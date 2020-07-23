@@ -29,11 +29,11 @@
                     <div class="col-md-6 col-lg-6 col-12">
                 <section class="card">
                    <div class="card-header p-2" style="background: #814BAA;color:#ffffff">
-                       <nuxt-link
-                              to="waiting"
+                       <!-- <nuxt-link
+                              to="/waiting"
                               class="btn btn-sm btn-primary"
                               ><ion-icon name="ellipsis-horizontal" style="font-size:3em;"></ion-icon>
-                       </nuxt-link>
+                       </nuxt-link> -->
                         <h4 class="card-title" style="color:#ffffff;">Dr Akinwunmi</h4>
                         <div style="color:#ffffff;">
                             <a href="#" style="color:#ffffff;"><span class="mr-75 feather icon-camera"></span></a>
@@ -45,7 +45,7 @@
                         <div class="card-body p-0">
                             <div class="col-lg-12 col-md-12 col-12">
                                 <div class="card chat-application">
-                                    
+
                                     <div class="chat-app-window">
                                         <div class="user-chats pr-0 pl-0">
                                             <div class="m-1"><small class="text-muted">July 15, 2020</small></div>
@@ -126,7 +126,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                     <hr>
                                     <div class="chat-footer mt-0">

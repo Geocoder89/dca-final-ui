@@ -37,7 +37,7 @@
                           <td class="product-name">Pending Cases <sup>(4)</sup></td>
                           <td>
                             <nuxt-link
-                              to="/doctor/viewfile"
+                              to="./viewfile"
                               class="btn btn-primary float-right"
                               >View</nuxt-link
                             >
@@ -47,7 +47,7 @@
                           <td class="product-name">Complete Cases <sup>(4)</sup></td>
                           <td>
                             <nuxt-link
-                              to="/doctor/completed"
+                              to="./completed"
                               class="btn btn-primary float-right"
                               >View</nuxt-link
                             >

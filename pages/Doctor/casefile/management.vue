@@ -93,19 +93,19 @@
                                         <td class="product-name">1. Idowu Philips</td>
                                         <td>
                                           <nuxt-link
-                                            to="casefile"
+                                            to="../casefile"
                                             ><ion-icon name="eye" style="font-size:1.3em;"></ion-icon></nuxt-link
                                           >
                                         </td>
                                           <td>
                                               <nuxt-link
-                                            to="waiting"
+                                            to="../waiting"
                                             ><i class="fa fa-edit" style="font-size:1.3em;"></i></nuxt-link
                                           >
                                           </td>
                                           <td>
                                               <nuxt-link
-                                            to="waiting"
+                                            to="../waiting"
                                             ><ion-icon name="trash" style="font-size:1.3em;"></ion-icon></nuxt-link
                                           >
                                           </td>
@@ -114,19 +114,19 @@
                                         <td class="product-name" >2. Abdul Aminu</td>
                                         <td>
                                           <nuxt-link
-                                            to="casefile"
+                                            to="../casefile"
                                             ><ion-icon name="eye" style="font-size:1.3em;"></ion-icon></nuxt-link
                                           >
                                         </td>
                                           <td>
                                               <nuxt-link
-                                            to="waiting"
+                                            to="../waiting"
                                             ><i class="fa fa-edit" style="font-size:1.3em;"></i></nuxt-link
                                           >
                                           </td>
                                           <td>
                                               <nuxt-link
-                                            to="waiting"
+                                            to="../waiting"
                                             ><ion-icon name="trash" style="font-size:1.3em;"></ion-icon></nuxt-link
                                           >
                                           </td>
@@ -135,19 +135,19 @@
                                         <td class="product-name">3. Medical Report from Lab</td>
                                         <td>
                                           <nuxt-link
-                                            to="casefile"
+                                            to="../casefile"
                                             ><ion-icon name="eye" style="font-size:1.3em;"></ion-icon></nuxt-link
                                           >
                                         </td>
                                           <td>
                                               <nuxt-link
-                                            to="waiting"
+                                            to="../waiting"
                                             ><i class="fa fa-edit" style="font-size:1.3em;"></i></nuxt-link
                                           >
                                           </td>
                                           <td>
                                               <nuxt-link
-                                            to="waiting"
+                                            to="../waiting"
                                             ><ion-icon name="trash" style="font-size:1.3em;"></ion-icon></nuxt-link
                                           >
                                           </td>

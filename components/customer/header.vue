@@ -207,9 +207,9 @@
                   /></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="/patients/editprofile"
+                  <a class="dropdown-item" href="../patients/editprofile"
                     ><i class="feather icon-user"></i> Edit Profile</a
-                  ><a class="dropdown-item" href="/patients/message"
+                  ><a class="dropdown-item" href="../patients/message"
                     ><i class="feather icon-mail"></i> My Inbox
                   </a>
                 </div>
