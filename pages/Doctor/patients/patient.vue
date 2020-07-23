@@ -23,7 +23,7 @@
                 </div>
               </div>
             </div>
-          
+
           </div>
           <div class="content-body">
             <section class="page-users-view">
@@ -96,20 +96,20 @@
                                     </select>
                                   </fieldset>
                                 </div>
-                                
+
                               </div>
                             </fieldset>
                           </form>
                         </div>
                         <div class="col-12 d-flex justify-content-start">
-                          <nuxt-link to="editprofile" class="btn btn-primary"
+                          <nuxt-link to="../editprofile" class="btn btn-primary"
                             ><i class="feather"></i> Submit</nuxt-link
                           >
                         </div>
                       </div>
                       <div class="row">
                     <div class="col-md-12">
-                       
+
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 <nuxt-link to="#">

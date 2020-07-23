@@ -110,5 +110,13 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+   // nuxt.config.js
+    hooks: {
+      config(options) {
+        options.buildModules = options.buildModules.filter(
+          module => module[0] !== '@nuxt/loading-screen'
+        );
+      },
   }
 }
