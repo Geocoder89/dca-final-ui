@@ -220,9 +220,9 @@
                               <div class="col-12 pl-0">
                                 <p>
                                   Already have an account?
-                                  <nuxt-link to="/Doctor/login">login</nuxt-link>
+                                  <nuxt-link to="/doctor/login">login</nuxt-link>
                                 </p>
-                                <nuxt-link to="/Doctor/verify" class="btn btn-primary">
+                                <nuxt-link to="/doctor/verify" class="btn btn-primary">
                                   Register</nuxt-link
                                 >
                               </div>

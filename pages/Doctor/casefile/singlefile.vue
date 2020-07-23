@@ -62,7 +62,7 @@
                             <li class="nav-item">
                               <nuxt-link
                                 class="btn btn-primary va-btn"
-                                to="/Doctor/casefile/viewfile"
+                                to="/doctor/casefile/viewfile"
                                 >View Files</nuxt-link>
                               
                             </li>

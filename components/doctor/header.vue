@@ -180,7 +180,7 @@
                   <li class="dropdown-menu-footer">
                     <nuxt-link
                       class="dropdown-item p-1 text-center"
-                      to="notifications"
+                      to="#"
                       >Read all notifications
                     </nuxt-link>
                   </li>

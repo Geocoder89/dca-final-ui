@@ -18,7 +18,7 @@
               <div class="row breadcrumbs-top">
                 <div class="col-12">
                   <h4 class="content-header-title float-left mb-0">
-                    Available Patients
+                    Available patients
                   </h4>
                 </div>
               </div>
@@ -37,19 +37,19 @@
                           <td class="product-name" style="font-size:0.9em;">1. Idowu Philips</td>
                           <td>
                             <nuxt-link
-                              to="/Doctor/chats"
+                              to="/doctor/chats"
                               class="btn btn-sm btn-primary"
                               >Check In</nuxt-link
                             >
                           </td>
                           <td>
                             <nuxt-link
-                              to="/Doctor/casefile"
+                              to="/doctor/casefile"
                               style="font-size:0.7em;"
                               >Read Cases |</nuxt-link
                             >
                             <nuxt-link
-                              to="/Doctor/medicals"
+                              to="/doctor/medicals"
                               style="font-size:0.7em;"
                               >Medical History</nuxt-link
                             >
@@ -59,14 +59,14 @@
                           <td class="product-name">2. Abdul Aminu</td>
                           <td>
                             <nuxt-link
-                              to="/Doctor/chats"
+                              to="/doctor/chats"
                               class="btn btn-sm btn-primary"
                               >Check In</nuxt-link
                             >
                           </td>
                           <td>
                             <nuxt-link
-                              to="/Doctor/casefile"
+                              to="/doctor/casefile"
                               style="font-size:0.7em;"
                               >Read Cases |</nuxt-link
                             >
@@ -81,19 +81,19 @@
                           <td class="product-name">3. Chioma Obi</td>
                           <td>
                             <nuxt-link
-                              to="/Doctor/chats"
+                              to="/doctor/chats"
                               class="btn btn-sm btn-primary"
                               >Check In</nuxt-link
                             >
                           </td>
                           <td>
                             <nuxt-link
-                              to="/Doctor/casefile"
+                              to="/doctor/casefile"
                               style="font-size:0.7em;"
                               >Read Cases |</nuxt-link
                             >
                             <nuxt-link
-                              to="/Doctor/medicals"
+                              to="/doctor/medicals"
                               style="font-size:0.7em;"
                               >Medical History</nuxt-link
                             >
@@ -103,19 +103,19 @@
                           <td class="product-name">4. Graves James</td>
                           <td>
                             <nuxt-link
-                              to="/Doctor/chats"
+                              to="/doctor/chats"
                               class="btn btn-sm btn-primary"
                               >Check In</nuxt-link
                             >
                           </td>
                           <td>
                             <nuxt-link
-                              to="/Doctor/casefile"
+                              to="/doctor/casefile"
                               style="font-size:0.7em;"
                               >Read Cases |</nuxt-link
                             >
                             <nuxt-link
-                              to="/Doctor/medicals"
+                              to="/doctor/medicals"
                               style="font-size:0.7em;"
                               >Medical History</nuxt-link
                             >

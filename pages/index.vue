@@ -29,8 +29,8 @@
                                         <ion-icon name="chevron-down-outline" style="align-self:center;text-alifgn:center"></ion-icon>
                                         <div class="card-content">
                                             <div class="card-body pt-1 d-flex justify-content-center">
-                                                <nuxt-link to="/Patients/signup" style="text-align: center;">Patient | </nuxt-link>
-                                                <nuxt-link to="/Doctor/signup" style="text-align: center;"> doctor | </nuxt-link>
+                                                <nuxt-link to="/patients/signup" style="text-align: center;">Patient | </nuxt-link>
+                                                <nuxt-link to="/doctor/signup" style="text-align: center;"> doctor | </nuxt-link>
                                                 <nuxt-link to="#" style="text-align: center;"> Phamarcy</nuxt-link>
                                             </div>
                                         </div>

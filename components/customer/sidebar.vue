@@ -33,7 +33,7 @@
           data-menu="menu-navigation"
         >
           <li class="nav-item active">
-            <nuxt-link to="/Patients/dashboard"
+            <nuxt-link to="/patients/dashboard"
               ><i class="feather icon-home"></i
               ><span class="menu-title" data-i18n="Dashboard">Dashboard</span
               >
@@ -42,45 +42,45 @@
           </li>
           <hr />
           <li class=" nav-item">
-            <nuxt-link to="/Patients/waiting"
+            <nuxt-link to="/patients/waiting"
               ><ion-icon name="call-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Call a Doctor</span>
             </nuxt-link>
           </li>
 
           <li class=" nav-item">
-            <nuxt-link to="/Patients/profile"
+            <nuxt-link to="/patients/profile"
               ><ion-icon name="person-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Profile</span>
             </nuxt-link>
           </li>
           <li class=" nav-item ">
-            <nuxt-link to="/Patients/medicalhistory"
+            <nuxt-link to="/patients/medicalhistory"
               ><ion-icon name="receipt-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Medical History</span>
             </nuxt-link>
           </li>
 
           <li class="nav-item">
-            <nuxt-link to="/Patients/consult"
+            <nuxt-link to="/patients/consult"
               ><ion-icon name="hourglass-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Consultation Room</span>
             </nuxt-link>
           </li>
           <li class=" nav-item">
-            <nuxt-link to="/Patients/referal"
+            <nuxt-link to="/patients/referal"
               ><ion-icon name="people-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Referral</span>
             </nuxt-link>
           </li>
           <li class=" nav-item">
-            <nuxt-link to="/Patients/subscriptionplan"
+            <nuxt-link to="/patients/subscriptionplan"
               ><ion-icon name="card-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Subscription Plan</span>
             </nuxt-link>
           </li>
           <li class=" nav-item">
-            <nuxt-link to="/Patients/emergency"
+            <nuxt-link to="/patients/emergency"
               ><i class="fa fa-ambulance" style="margin-right:1em;"></i>
               <span class="menu-title">Ambulance</span>
             </nuxt-link>
@@ -93,13 +93,13 @@
           data-menu="menu-navigation"
         >
           <li class=" nav-item">
-            <nuxt-link to="/Patients/help"
+            <nuxt-link to="/patients/help"
               ><ion-icon name="alert-circle-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Help Desk</span></nuxt-link
             >
           </li>
           <li class=" nav-item">
-            <nuxt-link to="/Patients/changepassword"
+            <nuxt-link to="/patients/changepassword"
               ><ion-icon name="settings-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Change Password</span></nuxt-link
             >

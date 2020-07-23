@@ -29,7 +29,7 @@
                                         clicking the link sent to your mailbox.</p>
                                         <div class="card-content">
                                             <div class="card-body pt-1 d-flex justify-content-center">
-                                                <nuxt-link to="/Doctor/docboard" style="text-align: center;">Click here to continue</nuxt-link>
+                                                <nuxt-link to="/doctor/docboard" style="text-align: center;">Click here to continue</nuxt-link>
                                             </div>
                                         </div>
                                         <div class="login-footer">

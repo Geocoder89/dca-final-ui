@@ -50,15 +50,15 @@
                                                             </label>
                                                         </div>
                                                         <div class="text-left">
-                                                             <div class="text-right d-sm-block"><nuxt-link to="/Patients/forgotpassword" class="card-link">Forget Password?</nuxt-link></div>
+                                                             <div class="text-right d-sm-block"><nuxt-link to="/patients/forgotpassword" class="card-link">Forget Password?</nuxt-link></div>
                                                         </div>
                                                     </div>
                                                    <!--  <a href="index.html" class="btn btn-outline-primary float-left btn-inline">Register</a> -->
-                                                    <nuxt-link to="/Patients/dashboard" type="submit" id="login" class="btn btn-primary d-block btn-inline">Sign In</nuxt-link>
+                                                    <nuxt-link to="/patients/dashboard" type="submit" id="login" class="btn btn-primary d-block btn-inline">Sign In</nuxt-link>
                                                 </form>
                                                 <div class="form-group d-flex justify-content-between align-items-center mt-2">
                                                         <div class="text-center">
-                                                             <div class="text-right d-sm-block">Don't Have an Account?<nuxt-link to="/Patients/signup" class="card-link"> Create Account</nuxt-link></div>
+                                                             <div class="text-right d-sm-block">Don't Have an Account?<nuxt-link to="/patients/signup" class="card-link"> Create Account</nuxt-link></div>
                                                         </div>
                                                 </div>
                                             </div>

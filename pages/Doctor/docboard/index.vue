@@ -22,7 +22,7 @@
                   </h4>
                   <nuxt-link
                     class="btn-icon btn-lg float-right btn btn-danger btn-round btn-sm "
-                    to="emergency"
+                    to="#"
                     aria-haspopup="true"
                     aria-expanded="false"
                     ><i class="fa fa-ambulance"></i
@@ -42,7 +42,7 @@
                       >2+</span
                     ></sup
                   >
-                  <nuxt-link to="/Doctor/patients" class="">
+                  <nuxt-link to="/doctor/patients" class="">
                     <div
                       class="card d-flex flex-column justify-content-center"
                       style="border-radius: 33px;background: #F8F8F8;box-shadow: none;"
@@ -83,7 +83,7 @@
                       >4+</span
                     ></sup
                   >
-                  <nuxt-link to="/Doctor/casefile" class="a-card">
+                  <nuxt-link to="/doctor/casefile" class="a-card">
                     <div
                       class="card d-flex flex-column justify-content-center"
                       style="border-radius: 33px;background: #F8F8F8;box-shadow: none;"
@@ -129,7 +129,7 @@
                       >4+</span
                     ></sup
                   >
-                  <nuxt-link to="/Doctor/message" class="a-card">
+                  <nuxt-link to="/doctor/message" class="a-card">
                     <div
                       class="card d-flex flex-column justify-content-center"
                       style="border-radius: 33px;background: #F8F8F8;box-shadow: none;"

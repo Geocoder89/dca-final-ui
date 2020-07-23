@@ -93,7 +93,7 @@
                                         <td class="product-name">1. Call with Mr Ahmed Haruna</td>
                                         <td>
                                           <nuxt-link
-                                            to="/Doctor/casefile/singlefile"
+                                            to="/doctor/casefile/singlefile"
                                             class="btn btn-sm btn-primary float-right"
                                             >View</nuxt-link
                                           >
@@ -103,7 +103,7 @@
                                         <td class="product-name">2. Call with Mr Ahmed Haruna</td>
                                         <td>
                                           <nuxt-link
-                                            to="/Doctor/casefile/singlefile"
+                                            to="/doctor/casefile/singlefile"
                                             class="btn btn-sm btn-primary float-right"
                                             >View</nuxt-link>
                                         </td>
@@ -112,7 +112,7 @@
                                         <td class="product-name">3. Call with Mr Ahmed Haruna</td>
                                         <td>
                                           <nuxt-link
-                                            to="/Doctor/casefile/singlefile"
+                                            to="/doctor/casefile/singlefile"
                                             class="btn btn-sm btn-primary float-right"
                                             >View</nuxt-link
                                           >
@@ -122,7 +122,7 @@
                                         <td class="product-name">4. Call with Mr Ahmed Haruna</td>
                                         <td>
                                           <nuxt-link
-                                            to="/Doctor/casefile/singlefile"
+                                            to="/doctor/casefile/singlefile"
                                             class="btn btn-sm btn-primary float-right"
                                             >view</nuxt-link
                                           >
@@ -152,7 +152,7 @@
                                         <td class="product-name">1. Call with Mr Ahmed Haruna</td>
                                         <td>
                                           <nuxt-link
-                                            to="/Doctor/casefile/completed"
+                                            to="/doctor/casefile/completed"
                                             class="btn btn-sm btn-primary float-right"
                                             >View</nuxt-link
                                           >
@@ -162,7 +162,7 @@
                                         <td class="product-name">2. Call with Mr Ahmed Haruna</td>
                                         <td>
                                           <nuxt-link
-                                            to="/Doctor/casefile/completed"
+                                            to="/doctor/casefile/completed"
                                             class="btn btn-sm btn-primary float-right"
                                             >View</nuxt-link>
                                         </td>
@@ -171,7 +171,7 @@
                                         <td class="product-name">3. Call with Mr Ahmed Haruna</td>
                                         <td>
                                           <nuxt-link
-                                            to="/Doctor/casefile/completed"
+                                            to="/doctor/casefile/completed"
                                             class="btn btn-sm btn-primary float-right"
                                             >View</nuxt-link
                                           >
@@ -181,7 +181,7 @@
                                         <td class="product-name">4. Call with Mr Ahmed Haruna</td>
                                         <td>
                                           <nuxt-link
-                                            to="/Doctor/casefile/completed"
+                                            to="/doctor/casefile/completed"
                                             class="btn btn-sm btn-primary float-right"
                                             >view</nuxt-link
                                           >
