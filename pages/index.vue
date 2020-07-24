@@ -31,7 +31,7 @@
                                             <div class="card-body pt-1 d-flex justify-content-center">
                                                 <nuxt-link to="/patients/signup" style="text-align: center;">Patient | </nuxt-link>
                                                 <nuxt-link to="/doctor/signup" style="text-align: center;"> doctor | </nuxt-link>
-                                                <nuxt-link to="#" style="text-align: center;"> Phamarcy</nuxt-link>
+                                                <nuxt-link to="#" style="text-align: center;"> Pharmacy</nuxt-link>
                                             </div>
                                         </div>
                                         <div class="login-footer">
