@@ -1,14 +1,14 @@
 <template>
 <!-- BEGIN: Content-->
-    <div class="app-content content justify-content-center" style="margin-left:0;">
+    <div class="app-content content" style="margin-left:0;">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
             <div class="content-header row">
             </div>
             <div class="content-body">
-                <section class="row flexbox-container">  
-                    <div class="col-xl-8 col-11 d-flex justify-content-center">
+                <section class="row flexbox-container justify-content-center">  
+                    <div class="col-xl-8 col-12 d-flex justify-content-center">
                         <div class="card rounded-0 mb-0">
                             <div class="row m-0">
                                 <div class="col-lg-12" style="display:flex;justify-content: center;">
@@ -17,11 +17,7 @@
                                 </div>
                                 <div class="col-lg-12 col-12 p-0" >
                                     <div class="card rounded-0 mb-0 px-2">
-                                        <!-- <div class="card-header pb-1">
-                                            <div class="card-title text-center d-flex justify-content-center">
-                                                <h3 class="px-3 text-center align-self-center">Verify Your Account</h3>
-                                            </div>
-                                        </div> -->
+                                        
                                         <div class="card-title">
                                             <h3 class="text-center"><u>Verify Your Account</u></h3>
                                         </div>

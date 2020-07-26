@@ -82,9 +82,9 @@
   </div>
 </template>
 <script>
-import Header from '~/components/doctor/header'
-import Footer from '~/components/doctor/footer'
-import Sidebar from '~/components/doctor/sidebar'
+import Header from '~/components/hospital/header'
+import Footer from '~/components/hospital/footer'
+import Sidebar from '~/components/hospital/sidebar'
 
 export default {
   name: 'Cases',
