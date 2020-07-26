@@ -107,7 +107,7 @@
 <script>
 import Header from '~/components/pharmacy/header'
 import Footer from '~/components/pharmacy/footer'
-import SideBar from '~/components/pharmacy/fideBar'
+import SideBar from '~/components/pharmacy/sidebar'
 
 export default {
   name: 'Dashboard',

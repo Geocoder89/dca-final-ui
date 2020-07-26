@@ -56,7 +56,7 @@
                                 aria-controls="home-just"
                                 aria-selected="true"
                                 style="font-size: 16px;"
-                                >Pending<sup>(4)</sup></a
+                                >Idowu Philips</a
                               >
                             </li>
                             <li class="nav-item">
@@ -69,7 +69,7 @@
                                 aria-controls="profile-just"
                                 aria-selected="true"
                                 style="font-size: 16px;"
-                                >Completed<sup>(5)</sup></a
+                                ></a
                               >
                             </li>
                           </ul>

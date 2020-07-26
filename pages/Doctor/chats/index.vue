@@ -28,19 +28,50 @@
             <div class="row justify-content-center">
                     <div class="col-md-6 col-lg-6 col-12">
                 <section class="card">
-                   <div class="card-header p-2" style="background: #814BAA;color:#ffffff">
-                       <!-- <nuxt-link
-                              to="/waiting"
-                              class="btn btn-sm btn-primary"
-                              ><ion-icon name="ellipsis-horizontal" style="font-size:3em;"></ion-icon>
-                       </nuxt-link> -->
+                   <ul class="card-header p-2 d-flex" style="background: #814BAA;color:#ffffff">
+                       
+                       <nuxt-link
+                              to="#"
+                              class="btn btn-sm btn"
+                              data-toggle="dropdown"
+                              ><ion-icon 
+                              size="large"
+                              color="light"
+                              style="width: 30px;height:30px;color:#fff;"
+                              name="add-circle"></ion-icon>
+                              <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right p-1">
+                            <li class="dropdown-menu-header">
+                                <nuxt-link to="/doctor/patients/patient"><span class="grey darken-2"> Update Case</span></nuxt-link>
+                            </li>
+                            <br>
+                            <li class="dropdown-menu-header pb-1">
+                                <nuxt-link to="/doctor/prescribe"><span class="grey darken-2"> Prescription</span></nuxt-link>
+                            </li>
+                            <li class="dropdown-menu-header pb-1">
+                               <nuxt-link to="#"> <span class="grey darken-2"> Refer specialist</span></nuxt-link>
+                            </li>
+                            <li class="dropdown-menu-header pb-1">
+                                <nuxt-link to="#"><span class="grey darken-2"> Refer nurse</span></nuxt-link>
+                            </li>
+                            <li class="dropdown-menu-header pb-1">
+                                <nuxt-link to="#"><span class="grey darken-2"> Refer Nutritionist</span></nuxt-link>
+                            </li>
+                            <li class="dropdown-menu-header pb-1">
+                                <nuxt-link to="#"><span class="grey darken-2"> Refer Pharmarcy</span></nuxt-link>
+                            </li>
+                            <li class="dropdown-menu-header pb-1">
+                                <nuxt-link to="#"><span class="grey darken-2"> Close Case</span></nuxt-link>
+                            </li>
+                        </ul>
+                       </nuxt-link>
+                       
                         <h4 class="card-title" style="color:#ffffff;">Dr Akinwunmi</h4>
                         <div style="color:#ffffff;">
                             <a href="#" style="color:#ffffff;"><span class="mr-75 feather icon-camera"></span></a>
                             <a href="#" style="color:#ffffff;"><span class="mr-75 feather icon-phone"></span></a>
                             <a href="#" style="color:#ffffff;"><span class="mr-75 feather icon-video"></span></a>
                         </div>
-                    </div>
+                    </ul>
                     <div class="card-content">
                         <div class="card-body p-0">
                             <div class="col-lg-12 col-md-12 col-12">

@@ -53,7 +53,8 @@
                             <ion-icon 
                               name="call-outline"
                               size="large"
-                              style="width: 80px;height:80px;opacity:0.3"
+                              color="dark"
+                              style="width: 80px;height:80px;"
                             ></ion-icon>
                           </div>
                         </div>
@@ -74,7 +75,7 @@
                     ><span
                       class="badge badge-danger csup"
                       style="font-size: 19px;"
-                      >4+</span
+                      >4</span
                     ></sup
                   >
                   <nuxt-link to="message" class="a-card">
@@ -95,7 +96,8 @@
                             <ion-icon
                               name="mail-unread-outline"
                               size="large"
-                              style="width: 100px;height:100px;opacity:0.3"
+                              color="dark"
+                              style="width: 100px;height:100px;"
                             ></ion-icon>
                           </div>
                         </div>
@@ -153,7 +155,7 @@ export default {
       font-size: 12px;
       border-radius: 50%;
       line-height: 25px;
-      background: #814BAA;
+      background: #FFA34B;
   }
         .a-card:hover .card{
             box-shadow: 0 5px 35px 0 rgba(204, 204, 204, 0.1);
@@ -165,17 +167,17 @@ export default {
            padding-left:0;
          }
             .csup {
-                width: 30px;
-                height: 30px;
-                top: 20px;
-                left: 120px;
+                width: 50px;
+                height: 50px;
+                top: 7px;
+                left: 110px;
                 z-index: 1;
                 position: absolute;
-                font-size: 16px !important;
+                font-size: 18px !important;
                 border-radius: 50%;
-                line-height: 23px;
+                line-height: 38px;
                 text-align: center;
-                background: #814BAA;
+                background: #FFA34B;
                 padding: 5px;
             }
             

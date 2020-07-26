@@ -60,7 +60,7 @@
                             <ion-icon
                               name="fitness-outline"
                               size="large"
-                              style="width: 80px;height:80px;opacity:0.3"
+                              style="width: 80px;height:80px;"
                             ></ion-icon>
                           </div>
                         </div>
@@ -101,7 +101,7 @@
                             <ion-icon
                               name="chatbubbles-outline"
                               size="large"
-                              style="width: 100px;height:100px;opacity:0.3"
+                              style="width: 100px;height:100px;"
                             ></ion-icon>
                           </div>
                         </div>
@@ -147,7 +147,7 @@
                             <ion-icon
                               name="mail-unread-outline"
                               size="large"
-                              style="width: 100px;height:100px;opacity:0.3"
+                              style="width: 100px;height:100px;"
                             ></ion-icon>
                           </div>
                         </div>
@@ -188,7 +188,7 @@
                             <ion-icon
                               name="receipt-outline"
                               size="large"
-                              style="width: 100px;height:100px;opacity:0.3"
+                              style="width: 100px;height:100px;"
                             ></ion-icon>
                           </div>
                         </div>
@@ -221,7 +221,7 @@
 <script> 
 import Header from '~/components/pharmacy/header'
 import Footer from '~/components/pharmacy/footer'
-import SideBar from '~/components/pharmacy/fideBar'
+import SideBar from '~/components/pharmacy/sidebar'
 
 export default {
   name: 'Dashboard',
@@ -232,3 +232,43 @@ export default {
   }
 }
 </script>
+<style scoped>
+
+  .csup {
+      width: 40px;
+      height: 40px;
+      top: 50px;
+      left:110px;
+      z-index:1;
+      position: relative;
+      font-size: 12px;
+      border-radius: 50%;
+      line-height: 25px;
+      background: #FFA34B;
+  }
+        .a-card:hover .card{
+            box-shadow: 0 5px 35px 0 rgba(204, 204, 204, 0.1);
+        }
+        @media only screen and (max-width: 768px) {
+          /* For mobile phones: */
+         .dashboard-content{
+           padding-top:50px;
+           padding-left:0;
+         }
+            .csup {
+                width: 50px;
+                height: 50px;
+                top: 7px;
+                left: 110px;
+                z-index: 1;
+                position: absolute;
+                font-size: 18px !important;
+                border-radius: 50%;
+                line-height: 38px;
+                text-align: center;
+                background: #FFA34B;
+                padding: 5px;
+            }
+            
+        }
+</style>

@@ -25,7 +25,7 @@
             </div>
             <ul class="nav navbar-nav float-right">
               <li class="nav-item">
-                <nuxt-link class="nav-link nav-link-label" to="#"
+                <nuxt-link class="nav-link nav-link-label" to="/doctor/message"
                   ><i class="ficon feather icon-mail"></i
                 ></nuxt-link>
               </li>
@@ -206,10 +206,10 @@
                   /></span>
                 </nuxt-link>
                 <div class="dropdown-menu dropdown-menu-right">
-                  <nuxt-link class="dropdown-item" to="#"
+                  <nuxt-link class="dropdown-item" to="/doctor/editprofile"
                     ><i class="feather icon-user"></i> Edit Profile</nuxt-link
                   >
-                  <nuxt-link class="dropdown-item" to="#"
+                  <nuxt-link class="dropdown-item" to="/doctor/message"
                     ><i class="feather icon-mail"></i> My Inbox
                   </nuxt-link>
                 </div>

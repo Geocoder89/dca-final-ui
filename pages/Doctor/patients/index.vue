@@ -14,10 +14,10 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
           <div class="content-header row justify-content-center">
-            <div class="content-header-left col-md-5 col-12 mb-2">
+            <div class="content-header-left col-md-6 col-12 mb-6">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
-                  <h4 class="content-header-title float-left mb-0">
+                  <h4 class="content-header-title float-left mb-2">
                     Available patients
                   </h4>
                 </div>
@@ -28,13 +28,13 @@
             <!-- Data list view starts -->
             <section id="data-list-view" class="data-list-view-header">
               <div class="row justify-content-md-center">
-                <div class="col-md-5 col-lg-5">
+                <div class="col-md-6 col-lg-6">
                   <!-- DataTable starts -->
                   <div class="card">
                     <table class="table data-list-view">
                       <tbody>
                         <tr>
-                          <td class="product-name" style="font-size:0.9em;">1. Idowu Philips</td>
+                          <td class="product-name p-2" style="font-size:0.9em;">1. Idowu Philips</td>
                           <td>
                             <nuxt-link
                               to="/doctor/chats"
@@ -56,7 +56,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td class="product-name">2. Abdul Aminu</td>
+                          <td class="product-name p-2">2. Abdul Aminu</td>
                           <td>
                             <nuxt-link
                               to="/doctor/chats"
@@ -78,7 +78,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td class="product-name">3. Chioma Obi</td>
+                          <td class="product-name p-2">3. Chioma Obi</td>
                           <td>
                             <nuxt-link
                               to="/doctor/chats"
@@ -100,7 +100,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td class="product-name">4. Graves James</td>
+                          <td class="product-name p-2">4. Graves James</td>
                           <td>
                             <nuxt-link
                               to="/doctor/chats"

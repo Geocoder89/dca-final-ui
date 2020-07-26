@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="app-content content">
+    <div class="app-content content justify-content-center" style="margin-left:0;">
       <div class="content-overlay"></div>
       <div class="header-navbar-shadow"></div>
       <div class="content-wrapper">
@@ -135,7 +135,7 @@
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput"
-                                      >GPS:</label
+                                      >GP:</label
                                     >
                                     <select
                                       id="basicInput"
