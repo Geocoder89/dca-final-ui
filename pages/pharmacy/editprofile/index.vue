@@ -260,7 +260,7 @@
 <script>
 import Header from '~/components/pharmacy/header'
 import Footer from '~/components/pharmacy/footer'
-import SideBar from '~/components/pharmacy/sidebar'
+import SideBar from '~/components/pharmacy/sideBar'
 
 export default {
   name: 'Dashboard',
