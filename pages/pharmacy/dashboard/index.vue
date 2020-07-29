@@ -18,106 +18,15 @@
               <div class="row breadcrumbs-top">
                 <div class="col-12">
                   <h4 class="content-header-title float-left mb-0">
-                    Hi, James
+                    Hi, Alpha Pharmacy & Stores
                   </h4>
-                  <nuxt-link
-                    class="btn-icon btn-lg float-right btn btn-danger btn-round btn-sm "
-                    to="emergency"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    ><i class="fa fa-ambulance"></i
-                  ></nuxt-link>
+                  
                 </div>
               </div>
             </div>
           </div>
           <div class="content-body">
-            <section id="dashboard-analytics" class="mb-0">
-              <div class="row justify-content-center">
-                <div class="col-lg-2 col-md-4 col-12 pb-0">
-                  <sup class=""
-                    ><span
-                      class="badge badge-danger csup"
-                      style="font-size: 19px;"
-                      >1</span
-                    ></sup
-                  >
-                  <nuxt-link to="medicalhistory" class="">
-                    <div
-                      class="card d-flex flex-column justify-content-center"
-                      style="border-radius: 33px;background: #F8F8F8;box-shadow: none;"
-                    >
-                      <div class="card-content align-self-center">
-                        <div
-                          class="avatar p-50 mt-2"
-                          style="width: 140px;height:140px;border-radius: 40px; background: #fff;"
-                        >
-                          <div
-                            class="avatar-content"
-                            style="width: 130px;height:130px;font-size: 124px; "
-                          >
-                            <!-- <i class="fa fa-heartbeat text-primary font-medium-5"></i> -->
-                            <ion-icon
-                              name="fitness-outline"
-                              size="large"
-                              style="width: 80px;height:80px;"
-                            ></ion-icon>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-column align-items-start pb-0">
-                        <h3
-                          class="text-bold-300 text-center align-self-center mb-1"
-                        >
-                          Medical <br />History
-                        </h3>
-                      </div>
-                    </div>
-                  </nuxt-link>
-                </div>
-                <div class="col-lg-2 col-md-4 col-12 pb-0">
-                  <sup
-                    ><span
-                      class="badge badge-danger csup"
-                      style="font-size: 19px;"
-                      >4+</span
-                    ></sup
-                  >
-                  <nuxt-link to="consult" class="a-card">
-                    <div
-                      class="card d-flex flex-column justify-content-center"
-                      style="border-radius: 33px;background: #F8F8F8;box-shadow: none;"
-                    >
-                      <div class="card-content align-self-center">
-                        <div
-                          class="avatar p-50 mt-2"
-                          style="width: 140px;height:140px;border-radius: 40px;background: #fff;"
-                        >
-                          <div
-                            class="avatar-content"
-                            style="width: 130px;height:130px;font-size: 124px;"
-                          >
-                            <!-- <i class="fa fa-heartbeat text-primary font-medium-5"></i> -->
-                            <ion-icon
-                              name="chatbubbles-outline"
-                              size="large"
-                              style="width: 100px;height:100px;"
-                            ></ion-icon>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-column align-items-start pb-0">
-                        <h3
-                          class="text-bold-300 text-center align-self-center mb-1"
-                        >
-                          Consulting <br />Room
-                        </h3>
-                      </div>
-                    </div>
-                  </nuxt-link>
-                </div>
-              </div>
-            </section>
+            
             <!-- Dashboard Analytics end -->
             <section id="dashboard-analytics" class="mt-0">
               <div class="row justify-content-center">
@@ -129,7 +38,7 @@
                       >4+</span
                     ></sup
                   >
-                  <nuxt-link to="consult" class="a-card">
+                  <nuxt-link to="#" class="a-card">
                     <div
                       class="card d-flex flex-column justify-content-center"
                       style="border-radius: 33px;background: #F8F8F8;box-shadow: none;"
@@ -143,10 +52,11 @@
                             class="avatar-content"
                             style="width: 130px;height:130px;font-size: 124px;"
                           >
-                            <!-- <i class="fa fa-heartbeat text-primary font-medium-5"></i> -->
+                            <!-- <i class="fa fa-pill text-primary font-medium-5"></i> -->
                             <ion-icon
-                              name="mail-unread-outline"
+                              name="bandage"
                               size="large"
+                              color="danger"
                               style="width: 100px;height:100px;"
                             ></ion-icon>
                           </div>
@@ -156,7 +66,8 @@
                         <h3
                           class="text-bold-300 text-center align-self-center mb-1"
                         >
-                          Message
+                          Pending Prescribe <br>
+                          Drugs
                         </h3>
                       </div>
                     </div>
@@ -170,7 +81,7 @@
                       >4+</span
                     ></sup
                   >
-                  <nuxt-link to="consult" class="a-card">
+                  <nuxt-link to="#" class="a-card">
                     <div
                       class="card d-flex flex-column justify-content-center"
                       style="border-radius: 33px;background: #F8F8F8;box-shadow: none;"
@@ -186,8 +97,9 @@
                           >
                             <!-- <i class="fa fa-heartbeat text-primary font-medium-5"></i> -->
                             <ion-icon
-                              name="receipt-outline"
+                              name="bandage"
                               size="large"
+                              color="success"
                               style="width: 100px;height:100px;"
                             ></ion-icon>
                           </div>
@@ -197,7 +109,8 @@
                         <h3
                           class="text-bold-300 text-center align-self-center mb-1"
                         >
-                          My Case <br />File
+                         Completed Prescribe <br>
+                          Drugs
                         </h3>
                       </div>
                     </div>
@@ -271,4 +184,13 @@ export default {
             }
             
         }
+        .fa-pill{
+          filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=.5);
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+        .fa-pill:before {
+          content: "\f205";
+        }  
 </style>

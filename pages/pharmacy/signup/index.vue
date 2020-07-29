@@ -14,7 +14,7 @@
                     <div class="card rounded-0 mb-0 p-2">
                       <div class="card-header pt-50 pb-1">
                         <div class="card-title">
-                          <h4 class="mb-0">NURSE REGISTRATION</h4>
+                          <h4 class="mb-0">PHARMACY REGISTRATION</h4>
                         </div>
                       </div>
                       <p class="px-2">
@@ -27,38 +27,49 @@
                               <div class="row">
                                 <div class="col-xl-4 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <label for="basicInput">First Name:</label>
+                                    <label for="basicInput">Pharmacy Name:</label>
                                     <input
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter first name"
+                                      placeholder="Enter Registered Name"
                                     />
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <label for="basicInput">Last Name:</label>
+                                    <label for="basicInput">Pharmacy Address:</label>
                                     <input
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter last name"
+                                      placeholder="Enter Address"
                                     />
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput">Pharmacy License No:</label>
+                                    <input
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder="Enter License"
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput">Email:</label>
                                     <input
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter email"
+                                      placeholder="Enter Email"
                                     />
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput">Phone:</label>
                                     <input
@@ -69,7 +80,7 @@
                                     />
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput"
                                       >Password:</label
@@ -82,7 +93,7 @@
                                     />
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput"
                                       >Password Confirmation:</label
@@ -95,70 +106,14 @@
                                     />
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <div class="col-xl-12 col-md-12 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <label for="basicInput">NMCN Licence No:</label>
-                                    <input
+                                    <label for="basicInput">Description of Pharmacy:</label>
+                                    <textarea
                                       id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder="Enter NMCN Licence No"
-                                    />
-                                  </fieldset>
-                                </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <label for="basicInput"
-                                      >Nursing School Attended:</label
-                                    >
-                                    <input
-                                      id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder="Enter Nursing School Attended"
-                                    />
-                                  </fieldset>
-                                </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <label for="basicInput"
-                                      >Year of Graduation:</label
-                                    >
-                                    <input
-                                      id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder="Year of Graduation"
-                                    />
-                                  </fieldset>
-                                </div>
-                                <div class="col-xl-6 col-md-6 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <label for="basicInput"
-                                      >GP:</label
-                                    >
-                                    <select
-                                      id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                    >
-                                    <option value="">Field one</option>
-                                    <option value="">Field one</option>
-                                    <option value="">Field one</option>
-                                    </select>
-                                  </fieldset>
-                                </div>
-                                <div class="col-xl-6 col-md-6 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <label for="basicInput"
-                                      >Specialties if any:</label
-                                    >
-                                    <input
-                                      id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder="Specialties if any"
-                                    />
+                                      style="resize:none;"
+                                      class="form-control">
+                                    </textarea>
                                   </fieldset>
                                 </div>
                               </div>
@@ -220,9 +175,9 @@
                               <div class="col-12 pl-0">
                                 <p>
                                   Already have an account?
-                                  <nuxt-link to="/nurse/login">login</nuxt-link>
+                                  <nuxt-link to="/pharmacy/login">login</nuxt-link>
                                 </p>
-                                <nuxt-link to="/nurse/verify" class="btn btn-primary">
+                                <nuxt-link to="/pharmacy/verify" class="btn btn-primary">
                                   Register</nuxt-link
                                 >
                               </div>

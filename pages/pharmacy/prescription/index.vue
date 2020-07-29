@@ -7,7 +7,7 @@
       data-col="2-columns"
     >
       <Header></Header>
-      <SideBar></SideBar>
+      <Sidebar></Sidebar>
 
       <div class="app-content content">
         <div class="content-overlay"></div>
@@ -30,35 +30,35 @@
               <div class="row justify-content-md-center">
                 <div class="col-md-6 col-lg-6">
                   <!-- DataTable starts -->
-                  <div class="table-responsive">
+                  <div class="card">
                     <table class="table data-list-view">
                       <tbody>
                         <tr>
-                          <td class="product-name">New Prescription (3) </td>
+                          <td class="product-name">New Prescription <sup>(3)</sup></td>
                           <td>
                             <nuxt-link
-                              to="prescription/new"
-                              class="btn btn-sm btn-primary float-right"
+                              to="/pharmacy/prescription/new"
+                              class="btn btn-primary float-right"
                               >View</nuxt-link
                             >
                           </td>
                         </tr>
                         <tr>
-                          <td class="product-name">Pending Prescribed drugs (2)</td>
+                          <td class="product-name">Pending Prescribed drugs <sup>(2)</sup></td>
                           <td>
                             <nuxt-link
-                              to="prescription/pending"
-                              class="btn btn-sm btn-primary float-right"
+                              to="/pharmacy/prescription/pending"
+                              class="btn btn-primary float-right"
                               >View</nuxt-link
                             >
                           </td>
                         </tr>
                         <tr>
-                          <td class="product-name">Completed Prescribed drugs (5)</td>
+                          <td class="product-name">Completed Prescribed drugs<sup>(5)</sup></td>
                           <td>
                             <nuxt-link
-                              to="prescription/completed"
-                              class="btn btn-sm btn-primary float-right"
+                              to="/pharmacy/prescription/completed"
+                              class="btn btn-primary float-right"
                               >View</nuxt-link
                             >
                           </td>
@@ -84,14 +84,14 @@
 <script>
 import Header from '~/components/pharmacy/header'
 import Footer from '~/components/pharmacy/footer'
-import SideBar from '~/components/pharmacy/sidebar'
+import Sidebar from '~/components/pharmacy/sidebar'
 
 export default {
-  name: 'Dashboard',
+  name: 'Cases',
   components: {
     Header,
     Footer,
-    SideBar
+    Sidebar
   }
 }
 </script>
@@ -102,3 +102,4 @@ export default {
   left: 0;
 }
 </style>
+

@@ -75,7 +75,7 @@
           </li>
           <li class=" nav-item">
             <nuxt-link to="/nurse/reviews"
-              ><ion-icon name="calendar-outline" color="dark" style="margin-right:1em;"></ion-icon>
+              ><ion-icon name="star-outline" color="dark" style="margin-right:1em;"></ion-icon>
               <span class="menu-title"> Reviews</span>
             </nuxt-link>
           </li>

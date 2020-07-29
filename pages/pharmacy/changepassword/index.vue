@@ -118,14 +118,14 @@
 <script>
 import Header from '~/components/pharmacy/header'
 import Footer from '~/components/pharmacy/footer'
-import SideBar from '~/components/pharmacy/sidebar'
+import Sidebar from '~/components/pharmacy/sidebar'
 
 export default {
-  name: 'Dashboard',
+  name: 'Changepassword',
   components: {
     Header,
     Footer,
-    SideBar
+    Sidebar
   }
 }
 </script>

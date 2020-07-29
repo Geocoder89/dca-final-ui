@@ -30,10 +30,11 @@
                                         <div class="card-content">
                                             <div class="card-body pt-1 d-flex justify-content-center flex-wrap">
                                                 <nuxt-link to="/patients/signup" style="text-align: center;">Patient | </nuxt-link>
-                                                <nuxt-link to="/pharmacy/dashboard" style="text-align: center;">Pharmacy | </nuxt-link>
+                                                <nuxt-link to="/pharmacy/signup" style="text-align: center;">Pharmacy | </nuxt-link>
                                                 <nuxt-link to="/doctor/signup" style="text-align: center;"> Doctor | </nuxt-link>
                                                 <nuxt-link to="/ambulance/signup" style="text-align: center;"> Ambulance | </nuxt-link>
-                                                <nuxt-link to="/hospital/signup" style="text-align: center;"> Hospital </nuxt-link>
+                                                <nuxt-link to="/hospital/signup" style="text-align: center;"> Hospital |</nuxt-link>
+                                                <nuxt-link to="/nurse/signup" style="text-align: center;"> Nurse </nuxt-link>
                                             </div> 
                                         </div> 
                                         <div class="login-footer">
