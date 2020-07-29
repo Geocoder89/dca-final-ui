@@ -36,11 +36,16 @@ export default {
       {rel: 'stylesheet', href: '/app-assets/css/pages/app-user.css'},
       {rel: 'stylesheet', href: '/app-assets/css/pages/authentication.css'},
       {rel: 'stylesheet', href: '/app-assets/vendors/css/vendors.min.css'},
+      {rel: 'stylesheet', href: '/app-assets/vendors/css/pickers/pickadate/pickadate.css'},
       {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600'}
     ],
      // Load all javascript codes here
   script: [
     {type: 'text/javascript', src: '/app-assets/vendors/js/vendors.min.js', defer: true},
+    {type: 'text/javascript', src: '/app-assets/vendors/js/pickers/pickadate/picker.js', defer: true},
+    {type: 'text/javascript', src: '/app-assets/vendors/js/pickers/pickadate/picker.date.js', defer: true},
+    {type: 'text/javascript', src: '/app-assets/vendors/js/pickers/pickadate/picker.time.js', defer: true},
+    {type: 'text/javascript', src: '/app-assets/vendors/js/pickers/pickadate/legacy.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/vendors/js/forms/select/select2.full.min.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/vendors/js/ui/prism.min.js', defer: true},
@@ -56,6 +61,7 @@ export default {
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/buttons.bootstrap.min.js'},
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/dataTables.select.min.js'},
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js'},
+    {type: 'text/javascript', src: '/app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js'},
     {type: 'text/javascript', src: '/app-assets/js/scripts/components.js'},
   ],
 },

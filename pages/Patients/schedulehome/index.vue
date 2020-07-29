@@ -49,7 +49,7 @@
                                     <input
                                       id="basicInput"
                                       type="text"
-                                      class="form-control format-picker"
+                                      class="form-control pickadate"
                                       placeholder=""
                                     />
                                   </div>

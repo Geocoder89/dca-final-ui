@@ -132,7 +132,7 @@
                                             <input
                                             id="basicInput"
                                             type="text"
-                                            class="form-control"
+                                            class="form-control pickadate"
                                             placeholder="dd/mm/yyyy"
                                             />
                                         </fieldset>
@@ -143,7 +143,7 @@
                                             <input
                                             id="basicInput"
                                             type="text"
-                                            class="form-control"
+                                            class="form-control pickadate"
                                             placeholder="dd/mm/yyyy"
                                             />
                                         </fieldset>

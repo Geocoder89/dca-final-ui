@@ -18,7 +18,7 @@
               <div class="row breadcrumbs-top">
                 <div class="col-12">
                   <h4 class="content-header-title float-left mb-0">
-                    Edit Profile
+                    Update Case
                   </h4>
                 </div>
               </div>
@@ -29,7 +29,7 @@
               <div class="col-md-6 col-12">
                 <section class="card">
                   <div class="card-header">
-                    <h5>Hospital Information</h5>
+                    <h5> Update Case</h5>
                   </div>
                   <div class="card-content">
                     <div class="card-body pt-0">

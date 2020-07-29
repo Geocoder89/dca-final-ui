@@ -45,19 +45,6 @@
                               <div class="col-12">
                                 <div class="form-group">
                                   <label for="accountTextarea"
-                                    >Subscriber Id:</label
-                                  >
-                                  <input
-                                    id="basicInput"
-                                    type="text"
-                                    class="form-control"
-                                    placeholder=""
-                                  />
-                                </div>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-group">
-                                  <label for="accountTextarea"
                                     >Family/Freind's Email:</label
                                   >
                                   <input

@@ -6,8 +6,8 @@
       <div class="content-wrapper">
         <div class="content-header row"></div>
         <div class="content-body">
-          <section class="row flexbox-container">
-            <div class="col-xl-10 col-12 d-flex justify-content-center">
+          <section class="row flexbox-container justify-content-center">
+            <div class="col-xl-8 col-12 d-flex justify-content-center">
               <div class="card bg-authentication rounded-0 mb-0">
                 <div class="row m-0">
                   <div class="col-lg-12 col-12 p-0">

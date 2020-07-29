@@ -28,7 +28,7 @@
                                         <p class=" text-center">Welcome to a world where we literally treat health as wealth.</p>
                                         <ion-icon name="chevron-down-outline" style="align-self:center;text-alifgn:center"></ion-icon>
                                         <div class="card-content">
-                                            <div class="card-body pt-1 d-flex justify-content-center">
+                                            <div class="card-body pt-1 d-flex justify-content-center flex-wrap">
                                                 <nuxt-link to="/patients/signup" style="text-align: center;">Patient | </nuxt-link>
                                                 <nuxt-link to="/pharmacy/dashboard" style="text-align: center;">Pharmacy | </nuxt-link>
                                                 <nuxt-link to="/doctor/signup" style="text-align: center;"> Doctor | </nuxt-link>

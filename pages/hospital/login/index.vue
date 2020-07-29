@@ -54,7 +54,7 @@
                                                         </div>
                                                     </div>
                                                    <!--  <a href="index.html" class="btn btn-outline-primary float-left btn-inline">Register</a> -->
-                                                    <nuxt-link to="/hospital/docboard" type="submit" id="login" class="btn btn-primary d-block btn-inline">Sign In</nuxt-link>
+                                                    <nuxt-link to="/hospital/dashboard" type="submit" id="login" class="btn btn-primary d-block btn-inline">Sign In</nuxt-link>
                                                 </form>
                                                 <div class="form-group d-flex justify-content-between align-items-center mt-2">
                                                         <div class="text-center">

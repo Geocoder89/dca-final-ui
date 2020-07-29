@@ -56,7 +56,7 @@
                                 aria-controls="home-just"
                                 aria-selected="true"
                                 style="font-size: 16px;"
-                                >Pending<sup>(4)</sup></a
+                                >New Referrals</a
                               >
                             </li>
                             <li class="nav-item">

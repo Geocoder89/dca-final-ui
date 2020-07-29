@@ -79,18 +79,6 @@
                                       <option value="2">Hospital loc2</option>
                                     </select>
                                   </fieldset>
-
-                                  <fieldset class="form-group">
-                                    <label for="basicInput"
-                                      >Service Cost:</label
-                                    >
-                                    <input
-                                      type="text"
-                                      class="form-control"
-                                      id="basicInput"
-                                      placeholder="service cost will show here"
-                                    />
-                                  </fieldset>
                                 </div>
                               </div>
                             </fieldset>
