@@ -27,12 +27,12 @@
             
             <section id="data-list-view" class="data-list-view-header">
               <div class="row ">
-                <div class="col-md-12 col-lg-12">
+                <div class="col-md-6 col-lg-6 offset-md-3 col-12">
                   <div class="card">
                     <p class=" mb-2 ml-2 mt-2"> You have an emergency to pick up </p>
                   </div>
                 </div>
-                <div class="col-md-12 col-lg-12">
+                <div class="col-md-6 col-lg-6 offset-md-3 col-12">
                   <!-- DataTable starts -->
                   <div class="card">
                     <table class="table data-list-view">
@@ -60,7 +60,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-12 col-lg-12">
+                <div class="col-md-6 col-lg-6 offset-md-3 col-12">
                   <!-- DataTable starts -->
                   <div class="card">
                     <table class="table data-list-view">

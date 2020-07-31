@@ -13,8 +13,8 @@
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
-          <div class="content-header row">
-            <div class="content-header-left col-md-9 col-12 mb-2">
+          <div class="content-header row justify-content-center">
+            <div class="content-header-left col-md-5 col-lg-5 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
                   <h4 class="content-header-title float-left mb-0">
@@ -26,36 +26,40 @@
           </div>
           <div class="content-body">
             <!-- Description -->
-            <section
-              id="description"
-              class="card"
-              style="height:70vh;display:flex;align-items: center;text-align: center;justify-content: center;"
-            >
-              <div class="card-header">
-                <!-- <h4 class="card-title">Description</h4> -->
-              </div>
-              <div class="card-content">
-                <div class="card-body">
-                  <div class="card-text">
-                    <!-- <h3>Welcome back,</h3> -->
-
-                    <p id="title" v-html="title"></p>
-                    <button
-                      id="talkingbtn"
-                      class="btn btn-outline-primary btn-inline"
-                      @click="loader"
-                    >
-                      Talk to a Doctor</button
-                    ><br />
-                    <img
-                      v-if="showLoader"
-                      id="loader"
-                      src="~assets/img/portrait/small/30.gif"
-                    />
+            <div class="row justify-content-center">
+              <div class="col-lg-5 col-md-5 col-12">
+                <section
+                  id="description"
+                  class="card d-flex justify-content-center align-items-center text-center"
+                  style=""
+                >
+                  <div class="card-header">
+                    <!-- <h4 class="card-title">Description</h4> -->
                   </div>
-                </div>
-              </div>
-            </section>
+                  <div class="card-content">
+                    <div class="card-body">
+                      <div class="card-text">
+                        <!-- <h3>Welcome back,</h3> -->
+
+                        <p id="title" v-html="title"></p>
+                        <button
+                          id="talkingbtn"
+                          class="btn btn-outline-primary btn-inline"
+                          @click="loader"
+                        >
+                          Talk to a Doctor</button
+                        ><br />
+                        <img
+                          v-if="showLoader"
+                          id="loader"
+                          src="~assets/img/portrait/small/30.gif"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </section>
+            </div>
+            </div>
           </div>
         </div>
       </div>
@@ -91,7 +95,7 @@ export default {
       this.title = 'Your doctor will be with you shortly...'
       this.showLoader = true
       setTimeout(() => {
-        this.$router.push('consultation')
+        this.$router.push('chats')
       }, 5000)
     }
   }

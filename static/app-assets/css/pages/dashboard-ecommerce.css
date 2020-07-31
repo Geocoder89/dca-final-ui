@@ -39,8 +39,8 @@
   margin : 0 20px 10px 0;
   clear : both;
   color : #FFFFFF;
-  background : -webkit-linear-gradient(332deg, #814BAA, rgba(115, 103, 240, 0.7));
-  background :         linear-gradient(118deg, #814BAA, rgba(115, 103, 240, 0.7));
+  background : #814BAA;
+  /* background :         linear-gradient(118deg, #814BAA, rgba(115, 103, 240, 0.7)); */
   /*border-radius : 0.5rem;*/
   border-top-left-radius: 1.0rem;
   border-top-right-radius: 1.0rem;

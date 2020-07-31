@@ -32,48 +32,29 @@
                                                 <h3 class="px-3 text-center align-self-center">Verify Your Account</h3>
                                             </div>
                                         </div> -->
-                    <div class="card-title">
-                      <h3 class="text-center"><u>Drcallaway</u></h3>
-                    </div>
-                    <p class=" text-center">
-                      Welcome to a world where we literally treat health as
-                      wealth.
-                    </p>
-                    <ion-icon
-                      name="chevron-down-outline"
-                      style="align-self:center;text-alifgn:center"
-                    ></ion-icon>
-                    <div class="card-content">
-                      <div class="card-body pt-1 d-flex justify-content-center">
-                        <nuxt-link
-                          to="/patients/signup"
-                          style="text-align: center;"
-                          >Patient |
-                        </nuxt-link>
-                        <nuxt-link
-                          to="/pharmacy/dashboard"
-                          style="text-align: center;"
-                          >Pharmacy |
-                        </nuxt-link>
-                        <nuxt-link
-                          to="/doctor/signup"
-                          style="text-align: center;"
-                        >
-                          Doctor |
-                        </nuxt-link>
-                        <nuxt-link
-                          to="/ambulance/signup"
-                           style="text-align: center;"
-                        >
-                          Ambulance |
-                        </nuxt-link>
-                        <nuxt-link
-                          to="/diagnostic/signup"
-                          style="text-align: center;"
-                        >
-                          Diagnostic
-                        </nuxt-link>
-                      </div>
+                                        <div class="card-title">
+                                            <h3 class="text-center"><u>Drcallaway</u></h3>
+                                        </div>
+                                        <p class=" text-center">Welcome to a world where we literally treat health as wealth.</p>
+                                        <ion-icon name="chevron-down-outline" style="align-self:center;text-alifgn:center"></ion-icon>
+                                        <div class="card-content">
+                                            <div class="card-body pt-1 d-flex justify-content-center flex-wrap">
+                                                <nuxt-link to="/patients/signup" style="text-align: center;">Patient | </nuxt-link>
+                                                <nuxt-link to="/pharmacy/signup" style="text-align: center;">Pharmacy | </nuxt-link>
+                                                <nuxt-link to="/doctor/signup" style="text-align: center;"> Doctor | </nuxt-link>
+                                                <nuxt-link to="/ambulance/signup" style="text-align: center;"> Ambulance | </nuxt-link>
+                                                <nuxt-link to="/hospital/signup" style="text-align: center;"> Hospital |</nuxt-link>
+                                                <nuxt-link to="/nurse/signup" style="text-align: center;"> Nurse </nuxt-link>
+                                                <nuxt-link to="/diagnostic/signup" style="text-align: center;"> Diagnostic </nuxt-link>
+                                            </div>
+                                        </div>
+                                        <div class="login-footer">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="login-footer"></div>
                   </div>

@@ -199,7 +199,7 @@
                   <span
                     ><img
                       class="round"
-                      src="~assets/img/portrait/small/avatar-s-11.jpg"
+                      src="~assets/img/pages/pharmacy.jpg"
                       alt="avatar"
                       height="40"
                       width="40"

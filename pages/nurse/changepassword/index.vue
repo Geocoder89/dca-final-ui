@@ -116,16 +116,16 @@
   </div>
 </template>
 <script>
-import Header from '~/components/pharmacy/header'
-import Footer from '~/components/pharmacy/footer'
-import SideBar from '~/components/pharmacy/sideBar'
+import Header from '~/components/nurse/header'
+import Footer from '~/components/nurse/footer'
+import Sidebar from '~/components/nurse/sidebar'
 
 export default {
-  name: 'Dashboard',
+  name: 'Changepassword',
   components: {
     Header,
     Footer,
-    SideBar
+    Sidebar
   }
 }
 </script>

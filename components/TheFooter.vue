@@ -7,7 +7,7 @@
           class="text-bold-800 grey darken-2"
           href="#"
           target="_blank"
-          >drkallaway,</a
+          >drcallaway,</a
         >version 1.0</span
       ><span class="float-md-right d-none d-md-block"
         >Patient<i class="feather icon-heart pink"></i

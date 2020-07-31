@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="app-content content">
+    <div class="app-content content justify-content-center" style="margin-left:0;">
       <div class="content-overlay"></div>
       <div class="header-navbar-shadow"></div>
       <div class="content-wrapper">
         <div class="content-header row"></div>
         <div class="content-body">
-          <section class="row flexbox-container">
-            <div class="col-xl-10 col-12 d-flex justify-content-center">
+          <section class="row flexbox-container justify-content-center">
+            <div class="col-xl-8 col-12 d-flex justify-content-center">
               <div class="card bg-authentication rounded-0 mb-0">
                 <div class="row m-0">
                   <div class="col-lg-12 col-12 p-0">
@@ -135,7 +135,7 @@
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput"
-                                      >GPS:</label
+                                      >GP:</label
                                     >
                                     <select
                                       id="basicInput"

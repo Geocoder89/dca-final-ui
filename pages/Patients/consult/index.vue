@@ -39,7 +39,7 @@
                             <nuxt-link
                               to="/patients/waiting"
                               class="btn btn-sm btn-primary float-right"
-                              >View</nuxt-link
+                              >Initiate</nuxt-link
                             >
                           </td>
                         </tr>
@@ -49,7 +49,7 @@
                             <nuxt-link
                               to="/patients/schedulehome"
                               class="btn btn-sm btn-primary float-right"
-                              >View</nuxt-link
+                              >Schedule</nuxt-link
                             >
                           </td>
                         </tr>
@@ -69,7 +69,7 @@
                             <nuxt-link
                               to="/patients/requestnurse"
                               class="btn btn-sm btn-primary float-right"
-                              >View</nuxt-link
+                              >Book</nuxt-link
                             >
                           </td>
                         </tr>

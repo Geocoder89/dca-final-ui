@@ -56,22 +56,17 @@
           </li>
 
           <li class=" nav-item">
-            <nuxt-link to="#"
+            <nuxt-link to="/doctor/patients"
               ><ion-icon name="hourglass-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Waiting Room</span>
             </nuxt-link>
           </li>
           <li class=" nav-item">
-            <nuxt-link to="/doctor/patients"
+            <nuxt-link to="/doctor/casefile/cases"
               ><ion-icon name="receipt-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title"> Case Management</span>
             </nuxt-link>
-            <!-- <ul class="menu-content">
-                  <li><nuxt-link to="/doctor/casefile"><i class="fa fa-file-pdf-o"></i><span class="menu-item" data-i18n="Basic">Casefile</span></nuxt-link>
-                  </li>
-                  <li><nuxt-link to="/doctor/cases"><i class="fa fa-file-pdf-o"></i><span class="menu-item" data-i18n="Statistics">Manage</span></nuxt-link>
-                  </li>
-            </ul> -->
+           
           </li>
           <li class=" nav-item ">
             <nuxt-link to="/doctor/message"

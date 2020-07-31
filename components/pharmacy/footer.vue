@@ -5,7 +5,7 @@
         <span class="float-md-left d-block d-md-inline-block mt-25">
           COPYRIGHT &copy; 2020
           <a class="text-bold-800 grey darken-2" href="#" target="_blank"
-            >drkallaway,</a
+            >drcallaway,</a
           >
           version 1.0
         </span>

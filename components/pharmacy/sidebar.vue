@@ -39,8 +39,6 @@
             <nuxt-link to="/pharmacy/dashboard"
               ><i class="feather icon-home"></i
               ><span class="menu-title" data-i18n="Dashboard">Dashboard</span
-              ><span class="badge badge badge-warning badge-pill float-right"
-                >2</span
               ></nuxt-link
             >
           </li>
@@ -85,7 +83,7 @@
             </nuxt-link>
           </li>
           <li class=" nav-item">
-            <nuxt-link to="/pharmacy/change-password"
+            <nuxt-link to="/pharmacy/changepassword"
               ><i class="feather icon-settings"></i
               ><span class="menu-title">Change Password</span>
             </nuxt-link>

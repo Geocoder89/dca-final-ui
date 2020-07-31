@@ -35,7 +35,7 @@
                       <div class="row">
                         <div class="users-view-image">
                           <img
-                            src="~assets/img/portrait/small/avatar-s-11.jpg"
+                            src="~assets/img/pages/pharmacy.jpg"
                             class="users-avatar-shadow w-100 rounded mb-2 pr-2 ml-1"
                             alt="avatar"
                           />
@@ -145,7 +145,7 @@
 <script>
 import Header from '~/components/pharmacy/header'
 import Footer from '~/components/pharmacy/footer'
-import SideBar from '~/components/pharmacy/sideBar'
+import SideBar from '~/components/pharmacy/sidebar'
 
 export default {
   name: 'Dashboard',

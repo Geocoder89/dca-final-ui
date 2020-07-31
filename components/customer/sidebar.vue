@@ -41,12 +41,12 @@
             >
           </li>
           <hr />
-          <li class=" nav-item">
+          <!-- <li class=" nav-item">
             <nuxt-link to="/patients/waiting"
               ><ion-icon name="call-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Call a Doctor</span>
             </nuxt-link>
-          </li>
+          </li> -->
 
           <li class=" nav-item">
             <nuxt-link to="/patients/profile"

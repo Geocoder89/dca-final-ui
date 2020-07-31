@@ -112,13 +112,13 @@
 
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                                <nuxt-link to="#">
+                                <nuxt-link to="/doctor/medicals">
                                     <ion-icon name="chevron-forward"></ion-icon>
                                     View Idowu Philips Medical History
                                 </nuxt-link>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                                <nuxt-link to="#">
+                                <nuxt-link to="/doctor/casefile">
                                     <ion-icon name="chevron-forward"></ion-icon>
                                     View Idowu Philips Recent Cases
                                 </nuxt-link>

@@ -37,7 +37,7 @@
                           <td class="product-name">Pending Cases <sup>(4)</sup></td>
                           <td>
                             <nuxt-link
-                              to="./viewfile"
+                              to="./management"
                               class="btn btn-primary float-right"
                               >View</nuxt-link
                             >

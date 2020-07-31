@@ -68,7 +68,7 @@
                                   >
                                   <input
                                     type="text"
-                                    class="form-control format-picker"
+                                    class="form-control pickadate"
                                     id="basicInput"
                                     placeholder=""
                                   />
