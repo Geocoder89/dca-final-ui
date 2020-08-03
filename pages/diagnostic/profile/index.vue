@@ -7,7 +7,7 @@
       data-col="2-columns"
     >
       <Header></Header>
-      <SideBar></SideBar>
+      <Sidebar></Sidebar>
 
       <div class="app-content content">
         <div class="content-overlay"></div>
@@ -35,7 +35,7 @@
                       <div class="row">
                         <div class="users-view-image">
                           <img
-                            src="~assets/img/portrait/small/avatar-s-11.jpg"
+                            src="~assets/img/pages/diagnostic.jpg"
                             class="users-avatar-shadow w-100 rounded mb-2 pr-2 ml-1"
                             alt="avatar"
                           />
@@ -145,14 +145,22 @@
 <script>
 import Header from '~/components/diagnostic/header'
 import Footer from '~/components/diagnostic/footer'
-import SideBar from '~/components/diagnostic/sidebar'
+import Sidebar from '~/components/diagnostic/sidebar'
 
 export default {
-  name: 'Dashboard',
+  name: 'Profile',
   components: {
     Header,
     Footer,
-    SideBar
+    Sidebar
   }
 }
 </script>
+
+<style scoped>
+.other-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+</style>

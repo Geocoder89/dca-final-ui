@@ -7,7 +7,7 @@
       data-col="2-columns"
     >
       <Header></Header>
-      <SideBar></SideBar>
+      <Sidebar></Sidebar>
 
       <div class="app-content content">
         <div class="content-overlay"></div>
@@ -39,42 +39,26 @@
                             <li
                               class="list-group-item d-flex justify-content-between align-items-center"
                             >
-                              <nuxt-link to="#">Phnuxt-linkrmarcy</nuxt-link>
-                              <span class="badge badge-danger badge-pill"
-                                >2</span
-                              >
-                            </li>
-                            <li
-                              class="list-group-item d-flex justify-content-between align-items-center"
-                            >
-                              <nuxt-link to="#">Specialist</nuxt-link>
-                              <span class="badge badge-danger badge-pill"
-                                >6</span
-                              >
-                            </li>
-                            <li
-                              class="list-group-item d-flex justify-content-between align-items-center"
-                            >
                               <nuxt-link to="#"
-                                >General Practitioner (GP)</nuxt-link
+                                >Pharmarcy</nuxt-link
                               >
-                              <span class="badge badge-danger badge-pill"
+                              <span class="badge badge-warning badge-pill"
                                 >2</span
                               >
                             </li>
                             <li
                               class="list-group-item d-flex justify-content-between align-items-center"
                             >
-                              <nuxt-link to="#">Hospital</nuxt-link>
-                              <span class="badge badge-danger badge-pill"
+                              <nuxt-link to="#">diagnostic</nuxt-link>
+                              <span class="badge badge-warning badge-pill"
                                 >1</span
                               >
                             </li>
                             <li
                               class="list-group-item d-flex justify-content-between align-items-center"
                             >
-                              <nuxt-link to="#">Diagnostic</nuxt-link>
-                              <span class="badge badge-danger badge-pill"
+                              <nuxt-link to="#">Ambulance</nuxt-link>
+                              <span class="badge badge-warning badge-pill"
                                 >3</span
                               >
                             </li>
@@ -82,7 +66,7 @@
                               class="list-group-item d-flex justify-content-between align-items-center"
                             >
                               <nuxt-link to="#">Diagnostic Center</nuxt-link>
-                              <span class="badge badge-danger badge-pill"
+                              <span class="badge badge-warning badge-pill"
                                 >4</span
                               >
                             </li>
@@ -90,7 +74,15 @@
                               class="list-group-item d-flex justify-content-between align-items-center"
                             >
                               <nuxt-link to="#">Delivery Operators</nuxt-link>
-                              <span class="badge badge-danger badge-pill"
+                              <span class="badge badge-warning badge-pill"
+                                >2</span
+                              >
+                            </li>
+                            <li
+                              class="list-group-item d-flex justify-content-between align-items-center"
+                            >
+                              <nuxt-link to="#">Nutritionist/Wellness Company</nuxt-link>
+                              <span class="badge badge-warning badge-pill"
                                 >2</span
                               >
                             </li>
@@ -117,14 +109,14 @@
 <script>
 import Header from '~/components/diagnostic/header'
 import Footer from '~/components/diagnostic/footer'
-import SideBar from '~/components/diagnostic/sidebar'
+import Sidebar from '~/components/diagnostic/sidebar'
 
 export default {
-  name: 'Dashboard',
+  name: 'Message',
   components: {
     Header,
     Footer,
-    SideBar
+    Sidebar
   }
 }
 </script>

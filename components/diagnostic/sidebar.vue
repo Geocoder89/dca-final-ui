@@ -49,30 +49,30 @@
             </nuxt-link>
           </li>
           <li class=" nav-item">
-            <nuxt-link to="/diagnostic/diagnosis"
+            <nuxt-link to="/diagnostic/referrals"
               ><ion-icon
                 name="people-outline"
                 style="margin-right:1em;"
               ></ion-icon>
-              <span class="menu-title">Diagnosis</span>
+              <span class="menu-title">referrals</span>
             </nuxt-link>
           </li>
           <li class=" nav-item ">
-            <nuxt-link to="/diagnostic/appointment"
-              ><i class="fa fa-list-alt" style="margin-right:1em;"></i>
+            <nuxt-link to="/diagnostic/appointments"
+              ><ion-icon name="calendar-outline" color="dark" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Appointments</span>
             </nuxt-link>
           </li>
 
           <li class="nav-item">
-            <nuxt-link to="/diagnostic/delivery"
+            <nuxt-link to="#"
               ><i class="fa fa-shopping-cart" style="margin-right:1em;"></i>
               <span class="menu-title">Delivery & Pickup</span>
             </nuxt-link>
           </li>
           <li class=" nav-item">
             <nuxt-link to="/diagnostic/message"
-              ><i class="fa fa-envelope" style="margin-right:1em;"></i>
+              ><ion-icon name="mail-unread-outline"  color="dark" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Message</span>
             </nuxt-link>
           </li>

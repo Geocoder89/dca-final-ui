@@ -184,13 +184,5 @@ export default {
             }
             
         }
-        .fa-pill{
-          filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=.5);
-          -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-        }
-        .fa-pill:before {
-          content: "\f205";
-        }  
+        
 </style>

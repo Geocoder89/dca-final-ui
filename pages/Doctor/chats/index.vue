@@ -68,8 +68,8 @@
                         <h4 class="card-title" style="color:#ffffff;">Dr Akinwunmi</h4>
                         <div style="color:#ffffff;">
                             <a href="#" style="color:#ffffff;"><span class="mr-75 feather icon-camera"></span></a>
-                            <a href="#" style="color:#ffffff;"><span class="mr-75 feather icon-phone"></span></a>
-                            <a href="#" style="color:#ffffff;"><span class="mr-75 feather icon-video"></span></a>
+                             <nuxt-link to="/doctor/audio" style="color:#ffffff;"><span class="mr-75 feather icon-phone"></span></nuxt-link>
+                            <nuxt-link to="/doctor/video" style="color:#ffffff;"><span class="mr-75 feather icon-video"></span></nuxt-link>
                         </div>
                     </ul>
                     <div class="card-content">

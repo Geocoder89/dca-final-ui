@@ -13,13 +13,14 @@
         <div class="content-overlay"></div>
         <!-- <div class="header-navbar-shadow"></div> -->
         <div class="content-wrapper">
-          <div class="content-header row">
+          <div class="content-header row pb-0">
             <div class="content-header-left col-md-12 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
                   <h4 class="content-header-title float-left mb-0">
-                    Welcome, PONS Medical Lab.
+                    Welcome, PONs Medical Lab
                   </h4>
+                  
                 </div>
               </div>
             </div>
@@ -35,9 +36,9 @@
                       >1</span
                     ></sup
                   >
-                  <nuxt-link to="call-up-order" class="">
+                  <nuxt-link to="/diagnostic/referrals" class="">
                     <div
-                      class="card d-flex flex-column justify-content-center"
+                      class="card d-flex flex-column justify-content-center mb-0"
                       style="border-radius: 33px;background: #F8F8F8;box-shadow: none;"
                     >
                       <div class="card-content align-self-center">
@@ -53,33 +54,32 @@
                             <ion-icon
                               name="people-outline"
                               size="large"
-                              style="width: 80px;height:80px;opacity:0.3"
+                              style="width: 80px;height:80px;color:#814BAA;"
                             ></ion-icon>
                           </div>
                         </div>
                       </div>
                       <div class="d-flex flex-column align-items-start pb-0">
                         <h3
-                          class="text-bold-300 text-center align-self-center mb-1"
+                          class="text-muted text-center align-self-center mb-1"
                         >
-                          Referal
+                          Referrals
                         </h3>
                       </div>
                     </div>
                   </nuxt-link>
                 </div>
-
-                <div class="col-lg-2 col-md-4 col-6">
+                <div class="col-lg-2 col-md-4 col-6 pb-0">
                   <sup
                     ><span
                       class="badge badge-danger csup"
                       style="font-size: 19px;"
-                      >4+</span
+                      >4</span
                     ></sup
                   >
-                  <nuxt-link to="message" class="a-card">
+                  <nuxt-link to="/diagnostic/appointments" class="a-card">
                     <div
-                      class="card d-flex flex-column justify-content-center"
+                      class="card d-flex flex-column justify-content-center mb-0"
                       style="border-radius: 33px;background: #F8F8F8;box-shadow: none;"
                     >
                       <div class="card-content align-self-center">
@@ -93,18 +93,19 @@
                           >
                             <!-- <i class="fa fa-heartbeat text-primary font-medium-5"></i> -->
                             <ion-icon
-                              name="mail-unread-outline"
+                              name="calendar-outline"
                               size="large"
-                              style="width: 100px;height:100px;opacity:0.3"
+                              color="dark"
+                              style="width: 100px;height:100px;color:#000;"
                             ></ion-icon>
                           </div>
                         </div>
                       </div>
                       <div class="d-flex flex-column align-items-start pb-0">
                         <h3
-                          class="text-bold-300 text-center align-self-center mb-1"
+                          class="text-muted text-center align-self-center mb-1"
                         >
-                          Message
+                          Appointments
                         </h3>
                       </div>
                     </div>
@@ -112,8 +113,6 @@
                 </div>
               </div>
             </section>
-            <!-- Dashboard Analytics end -->
-            <!-- Dashboard Analytics end -->
           </div>
         </div>
       </div>
@@ -141,40 +140,42 @@ export default {
 }
 </script>
 <style scoped>
-.csup {
-  width: 40px;
-  height: 40px;
-  top: 50px;
-  left: 110px;
-  z-index: 1;
-  position: relative;
-  font-size: 12px;
-  border-radius: 50%;
-  line-height: 25px;
-  background: #814baa;
-}
-.a-card:hover .card {
-  box-shadow: 0 5px 35px 0 rgba(204, 204, 204, 0.1);
-}
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .dashboard-content {
-    padding-top: 50px;
-    padding-left: 0;
-  }
+
   .csup {
-    width: 30px;
-    height: 30px;
-    top: 20px;
-    left: 120px;
-    z-index: 1;
-    position: absolute;
-    font-size: 16px !important;
-    border-radius: 50%;
-    line-height: 23px;
-    text-align: center;
-    background: #814baa;
-    padding: 5px;
+      width: 40px;
+      height: 40px;
+      top: 50px;
+      left:110px;
+      z-index:1;
+      position: relative;
+      font-size: 12px;
+      border-radius: 50%;
+      line-height: 25px;
+      background: #FFA34B;
   }
-}
+        .a-card:hover .card{
+            box-shadow: 0 5px 35px 0 rgba(204, 204, 204, 0.1);
+        }
+        @media only screen and (max-width: 768px) {
+          /* For mobile phones: */
+         .dashboard-content{
+           padding-top:50px;
+           padding-left:0;
+         }
+            .csup {
+                width: 50px;
+                height: 50px;
+                top: 7px;
+                left: 110px;
+                z-index: 1;
+                position: absolute;
+                font-size: 18px !important;
+                border-radius: 50%;
+                line-height: 38px;
+                text-align: center;
+                background: #FFA34B;
+                padding: 5px;
+            }
+            
+        }
 </style>

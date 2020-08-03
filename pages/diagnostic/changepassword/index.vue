@@ -7,7 +7,7 @@
       data-col="2-columns"
     >
       <Header></Header>
-     <SideBar></SideBar>
+      <Sidebar></Sidebar>
 
       <div class="app-content content">
         <div class="content-overlay"></div>
@@ -118,14 +118,14 @@
 <script>
 import Header from '~/components/diagnostic/header'
 import Footer from '~/components/diagnostic/footer'
-import SideBar from '~/components/diagnostic/sidebar'
+import Sidebar from '~/components/diagnostic/sidebar'
 
 export default {
-  name: 'Dashboard',
+  name: 'Changepassword',
   components: {
     Header,
     Footer,
-    SideBar
+    Sidebar
   }
 }
 </script>
