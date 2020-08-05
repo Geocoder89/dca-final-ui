@@ -29,7 +29,7 @@
               <div class="col-md-6 col-12">
                 <section class="card">
                   <div class="card-header">
-                    <h5>Hospital Information</h5>
+                    <h5>Nutritionist Information</h5>
                   </div>
                   <div class="card-content">
                     <div class="card-body pt-0">
@@ -66,6 +66,27 @@
                                 class="form-control"
                                 placeholder="Enter Phone"
                               />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">License:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter License"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-12 col-md-12 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Description of diagnostic:</label>
+                              <textarea
+                                id="basicInput"
+                                style="resize:none;"
+                                class="form-control">
+                              </textarea>
                             </fieldset>
                           </div>
                           <div class="col-xl-12 col-md-12 col-12 mb-0">

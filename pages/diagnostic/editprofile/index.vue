@@ -29,7 +29,7 @@
               <div class="col-md-6 col-12">
                 <section class="card">
                   <div class="card-header">
-                    <h5>Hospital Information</h5>
+                    <h5>Diagnostic Information</h5>
                   </div>
                   <div class="card-content">
                     <div class="card-body pt-0">
@@ -37,23 +37,12 @@
                         <div class="row">
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
                             <fieldset class="form-group">
-                              <label for="basicInput">First Name:</label>
+                              <label for="basicInput">Registered Name:</label>
                               <input
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter first name"
-                              />
-                            </fieldset>
-                          </div>
-                          <div class="col-xl-4 col-md-6 col-12 mb-0">
-                            <fieldset class="form-group">
-                              <label for="basicInput">Last Name:</label>
-                              <input
-                                id="basicInput"
-                                type="text"
-                                class="form-control"
-                                placeholder="Enter last name"
+                                placeholder="Enter Registered Name"
                               />
                             </fieldset>
                           </div>
@@ -66,6 +55,27 @@
                                 class="form-control"
                                 placeholder="Enter Phone"
                               />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">License:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter License"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-12 col-md-12 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Description of diagnostic:</label>
+                              <textarea
+                                id="basicInput"
+                                style="resize:none;"
+                                class="form-control">
+                              </textarea>
                             </fieldset>
                           </div>
                           <div class="col-xl-12 col-md-12 col-12 mb-0">
@@ -116,6 +126,82 @@
                                 <option value="Blade Runner">Usa</option>
                                 <option value="Thor Ragnarok">Turkey</option>
                               </select>
+                            </fieldset>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <p>Contact Person #1 Details</p>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Name:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter Name"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Email:</label>
+                              <input
+                                id="basicInput"
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter Email"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Phone:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Edit Phone"
+                              />
+                            </fieldset>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <p>Contact Person #2 Details</p>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Name:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter Name"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Email:</label>
+                              <input
+                                id="basicInput"
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter Email"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Phone:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Edit Phone"
+                              />
                             </fieldset>
                           </div>
                         </div>

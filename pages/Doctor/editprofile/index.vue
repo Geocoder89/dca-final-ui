@@ -14,7 +14,7 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
           <div class="content-header row justify-content-center">
-            <div class="content-header-left col-md-8 col-12 mb-2">
+            <div class="content-header-left col-md-6 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
                   <h4 class="content-header-title float-left mb-0">
@@ -26,7 +26,7 @@
           </div>
           <div class="content-body">
             <div class="row justify-content-center">
-              <div class="col-md-8">
+              <div class="col-md-6">
                 <section class="card">
                   <div class="card-header">
                     <h3>Personal Info</h3>
@@ -76,6 +76,61 @@
                                 type="text"
                                 class="form-control"
                                 placeholder="Enter Your Address"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Medical School Attended:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter Medical sch..."
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Medical Council No:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Medical Coun..."
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Year:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Year"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-6 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">GP:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Gp"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-6 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Specialty:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="if any..."
                               />
                             </fieldset>
                           </div>
@@ -132,81 +187,20 @@
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-md-8">
+              <div class="col-md-6 col-12">
                 <section class="card">
                   <div class="card-header">
-                    <h3>Update Account Details</h3>
+                    <!-- <h5>Hospital Information</h5> -->
                   </div>
                   <div class="card-content">
                     <div class="card-body pt-0">
-                      <form action="index.html">
-                        <div class="row">
-                          <div class="col-xl-4 col-md-6 col-12 mb-0">
-                            <fieldset class="form-group">
-                              <label for="basicInput"
-                                >Account Name:</label
-                              >
-                              <input
-                                id="basicInput"
-                                type="text"
-                                class="form-control"
-                                placeholder="Enter first name"
-                              />
-                            </fieldset>
-                          </div>
-                          <div class="col-xl-4 col-md-6 col-12 mb-0">
-                            <fieldset class="form-group">
-                              <label for="basicInput"
-                                >Account Number:</label
-                              >
-                              <input
-                                id="basicInput"
-                                type="text"
-                                class="form-control"
-                                placeholder="Enter last name"
-                              />
-                            </fieldset>
-                          </div>
-                          <div class="col-xl-4 col-md-6 col-12 mb-0">
-                            <fieldset class="form-group">
-                              <label for="basicInput"
-                                >Account Type:</label
-                              >
-                              <input
-                                id="basicInput"
-                                type="text"
-                                class="form-control"
-                                placeholder="Enter Phone"
-                              />
-                            </fieldset>
-                          </div>
-                          <div class="col-xl-4 col-md-6 col-12 mb-0">
-                            <fieldset class="form-group">
-                              <label for="basicInput"
-                                >Bank:</label
-                              >
-                              <select
-                                id="customSelect" class="custom-select">
-                              <option value="Choose Bank">Choose Bank</option>
-                              <option value="Access">Access</option>
-                              <option value="Uba">Uba</option>
-                              </select>
-                            </fieldset>
-                          </div>
-                          
-                        </div>
-                        <button
-                          type="submit"
-                          class="btn btn-primary float-right btn-inline mb-50"
-                        >
-                          Update
-                          </button>
-                      </form>
+                      <h6><nuxt-link to="#"><i class="fa fa-money"></i> Update Account Details</nuxt-link></h6>
                     </div>
                   </div>
                 </section>
+
               </div>
-            </div>
+          </div>
           </div>
         </div>
       </div>

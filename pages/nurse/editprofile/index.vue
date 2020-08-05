@@ -29,7 +29,7 @@
               <div class="col-md-6 col-12">
                 <section class="card">
                   <div class="card-header">
-                    <h5>Nurse Information</h5>
+                    <h3>Nurse Info</h3>
                   </div>
                   <div class="card-content">
                     <div class="card-body pt-0">
@@ -80,6 +80,61 @@
                             </fieldset>
                           </div>
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Nursing School Attended:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter Medical sch..."
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">NMCN No:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Medical Coun..."
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Year:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Year"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-6 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">GP:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Gp"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-6 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Specialty:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="if any..."
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
                             <div class="text-bold-100 font-small-2">
                               City:
                             </div>
@@ -125,9 +180,7 @@
                         >
                           Save Changes
                         </button>
-
                       </form>
-                      
                     </div>
                   </div>
                 </section>

@@ -28,7 +28,7 @@
           </li>
         </ul>
       </div>
-      <!-- <div class="shadow-bottom"></div>
+      <div class="shadow-bottom"></div>
       <div class="main-menu-content">
         <ul
           id="main-menu-navigation"
@@ -97,7 +97,7 @@
             >
           </li>
         </ul>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>

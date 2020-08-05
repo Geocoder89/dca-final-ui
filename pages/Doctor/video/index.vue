@@ -65,7 +65,7 @@
 </template>
 <style scoped>
   .card{
-    background:url('~assets/img/portrait/small/avatar-s-11.jpg');
+    background:url('~assets/img/portrait/small/avatar-s-5.jpg');
     background-size:cover;
     background-position: center;
     color:#fff;

@@ -206,9 +206,9 @@
                   /></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="../diagnostic/editprofile"
+                  <a class="dropdown-item" href="../nutritionist/editprofile"
                     ><i class="feather icon-user"></i> Edit Profile</a
-                  ><a class="dropdown-item" href="../diagnostic/message"
+                  ><a class="dropdown-item" href="../nutritionist/message"
                     ><i class="feather icon-mail"></i> My Inbox
                   </a>
                 </div>

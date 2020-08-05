@@ -14,7 +14,7 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
           <div class="content-header row justify-content-center">
-            <div class="content-header-left col-md-8 col-12 mb-2">
+            <div class="content-header-left col-md-6 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
                   <h4 class="content-header-title float-left mb-0">
@@ -26,7 +26,7 @@
           </div>
           <div class="content-body">
             <div class="row justify-content-center">
-              <div class="col-md-8">
+              <div class="col-md-6">
                 <section class="card">
                   <div class="card-header">
                     <h3>Basic Info</h3>
@@ -132,7 +132,7 @@
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-md-8">
+              <div class="col-md-6">
                 <section class="card">
                   <div class="card-header">
                     <h3>Next of Kin</h3>

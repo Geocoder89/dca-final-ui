@@ -41,89 +41,40 @@
                           />
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                          <form action="#">
-                            <h6>Personal Info</h6>
-                            <fieldset>
-                              <div class="row">
-                                <div class="col-xl-12 col-md-12 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <label for="basicInput">Address:</label>
-                                    <input
-                                      type="text"
-                                      class="form-control"
-                                      id="basicInput"
-                                      placeholder="Enter Your Address"
-                                    />
-                                  </fieldset>
-                                </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-1">
-                                  <div class="text-bold-100 font-small-2">
-                                    Country:
-                                  </div>
-                                  <fieldset class="form-group">
-                                    <select
-                                      class="custom-select"
-                                      id="customSelect"
-                                    >
-                                      <option selected>Choose country..</option>
-                                      <option value="IT">Nigeria</option>
-                                      <option value="Blade Runner">Usa</option>
-                                      <option value="Thor Ragnarok"
-                                        >Turkey</option
-                                      >
-                                    </select>
-                                  </fieldset>
-                                </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
-                                  <div class="text-bold-100 font-small-2">
-                                    State:
-                                  </div>
-                                  <fieldset class="form-group">
-                                    <select
-                                      class="custom-select"
-                                      id="customSelect"
-                                    >
-                                      <option selected>Choose state..</option>
-                                      <option value="IT">Lagos</option>
-                                      <option value="Blade Runner">Oyo</option>
-                                      <option value="Thor Ragnarok"
-                                        >Benue</option
-                                      >
-                                    </select>
-                                  </fieldset>
-                                </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
-                                  <div class="text-bold-100 font-small-2">
-                                    City:
-                                  </div>
-                                  <fieldset class="form-group">
-                                    <select
-                                      class="custom-select"
-                                      id="customSelect"
-                                    >
-                                      <option selected>Choose city..</option>
-                                      <option value="IT">Yaba</option>
-                                      <option value="Blade Runner"
-                                        >Lekki</option
-                                      >
-                                      <option value="Thor Ragnarok"
-                                        >Ikeja</option
-                                      >
-                                    </select>
-                                  </fieldset>
-                                </div>
+                          <h6>Personal Info</h6>
+                            <hr>
+                            <div class="row">
+                              <div class="col-lg-6 col-md-6 col-12">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><strong>First Name:</strong> Yemisi</li>
+                                    <li class="list-group-item"><strong>Last Name:</strong> Otunbusi</li>
+                                    <li class="list-group-item"><strong>Adresss:</strong> 08, jige aina street</li>
+                                    <li class="list-group-item"><strong>City:</strong> Ikeja</li>
+                                    <li class="list-group-item"><strong>State:</strong> Lagos</li>
+                                    <li class="list-group-item"><strong>Email:</strong> donmils@gmail.com</li>
+                                    <li class="list-group-item"><strong>Phone:</strong> 09089787867</li>
+                                    <li class="list-group-item"><strong>Date Registered:</strong> 23/04/2019</li>
+                                </ul>
                               </div>
-                            </fieldset>
-                          </form>
+                              <div class="col-lg-6 col-md-6 col-12">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><strong>NMCN No:</strong> 09783682899</li>
+                                    <li class="list-group-item"><strong>Nursing School:</strong> Institute of Health</li>
+                                    <li class="list-group-item"><strong>Year:</strong> 2014</li>
+                                    <li class="list-group-item"><strong>Gp:</strong> Nil</li>
+                                    <li class="list-group-item"><strong>Specialty:</strong> Nil</li>
+                                </ul>
+                              </div>
+                            </div>
                         </div>
 
                         <div class="col-12">
-                          <button class="btn btn-primary mr-1">
-                            <i class="feather icon-save"></i> Save
-                          </button>
-                          <button class="btn btn-outline-danger">
+                          <nuxt-link to="/nurse/editprofile" class="btn btn-outline-primary mt-2">
+                              <i class="feather icon-edit"></i> Edit Profile
+                            </nuxt-link>
+                          <!-- <button class="btn btn-outline-danger">
                             <i class="feather icon-"></i> Cancel
-                          </button>
+                          </button> -->
                         </div>
                       </div>
                     </div>

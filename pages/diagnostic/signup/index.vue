@@ -14,7 +14,7 @@
                     <div class="card rounded-0 mb-0 p-2">
                       <div class="card-header pt-50 pb-1">
                         <div class="card-title">
-                          <h4 class="mb-0">diagnostic REGISTRATION</h4>
+                          <h4 class="mb-0">DIAGNOSTIC REGISTRATION</h4>
                         </div>
                       </div>
                       <p class="px-2">
@@ -117,6 +117,82 @@
                                   </fieldset>
                                 </div>
                               </div>
+                              <div class="row">
+                          <div class="col-12">
+                            <p>Contact Person #1 Details</p>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Name:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter Name"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Email:</label>
+                              <input
+                                id="basicInput"
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter Email"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Phone:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Edit Phone"
+                              />
+                            </fieldset>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <p>Contact Person #2 Details</p>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Name:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter Name"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Email:</label>
+                              <input
+                                id="basicInput"
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter Email"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Phone:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Edit Phone"
+                              />
+                            </fieldset>
+                          </div>
+                        </div>
                               <p class="px-0">
                                     Bank Details.
                             </p>

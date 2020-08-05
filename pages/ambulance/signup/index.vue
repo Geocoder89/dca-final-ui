@@ -7,18 +7,10 @@
         <div class="content-header row"></div>
         <div class="content-body">
           <section class="row flexbox-container justify-content-center">
-            <div class="col-xl-10 col-12 d-flex justify-content-center">
+            <div class="col-xl-6 col-12 d-flex justify-content-center">
               <div class="card bg-authentication rounded-0 mb-0">
                 <div class="row m-0">
-                  <div
-                    class="col-lg-5 d-lg-block d-none text-center align-self-center pl-0 pr-0 py-0"
-                  >
-                    <img
-                      src="~assets/img/pages/register.jpg"
-                      alt="branding logo"
-                    />
-                  </div>
-                  <div class="col-lg-7 col-12 p-0">
+                  <div class="col-lg-12 col-12 p-0">
                     <div class="card rounded-0 mb-0 p-2">
                       <div class="card-header pt-50 pb-1">
                         <div class="card-title">
@@ -32,70 +24,107 @@
                         <div class="card-body pt-0">
                           <div class="col-12 pl-0">
                             <form action="">
-                              <!-- <div class="row"> -->
-                                <div class="col-xl-12 col-md-12 col-12 mb-0">
+                              <div class="row">
+                                <div class="col-xl-4 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <input 
+                                    <label for="basicInput">Registered Name:</label>
+                                    <input
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Name of Ambulance Company"
+                                      placeholder="Enter Registered Name"
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput">Address:</label>
+                                    <input
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder="Enter Address"
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput">Operation License Number:</label>
+                                    <input
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder="Enter License"
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput">Email:</label>
+                                    <input
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder="Enter Email"
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput">Phone:</label>
+                                    <input
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder="Enter Phone"
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput"
+                                      >Password:</label
+                                    >
+                                    <input
+                                      id="basicInput"
+                                      type="password"
+                                      class="form-control"
+                                      placeholder="Enter Password"
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput"
+                                      >Password Confirmation:</label
+                                    >
+                                    <input
+                                      id="basicInput"
+                                      type="password"
+                                      class="form-control"
+                                      placeholder="Enter Password Confirmation"
                                     />
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-12 col-md-12 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <input 
+                                    <label for="basicInput">Ambulance Centre Description:</label>
+                                    <textarea
                                       id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder="Address"
-                                    />
+                                      style="resize:none;"
+                                      class="form-control">
+                                    </textarea>
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-12 col-md-12 col-12 mb-0">
+                              </div>
+                              <p class="px-0">
+                                    Bank Details.
+                            </p>
+                            <div class="row">
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <input 
-                                      id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder="Operation License Number"
-                                    />
-                                  </fieldset>
-                                </div>
-                                <div class="col-xl-12 col-md-12 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <input 
-                                      id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder="Email Address"
-                                    />
-                                  </fieldset>
-                                </div>
-                                <div class="col-xl-12 col-md-12 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <input 
-                                      id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder="Password"
-                                    />
-                                  </fieldset>
-                                </div>
-                                <div class="col-xl-12 col-md-12 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <input 
-                                      id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder="Phone Number"
-                                    />
-                                  </fieldset>
-                                </div>
-                                <div class="col-xl-12 col-md-12 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <input 
+                                    <label for="basicInput">Account Name:</label>
+                                    <input
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
@@ -103,51 +132,46 @@
                                     />
                                   </fieldset>
                                 </div>
-                              <!-- </div> -->
-                              <div class="row">
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
+                                    <label for="basicInput">Account No:</label>
                                     <input
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Account Number"
+                                      placeholder="Account No"
                                     />
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
+                                    <label for="basicInput">Account Type:</label>
                                     <select
-                                      id="customSelect"
-                                      class="custom-select"
-                                      style="width:100%;"
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
                                     >
-                                      <option>Account Type</option>
-                                      <option value="">Savings</option>
-                                      <option value="">Current</option>
-                                      <option value="">Savings</option>
+                                    <option value="">Field one</option>
+                                    <option value="">Field one</option>
+                                    <option value="">Field one</option>
                                     </select>
-                                    
                                   </fieldset>
                                 </div>
-
-                              </div>
-                                <div class="col-xl-12 col-md-12 col-12 mb-0">
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
+                                    <label for="basicInput">Choose Your Bank:</label>
                                     <select
-                                      id="customSelect"
-                                      class="custom-select"
-                                      style="width:100%;"
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
                                     >
-                                      <option>Choose your bank</option>
-                                      <option value="">Access Bank</option>
-                                      <option value="">GT Bank</option>
-                                      <option value="">FirstBank</option>
+                                    <option value="">Field one</option>
+                                    <option value="">Field one</option>
+                                    <option value="">Field one</option>
                                     </select>
-
                                   </fieldset>
                                 </div>
-                              <!-- </div> -->
+                            </div>        
                               <div class="col-12 pl-0">
                                 <p>
                                   Already have an account?
@@ -155,12 +179,13 @@
                                 </p>
                                 <nuxt-link to="/ambulance/verify" class="btn btn-primary">
                                   Register</nuxt-link
-                                > 
+                                >
                               </div>
                             </form>
                           </div>
                         </div>
                       </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -174,6 +199,6 @@
 </template>
 <script>
 export default {
-  name: 'Register'
+  name: 'Signup'
 }
 </script>

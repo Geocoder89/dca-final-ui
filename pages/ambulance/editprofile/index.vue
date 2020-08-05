@@ -14,7 +14,7 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
           <div class="content-header row justify-content-center">
-            <div class="content-header-left col-md-8 col-12 mb-2">
+            <div class="content-header-left col-md-6 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
                   <h4 class="content-header-title float-left mb-0">
@@ -26,10 +26,10 @@
           </div>
           <div class="content-body">
             <div class="row justify-content-center">
-              <div class="col-md-8">
+              <div class="col-md-6">
                 <section class="card">
                   <div class="card-header">
-                    <h3>Basic Info</h3>
+                    <h5>Ambulance Information</h5>
                   </div>
                   <div class="card-content">
                     <div class="card-body pt-0">
@@ -37,23 +37,12 @@
                         <div class="row">
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
                             <fieldset class="form-group">
-                              <label for="basicInput">First Name:</label>
+                              <label for="basicInput">Registered Name:</label>
                               <input
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter first name"
-                              />
-                            </fieldset>
-                          </div>
-                          <div class="col-xl-4 col-md-6 col-12 mb-0">
-                            <fieldset class="form-group">
-                              <label for="basicInput">Last Name:</label>
-                              <input
-                                id="basicInput"
-                                type="text"
-                                class="form-control"
-                                placeholder="Enter last name"
+                                placeholder="Enter Registered Name"
                               />
                             </fieldset>
                           </div>
@@ -66,6 +55,27 @@
                                 class="form-control"
                                 placeholder="Enter Phone"
                               />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">License Ops No:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter License"
+                              />
+                            </fieldset>
+                          </div>
+                          <div class="col-xl-12 col-md-12 col-12 mb-0">
+                            <fieldset class="form-group">
+                              <label for="basicInput">Ambulance Description:</label>
+                              <textarea
+                                id="basicInput"
+                                style="resize:none;"
+                                class="form-control">
+                              </textarea>
                             </fieldset>
                           </div>
                           <div class="col-xl-12 col-md-12 col-12 mb-0">
@@ -119,117 +129,79 @@
                             </fieldset>
                           </div>
                         </div>
-                        <button
-                          type="submit"
-                          class="btn btn-primary float-right btn-inline mb-50"
-                        >
-                          Update
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-            <div class="row justify-content-center">
-              <div class="col-md-8">
-                <section class="card">
-                  <div class="card-header">
-                    <h3>Next of Kin</h3>
-                  </div>
-                  <div class="card-content">
-                    <div class="card-body pt-0">
-                      <form action="index.html">
                         <div class="row">
+                          <div class="col-12">
+                            <p>Contact Person #1 Details</p>
+                          </div>
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
                             <fieldset class="form-group">
-                              <label for="basicInput"
-                                >First Name (next of kin):</label
-                              >
+                              <label for="basicInput">Name:</label>
                               <input
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter first name"
+                                placeholder="Enter Name"
                               />
                             </fieldset>
                           </div>
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
                             <fieldset class="form-group">
-                              <label for="basicInput"
-                                >Last Name (next of kin):</label
-                              >
+                              <label for="basicInput">Email:</label>
                               <input
                                 id="basicInput"
-                                type="text"
+                                type="email"
                                 class="form-control"
-                                placeholder="Enter last name"
+                                placeholder="Enter Email"
                               />
                             </fieldset>
                           </div>
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
                             <fieldset class="form-group">
-                              <label for="basicInput"
-                                >Phone (next of kin):</label
-                              >
+                              <label for="basicInput">Phone:</label>
                               <input
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter Phone"
+                                placeholder="Edit Phone"
                               />
                             </fieldset>
                           </div>
-                          <div class="col-xl-12 col-md-12 col-12 mb-0">
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <p>Contact Person #2 Details</p>
+                          </div>
+                          <div class="col-xl-4 col-md-6 col-12 mb-0">
                             <fieldset class="form-group">
-                              <label for="basicInput"
-                                >Address (next of kin):</label
-                              >
+                              <label for="basicInput">Name:</label>
                               <input
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter Your Address"
+                                placeholder="Enter Name"
                               />
                             </fieldset>
                           </div>
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
-                            <div class="text-bold-100 font-small-2">
-                              City (next of kin):
-                            </div>
                             <fieldset class="form-group">
-                              <select id="customSelect" class="custom-select">
-                                <option selected>Choose city..</option>
-                                <option value="IT">Yaba</option>
-                                <option value="Blade Runner">Lekki</option>
-                                <option value="Thor Ragnarok">Ikeja</option>
-                              </select>
+                              <label for="basicInput">Email:</label>
+                              <input
+                                id="basicInput"
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter Email"
+                              />
                             </fieldset>
                           </div>
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
-                            <div class="text-bold-100 font-small-2">
-                              State (next of kin):
-                            </div>
                             <fieldset class="form-group">
-                              <select id="customSelect" class="custom-select">
-                                <option selected>Choose state..</option>
-                                <option value="IT">Lagos</option>
-                                <option value="Blade Runner">Oyo</option>
-                                <option value="Thor Ragnarok">Benue</option>
-                              </select>
-                            </fieldset>
-                          </div>
-                          <div class="col-xl-4 col-md-6 col-12 mb-1">
-                            <div class="text-bold-100 font-small-2">
-                              Country (next of kin):
-                            </div>
-                            <fieldset class="form-group">
-                              <select id="customSelect" class="custom-select">
-                                <option selected>Choose country..</option>
-                                <option value="IT">Nigeria</option>
-                                <option value="Blade Runner">Usa</option>
-                                <option value="Thor Ragnarok">Turkey</option>
-                              </select>
+                              <label for="basicInput">Phone:</label>
+                              <input
+                                id="basicInput"
+                                type="text"
+                                class="form-control"
+                                placeholder="Edit Phone"
+                              />
                             </fieldset>
                           </div>
                         </div>
@@ -237,14 +209,31 @@
                           type="submit"
                           class="btn btn-primary float-right btn-inline mb-50"
                         >
-                          Update
-                          </button>
+                          Save Changes
+                        </button>
+
                       </form>
+                      
                     </div>
                   </div>
                 </section>
               </div>
             </div>
+            <div class="row justify-content-center">
+              <div class="col-md-6 col-12">
+                <section class="card">
+                  <div class="card-header">
+                    <!-- <h5>Hospital Information</h5> -->
+                  </div>
+                  <div class="card-content">
+                    <div class="card-body pt-0">
+                      <h6><nuxt-link to="#"><i class="fa fa-money"></i> Update Account Details</nuxt-link></h6>
+                    </div>
+                  </div>
+                </section>
+
+              </div>
+          </div>
           </div>
         </div>
       </div>
