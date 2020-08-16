@@ -38,7 +38,7 @@
                           <td>
                             <nuxt-link
                               to="/hospital/appointments/new"
-                              class="btn btn-primary float-right"
+                              class="btn btn-primary float-right" style="border-radius:40px;"
                               >View</nuxt-link
                             >
                           </td>

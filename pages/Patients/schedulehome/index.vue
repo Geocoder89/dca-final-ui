@@ -12,13 +12,13 @@
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
-          <div class="content-header row">
-            <div class="content-header-left col-md-5 col-12 mb-2">
+          <div class="content-header row justify-content-center">
+            <div class="content-header-left col-md-6 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
-                  <h2 class="content-header-title float-left mb-0">
+                  <h3 class="content-header-title float-left mb-0">
                     Schedule Visit
-                  </h2>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -27,34 +27,32 @@
             <section class="page-users-view">
               <div class="row justify-content-center">
                 <!-- account start -->
-                <div class="col-12 col-md-5 col-lg-5">
-                  <div class="card justify-content-center">
-                    <div class="card-header">
-                      <!-- <div class="card-title">Help</div> -->
-                    </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <div class="card justify-content-center px-1 py-1">
                     <div class="card-body">
                       <div class="row">
-                        <div class="col-12">
-                          <p>
+                        <div class="col-12 pb-2">
+                          <h4 class="font-weight-light">
                             Schedule home visit with a doctor.
-                          </p>
+                          </h4>
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                           <form action="#">
                             <fieldset>
                               <div class="row">
-                                <div class="col-12">
+                                <div class="col-xl-6 col-md-6 col-lg-6 col-12">
                                   <div class="form-group">
                                     <label for="accountTextarea">Date:</label>
                                     <input
                                       id="basicInput"
                                       type="text"
                                       class="form-control pickadate"
+                                      style="border-radius:40px;"
                                       placeholder=""
                                     />
                                   </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-xl-6 col-md-6 col-lg-6 col-12">
                                   <div class="form-group">
                                     <label for="accountTextarea"
                                       >Time (00:00):</label
@@ -63,6 +61,7 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control pickatime-format"
+                                      style="border-radius:40px;"
                                       placeholder=""
                                     />
                                   </div>
@@ -75,6 +74,7 @@
                                     <textarea
                                       id="accountTextarea"
                                       class="form-control"
+                                      style="border-radius:40px;"
                                       rows="3"
                                     ></textarea>
                                   </div>
@@ -88,6 +88,7 @@
                           <nuxt-link
                             to="schedulemessage"
                             class="btn btn-primary"
+                            style="border-radius:40px;"
                             ><i class="feather"></i> Schedule</nuxt-link
                           >
                           <!--  <button class="btn btn-outline-danger"><i class="feather icon-"></i> Cancel</button> -->

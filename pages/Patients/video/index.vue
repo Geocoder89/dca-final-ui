@@ -27,7 +27,7 @@
           <div class="content-body">
             <!-- Description -->
             <div class="row justify-content-center"> 
-              <div class="col-lg-8 col-md-8 col-12">
+              <div class="col-lg-6 col-md-6 col-12">
                 <section
                   id="description"
                   class="card d-flex justify-content-end pb-3 pr-2 pl-2 pt-2 align-items-center text-center"

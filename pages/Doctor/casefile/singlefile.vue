@@ -17,9 +17,9 @@
             <div class="content-header-left col-md-6 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
-                  <h4 class="content-header-title float-left mb-0">
+                  <h3 class="content-header-title float-left mb-0">
                     Case File
-                  </h4>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -63,6 +63,7 @@
                               <nuxt-link
                                 class="btn btn-primary va-btn"
                                 to="/doctor/casefile/viewfile"
+                                style="border-radius:40px;"
                                 >View Files</nuxt-link>
                               
                             </li>
@@ -82,7 +83,7 @@
                                 <section class="mb-50">
                                     <div class="card">
                                   <div class="card-header pl-0 mb-1">
-                                    <h6 class="card-title">Complaints</h6>
+                                    <h4 class="font-weight-light">Complaints</h4>
                                   </div>
                                   
                                     <div class="card-body" style="background:#F8F8F8;border-radius:20px;">
@@ -99,7 +100,7 @@
                                 <section class="mb-50">
                                     <div class="card">
                                   <div class="card-header pl-0 mb-1">
-                                    <h6 class="card-title">Diagnosis</h6>
+                                    <h4 class="font-weight-light">Diagnosis</h4>
                                   </div>
                                   
                                     <div class="card-body" style="background:#F8F8F8;border-radius:20px;">
@@ -115,7 +116,7 @@
                                 <section class="mb-50">
                                     <div class="card">
                                   <div class="card-header pl-0 mb-1">
-                                    <h6 class="card-title">Prescription</h6>
+                                    <h4 class="font-weight-light">Prescription</h4>
                                   </div>
                                   
                                     <div class="card-body" style="background:#F8F8F8;border-radius:20px;">

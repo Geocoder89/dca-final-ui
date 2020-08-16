@@ -17,9 +17,9 @@
             <div class="content-header-left col-md-6 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
-                  <h4 class="content-header-title float-left mb-0">
+                  <h3 class="content-header-title float-left mb-0">
                     Case Management
-                  </h4>
+                  </h3>
                 </div>
               </div>
             </div>

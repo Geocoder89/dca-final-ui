@@ -32,7 +32,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter first name"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -43,7 +44,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter last name"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -54,7 +56,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter email"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -65,7 +68,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter Phone"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -78,7 +82,8 @@
                                       id="basicInput"
                                       type="password"
                                       class="form-control"
-                                      placeholder="Enter Password"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -91,7 +96,8 @@
                                       id="basicInput"
                                       type="password"
                                       class="form-control"
-                                      placeholder="Enter Password Confirmation"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -102,7 +108,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter NMCN Licence No"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -115,7 +122,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter Nursing School Attended"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -128,7 +136,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Year of Graduation"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -141,6 +150,7 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
+                                      style="border-radius:40px;"
                                     >
                                     <option value="">Field one</option>
                                     <option value="">Field one</option>
@@ -157,7 +167,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Specialties if any"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -173,7 +184,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Account Name"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -184,7 +196,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Account No"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -195,6 +208,7 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
+                                      style="border-radius:40px;"
                                     >
                                     <option value="">Field one</option>
                                     <option value="">Field one</option>
@@ -209,6 +223,7 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
+                                      style="border-radius:40px;"
                                     >
                                     <option value="">Field one</option>
                                     <option value="">Field one</option>
@@ -222,7 +237,7 @@
                                   Already have an account?
                                   <nuxt-link to="/nurse/login">login</nuxt-link>
                                 </p>
-                                <nuxt-link to="/nurse/verify" class="btn btn-primary">
+                                <nuxt-link to="/nurse/verify" style="border-radius:40px;" class="btn btn-primary">
                                   Register</nuxt-link
                                 >
                               </div>

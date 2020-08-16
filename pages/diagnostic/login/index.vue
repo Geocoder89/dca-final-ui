@@ -24,7 +24,7 @@
                                             <div class="card-body pt-1">
                                                 <form action="index.html">
                                                     <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                        <input type="text" class="form-control" id="user-name" placeholder="Email" required>
+                                                        <input type="text" class="form-control" id="user-name" placeholder="Email" style="border-radius:40px;" required>
                                                         <div class="form-control-position">
                                                             <i class="feather icon-user"></i>
                                                         </div>
@@ -32,7 +32,7 @@
                                                     </fieldset>
 
                                                     <fieldset class="form-label-group position-relative has-icon-left">
-                                                        <input type="password" class="form-control" id="user-password" placeholder="Password" required>
+                                                        <input type="password" class="form-control" id="user-password" placeholder="Password" style="border-radius:40px;" required>
                                                         <div class="form-control-position">
                                                             <i class="feather icon-lock"></i>
                                                         </div>
@@ -54,7 +54,7 @@
                                                         </div>
                                                     </div>
                                                    <!--  <a href="index.html" class="btn btn-outline-primary float-left btn-inline">Register</a> -->
-                                                    <nuxt-link to="/diagnostic/dashboard" type="submit" id="login" class="btn btn-primary d-block btn-inline">Sign In</nuxt-link>
+                                                    <nuxt-link to="/diagnostic/dashboard" type="submit" id="login" class="btn btn-primary d-block btn-inline" style="border-radius:40px;">Sign In</nuxt-link>
                                                 </form>
                                                 <div class="form-group d-flex justify-content-between align-items-center mt-2">
                                                         <div class="text-center">

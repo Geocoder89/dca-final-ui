@@ -17,9 +17,9 @@
             <div class="content-header-left col-md-5 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
-                  <h2 class="content-header-title float-left mb-0">
+                  <h3 class="content-header-title float-left mb-0">
                     Request a Nurse
-                  </h2>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -29,17 +29,17 @@
               <div class="row justify-content-center">
                 <!-- account start -->
                 <div class="col-12 col-md-5 col-lg-5">
-                  <div class="card justify-content-center">
+                  <div class="card px-2 pb-1 justify-content-center">
                     <div class="card-header">
                       <!-- <div class="card-title">Help</div> -->
                     </div>
                     <div class="card-body">
                       <div class="row">
-                        <div class="col-12">
-                          <p>
+                        <div class="col-12 mb-1">
+                          <h4  class="font-weight-light">
                             Instantly book a registered nurse for general
                             healthcare service.
-                          </p>
+                          </h4>
                           <small class="text-warning"
                             >Please note this service cost ₦5000 to connect you
                             with a nurse.</small
@@ -58,6 +58,7 @@
                                     class="form-control"
                                     id="basicInput"
                                     placeholder=""
+                                    style="border-radius:40px;"
                                   />
                                 </fieldset>
                               </div>
@@ -71,6 +72,7 @@
                                     class="form-control pickadate"
                                     id="basicInput"
                                     placeholder=""
+                                    style="border-radius:40px;"
                                   />
                                 </div>
                               </div>
@@ -84,6 +86,7 @@
                                     class="form-control pickatime-format"
                                     id="basicInput"
                                     placeholder=""
+                                    style="border-radius:40px;"
                                   />
                                 </div>
                               </div>
@@ -95,6 +98,7 @@
                                   <textarea
                                     class="form-control"
                                     id="accountTextarea"
+                                    style="border-radius:40px;"
                                     rows="3"
                                   ></textarea>
                                 </div>
@@ -107,6 +111,7 @@
                           <nuxt-link
                             to="schedulemessage"
                             class="btn btn-primary"
+                            style="border-radius:40px;"
                             ><i class="feather"></i> Request
                           </nuxt-link>
                         </div>

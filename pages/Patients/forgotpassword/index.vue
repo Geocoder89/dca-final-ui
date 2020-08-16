@@ -24,14 +24,14 @@
                                             <div class="card-body pt-1">
                                                 <form action="#">
                                                     <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                        <input type="text" class="form-control" id="user-name" placeholder="Email" required>
+                                                        <input type="text" class="form-control" style="border-radius:40px;" id="user-name" placeholder="Email" required>
                                                         <div class="form-control-position">
                                                             <i class="feather icon-user"></i>
                                                         </div>
                                                         <label for="user-name">Username</label>
                                                     </fieldset>
                                                    <!--  <a href="index.html" class="btn btn-outline-primary float-left btn-inline">Register</a> -->
-                                                    <a href="#" type="submit" id="login" class="btn btn-primary d-block btn-inline">Reset Password</a>
+                                                    <a href="#" type="submit" id="login" style="border-radius:40px;" class="btn btn-primary d-block btn-inline">Reset Password</a>
                                                 </form>
                                             </div>
                                         </div>

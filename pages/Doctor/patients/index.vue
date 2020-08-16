@@ -39,6 +39,7 @@
                             <nuxt-link
                               to="/doctor/chats"
                               class="btn btn-sm btn-primary"
+                              style="border-radius:40px;"
                               >Check In</nuxt-link
                             >
                           </td>
@@ -61,6 +62,7 @@
                             <nuxt-link
                               to="/doctor/chats"
                               class="btn btn-sm btn-primary"
+                              style="border-radius:40px;"
                               >Check In</nuxt-link
                             >
                           </td>
@@ -83,6 +85,7 @@
                             <nuxt-link
                               to="/doctor/chats"
                               class="btn btn-sm btn-primary"
+                              style="border-radius:40px;"
                               >Check In</nuxt-link
                             >
                           </td>
@@ -105,6 +108,7 @@
                             <nuxt-link
                               to="/doctor/chats"
                               class="btn btn-sm btn-primary"
+                              style="border-radius:40px;"
                               >Check In</nuxt-link
                             >
                           </td>
@@ -145,7 +149,7 @@ import Footer from '~/components/doctor/footer'
 import Sidebar from '~/components/doctor/sidebar'
 
 export default {
-  name: 'Oatients',
+  name: 'Patients',
   components: {
     Header,
     Footer,
@@ -154,9 +158,24 @@ export default {
 }
 </script>
 <style scoped>
-.other-link {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
+.cbtn {
+      width:58%;
+      height:35px;
+      line-height:8px;
+      text-align:center;
+      border-radius:40px;
+  }
+        
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .cbtn {
+        width:100%;
+        height:35px;
+        font-size:12px;
+        line-height:8px;
+        text-align:center;
+        border-radius:40px;
+    }
+      
+  }
 </style>

@@ -50,12 +50,14 @@
                             class="avatar-content"
                             style="width: 130px;height:130px;font-size: 124px; "
                           >
-                            <!-- <i class="fa fa-heartbeat text-primary font-medium-5"></i> -->
+                            <div style="background:#43D9FF;display:flex;padding:20px;border-radius:50%;">
                             <ion-icon
-                              name="calendar-outline"
+                              name="calendar"
                               size="large"
-                              style="width: 80px;height:80px;color:#000;"
+                              color="light"
+                              style="width: 65px;height:65px;color:#814BAA;"
                             ></ion-icon>
+                            </div>
                           </div>
                         </div>
                       </div>

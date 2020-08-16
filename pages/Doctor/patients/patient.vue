@@ -17,9 +17,9 @@
             <div class="content-header-left col-md-5 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
-                  <h4 class="content-header-title float-left mb-0">
+                  <h3 class="content-header-title float-left mb-0">
                     Check In
-                  </h4>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -30,7 +30,7 @@
               <div class="row justify-content-center">
                 <!-- account start -->
                 <div class="col-12 col-md-5 col-lg-5">
-                  <div class="card justify-content-center">
+                  <div class="card px-1 justify-content-center">
                     <div class="card-header">
                       <!-- <div class="card-title">Help</div> -->
                     </div>
@@ -47,7 +47,8 @@
                                       type="text"
                                       class="form-control"
                                       id="basicInput"
-                                      placeholder="New Case"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -58,7 +59,8 @@
                                       type="text"
                                       class="form-control"
                                       id="basicInput"
-                                      placeholder="Complaint"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -69,7 +71,8 @@
                                       type="text"
                                       class="form-control"
                                       id="basicInput"
-                                      placeholder="Enter Diagnosis"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -80,7 +83,8 @@
                                       type="text"
                                       class="form-control"
                                       id="basicInput"
-                                      placeholder="Enter Prescription"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -91,6 +95,7 @@
                                       type="text"
                                       class="form-control"
                                       id="basicInput"
+                                      style="border-radius:40px;"
                                     >
                                     <option value="">Choose</option>
                                     </select>
@@ -102,7 +107,8 @@
                           </form>
                         </div>
                         <div class="col-12 d-flex justify-content-start">
-                          <nuxt-link to="../editprofile" class="btn btn-primary"
+                          <nuxt-link to="../editprofile" class="btn btn-primary my-2"
+                          style="border-radius:40px;"
                             ><i class="feather"></i> Submit</nuxt-link
                           >
                         </div>

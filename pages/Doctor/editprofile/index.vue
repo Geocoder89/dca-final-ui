@@ -17,9 +17,9 @@
             <div class="content-header-left col-md-6 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
-                  <h4 class="content-header-title float-left mb-0">
+                  <h3 class="content-header-title float-left mb-0">
                     Edit Profile
-                  </h4>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -27,9 +27,9 @@
           <div class="content-body">
             <div class="row justify-content-center">
               <div class="col-md-6">
-                <section class="card">
-                  <div class="card-header">
-                    <h3>Personal Info</h3>
+                <section class="card px-2 pb-2 pt-1">
+                  <div class="card-header pb-2">
+                    <h4 class="font-weight-light">Personal Info</h4 class="font-weight-light">
                   </div>
                   <div class="card-content">
                     <div class="card-body pt-0">
@@ -42,7 +42,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter first name"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -53,7 +54,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter last name"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -64,7 +66,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter Phone"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -75,7 +78,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter Your Address"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -86,7 +90,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter Medical sch..."
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -97,7 +102,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Medical Coun..."
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -108,7 +114,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Year"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -119,7 +126,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Gp"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -131,6 +139,7 @@
                                 type="text"
                                 class="form-control"
                                 placeholder="if any..."
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -139,7 +148,7 @@
                               City:
                             </div>
                             <fieldset class="form-group">
-                              <select id="customSelect" class="custom-select">
+                              <select id="customSelect" class="custom-select" style="border-radius:40px;">
                                 <option selected>Choose city..</option>
                                 <option value="IT">Yaba</option>
                                 <option value="Blade Runner">Lekki</option>
@@ -152,7 +161,7 @@
                               State:
                             </div>
                             <fieldset class="form-group">
-                              <select id="customSelect" class="custom-select">
+                              <select id="customSelect" class="custom-select" style="border-radius:40px;">
                                 <option selected>Choose state..</option>
                                 <option value="IT">Lagos</option>
                                 <option value="Blade Runner">Oyo</option>
@@ -165,7 +174,7 @@
                               Country:
                             </div>
                             <fieldset class="form-group">
-                              <select id="customSelect" class="custom-select">
+                              <select id="customSelect" class="custom-select" style="border-radius:40px;">
                                 <option selected>Choose country..</option>
                                 <option value="IT">Nigeria</option>
                                 <option value="Blade Runner">Usa</option>
@@ -177,6 +186,7 @@
                         <button
                           type="submit"
                           class="btn btn-primary float-right btn-inline mb-50"
+                          style="border-radius:40px;"
                         >
                           Save Changes
                         </button>
@@ -188,7 +198,7 @@
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6 col-12">
-                <section class="card">
+                <section class="card px-2 pb-2 pt-1">
                   <div class="card-header">
                     <!-- <h5>Hospital Information</h5> -->
                   </div>

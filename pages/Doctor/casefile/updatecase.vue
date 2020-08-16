@@ -27,9 +27,9 @@
           <div class="content-body">
             <div class="row justify-content-center">
               <div class="col-md-6 col-12">
-                <section class="card">
-                  <div class="card-header">
-                    <h5> Update Case</h5>
+                <section class="card px-2 py-1">
+                  <div class="card-header pb-2">
+                    <h4 class="font-weight-light"> Update Case</h4>
                   </div>
                   <div class="card-content">
                     <div class="card-body pt-0">
@@ -42,7 +42,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter first name"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -53,7 +54,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter last name"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -64,7 +66,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter Phone"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -75,7 +78,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter Your Address"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -84,7 +88,7 @@
                               City:
                             </div>
                             <fieldset class="form-group">
-                              <select id="customSelect" class="custom-select">
+                              <select id="customSelect" class="custom-select" style="border-radius:40px;">
                                 <option selected>Choose city..</option>
                                 <option value="IT">Yaba</option>
                                 <option value="Blade Runner">Lekki</option>
@@ -97,6 +101,7 @@
                         <button
                           type="submit"
                           class="btn btn-primary float-right btn-inline mb-50"
+                          style="border-radius:40px;"
                         >
                           Save Changes
                         </button>
@@ -110,7 +115,7 @@
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6 col-12">
-                <section class="card">
+                <section class="card px-2 py-1">
                   <div class="card-header">
                     <!-- <h5>Hospital Information</h5> -->
                   </div>

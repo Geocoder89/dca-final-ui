@@ -52,13 +52,14 @@
                             class="avatar-content"
                             style="width: 130px;height:130px;font-size: 124px;"
                           >
-                            <!-- <i class="fa fa-pill text-primary font-medium-5"></i> -->
+                            <div style="background:#43D9FF;display:flex;padding:20px;border-radius:50%;">
                             <ion-icon
                               name="bandage"
                               size="large"
-                              color="danger"
-                              style="width: 100px;height:100px;"
+                              color="light"
+                              style="width: 65px;height:65px;"
                             ></ion-icon>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -95,13 +96,14 @@
                             class="avatar-content"
                             style="width: 130px;height:130px;font-size: 124px;"
                           >
-                            <!-- <i class="fa fa-heartbeat text-primary font-medium-5"></i> -->
+                            <div style="background:#43D9FF;display:flex;padding:20px;border-radius:50%;">
                             <ion-icon
                               name="bandage"
                               size="large"
-                              color="success"
-                              style="width: 100px;height:100px;"
+                              color="light"
+                              style="width: 65px;height:65px;"
                             ></ion-icon>
+                            </div>
                           </div>
                         </div>
                       </div>

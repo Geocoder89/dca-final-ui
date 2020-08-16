@@ -27,9 +27,9 @@
           <div class="content-body">
             <div class="row justify-content-center">
               <div class="col-md-6">
-                <section class="card">
-                  <div class="card-header">
-                    <h3>Basic Info</h3>
+                <section class="card px-2 py-2">
+                  <div class="card-header pb-2">
+                    <h4 class="font-weight-light">Basic Info</h4>
                   </div>
                   <div class="card-content">
                     <div class="card-body pt-0">
@@ -42,7 +42,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter first name"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -53,7 +54,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter last name"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -64,7 +66,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter Phone"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -75,7 +78,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter Your Address"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -84,7 +88,7 @@
                               City:
                             </div>
                             <fieldset class="form-group">
-                              <select id="customSelect" class="custom-select">
+                              <select id="customSelect" class="custom-select" style="border-radius:40px;">
                                 <option selected>Choose city..</option>
                                 <option value="IT">Yaba</option>
                                 <option value="Blade Runner">Lekki</option>
@@ -97,7 +101,7 @@
                               State:
                             </div>
                             <fieldset class="form-group">
-                              <select id="customSelect" class="custom-select">
+                              <select id="customSelect" class="custom-select" style="border-radius:40px;">
                                 <option selected>Choose state..</option>
                                 <option value="IT">Lagos</option>
                                 <option value="Blade Runner">Oyo</option>
@@ -110,7 +114,7 @@
                               Country:
                             </div>
                             <fieldset class="form-group">
-                              <select id="customSelect" class="custom-select">
+                              <select id="customSelect" class="custom-select" style="border-radius:40px;">
                                 <option selected>Choose country..</option>
                                 <option value="IT">Nigeria</option>
                                 <option value="Blade Runner">Usa</option>
@@ -122,6 +126,7 @@
                         <button
                           type="submit"
                           class="btn btn-primary float-right btn-inline mb-50"
+                          style="border-radius:40px;"
                         >
                           Update
                         </button>
@@ -133,9 +138,9 @@
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6">
-                <section class="card">
-                  <div class="card-header">
-                    <h3>Next of Kin</h3>
+                <section class="card card px-2 py-2">
+                  <div class="card-header pb-2">
+                    <h4 class="font-weight-light">Next of Kin</h4>
                   </div>
                   <div class="card-content">
                     <div class="card-body pt-0">
@@ -150,7 +155,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter first name"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -163,7 +169,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter last name"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -176,7 +183,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter Phone"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -189,7 +197,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter Your Address"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -198,7 +207,7 @@
                               City (next of kin):
                             </div>
                             <fieldset class="form-group">
-                              <select id="customSelect" class="custom-select">
+                              <select id="customSelect" class="custom-select" style="border-radius:40px;">
                                 <option selected>Choose city..</option>
                                 <option value="IT">Yaba</option>
                                 <option value="Blade Runner">Lekki</option>
@@ -211,7 +220,7 @@
                               State (next of kin):
                             </div>
                             <fieldset class="form-group">
-                              <select id="customSelect" class="custom-select">
+                              <select id="customSelect" class="custom-select" style="border-radius:40px;">
                                 <option selected>Choose state..</option>
                                 <option value="IT">Lagos</option>
                                 <option value="Blade Runner">Oyo</option>
@@ -224,7 +233,7 @@
                               Country (next of kin):
                             </div>
                             <fieldset class="form-group">
-                              <select id="customSelect" class="custom-select">
+                              <select id="customSelect" class="custom-select" style="border-radius:40px;">
                                 <option selected>Choose country..</option>
                                 <option value="IT">Nigeria</option>
                                 <option value="Blade Runner">Usa</option>
@@ -236,6 +245,7 @@
                         <button
                           type="submit"
                           class="btn btn-primary float-right btn-inline mb-50"
+                          style="border-radius:40px;"
                         >
                           Update
                           </button>

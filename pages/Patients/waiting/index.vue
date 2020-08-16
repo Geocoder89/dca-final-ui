@@ -30,7 +30,7 @@
               <div class="col-lg-5 col-md-5 col-12">
                 <section
                   id="description"
-                  class="card d-flex justify-content-center align-items-center text-center"
+                  class="card d-flex pb-1 justify-content-center align-items-center text-center"
                   style=""
                 >
                   <div class="card-header">
@@ -42,9 +42,17 @@
                         <!-- <h3>Welcome back,</h3> -->
 
                         <p id="title" v-html="title"></p>
+                        <input
+                            id="basicInput"
+                            type="text"
+                            class="form-control mb-1"
+                            style="border-radius:40px;"
+                            placeholder="briefly tell us what went wrong..."
+                          />
                         <button
                           id="talkingbtn"
                           class="btn btn-outline-primary btn-inline"
+                          style="border-radius:40px;"
                           @click="loader"
                         >
                           Talk to a Doctor</button

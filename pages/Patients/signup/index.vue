@@ -40,7 +40,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter first name"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -51,7 +52,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter last name"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -62,7 +64,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter email"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -73,7 +76,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter Phone"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -84,7 +88,8 @@
                                       id="basicInput"
                                       type="password"
                                       class="form-control"
-                                      placeholder="Enter Password"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -97,11 +102,12 @@
                                       id="basicInput"
                                       type="password"
                                       class="form-control"
-                                      placeholder="Enter Password Confirmation"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <div class="text-bold-100 font-small-2">
                                     Date-of-Birth:
                                   </div>
@@ -109,7 +115,7 @@
                                     <select
                                       id="customSelect"
                                       class="custom-select"
-                                      style="width:25%;"
+                                      style="width:20%;border-radius:40px;"
                                     >
                                       <option selected>01</option>
                                       <option value="">02</option>
@@ -119,7 +125,7 @@
                                     <select
                                       id="customSelect"
                                       class="custom-select"
-                                      style="width:30%;"
+                                      style="width:30%;border-radius:40px;"
                                     >
                                       <option selected>January</option>
                                       <option value="">February</option>
@@ -130,7 +136,7 @@
                                     <select
                                       id="customSelect"
                                       class="custom-select"
-                                      style="width:40%;"
+                                      style="width:25%;border-radius:40px;"
                                     >
                                       <option selected>1990</option>
                                       <option value="">1991</option>
@@ -174,7 +180,7 @@
                                   Already have an account?
                                   <nuxt-link to="/patients/login">login</nuxt-link>
                                 </p>
-                                <nuxt-link to="/patients/verify" class="btn btn-primary">
+                                <nuxt-link to="/patients/verify" class="btn btn-primary" style="border-radius:40px;">
                                   Register</nuxt-link
                                 >
                               </div>

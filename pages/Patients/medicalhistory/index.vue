@@ -13,13 +13,13 @@
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
-          <div class="content-header row">
-            <div class="content-header-left col-md-9 col-12 mb-2">
+          <div class="content-header row justify-content-center">
+            <div class="content-header-left col-md-6 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
-                  <h4 class="content-header-title float-left mb-0">
+                  <h3 class="content-header-title float-left mb-0">
                     Medical History
-                  </h4>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -27,9 +27,9 @@
           <div class="content-body">
             <!-- account setting page start -->
             <section id="page-account-settings">
-              <div class="row">
+              <div class="row justify-content-center">
                 <!-- left menu section -->
-                <div class="col-md-3 mb-2 mb-md-0">
+                <!-- <div class="col-md-3 mb-2 mb-md-0">
                   <ul class="nav nav-pills flex-column mt-md-0 mt-1">
                     <li class="nav-item">
                       <a
@@ -44,10 +44,10 @@
                       </a>
                     </li>
                   </ul>
-                </div>
+                </div> -->
                 <!-- right content section -->
                 <div class="col-md-6">
-                  <div class="card">
+                  <div class="card px-2 pt-2 pb-0">
                     <div class="card-content">
                       <div class="card-body">
                         <div class="tab-content">
@@ -58,11 +58,11 @@
                             aria-labelledby="account-pill-general"
                             aria-expanded="true"
                           >
-                            Medical Information
+                            <h4 class="font-weight-light mb-2">Medical Information</h4>
                             <hr>
                             <form novalidate>
                               <div class="row">
-                                <div class="col-12">
+                                <div class="col-md-6 col-lg-6 col-xl-6 col-12">
                                   <div class="form-group">
                                     <div class="controls">
                                       <label for="account-name"
@@ -73,6 +73,7 @@
                                         type="text"
                                         class="form-control"
                                         placeholder="80"
+                                        style="border-radius:40px;"
                                         value=""
                                         required
                                         data-validation-required-message="This name field is required"
@@ -80,7 +81,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-md-6 col-lg-6 col-xl-6 col-12">
                                   <div class="form-group">
                                     <div class="controls">
                                       <label for="account-username"
@@ -91,6 +92,7 @@
                                         type="text"
                                         class="form-control"
                                         placeholder="6.6"
+                                        style="border-radius:40px;"
                                         value=""
                                         required
                                         data-validation-required-message="This username field is required"
@@ -98,7 +100,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-md-6 col-lg-6 col-xl-6 col-12">
                                   <div class="form-group">
                                     <div class="controls">
                                       <label for="account-name">Height:</label>
@@ -107,6 +109,7 @@
                                         type="text"
                                         class="form-control"
                                         placeholder="66"
+                                        style="border-radius:40px;"
                                         value=""
                                         required
                                         data-validation-required-message="This name field is required"
@@ -114,7 +117,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-md-6 col-lg-6 col-xl-6 col-12">
                                   <div class="form-group">
                                     <div class="controls">
                                       <label for="account-name"
@@ -125,6 +128,7 @@
                                         type="text"
                                         class="form-control"
                                         placeholder=""
+                                        style="border-radius:40px;"
                                         value=""
                                         required
                                         data-validation-required-message="This name field is required"
@@ -147,7 +151,8 @@
                                   <select
                                     id="customSelect"
                                     class="custom-select"
-                                    style="width:20%;"
+                                    style="width:20%;border-radius:40px;"
+                                    
                                   >
                                     <option selected>Yes</option>
                                     <option>No</option>
@@ -160,7 +165,7 @@
                                   <select
                                     id="customSelect"
                                     class="custom-select"
-                                    style="width:20%;"
+                                    style="width:20%;border-radius:40px;"
                                   >
                                     <option selected>Yes</option>
                                     <option>No</option>
@@ -177,13 +182,13 @@
                                         value=""
                                         class="form-control"
                                         placeholder="Name"
-                                        style="width:60%;"
+                                        style="width:60%;border-radius:40px;"
                                       />
                                       <input
                                         type="text"
-                                        class="form-control"
+                                        class="form-control ml-1"
                                         placeholder="Dose"
-                                        style="width:30%;"
+                                        style="width:30%;border-radius:40px;"
                                       />
                                     </div>
                                   </div>
@@ -195,7 +200,7 @@
                                   <select
                                     id="customSelect"
                                     class="custom-select"
-                                    style="width:20%;"
+                                    style="width:20%;border-radius:40px;"
                                   >
                                     <option selected>No</option>
                                     <option value="">Yes</option>
@@ -211,7 +216,7 @@
                                         type="number"
                                         class="form-control"
                                         placeholder="5"
-                                        style="width:20%;"
+                                        style="width:20%;border-radius:40px;"
                                       />
                                     </div>
                                   </div>
@@ -224,7 +229,7 @@
                                   <select
                                     id="customSelect"
                                     class="custom-select"
-                                    style="width:20%;"
+                                    style="width:20%;border-radius:40px;"
                                   >
                                     <option selected>No</option>
                                     <option value="">Yes</option>
@@ -240,7 +245,7 @@
                                         type="number"
                                         class="form-control"
                                         placeholder="5"
-                                        style="width:20%;"
+                                        style="width:20%;border-radius:40px;"
                                       />
                                     </div>
                                   </div>
@@ -256,6 +261,7 @@
                                       class="form-control"
                                       rows="3"
                                       placeholder="asthma, lung disease"
+                                      style="border-radius:40px;"
                                     ></textarea>
                                   </div>
                                 </div>
@@ -264,6 +270,7 @@
                                 <nuxt-link
                                   to="#"
                                   class="btn btn-primary align-self-start"
+                                  style="border-radius:40px;"
                                   ><i class="feather icon-save"></i> Save
                                 </nuxt-link>
                               </div>

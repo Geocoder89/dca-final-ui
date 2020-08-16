@@ -7,7 +7,7 @@
       data-col="2-columns"
     >
       <Header></Header>
-      <Sidebar></Sidebar>
+     <side-bar></side-bar>
 
       <div class="app-content content">
         <div class="content-overlay"></div>
@@ -27,7 +27,7 @@
           <div class="content-body">
             <div class="row justify-content-center">
               <div class="col-md-6 col-lg-6 col-12">
-                <div class="card">
+                <div class="card px-2 pb-1">
                   <div class="card-header"></div>
                   <div class="card-content">
                     <div class="card-body">
@@ -44,6 +44,7 @@
                                 class="form-control"
                                 required
                                 placeholder="Old Password"
+                                style="border-radius:40px;"
                                 data-validation-required-message="This old password field is required"
                               />
                             </div>
@@ -61,6 +62,7 @@
                                 name="password"
                                 class="form-control"
                                 placeholder="New Password"
+                                style="border-radius:40px;"
                                 required
                                 data-validation-required-message="The password field is required"
                                 minlength="6"
@@ -82,6 +84,7 @@
                                 required
                                 data-validation-match-match="password"
                                 placeholder="New Password"
+                                style="border-radius:40px;"
                                 data-validation-required-message="The Confirm password field is required"
                                 minlength="6"
                               />
@@ -94,6 +97,7 @@
                           <button
                             type="submit"
                             class="btn btn-primary mr-sm-1 mb-1 mb-sm-0"
+                            style="border-radius:40px;"
                           >
                             Update
                           </button>
@@ -118,14 +122,14 @@
 <script>
 import Header from '~/components/hospital/header'
 import Footer from '~/components/hospital/footer'
-import Sidebar from '~/components/hospital/sidebar'
+import SideBar from '~/components/hospital/sidebar'
 
 export default {
-  name: 'Changepassword',
+  name: 'Dashboard',
   components: {
     Header,
     Footer,
-    Sidebar
+    SideBar
   }
 }
 </script>

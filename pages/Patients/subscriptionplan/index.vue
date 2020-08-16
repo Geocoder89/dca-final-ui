@@ -16,9 +16,9 @@
             <div class="content-header-left col-md-6 col-lg-6 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
-                  <h4 class="content-header-title float-left mb-0">
+                  <h3 class="content-header-title float-left mb-0">
                     Manage Subscription
-                  </h4>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -31,8 +31,8 @@
                     <!-- account start -->
                     <div class="col-12 col-md-12 col-lg-12 pb-0">
                       <div class="card">
-                        <div class="card-header">
-                          <div class="card-title">Status</div>
+                        <div class="card-header pb-2">
+                          <h4 class="card-title font-weight-light">Status</h4>
                         </div>
                         <div class="card-body pb-0">
                           <div class="row pb-0">
@@ -68,8 +68,8 @@
                     <!-- account start -->
                     <div class="col-12 col-md-12 col-lg-12 pb-0">
                       <div class="card">
-                        <div class="card-header">
-                          <div class="card-title">Upgrade my plan</div>
+                        <div class="card-header pb-1">
+                          <h4 class="card-title font-weight-light">Upgrade my plan</h4>
                         </div>
                         <div class="card-body pb-0">
                           <div class="row pb-0">
@@ -131,7 +131,7 @@
                               aria-labelledby="home-tab-justified"
                             >
                               <div class="col-lg-12 col-md-6 col-12">
-                                <section class="mb-50">
+                                <section class="card px-0 mb-50">
                                   <div class="card-header">
                                     <!-- <h4 class="card-title">Description</h4> -->
                                   </div>
@@ -143,7 +143,7 @@
                                         class="col-md-3 col-sm-3 text-center"
                                       >
                                         <span class="text-center">
-                                          <strong>₦500 </strong>
+                                          <strong>₦500 </strong><br>
                                           <small>Monthly</small>
                                         </span>
                                       </div>
@@ -151,7 +151,7 @@
                                         class="col-md-3 col-sm-3 text-center"
                                       >
                                         <span class="text-center">
-                                          <strong>₦1500 </strong>
+                                          <strong>₦1500 </strong><br>
                                           <small class="text-center"
                                             >Quaterly</small
                                           >
@@ -161,7 +161,7 @@
                                         class="col-md-3 col-sm-3 text-center"
                                       >
                                         <span class="text-center">
-                                          <strong>₦5,500 </strong>
+                                          <strong>₦5,500 </strong><br>
                                           <small class="text-center"
                                             >Annually</small
                                           >
@@ -169,40 +169,65 @@
                                       </div>
                                     </div>
 
-                                    <ul class="list-group list-group-flush">
-                                      <li
-                                        class="list-group-item d-flex justify-content-between align-items-center"
-                                      >
-                                        Medical Questions and Answer online.
-                                        <ion-icon
-                                          name="checkmark-done-outline"
-                                          size="small"
-                                        ></ion-icon>
-                                      </li>
-                                      <li
-                                        class="list-group-item d-flex justify-content-between align-items-center"
-                                      >
-                                        Call Doctor/Get prescription.
-                                        <ion-icon
-                                          name="checkmark-done-outline"
-                                          size="small"
-                                        ></ion-icon>
-                                      </li>
-                                      <li
-                                        class="list-group-item d-flex justify-content-between align-items-center"
-                                      >
-                                        Drugs upto prescribed limit per quarter,
-                                        say N3,000.
-                                        <ion-icon
-                                          name="checkmark-done-outline"
-                                          size="small"
-                                        ></ion-icon>
-                                      </li>
-                                    </ul>
+                                   <ul class="list-group list-group-flush">
+                                    <li
+                                      class="list-group-item d-flex justify-content-between align-items-center"
+                                    >
+                                      Medical Questions and Answer online.
+                                      <i class="fa fa-check-circle text-success"></i>
+                                    </li>
+                                    <li
+                                      class="list-group-item d-flex justify-content-between align-items-center"
+                                    >
+                                      Call Doctor/Get prescription.
+                                      <i class="fa fa-check-circle text-success"></i>
+                                    </li>
+                                    <li
+                                      class="list-group-item d-flex justify-content-between align-items-center"
+                                    >
+                                      Drugs upto prescribed limit per quarter,
+                                      say N3,000.
+                                      <i class="fa fa-check-circle text-success"></i>
+                                    </li>
+                                    <li
+                                      class="list-group-item d-flex justify-content-between align-items-center"
+                                    >
+                                      Talk to a Specialist.
+                                      <i class="fa fa-check-circle text-default" style="opacity:.5"></i>
+                                    </li>
+                                    <li
+                                      class="list-group-item d-flex justify-content-between align-items-center"
+                                    >
+                                      Discounts for partner services (diagnostic
+                                      centers, opticians, dentist)<br />
+                                      OR one Basic optician check per annum.
+                                      <i class="fa fa-check-circle text-default" style="opacity:.5"></i>
+                                    </li>
+                                    <li
+                                      class="list-group-item d-flex justify-content-between align-items-center"
+                                    >
+                                      Hospitals Referals/appointments/talk to a
+                                      specialist.
+                                      <i class="fa fa-check-circle text-default" style="opacity:.5"></i>
+                                    </li>
+                                    <li
+                                      class="list-group-item d-flex justify-content-between align-items-center"
+                                    >
+                                      Keep track of your numbers.
+                                      <i class="fa fa-check-circle text-default" style="opacity:.5"></i>
+                                    </li>
+                                    <li
+                                      class="list-group-item d-flex justify-content-between align-items-center"
+                                    >
+                                      Doctor calls, once annually.
+                                      <i class="fa fa-check-circle text-default" style="opacity:.5"></i>
+                                    </li>
+                                  </ul>
                                     <div class="d-flex justify-content-center">
                                       <button
                                         role="button"
                                         class="btn btn-primary mt-5 justify-content-center"
+                                        style="border-radius:40px;"
                                       >
                                         Subscribe
                                       </button>
@@ -252,38 +277,26 @@
                                       class="list-group-item d-flex justify-content-between align-items-center"
                                     >
                                       Medical Questions and Answer online.
-                                      <ion-icon
-                                        name="checkmark-done-outline"
-                                        size="small"
-                                      ></ion-icon>
+                                      <i class="fa fa-check-circle text-success"></i>
                                     </li>
                                     <li
                                       class="list-group-item d-flex justify-content-between align-items-center"
                                     >
                                       Call Doctor/Get prescription.
-                                      <ion-icon
-                                        name="checkmark-done-outline"
-                                        size="small"
-                                      ></ion-icon>
+                                      <i class="fa fa-check-circle text-success"></i>
                                     </li>
                                     <li
                                       class="list-group-item d-flex justify-content-between align-items-center"
                                     >
                                       Drugs upto prescribed limit per quarter,
                                       say N3,000.
-                                      <ion-icon
-                                        name="checkmark-done-outline"
-                                        size="small"
-                                      ></ion-icon>
+                                      <i class="fa fa-check-circle text-success"></i>
                                     </li>
                                     <li
                                       class="list-group-item d-flex justify-content-between align-items-center"
                                     >
                                       Talk to a Specialist.
-                                      <ion-icon
-                                        name="checkmark-done-outline"
-                                        size="small"
-                                      ></ion-icon>
+                                      <i class="fa fa-check-circle text-success"></i>
                                     </li>
                                     <li
                                       class="list-group-item d-flex justify-content-between align-items-center"
@@ -291,44 +304,33 @@
                                       Discounts for partner services (diagnostic
                                       centers, opticians, dentist)<br />
                                       OR one Basic optician check per annum.
-                                      <ion-icon
-                                        name="checkmark-done-outline"
-                                        size="small"
-                                      ></ion-icon>
+                                      <i class="fa fa-check-circle text-success"></i>
                                     </li>
                                     <li
                                       class="list-group-item d-flex justify-content-between align-items-center"
                                     >
                                       Hospitals Referals/appointments/talk to a
                                       specialist.
-                                      <ion-icon
-                                        name="checkmark-done-outline"
-                                        size="small"
-                                      ></ion-icon>
+                                      <i class="fa fa-check-circle text-default" style="opacity:.5"></i>
                                     </li>
                                     <li
                                       class="list-group-item d-flex justify-content-between align-items-center"
                                     >
                                       Keep track of your numbers.
-                                      <ion-icon
-                                        name="checkmark-done-outline"
-                                        size="small"
-                                      ></ion-icon>
+                                      <i class="fa fa-check-circle text-default" style="opacity:.5"></i>
                                     </li>
                                     <li
                                       class="list-group-item d-flex justify-content-between align-items-center"
                                     >
                                       Doctor calls, once annually.
-                                      <ion-icon
-                                        name="checkmark-done-outline"
-                                        size="small"
-                                      ></ion-icon>
+                                      <i class="fa fa-check-circle text-default" style="opacity:.5"></i>
                                     </li>
                                   </ul>
                                   <div class="d-flex justify-content-center">
                                     <button
                                       role="button"
                                       class="btn btn-primary mt-5 justify-content-center"
+                                      style="border-radius:40px;"
                                     >
                                       Subscribe
                                     </button>
@@ -377,53 +379,60 @@
                                       class="list-group-item d-flex justify-content-between align-items-center"
                                     >
                                       Medical Questions and Answer online.
-                                      <ion-icon
-                                        name="checkmark-done-outline"
-                                        size="small"
-                                      ></ion-icon>
+                                      <i class="fa fa-check-circle text-success"></i>
                                     </li>
                                     <li
                                       class="list-group-item d-flex justify-content-between align-items-center"
                                     >
                                       Call Doctor/Get prescription.
-                                      <ion-icon
-                                        name="checkmark-done-outline"
-                                        size="small"
-                                      ></ion-icon>
+                                      <i class="fa fa-check-circle text-success"></i>
                                     </li>
                                     <li
                                       class="list-group-item d-flex justify-content-between align-items-center"
                                     >
                                       Drugs upto prescribed limit per quarter,
                                       say N3,000.
-                                      <ion-icon
-                                        name="checkmark-done-outline"
-                                        size="small"
-                                      ></ion-icon>
+                                      <i class="fa fa-check-circle text-success"></i>
+                                    </li>
+                                    <li
+                                      class="list-group-item d-flex justify-content-between align-items-center"
+                                    >
+                                      Talk to a Specialist.
+                                      <i class="fa fa-check-circle text-success"></i>
+                                    </li>
+                                    <li
+                                      class="list-group-item d-flex justify-content-between align-items-center"
+                                    >
+                                      Discounts for partner services (diagnostic
+                                      centers, opticians, dentist)<br />
+                                      OR one Basic optician check per annum.
+                                      <i class="fa fa-check-circle text-success"></i>
+                                    </li>
+                                    <li
+                                      class="list-group-item d-flex justify-content-between align-items-center"
+                                    >
+                                      Hospitals Referals/appointments/talk to a
+                                      specialist.
+                                      <i class="fa fa-check-circle text-success"></i>
                                     </li>
                                     <li
                                       class="list-group-item d-flex justify-content-between align-items-center"
                                     >
                                       Keep track of your numbers.
-                                      <ion-icon
-                                        name="checkmark-done-outline"
-                                        size="small"
-                                      ></ion-icon>
+                                      <i class="fa fa-check-circle text-success"></i>
                                     </li>
                                     <li
                                       class="list-group-item d-flex justify-content-between align-items-center"
                                     >
                                       Doctor calls, once annually.
-                                      <ion-icon
-                                        name="checkmark-done-outline"
-                                        size="small"
-                                      ></ion-icon>
+                                      <i class="fa fa-check-circle text-success"></i>
                                     </li>
                                   </ul>
                                   <div class="d-flex justify-content-center">
                                     <button
                                       role="button"
                                       class="btn btn-primary mt-5 justify-content-center"
+                                      style="border-radius:40px;"
                                     >
                                       Subscribe
                                     </button>
@@ -446,8 +455,8 @@
                     <!-- account start -->
                     <div class="col-12 col-md-12 col-lg-12 pb-0">
                       <div class="card">
-                        <div class="card-header">
-                          <div class="card-title">Payment History</div>
+                        <div class="card-header pb-2">
+                          <h4 class="card-title font-weight-light">Payment History</h4>
                         </div>
                         <div class="card-body pb-0">
                           <div class="row pb-0">
@@ -455,20 +464,16 @@
                               class="col-12 col-sm-12 col-md-12 col-lg-12 pb-0"
                             >
                               <p class="mt-1">
-                                <strong>Standard:</strong
-                                ><span class="float-right">19/04/2020</span>
+                                Standard:<span class="float-right">19/04/2020</span>
                               </p>
                               <p class="mt-1">
-                                <strong>Basic:</strong
-                                ><span class="float-right">11/04/2020</span>
+                                Basic:<span class="float-right">11/04/2020</span>
                               </p>
                               <p class="mt-1">
-                                <strong>Premium:</strong
-                                ><span class="float-right">03/04/2020</span>
+                                Premium:<span class="float-right">03/04/2020</span>
                               </p>
                               <p class="mt-1">
-                                <strong>Premium:</strong
-                                ><span class="float-right">20/04/2020</span>
+                                Premium:<span class="float-right">20/04/2020</span>
                               </p>
                             </div>
                           </div>

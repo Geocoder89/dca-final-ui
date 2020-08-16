@@ -17,9 +17,9 @@
             <div class="content-header-left col-md-6 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
-                  <h4 class="content-header-title float-left mb-0">
+                  <h3 class="content-header-title float-left mb-0">
                     Case File
-                  </h4>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -75,7 +75,7 @@
                                 <section class="mb-50">
                                     <div class="card">
                                   <div class="card-header  pl-0 mb-1">
-                                    <h6 class="card-title">X-Ray Scan Result</h6>
+                                    <h4 class="font-weight-light">X-Ray Scan Result</h4>
                                   </div>
                                   
                                     <div class="card-body" style="background:#F8F8F8;border-radius:20px;">

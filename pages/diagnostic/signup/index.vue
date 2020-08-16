@@ -32,7 +32,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter Registered Name"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -43,7 +44,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter Address"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -54,7 +56,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter License"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -65,7 +68,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter Email"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -76,7 +80,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Enter Phone"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -89,7 +94,8 @@
                                       id="basicInput"
                                       type="password"
                                       class="form-control"
-                                      placeholder="Enter Password"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -102,7 +108,8 @@
                                       id="basicInput"
                                       type="password"
                                       class="form-control"
-                                      placeholder="Enter Password Confirmation"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -128,7 +135,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter Name"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -139,7 +147,8 @@
                                 id="basicInput"
                                 type="email"
                                 class="form-control"
-                                placeholder="Enter Email"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -150,7 +159,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Edit Phone"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -166,7 +176,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Enter Name"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -177,7 +188,8 @@
                                 id="basicInput"
                                 type="email"
                                 class="form-control"
-                                placeholder="Enter Email"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -188,7 +200,8 @@
                                 id="basicInput"
                                 type="text"
                                 class="form-control"
-                                placeholder="Edit Phone"
+                                placeholder=""
+                                style="border-radius:40px;"
                               />
                             </fieldset>
                           </div>
@@ -204,7 +217,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Account Name"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -215,7 +229,8 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
-                                      placeholder="Account No"
+                                      placeholder=""
+                                      style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -226,6 +241,7 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
+                                      style="border-radius:40px;"
                                     >
                                     <option value="">Field one</option>
                                     <option value="">Field one</option>
@@ -240,6 +256,7 @@
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
+                                      style="border-radius:40px;"
                                     >
                                     <option value="">Field one</option>
                                     <option value="">Field one</option>
@@ -253,7 +270,7 @@
                                   Already have an account?
                                   <nuxt-link to="/diagnostic/login">login</nuxt-link>
                                 </p>
-                                <nuxt-link to="/diagnostic/verify" class="btn btn-primary">
+                                <nuxt-link to="/diagnostic/verify" style="border-radius:40px;" class="btn btn-primary">
                                   Register</nuxt-link
                                 >
                               </div>

@@ -50,19 +50,20 @@
                             class="avatar-content"
                             style="width: 130px;height:130px;font-size: 124px; "
                           >
-                            
+                            <div style="background:skyblue;display:flex;padding:20px;border-radius:50%;">
                             <ion-icon
-                              name="hourglass-outline"
+                              name="hourglass"
                               size="large"
-                              color="dark"
-                              style="width: 80px;height:80px;"
+                              color="light"
+                              style="width: 65px;height:65px;"
                             ></ion-icon>
+                            </div>
                           </div>
                         </div>
                       </div>
                       <div class="d-flex flex-column align-items-start pb-0">
                         <h3
-                          class="text-bold-300 text-center align-self-center mb-1"
+                          class="text-muted text-center align-self-center mb-1"
                         >
                           Waiting <br />Room
                         </h3>
@@ -92,19 +93,20 @@
                             class="avatar-content"
                             style="width: 130px;height:130px;font-size: 124px;"
                           >
-                            
+                            <div style="background:skyblue;display:flex;padding:20px;border-radius:50%;">
                             <ion-icon
-                              name="receipt-outline"
+                              name="receipt"
                               size="large"
-                              color="dark"
-                              style="width: 100px;height:100px;"
+                              color="light"
+                              style="width: 65px;height:65px;"
                             ></ion-icon>
+                            </div>
                           </div>
                         </div>
                       </div>
                       <div class="d-flex flex-column align-items-start pb-0">
                         <h3
-                          class="text-bold-300 text-center align-self-center mb-1"
+                          class="text-muted text-center align-self-center mb-1"
                         >
                           Case <br />Management
                         </h3>
@@ -139,13 +141,14 @@
                             class="avatar-content"
                             style="width: 130px;height:130px;font-size: 124px;"
                           >
-                           
+                           <div style="background:skyblue;display:flex;padding:20px;border-radius:50%;">
                             <ion-icon
-                              name="mail-outline"
+                              name="mail"
                               size="large"
-                              color="dark"
-                              style="width: 100px;height:100px;"
+                              color="light"
+                              style="width: 65px;height:65px;"
                             ></ion-icon>
+                           </div>
                           </div>
                         </div>
                       </div>
@@ -181,13 +184,14 @@
                             class="avatar-content"
                             style="width: 130px;height:130px;font-size: 124px;"
                           >
-                           
+                           <div style="background:skyblue;display:flex;padding:20px;border-radius:50%;">
                             <ion-icon
-                              name="today-outline"
+                              name="today"
                               size="large"
-                              color="dark"
-                              style="width: 100px;height:100px;"
+                              color="light"
+                              style="width: 65px;height:65px;"
                             ></ion-icon>
+                           </div>
                           </div>
                         </div>
                       </div>

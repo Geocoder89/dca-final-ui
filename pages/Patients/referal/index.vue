@@ -27,17 +27,17 @@
               <div class="row justify-content-center">
                 <!-- account start -->
                 <div class="col-12 col-md-5 col-lg-5">
-                  <div class="card justify-content-center">
+                  <div class="card px-2 pb-2 justify-content-center">
                     <div class="card-header">
                       <!-- <div class="card-title">Help</div> -->
                     </div>
                     <div class="card-body">
                       <div class="row">
-                        <div class="col-12">
-                          <p>
+                        <div class="col-12 pb-2">
+                          <h4 class="font-weight-light">
                             Refer your family and freinds and enjoy Drcallaway
                             incentives.
-                          </p>
+                          </h4>
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                           <fieldset>
@@ -45,22 +45,25 @@
                               <div class="col-12">
                                 <div class="form-group">
                                   <label for="accountTextarea"
+                                  class="mb-1"
                                     >Family/Freind's Email:</label
                                   >
                                   <input
                                     id="basicInput"
                                     type="text"
                                     class="form-control"
+                                    style="border-radius:40px;"
                                     placeholder=""
                                   />
                                 </div>
                               </div>
                               <div class="col-12">
                                 <div class="form-group">
-                                  <label for="accountTextarea">Message:</label>
+                                  <label for="accountTextarea" class="mb-1">Message:</label>
                                   <textarea
                                     id="accountTextarea"
                                     class="form-control"
+                                    style="border-radius:40px;"
                                     rows="3"
                                   ></textarea>
                                 </div>
@@ -73,6 +76,7 @@
                           <nuxt-link
                             to="/patients/referralmessage"
                             class="btn btn-primary"
+                            style="border-radius:40px;"
                             ><i class="feather"></i> Send Invite</nuxt-link
                           >
                           <!--  <button class="btn btn-outline-danger"><i class="feather icon-"></i> Cancel</button> -->

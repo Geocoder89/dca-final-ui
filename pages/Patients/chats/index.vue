@@ -37,7 +37,7 @@
                         <h4 class="card-title" style="color:#ffffff;">Dr Akinwunmi</h4>
                         <div style="color:#ffffff;">
                             <a href="#" style="color:#ffffff;"><span class="mr-75 feather icon-camera"></span></a>
-                             <nuxt-link to="/patients/audio" style="color:#ffffff;"><span class="mr-75 feather icon-video"></span></nuxt-link>
+                             <nuxt-link to="/patients/audio" style="color:#ffffff;"><span class="mr-75 feather icon-phone"></span></nuxt-link>
                              <nuxt-link to="/patients/video" style="color:#ffffff;"><span class="mr-75 feather icon-video"></span></nuxt-link>
                         </div>
                     </div>

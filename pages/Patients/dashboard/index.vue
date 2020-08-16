@@ -62,14 +62,16 @@
                         >
                           <div
                             class="avatar-content"
-                            style="width: 130px;height:130px;font-size: 124px; "
+                            style="width: 130px;height:130px;font-size: 124px;"
                           >
-                            <!-- <i class="fa fa-heartbeat text-primary font-medium-5"></i> -->
+                            <div style="background:#43D9FF;display:flex;padding:20px;border-radius:50%;">
                             <ion-icon
-                              name="fitness-outline"
+                              name="fitness"
                               size="large"
-                              style="width: 80px;height:80px;color:#814BAA;"
+                              style="width: 65px;height:65px;color:#814BAA;color:red !important;"
+                              color="light"
                             ></ion-icon>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -105,13 +107,14 @@
                             class="avatar-content"
                             style="width: 130px;height:130px;font-size: 124px;"
                           >
-                            <!-- <i class="fa fa-heartbeat text-primary font-medium-5"></i> -->
+                            <div style="background:#43D9FF;display:flex;padding:20px;border-radius:50%;">
                             <ion-icon
-                              name="chatbubbles-outline"
+                              name="chatbubbles"
                               size="large"
-                              color="primary"
-                              style="width: 100px;height:100px;color:#814BAA;"
+                              color="light"
+                              style="width: 65px;height:65px;color:#814BAA;"
                             ></ion-icon>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -152,12 +155,14 @@
                             class="avatar-content"
                             style="width: 130px;height:130px;font-size: 124px;"
                           >
-                            <!-- <i class="fa fa-heartbeat text-primary font-medium-5"></i> -->
+                            <div style="background:#43D9FF;display:flex;padding:20px;border-radius:50%;">
                             <ion-icon
-                              name="mail-unread-outline"
+                              name="mail-unread"
                               size="large"
-                              style="width: 100px;height:100px;color:#814BAA;"
+                              style="width: 65px;height:65px;color:#814BAA;"
+                              color="light"
                             ></ion-icon>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -193,12 +198,14 @@
                             class="avatar-content"
                             style="width: 130px;height:130px;font-size: 124px;"
                           >
-                            <!-- <i class="fa fa-heartbeat text-primary font-medium-5"></i> -->
+                            <div style="background:#43D9FF;display:flex;padding:20px;border-radius:50%;">
                             <ion-icon
-                              name="receipt-outline"
+                              name="receipt"
                               size="large"
-                              style="width: 100px;height:100px;color:#814BAA;"
+                              style="width: 65px;height:65px;color:#814BAA;"
+                              color="light"
                             ></ion-icon>
+                            </div>
                           </div>
                         </div>
                       </div>

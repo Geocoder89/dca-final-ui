@@ -95,6 +95,7 @@
                                           <nuxt-link
                                             to="/doctor/casefile/singlefile"
                                             class="btn btn-sm btn-primary float-right"
+                                            style="border-radius:40px;"
                                             >View</nuxt-link
                                           >
                                         </td>
@@ -105,6 +106,7 @@
                                           <nuxt-link
                                             to="/doctor/casefile/singlefile"
                                             class="btn btn-sm btn-primary float-right"
+                                            style="border-radius:40px;"
                                             >View</nuxt-link>
                                         </td>
                                       </tr>
@@ -114,6 +116,7 @@
                                           <nuxt-link
                                             to="/doctor/casefile/singlefile"
                                             class="btn btn-sm btn-primary float-right"
+                                            style="border-radius:40px;"
                                             >View</nuxt-link
                                           >
                                         </td>
@@ -124,6 +127,7 @@
                                           <nuxt-link
                                             to="/doctor/casefile/singlefile"
                                             class="btn btn-sm btn-primary float-right"
+                                            style="border-radius:40px;"
                                             >view</nuxt-link
                                           >
                                         </td>
@@ -227,3 +231,26 @@ export default {
   }
 }
 </script>
+<style scoped>
+
+  .cbtn {
+      width:58%;
+      height:35px;
+      line-height:8px;
+      text-align:center;
+      border-radius:40px;
+  }
+        
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .cbtn {
+        width:100%;
+        height:35px;
+        font-size:12px;
+        line-height:8px;
+        text-align:center;
+        border-radius:40px;
+    }
+      
+  }
+</style>

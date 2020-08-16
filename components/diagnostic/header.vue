@@ -180,7 +180,7 @@
                   <li class="dropdown-menu-footer">
                     <a
                       class="dropdown-item p-1 text-center"
-                      href="notifications.html"
+                      href="#"
                       >Read all notifications</a
                     >
                   </li>
