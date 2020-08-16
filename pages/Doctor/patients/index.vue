@@ -35,29 +35,19 @@
                       <tbody>
                         <tr>
                           <td class="product-name p-2" style="font-size:0.9em;">1. Idowu Philips</td>
+                          <td class="text-muted">malaria, headache and yellow fever...</td>
                           <td>
                             <nuxt-link
                               to="/doctor/chats"
                               class="btn btn-sm btn-primary"
                               style="border-radius:40px;"
                               >Check In</nuxt-link
-                            >
-                          </td>
-                          <td>
-                            <nuxt-link
-                              to="/doctor/casefile"
-                              style="font-size:0.7em;"
-                              >Read Cases |</nuxt-link
-                            >
-                            <nuxt-link
-                              to="/doctor/medicals"
-                              style="font-size:0.7em;"
-                              >Medical History</nuxt-link
                             >
                           </td>
                         </tr>
                         <tr>
                           <td class="product-name p-2">2. Abdul Aminu</td>
+                          <td class="text-muted">malaria, headache and yellow fever...</td>
                           <td>
                             <nuxt-link
                               to="/doctor/chats"
@@ -66,21 +56,11 @@
                               >Check In</nuxt-link
                             >
                           </td>
-                          <td>
-                            <nuxt-link
-                              to="/doctor/casefile"
-                              style="font-size:0.7em;"
-                              >Read Cases |</nuxt-link
-                            >
-                            <nuxt-link
-                              to="/doctor/medicals"
-                              style="font-size:0.7em;"
-                              >Medical History</nuxt-link
-                            >
-                          </td>
+                          
                         </tr>
                         <tr>
                           <td class="product-name p-2">3. Chioma Obi</td>
+                          <td class="text-muted">malaria, headache and yellow fever...</td>
                           <td>
                             <nuxt-link
                               to="/doctor/chats"
@@ -89,21 +69,11 @@
                               >Check In</nuxt-link
                             >
                           </td>
-                          <td>
-                            <nuxt-link
-                              to="/doctor/casefile"
-                              style="font-size:0.7em;"
-                              >Read Cases |</nuxt-link
-                            >
-                            <nuxt-link
-                              to="/doctor/medicals"
-                              style="font-size:0.7em;"
-                              >Medical History</nuxt-link
-                            >
-                          </td>
+                          
                         </tr>
                         <tr>
                           <td class="product-name p-2">4. Graves James</td>
+                          <td class="text-muted">malaria, headache and yellow fever...</td>
                           <td>
                             <nuxt-link
                               to="/doctor/chats"
@@ -112,18 +82,7 @@
                               >Check In</nuxt-link
                             >
                           </td>
-                          <td>
-                            <nuxt-link
-                              to="/doctor/casefile"
-                              style="font-size:0.7em;"
-                              >Read Cases |</nuxt-link
-                            >
-                            <nuxt-link
-                              to="/doctor/medicals"
-                              style="font-size:0.7em;"
-                              >Medical History</nuxt-link
-                            >
-                          </td>
+                          
                         </tr>
                       </tbody>
                     </table>

@@ -125,7 +125,7 @@
                         </div>
                         <button
                           type="submit"
-                          class="btn btn-primary float-right btn-inline mb-50"
+                          class="btn btn-primary btn-inline mb-50"
                           style="border-radius:40px;"
                         >
                           Update
@@ -149,7 +149,7 @@
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
                             <fieldset class="form-group">
                               <label for="basicInput"
-                                >First Name (next of kin):</label
+                                >First Name:</label
                               >
                               <input
                                 id="basicInput"
@@ -163,7 +163,7 @@
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
                             <fieldset class="form-group">
                               <label for="basicInput"
-                                >Last Name (next of kin):</label
+                                >Last Name:</label
                               >
                               <input
                                 id="basicInput"
@@ -177,7 +177,7 @@
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
                             <fieldset class="form-group">
                               <label for="basicInput"
-                                >Phone (next of kin):</label
+                                >Phone:</label
                               >
                               <input
                                 id="basicInput"
@@ -191,7 +191,7 @@
                           <div class="col-xl-12 col-md-12 col-12 mb-0">
                             <fieldset class="form-group">
                               <label for="basicInput"
-                                >Address (next of kin):</label
+                                >Address:</label
                               >
                               <input
                                 id="basicInput"
@@ -204,11 +204,11 @@
                           </div>
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
                             <div class="text-bold-100 font-small-2">
-                              City (next of kin):
+                              City:
                             </div>
                             <fieldset class="form-group">
                               <select id="customSelect" class="custom-select" style="border-radius:40px;">
-                                <option selected>Choose city..</option>
+                                <option selected>Choose..</option>
                                 <option value="IT">Yaba</option>
                                 <option value="Blade Runner">Lekki</option>
                                 <option value="Thor Ragnarok">Ikeja</option>
@@ -221,7 +221,7 @@
                             </div>
                             <fieldset class="form-group">
                               <select id="customSelect" class="custom-select" style="border-radius:40px;">
-                                <option selected>Choose state..</option>
+                                <option selected>Choose..</option>
                                 <option value="IT">Lagos</option>
                                 <option value="Blade Runner">Oyo</option>
                                 <option value="Thor Ragnarok">Benue</option>
@@ -234,7 +234,7 @@
                             </div>
                             <fieldset class="form-group">
                               <select id="customSelect" class="custom-select" style="border-radius:40px;">
-                                <option selected>Choose country..</option>
+                                <option selected>Choose..</option>
                                 <option value="IT">Nigeria</option>
                                 <option value="Blade Runner">Usa</option>
                                 <option value="Thor Ragnarok">Turkey</option>
@@ -244,7 +244,7 @@
                         </div>
                         <button
                           type="submit"
-                          class="btn btn-primary float-right btn-inline mb-50"
+                          class="btn btn-primary btn-inline mb-50"
                           style="border-radius:40px;"
                         >
                           Update

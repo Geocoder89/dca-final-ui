@@ -261,7 +261,7 @@
                                       class="form-control"
                                       rows="3"
                                       placeholder="asthma, lung disease"
-                                      style="border-radius:40px;"
+                                      style="border-radius:20px;"
                                     ></textarea>
                                   </div>
                                 </div>

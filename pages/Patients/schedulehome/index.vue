@@ -74,7 +74,7 @@
                                     <textarea
                                       id="accountTextarea"
                                       class="form-control"
-                                      style="border-radius:40px;"
+                                      style="border-radius:20px;"
                                       rows="3"
                                     ></textarea>
                                   </div>

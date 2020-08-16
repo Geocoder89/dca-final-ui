@@ -53,8 +53,7 @@
                                     <li class="list-group-item">Phone: 09089787867</li>
                                     <li class="list-group-item">Date Registered: 23/04/2019</li>
                                 </ul>
-                              </div>
-                              <div class="col-lg-6 col-md-6 col-12">
+                              
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Medical Council No: 09783682899</li>
                                     <li class="list-group-item">Medical School: Institute of Health</li>

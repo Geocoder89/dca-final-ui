@@ -103,7 +103,7 @@
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <label for="basicInput">Medical Council Registration Number:</label>
+                                    <label for="basicInput">Medical Council Reg No:</label>
                                     <input
                                       id="basicInput"
                                       type="text"
@@ -141,6 +141,7 @@
                                     />
                                   </fieldset>
                                 </div>
+                                
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput"
@@ -169,6 +170,19 @@
                                       class="form-control"
                                       placeholder=""
                                       style="border-radius:40px;"
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput"
+                                      >Upload Certificate:</label
+                                    >
+                                    <input
+                                      id="basicInput"
+                                      type="file"
+                                      class=""
+                                      placeholder=""
                                     />
                                   </fieldset>
                                 </div>

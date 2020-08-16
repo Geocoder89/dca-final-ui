@@ -62,6 +62,12 @@
                             <li class="dropdown-menu-header pb-1">
                                 <nuxt-link to="#"><span class="grey darken-2"> Close Case</span></nuxt-link>
                             </li>
+                            <li class="dropdown-menu-header pb-1">
+                                <nuxt-link to="#"><span class="grey darken-2"> Medical History</span></nuxt-link>
+                            </li>
+                            <li class="dropdown-menu-header pb-1">
+                                <nuxt-link to="#"><span class="grey darken-2"> Read Cases</span></nuxt-link>
+                            </li>
                         </ul>
                        </nuxt-link>
                        

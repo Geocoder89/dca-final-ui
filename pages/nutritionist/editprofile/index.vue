@@ -106,7 +106,7 @@
                             </div>
                             <fieldset class="form-group">
                               <select id="customSelect" class="custom-select">
-                                <option selected>Choose city..</option>
+                                <option selected>Choose..</option>
                                 <option value="IT">Yaba</option>
                                 <option value="Blade Runner">Lekki</option>
                                 <option value="Thor Ragnarok">Ikeja</option>
@@ -119,7 +119,7 @@
                             </div>
                             <fieldset class="form-group">
                               <select id="customSelect" class="custom-select">
-                                <option selected>Choose state..</option>
+                                <option selected>Choose..</option>
                                 <option value="IT">Lagos</option>
                                 <option value="Blade Runner">Oyo</option>
                                 <option value="Thor Ragnarok">Benue</option>
@@ -132,7 +132,7 @@
                             </div>
                             <fieldset class="form-group">
                               <select id="customSelect" class="custom-select">
-                                <option selected>Choose country..</option>
+                                <option selected>Choose..</option>
                                 <option value="IT">Nigeria</option>
                                 <option value="Blade Runner">Usa</option>
                                 <option value="Thor Ragnarok">Turkey</option>
@@ -142,7 +142,8 @@
                         </div>
                         <button
                           type="submit"
-                          class="btn btn-primary float-right btn-inline mb-50"
+                          class="btn btn-primary btn-inline mb-50"
+                          style="border-radius:40px;"
                         >
                           Save Changes
                         </button>

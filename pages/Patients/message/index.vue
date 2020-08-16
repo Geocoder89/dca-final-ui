@@ -14,7 +14,7 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
           <div class="content-header row justify-content-center">
-            <div class="content-header-left col-md-5 col-12 mb-2">
+            <div class="content-header-left col-md-6 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
                   <h4 class="content-header-title float-left mb-0">Messages</h4>
@@ -26,10 +26,10 @@
             <section class="page-users-view">
               <div class="row justify-content-center">
                 <!-- account start -->
-                <div class="col-12 col-md-5 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-6">
                   <div class="card justify-content-center">
-                    <div class="card-header">
-                      <div class="card-title">Inbox(18)</div>
+                    <div class="card-header pb-1">
+                      <h4 class="font-weight-light">Inbox(18)</h4>
                       <hr />
                     </div>
                     <div class="card-body">

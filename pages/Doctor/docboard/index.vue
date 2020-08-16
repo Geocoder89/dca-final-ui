@@ -52,7 +52,7 @@
                           >
                             <div style="background:skyblue;display:flex;padding:20px;border-radius:50%;">
                             <ion-icon
-                              name="hourglass"
+                              name="time"
                               size="large"
                               color="light"
                               style="width: 65px;height:65px;"
