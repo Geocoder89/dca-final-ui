@@ -103,14 +103,15 @@ export default {
     '@nuxtjs/auth',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/moment',
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL:'http://127.0.0.1:8000/api/v1/'
+    baseURL:'http://127.0.0.1:8000/api/v1'
   },
   /*
    ** Build configuration
@@ -125,14 +126,16 @@ export default {
       },
       signup:{
           url:'signup',
-          method:'post',
-          propertyName:'data'
+          method:'post'
       },
       user:{
-        
+          url:'user',
+          method:'get',
+          propertyName: 'data'
       },
       logout:{
-
+          url:'logout',
+          method:'post',
       }
     },
     redirect:{
@@ -142,7 +145,6 @@ export default {
 
   router: {
     middleware: [
-      'auth',
       'clearValidationErrors'
     ]
   },

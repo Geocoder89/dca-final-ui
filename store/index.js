@@ -1,8 +1,8 @@
 export const getters = {
     authenticated(state){
-        return state.loggedIn
+        return state.auth.loggedIn
     },
     user(state){
-        return state
+        return state.auth.user
     }
 }

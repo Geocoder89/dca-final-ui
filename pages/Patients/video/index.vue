@@ -155,7 +155,8 @@ export default {
   },
   methods: {
     
-  }
+  },
+  middleware:['auth']
 }
 </script>
 

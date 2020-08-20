@@ -20,7 +20,7 @@
             </div>
           </div>
           <div class="content-body">
-            <!-- Data list view starts -->
+            <!-- Data list view starts --> 
             <section id="data-list-view" class="data-list-view-header">
               <div class="row justify-content-md-center">
                 <div class="col-md-6 col-lg-6">
@@ -97,7 +97,8 @@ export default {
     Header,
     Footer,
     Sidebar
-  }
+  },
+  middleware:['auth']
 }
 </script>
 <style scoped>

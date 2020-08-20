@@ -101,7 +101,8 @@ export default {
         this.$router.push('chats')
       }, 5000)
     }
-  }
+  },
+  middleware:['auth']
 }
 </script>
 <style scoped>

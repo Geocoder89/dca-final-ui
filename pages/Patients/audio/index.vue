@@ -176,7 +176,8 @@ export default {
   },
   methods: {
     
-  }
+  },
+  middleware:['auth']
 }
 </script>
 <style scoped>

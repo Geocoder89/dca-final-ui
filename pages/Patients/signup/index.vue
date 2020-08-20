@@ -31,7 +31,7 @@
                       <div class="card-content">
                         <div class="card-body pt-0">
                           <div class="col-12 pl-0">
-                            <form action="">
+                            
                               <div class="row">
                                 <div class="col-xl-4 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
@@ -41,8 +41,13 @@
                                       type="text"
                                       class="form-control"
                                       placeholder=""
+                                      v-model="form.first_name"
+                                      :class="{'is-invalid': errors.first_name}"
                                       style="border-radius:40px;"
                                     />
+                                    <div class="invalid-feedback" v-if="errors.first_name">
+                                        {{errors.first_name[0]}}
+                                    </div>
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-12 mb-0">
@@ -53,8 +58,13 @@
                                       type="text"
                                       class="form-control"
                                       placeholder=""
+                                      v-model="form.last_name"
+                                      :class="{'is-invalid': errors.last_name}"
                                       style="border-radius:40px;"
                                     />
+                                    <div class="invalid-feedback" v-if="errors.last_name">
+                                        {{errors.last_name[0]}}
+                                    </div>
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-12 mb-0">
@@ -65,8 +75,13 @@
                                       type="text"
                                       class="form-control"
                                       placeholder=""
+                                      v-model="form.email"
+                                      :class="{'is-invalid': errors.email}"
                                       style="border-radius:40px;"
                                     />
+                                    <div class="invalid-feedback" v-if="errors.email">
+                                        {{errors.email[0]}}
+                                    </div>
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-12 mb-0">
@@ -77,8 +92,13 @@
                                       type="text"
                                       class="form-control"
                                       placeholder=""
+                                      v-model="form.mobile_phone_number"
+                                      :class="{'is-invalid': errors.mobile_phone_number}"
                                       style="border-radius:40px;"
                                     />
+                                    <div class="invalid-feedback" v-if="errors.mobile_phone_number">
+                                        {{errors.mobile_phone_number[0]}}
+                                    </div>
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-12 mb-0">
@@ -89,8 +109,13 @@
                                       type="password"
                                       class="form-control"
                                       placeholder=""
+                                      v-model="form.password"
+                                      :class="{'is-invalid': errors.password}"
                                       style="border-radius:40px;"
                                     />
+                                    <div class="invalid-feedback" v-if="errors.password">
+                                        {{errors.password[0]}}
+                                    </div>
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-4 col-md-6 col-12 mb-0">
@@ -103,11 +128,12 @@
                                       type="password"
                                       class="form-control"
                                       placeholder=""
+                                      v-model="form.password_confirmation"
                                       style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-6 col-md-6 col-12 mb-0">
+                                <!-- <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <div class="text-bold-100 font-small-2">
                                     Date-of-Birth:
                                   </div>
@@ -144,7 +170,7 @@
                                       <option value="">1993</option>
                                     </select>
                                   </fieldset>
-                                </div>
+                                </div> -->
                                 <div class="col-xl-4 col-md-6 col-12 mb-0">
                                   <div class="text-bold-100 font-small-2">
                                     Gender:
@@ -157,6 +183,8 @@
                                             <input
                                               type="radio"
                                               name="radio"
+                                              v-model="form.gender"
+                                              value="MALE"
                                               checked
                                             />
                                             Male
@@ -166,12 +194,21 @@
                                       <li class="d-inline-block mr-2">
                                         <fieldset>
                                           <label>
-                                            <input type="radio" name="radio" />
+                                            <input 
+                                            type="radio" 
+                                            name="radio"
+                                            v-model="form.gender"
+                                            value="FEMALE"
+                                            
+                                            />
                                             Female
                                           </label>
                                         </fieldset>
                                       </li>
                                     </ul>
+                                    <div class="invalid-feedback" v-if="errors.gender">
+                                        {{errors.gender[0]}}
+                                    </div>
                                   </fieldset>
                                 </div>
                               </div>
@@ -180,11 +217,11 @@
                                   Already have an account?
                                   <nuxt-link to="/auth/login">login</nuxt-link>
                                 </p>
-                                <nuxt-link to="/patients/verify" class="btn btn-primary" style="border-radius:40px;">
-                                  Register</nuxt-link
+                                <button class="btn btn-primary" :disabled="this.disable" style="border-radius:40px;" @click.prevent="submit">
+                                  Register</button
                                 >
                               </div>
-                            </form>
+                            
                           </div>
                         </div>
                       </div>
@@ -201,6 +238,50 @@
 </template>
 <script>
 export default {
-  name: 'Register'
+  name: 'Register',
+  data(){
+    return {
+       form:{
+            first_name : "oluwole",
+            last_name : "ajayi",
+            middle_name : "",
+            email : "oluwole",
+            password : "12345",
+            password_confirmation : "563738",
+            gender : "FEMALE",
+            mobile_phone_number : "09089898989",
+            work_phone_number : "",
+            user_role_code : "ROLE001"
+           
+       },
+        disable: false
+    }
+  },
+  methods:{
+    async submit(){
+      if(this.form.password.length < 6){
+        alert("password must be atleast than six(6) characters long");
+        return false;
+      }
+      if(this.form.password !== this.form.password_confirmation){
+        alert("password do not match!");
+        return false;
+      }
+      this.disable = !this.disable
+        await this.$axios.post('signup', this.form
+        ).then(response => {
+            this.$router.push({
+              path:'/auth/verify'
+            }) 
+        })
+        .catch(error => {
+            console.log(error.response)
+            this.disable = !this.disable
+        })
+        
+      console.log(this.form)
+    }
+  },
+  middleware:['guest']
 }
 </script>

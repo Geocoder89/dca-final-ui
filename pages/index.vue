@@ -56,6 +56,7 @@
     <!-- END: Content-->
     <script>
 export default {
-  name: 'Home'
+  name: 'Home',
+  middleware:['guest']
 }
 </script>

@@ -11,10 +11,10 @@
         <div class="content-wrapper">
           <div class="content-header row pb-0">
             <div class="content-header-left col-md-12 col-12 mb-2">
-              <div class="row breadcrumbs-top">
-                <div class="col-12">
+              <div class="row breadcrumbs-top justify-content-center">
+                <div class="col-12 col-lg-6 col-md-6">
                   <h4 class="content-header-title float-left mb-0">
-                    Hi, Tosin
+                    Hi, {{user.first_name}}
                   </h4>
                   <nuxt-link
                     class="btn-icon btn-lg float-right btn btn-danger btn-round btn-sm "
@@ -26,19 +26,33 @@
                 </div>
                 
               </div>
-              <div class="row justify-content-center mt-2">
+              <!-- <div class="row justify-content-center mt-2">
+                  <div class="col-12 col-md-12 col-lg-12 justify-content-center text-center">
+                  <nuxt-link
+                    class="btn-icon btn-lg btn btn-primary btn-round btn-sm align-self-center" style="font-size:16px;"
+                    to="/patients/waiting"><i class="fa fa-phone"></i>  Talk to a Doctor</nuxt-link>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="content-body">
+            <section id="data-list-view" class="data-list-view-header">
+              <div class="row justify-content-md-center">
+                
+                <div class="col-md-6 col-lg-6">
+                  
+                  <!-- DataTable starts -->
+                  <div class="card">
+                      <div class="row justify-content-center mt-2">
                   <div class="col-12 col-md-12 col-lg-12 justify-content-center text-center">
                   <nuxt-link
                     class="btn-icon btn-lg btn btn-primary btn-round btn-sm align-self-center" style="font-size:16px;"
                     to="/patients/waiting"><i class="fa fa-phone"></i>  Talk to a Doctor</nuxt-link>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="content-body">
             <section id="dashboard-analytics" class="mb-0">
               <div class="row justify-content-center">
-                <div class="col-lg-2 col-md-4 col-6 pb-0">
+                <div class="col-lg-5 col-md-4 col-6 pb-0">
                   <sup class=""
                     ><span
                       class="badge badge-danger csup"
@@ -49,12 +63,12 @@
                   <nuxt-link to="medicalhistory" class="">
                     <div
                       class="card d-flex flex-column justify-content-center mb-0"
-                      style="border-radius: 33px;background: #F8F8F8;box-shadow: none;"
+                      style="border-radius: 33px;background: #F8F8F8;box-shadow: none;background:#fff;"
                     >
                       <div class="card-content align-self-center">
                         <div
                           class="avatar p-50 mt-2"
-                          style="width: 140px;height:140px;border-radius: 40px; background: #fff;"
+                          style="width: 140px;height:140px;border-radius: 40px; background: #fff;box-shadow: 0px 0px 5px #eee;"
                         >
                           <div
                             class="avatar-content"
@@ -81,7 +95,7 @@
                     </div>
                   </nuxt-link>
                 </div>
-                <div class="col-lg-2 col-md-4 col-6 pb-0">
+                <div class="col-lg-5 col-md-4 col-6 pb-0">
                   <sup
                     ><span
                       class="badge badge-danger csup"
@@ -92,12 +106,12 @@
                   <nuxt-link to="consult" class="a-card">
                     <div
                       class="card d-flex flex-column justify-content-center mb-0"
-                      style="border-radius: 33px;background: #F8F8F8;box-shadow: none;"
+                      style="border-radius: 33px;background: #F8F8F8;box-shadow: none;background:#fff;"
                     >
                       <div class="card-content align-self-center">
                         <div
                           class="avatar p-50 mt-2"
-                          style="width: 140px;height:140px;border-radius: 40px;background: #fff;"
+                          style="width: 140px;height:140px;border-radius: 40px;background: #fff;box-shadow: 0px 0px 5px #eee;"
                         >
                           <div
                             class="avatar-content"
@@ -129,7 +143,7 @@
             <!-- Dashboard Analytics end -->
             <section id="dashboard-analytics" class="mt-0">
               <div class="row justify-content-center">
-                <div class="col-lg-2 col-md-4 col-6">
+                <div class="col-lg-5 col-md-4 col-6">
                   <sup
                     ><span
                       class="badge badge-danger csup"
@@ -140,12 +154,12 @@
                   <nuxt-link to="consult" class="a-card">
                     <div
                       class="card d-flex flex-column justify-content-center"
-                      style="border-radius: 33px;background: #F8F8F8;box-shadow: none;"
+                      style="border-radius: 33px;background: #F8F8F8;box-shadow: none;background:#fff;"
                     >
                       <div class="card-content align-self-center">
                         <div
                           class="avatar p-50 mt-2"
-                          style="width: 140px;height:140px;border-radius: 40px;background: #fff;"
+                          style="width: 140px;height:140px;border-radius: 40px;background: #fff;box-shadow: 0px 0px 5px #eee;"
                         >
                           <div
                             class="avatar-content"
@@ -172,7 +186,7 @@
                     </div>
                   </nuxt-link>
                 </div>
-                <div class="col-lg-2 col-md-4 col-6">
+                <div class="col-lg-5 col-md-4 col-6">
                   <sup
                     ><span
                       class="badge badge-danger csup"
@@ -183,12 +197,12 @@
                   <nuxt-link to="consult" class="a-card">
                     <div
                       class="card d-flex flex-column justify-content-center"
-                      style="border-radius: 33px;background: #F8F8F8;box-shadow: none;"
+                      style="border-radius: 33px;background: #F8F8F8;box-shadow: none;background:#fff;"
                     >
                       <div class="card-content align-self-center">
                         <div
                           class="avatar p-50 mt-2"
-                          style="width: 140px;height:140px;border-radius: 40px;background: #fff;"
+                          style="width: 140px;height:140px;border-radius: 40px;background: #fff;box-shadow: 0px 0px 5px #eee;"
                         >
                           <div
                             class="avatar-content"
@@ -218,6 +232,10 @@
               </div>
             </section>
             <!-- Dashboard Analytics end -->
+            </div>
+          </div>
+          </div>
+          </section>
           </div>
         </div>
       </div>
@@ -251,7 +269,7 @@ export default {
       width: 40px;
       height: 40px;
       top: 50px;
-      left:110px;
+      left:150px;
       z-index:1;
       position: relative;
       font-size: 12px;

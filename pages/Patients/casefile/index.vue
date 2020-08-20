@@ -216,7 +216,8 @@ export default {
     Header,
     Footer,
     SideBar
-  }
+  },
+  middleware:['auth']
 }
 </script>
 <style scoped>

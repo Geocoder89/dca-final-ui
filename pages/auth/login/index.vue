@@ -127,6 +127,7 @@ export default {
         return errors.email || errors.message
     }
     
-  }
+  },
+  middleware:['guest']
 }
 </script>
