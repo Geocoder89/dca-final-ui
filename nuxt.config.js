@@ -50,8 +50,6 @@ export default {
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/vendors/js/ui/prism.min.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/vendors/js/charts/apexcharts.min.js', defer: true},
-    {type: 'text/javascript', src: '/app-assets/js/core/app-menu.js', defer: true},
-    {type: 'text/javascript', src: '/app-assets/js/core/app.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/js/scripts/cards/card-analytics.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/js/scripts/ui/data-list-view.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/vendors/js/extensions/dropzone.min.js'},
@@ -62,6 +60,9 @@ export default {
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/dataTables.select.min.js'},
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js'},
     {type: 'text/javascript', src: '/app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js'},
+    {type: 'text/javascript', src: '/app-assets/js/core/app-menu.js', defer: true},
+    {type: 'text/javascript', src: '/app-assets/js/core/app.js', defer: true},
+    {type: 'text/javascript', src: '/app-assets/js/core/app-user.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/js/scripts/components.js'},
   ],
 },
@@ -99,6 +100,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/auth',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
@@ -107,10 +109,49 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL:'http://127.0.0.1:8000/api/v1/'
+  },
   /*
    ** Build configuration
    */
+
+  auth: {
+    endpoints:{
+      login:{
+          url:'login',
+          method:'post',
+          propertyName:'data.token.token'
+      },
+      signup:{
+          url:'signup',
+          method:'post',
+          propertyName:'data'
+      },
+      user:{
+        
+      },
+      logout:{
+
+      }
+    },
+    redirect:{
+      login:'/auth/login'
+    }
+  },
+
+  router: {
+    middleware: [
+      'auth',
+      'clearValidationErrors'
+    ]
+  },
+
+  plugins:[
+    './plugins/mixins/user.js',
+    './plugins/axios.js',
+    './plugins/mixins/validation.js',
+  ],
   build: {
     /*
      ** You can extend webpack config here

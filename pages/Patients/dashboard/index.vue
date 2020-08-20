@@ -1,24 +1,20 @@
 <template>
   <div>
-    <body
-      class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  "
-      data-open="click"
-      data-menu="vertical-menu-modern"
-      data-col="2-columns"
-    >
+    <body class="vertical-layout 2-columns navbar-floating footer-static pace-done menu-hide" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" style="overflow: hidden;">
+
       <Header></Header>
       <Sidebar></Sidebar>
 
       <div class="app-content content">
         <div class="content-overlay"></div>
-        <!-- <div class="header-navbar-shadow"></div> -->
+        <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
           <div class="content-header row pb-0">
             <div class="content-header-left col-md-12 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
                   <h4 class="content-header-title float-left mb-0">
-                    Hi, James
+                    Hi, Tosin
                   </h4>
                   <nuxt-link
                     class="btn-icon btn-lg float-right btn btn-danger btn-round btn-sm "
@@ -245,7 +241,8 @@ export default {
     Header,
     Footer,
     Sidebar
-  }
+  },
+  middleware: ['auth']
 }
 </script>
 <style scoped>
@@ -267,10 +264,10 @@ export default {
         }
         @media only screen and (max-width: 768px) {
           /* For mobile phones: */
-         .dashboard-content{
-           padding-top:50px;
-           padding-left:0;
-         }
+            .dashboard-content{
+              padding-top:50px;
+              padding-left:0;
+            }
             .csup {
                 width: 50px;
                 height: 50px;
@@ -284,6 +281,9 @@ export default {
                 text-align: center;
                 background: #FFA34B;
                 padding: 5px;
+            }
+            .content{
+              margin-left:0;
             }
             
         }

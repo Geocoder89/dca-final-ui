@@ -943,8 +943,8 @@ body.menu-collapsed .menu-static {
             transition : transform 0.25s, top 0.35s, height 0.35s, -webkit-transform 0.25s;
   }
   .main-menu {
-    -webkit-transform : translate3d(-240px, 0, 0);
-            transform : translate3d(-240px, 0, 0);
+    -webkit-transform : translate3d(-260px, 0, 0);
+            transform : translate3d(-260px, 0, 0);
     -webkit-backface-visibility : hidden;
             backface-visibility : hidden;
     -webkit-perspective : 1000;

@@ -20,26 +20,36 @@
                                             </div>
                                         </div>
                                         <!-- <p class="px-2">Welcome back, We are glad to have you back.</p> -->
+                                       
                                         <div class="card-content">
                                             <div class="card-body pt-1">
-                                                <form action="index.html">
+                                                
                                                     <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                        <input type="text" class="form-control" id="user-name" placeholder="Email" style="border-radius:40px;" required>
+                                                        <input type="text" class="form-control" :class="{'is-invalid': getError(errors)}" id="user-name" placeholder="Email" v-model="form.email" style="border-radius:40px;" >
                                                         <div class="form-control-position">
                                                             <i class="feather icon-user"></i>
                                                         </div>
                                                         <label for="user-name">Username</label>
+                                                        <div class="invalid-feedback" v-if="errors.email">
+                                                            {{errors.email[0]}}
+                                                        </div>
+                                                         <div class="invalid-feedback" v-if="errors.message">
+                                                            {{errors.message}}
+                                                        </div>
                                                     </fieldset>
-
                                                     <fieldset class="form-label-group position-relative has-icon-left">
-                                                        <input type="password" class="form-control" id="user-password" placeholder="Password" style="border-radius:40px;" required>
+                                                        <input type="password" class="form-control" id="user-password" :class="{'is-invalid': errors.password}" placeholder="Password" v-model="form.password" style="border-radius:40px;" >
                                                         <div class="form-control-position">
                                                             <i class="feather icon-lock"></i>
                                                         </div>
                                                         <label for="user-password">Password</label>
+                                                        <div class="invalid-feedback" v-if="errors.password">
+                                                            {{errors.password[0]}}
+                                                        </div>
+                                                       
                                                     </fieldset>
                                                     <div class="form-group d-flex justify-content-between align-items-center">
-                                                        <div class="text-left">
+                                                        <!-- <div class="text-left">
                                                             <label>
                                                                 <input
                                                                 type="radio"
@@ -48,14 +58,14 @@
                                                                 />
                                                                 Remember
                                                             </label>
-                                                        </div>
+                                                        </div> -->
                                                         <div class="text-left">
                                                              <div class="text-right d-sm-block"><nuxt-link to="/patients/forgotpassword" class="card-link">Forget Password?</nuxt-link></div>
                                                         </div>
                                                     </div>
                                                    <!--  <a href="index.html" class="btn btn-outline-primary float-left btn-inline">Register</a> -->
-                                                    <nuxt-link to="/patients/dashboard" type="submit" id="login" class="btn btn-primary d-block btn-inline" style="border-radius:40px;">Sign In</nuxt-link>
-                                                </form>
+                                                    <button type="submit" @click="submit" :disabled="this.disable" class="btn btn-primary d-block btn-inline" style="border-radius:40px;">Sign In</button>
+                                               
                                                 <div class="form-group d-flex justify-content-between align-items-center mt-2">
                                                         <div class="text-center">
                                                              <div class="text-right d-sm-block">Don't Have an Account?<nuxt-link to="/patients/signup" class="card-link"> Create Account</nuxt-link></div>
@@ -86,6 +96,37 @@
 </template>
 <script>
 export default {
-  name: 'Login'
+    
+  name: 'Login',
+  data(){
+      return {
+          form:{
+              email:"",
+              password:""
+          },
+          disable: false
+      }
+  },
+  computed:{
+      
+  },
+  methods:{
+    async submit(){
+        this.disable = !this.disable
+        await this.$auth.login({
+            data:this.form
+        }).catch(error => {
+            console.log(error.response)
+            this.disable = !this.disable
+        }) 
+        this.$router.push({
+            path:'/patients/dashboard'
+        })
+    },
+    getError(errors){
+        return errors.email || errors.message
+    }
+    
+  }
 }
 </script>

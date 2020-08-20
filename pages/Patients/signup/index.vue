@@ -178,7 +178,7 @@
                               <div class="col-12 pl-0">
                                 <p>
                                   Already have an account?
-                                  <nuxt-link to="/patients/login">login</nuxt-link>
+                                  <nuxt-link to="/auth/login">login</nuxt-link>
                                 </p>
                                 <nuxt-link to="/patients/verify" class="btn btn-primary" style="border-radius:40px;">
                                   Register</nuxt-link

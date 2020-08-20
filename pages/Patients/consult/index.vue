@@ -1,11 +1,6 @@
 <template>
   <div>
-    <body
-      class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  "
-      data-open="click"
-      data-menu="vertical-menu-modern"
-      data-col="2-columns"
-    >
+    <body class="vertical-layout 2-columns navbar-floating footer-static pace-done menu-hide" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" style="overflow: auto;">
       <Header></Header>
       <Sidebar></Sidebar>
 
@@ -124,6 +119,9 @@ export default {
         line-height:8px;
         text-align:center;
         border-radius:40px;
+    }
+    .content{
+        margin-left:0;
     }
       
   }

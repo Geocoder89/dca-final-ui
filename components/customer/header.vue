@@ -414,8 +414,10 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  name:"Header"
+  name:"Header",
+  
 }
 </script>
 <style scoped>
