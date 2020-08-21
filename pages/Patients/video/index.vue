@@ -156,7 +156,7 @@ export default {
   methods: {
     
   },
-  middleware:['auth']
+  middleware:['auth','patient']
 }
 </script>
 

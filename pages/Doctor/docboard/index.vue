@@ -13,7 +13,7 @@
               <div class="row breadcrumbs-top">
                 <div class="col-12">
                   <h4 class="content-header-title float-left mb-0">
-                    Hi, James
+                    Hi, {{user.first_name}}
                   </h4>
                   
                 </div>
@@ -226,7 +226,8 @@ export default {
     Header,
     Footer,
     Sidebar
-  }
+  },
+  middleware:['auth','doctor']
 }
 </script>
 <style scoped>

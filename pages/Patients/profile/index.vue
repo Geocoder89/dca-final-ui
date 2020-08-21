@@ -40,11 +40,11 @@
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">First Name: {{user.first_name}}</li>
                                     <li class="list-group-item">Last Name: {{user.last_name}}</li>
-                                    <li class="list-group-item">Adresss: nil</li>
-                                    <li class="list-group-item">City: nil</li>
-                                    <li class="list-group-item">State: nil</li>
+                                    <li class="list-group-item">Adresss: {{user.address ? user.address : "nil"}}</li></li>
+                                    <li class="list-group-item">City: {{user.city ? user.city : "nil"}}</li>
+                                    <li class="list-group-item">State: {{user.state ? user.state : "nil"}}</li>
                                     <li class="list-group-item">Email: {{user.email}}</li>
-                                    <li class="list-group-item">Phone: nil</li>
+                                    <li class="list-group-item">Phone: {{user.mobile_phone_number ? user.mobile_phone_number : "nil"}}</li>
                                     <li class="list-group-item">Date Registered: {{user.created_at | formatDate}}</li>
                                 </ul>
                               
@@ -95,7 +95,7 @@ export default {
       return moment(String(value)).format('MM/DD/YYYY')
     }
   },
-  middleware:['auth']
+  middleware:['auth','patient']
 }
 </script>
 <style scoped>

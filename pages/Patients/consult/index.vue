@@ -98,7 +98,7 @@ export default {
     Footer,
     Sidebar
   },
-  middleware:['auth']
+  middleware:['auth','patient']
 }
 </script>
 <style scoped>

@@ -133,6 +133,7 @@ export default {
     Header,
     Footer,
     Sidebar
-  }
+  },
+  middleware:['auth','doctor']
 }
 </script>

@@ -68,7 +68,7 @@
                                                
                                                 <div class="form-group d-flex justify-content-between align-items-center mt-2">
                                                         <div class="text-center">
-                                                             <div class="text-right d-sm-block">Don't Have an Account?<nuxt-link to="/patients/signup" class="card-link"> Create Account</nuxt-link></div>
+                                                             <div class="text-right d-sm-block">Don't Have an Account?<nuxt-link to="/" class="card-link"> Create Account</nuxt-link></div>
                                                         </div>
                                                 </div>
                                             </div>
@@ -118,10 +118,22 @@ export default {
         }).catch(error => {
             console.log(error.response)
             this.disable = !this.disable
-        }) 
-        this.$router.push({
-            path:'/patients/dashboard'
         })
+        const logged = this.$store.state.auth.loggedIn
+        const user = this.$store.state.auth.user
+            if(logged){
+                if(user.roles[0].name === "doctor"){
+                this.$router.push({
+                    path:'/doctor/docboard'
+                })
+            }
+            if(user.roles[0].name === "patient"){
+                this.$router.push({
+                    path:'/patients/dashboard'
+                })
+            }
+        }
+        
     },
     getError(errors){
         return errors.email || errors.message

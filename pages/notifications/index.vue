@@ -249,6 +249,6 @@ export default {
     Footer,
     SideBar
   },
-  middleware:['auth']
+  middleware:['auth','doctor']
 }
 </script>

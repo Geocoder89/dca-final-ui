@@ -134,8 +134,7 @@ export default {
         
     }
     
-  },
-  middleware:['guest']
+  }
 }
 </script>
 <style scoped>

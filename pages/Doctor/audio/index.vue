@@ -176,6 +176,7 @@ export default {
   },
   methods: {
     
-  }
+  },
+  middleware:['auth','doctor']
 }
 </script>

@@ -102,7 +102,7 @@ export default {
       }, 5000)
     }
   },
-  middleware:['auth']
+  middleware:['auth','patient']
 }
 </script>
 <style scoped>

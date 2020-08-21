@@ -147,7 +147,8 @@ export default {
     Header,
     Footer,
     SideBar
-  }
+  },
+  middleware:['auth','doctor']
 }
 </script>
 

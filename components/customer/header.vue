@@ -192,7 +192,7 @@
                   class="dropdown-toggle nav-link dropdown-user-link"
                   href="#"
                   data-toggle="dropdown"
-                >
+                > 
                   <div class="user-nav d-sm-flex d-none">
                     <span class="user-name text-bold-600">{{user.first_name}} {{user.last_name}}</span
                     ><span class="user-status">Available</span>

@@ -242,17 +242,16 @@ export default {
   data(){
     return {
        form:{
-            first_name : "oluwole",
-            last_name : "ajayi",
+            first_name : "",
+            last_name : "",
             middle_name : "",
-            email : "oluwole",
-            password : "12345",
-            password_confirmation : "563738",
-            gender : "FEMALE",
-            mobile_phone_number : "09089898989",
+            email : "",
+            password : "",
+            password_confirmation : "",
+            gender : "",
+            mobile_phone_number : "",
             work_phone_number : "",
-            user_role_code : "ROLE001"
-           
+            user_role_code : "ROLE003"
        },
         disable: false
     }
