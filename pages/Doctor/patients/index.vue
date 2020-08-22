@@ -28,9 +28,9 @@
                   <div class="card">
                     <table class="table data-list-view">
                       <tbody>
-                        <tr>
-                          <td class="product-name p-2" style="font-size:0.9em;">1. Idowu Philips</td>
-                          <td class="text-muted">malaria, headache and yellow fever...</td>
+                        <tr v-for="patient in patients" :key="patient.id">
+                          <td class="product-name p-2" style="font-size:0.9em;">1.   {{patient.patient[0].first_name}} {{patient.patient[0].last_name}}</td>
+                          <td class="text-muted">{{patient.initial_complain}}</td>
                           <td>
                             <nuxt-link
                               to="/doctor/chats"
@@ -39,45 +39,6 @@
                               >Check In</nuxt-link
                             >
                           </td>
-                        </tr>
-                        <tr>
-                          <td class="product-name p-2">2. Abdul Aminu</td>
-                          <td class="text-muted">malaria, headache and yellow fever...</td>
-                          <td>
-                            <nuxt-link
-                              to="/doctor/chats"
-                              class="btn btn-sm btn-primary"
-                              style="border-radius:40px;"
-                              >Check In</nuxt-link
-                            >
-                          </td>
-                          
-                        </tr>
-                        <tr>
-                          <td class="product-name p-2">3. Chioma Obi</td>
-                          <td class="text-muted">malaria, headache and yellow fever...</td>
-                          <td>
-                            <nuxt-link
-                              to="/doctor/chats"
-                              class="btn btn-sm btn-primary"
-                              style="border-radius:40px;"
-                              >Check In</nuxt-link
-                            >
-                          </td>
-                          
-                        </tr>
-                        <tr>
-                          <td class="product-name p-2">4. Graves James</td>
-                          <td class="text-muted">malaria, headache and yellow fever...</td>
-                          <td>
-                            <nuxt-link
-                              to="/doctor/chats"
-                              class="btn btn-sm btn-primary"
-                              style="border-radius:40px;"
-                              >Check In</nuxt-link
-                            >
-                          </td>
-                          
                         </tr>
                       </tbody>
                     </table>
@@ -104,10 +65,27 @@ import Sidebar from '~/components/doctor/sidebar'
 
 export default {
   name: 'Patients',
+  data() {
+    return {
+      patients:'',
+    }
+  },
   components: {
     Header,
     Footer,
     Sidebar
+  },
+  methods:{
+    getPatients(){
+        this.$axios.get('cases/waiting-room')
+        .then(response => {
+          this.patients = response.data.data
+          console.log(response.data.data)
+        })
+    }
+  },
+  mounted(){
+    this.getPatients()
   },
   middleware:['auth','doctor']
 }

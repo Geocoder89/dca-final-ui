@@ -37,18 +37,29 @@
                         <!-- <h3>Welcome back,</h3> -->
 
                         <p id="title" v-html="title"></p>
+                        <fieldset>
                         <input
                             id="basicInput"
                             type="text"
                             class="form-control mb-1"
                             style="border-radius:40px;"
+                            :class="{'is-invalid': errors.initial_complain}"
+                            v-model="message"
                             placeholder="briefly tell us what went wrong..."
                           />
+                          <!-- <div class="invalid-feedback mb-1" v-if="err">
+                              {{err}}
+                          </div> -->
+                          <div class="invalid-feedback mb-1" v-if="errors.initial_complain">
+                              {{errors.initial_complain[0]}}
+                          </div>
+                        </fieldset>
                         <button
                           id="talkingbtn"
                           class="btn btn-outline-primary btn-inline"
                           style="border-radius:40px;"
-                          @click="loader"
+                          :disabled="disable"
+                          @click.prevent="submitCase"
                         >
                           Talk to a Doctor</button
                         ><br />
@@ -90,16 +101,36 @@ export default {
   data() {
     return {
       title: 'Your doctor is just a click away.',
-      showLoader: false
+      showLoader: false,
+      message:'',
+      disable:false
     }
   },
   methods: {
     loader() {
-      this.title = 'Your doctor will be with you shortly...'
-      this.showLoader = true
-      setTimeout(() => {
-        this.$router.push('chats')
-      }, 5000)
+      
+    },
+    submitCase(){
+        let vm = this;
+        if(!this.message){
+           alert('this field is required') 
+           return false;
+        }
+        this.title = 'Your doctor will be with you shortly...'
+        this.showLoader = true
+        this.disable = !this.disable
+
+        this.$axios.post('/cases', {
+          initial_complain:this.message
+        }).then(response => {
+            console.log(response.data)
+        }).catch(error => {
+            console.log(error.response)
+            this.title = 'Your doctor is just a click away.'
+            this.disable = !this.disable
+            this.showLoader = false
+        })
+        
     }
   },
   middleware:['auth','patient']
