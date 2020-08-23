@@ -103,6 +103,8 @@ export default {
       title: 'Your doctor is just a click away.',
       showLoader: false,
       message:'',
+      chatStatus:null,
+      caseid:'',
       disable:false
     }
   },
@@ -120,18 +122,49 @@ export default {
         this.showLoader = true
         this.disable = !this.disable
 
-        this.$axios.post('/cases', {
+        this.$axios.post('/case', {
           initial_complain:this.message
         }).then(response => {
             console.log(response.data)
+            this.getStatus()
         }).catch(error => {
             console.log(error.response)
             this.title = 'Your doctor is just a click away.'
             this.disable = !this.disable
             this.showLoader = false
         })
-        
+    },
+    getStatus(){
+        this.$axios.get('case')
+        .then(response => {
+           this.chatStatus = response.data.data.status
+           this.caseid = response.data.data.id
+          this.$store.dispatch('chat/setStatus', this.chatStatus)
+           this.checkStatus()
+        })
+    },
+    checkStatus(){
+        if(this.chatStatus === "ACTIVE"){
+            this.$router.push({
+              path:'/patients/chats/'+this.caseid
+            })
+        }
+        if(this.chatStatus === "PENDING"){
+            this.title = 'Your doctor will be with you shortly...'
+            this.showLoader = true
+            this.disable = !this.disable
+        }
     }
+    
+  },
+  mounted(){
+    this.getStatus()
+    setInterval(function () {
+      this.getStatus();
+    }, 1000); 
+  },
+  created(){
+
   },
   middleware:['auth','patient']
 }

@@ -19,7 +19,7 @@
               </div>
             </div>
           </div>
-          <div class="content-body">
+          <div class="content-body" v-if="!patients.length">
             <!-- Data list view starts -->
             <section id="data-list-view" class="data-list-view-header">
               <div class="row justify-content-md-center">
@@ -27,16 +27,35 @@
                   <!-- DataTable starts -->
                   <div class="card">
                     <table class="table data-list-view">
-                      <tbody>
+                      <tbody  >
+                        <tr>
+                          <td>No available patients</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="content-body" v-if="patients.length">
+            <!-- Data list view starts -->
+            <section id="data-list-view" class="data-list-view-header">
+              <div class="row justify-content-md-center">
+                <div class="col-md-6 col-lg-6">
+                  <!-- DataTable starts -->
+                  <div class="card">
+                    <table class="table data-list-view">
+                      <tbody  >
                         <tr v-for="patient in patients" :key="patient.id">
                           <td class="product-name p-2" style="font-size:0.9em;">1.   {{patient.patient[0].first_name}} {{patient.patient[0].last_name}}</td>
                           <td class="text-muted">{{patient.initial_complain}}</td>
                           <td>
-                            <nuxt-link
-                              to="/doctor/chats"
+                            <button
+                              @click.prevent="checkin(patient.id)"
                               class="btn btn-sm btn-primary"
                               style="border-radius:40px;"
-                              >Check In</nuxt-link
+                              >Check In</button
                             >
                           </td>
                         </tr>
@@ -82,6 +101,15 @@ export default {
           this.patients = response.data.data
           console.log(response.data.data)
         })
+    },
+    checkin(id){
+        this.$axios.patch('case/'+id)
+        .then(response =>{
+           console.log(response.data)
+           this.$router.push({
+             path:'/doctor/chats/'+id
+           })
+          })
     }
   },
   mounted(){

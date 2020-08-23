@@ -129,7 +129,7 @@ export default {
           method:'post'
       },
       user:{
-          url:'user',
+          url:'me',
           method:'get',
           propertyName: 'data'
       },
