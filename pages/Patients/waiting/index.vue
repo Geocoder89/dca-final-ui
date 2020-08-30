@@ -126,7 +126,7 @@ export default {
           initial_complain:this.message
         }).then(response => {
             console.log(response.data)
-            this.getStatus()
+            vm.getStatus()
         }).catch(error => {
             console.log(error.response)
             this.title = 'Your doctor is just a click away.'
@@ -135,12 +135,13 @@ export default {
         })
     },
     getStatus(){
+      let vm = this;
         this.$axios.get('case')
         .then(response => {
            this.chatStatus = response.data.data.status
            this.caseid = response.data.data.id
-          this.$store.dispatch('chat/setStatus', this.chatStatus)
-           this.checkStatus()
+          vm.$store.dispatch('chat/setStatus', this.chatStatus)
+           vm.checkStatus()
         })
     },
     checkStatus(){
@@ -158,10 +159,11 @@ export default {
     
   },
   mounted(){
-    this.getStatus()
+    let vm = this;
+    vm.getStatus()
     setInterval(function () {
-      this.getStatus();
-    }, 1000); 
+      vm.getStatus();
+    }, 30000); 
   },
   created(){
 

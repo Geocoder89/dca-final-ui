@@ -3,7 +3,7 @@
                     <div class="col-md-6 col-lg-6 col-12">
                 <section class="card">
                    <div class="card-header p-2" style="background: #814BAA;color:#ffffff">
-                       <ul class="card-header" :class="{'d-none' : this.$store.state.auth.user.roles[0].name !== 'doctor' }" style="background: #814BAA;color:#ffffff">
+                       <ul class="card-header p-2 d-none" style="background: #814BAA;color:#ffffff">
                        
                        <nuxt-link
                               to="#"
@@ -46,7 +46,7 @@
                         </ul>
                        </nuxt-link>
                     </ul>
-                        <h4 class="card-title" style="color:#ffffff;">{{receiver.first_name | capitalize}}</h4>
+                        <h4 class="card-title" style="color:#ffffff;">Dr Akinwunmi</h4>
                         <div style="color:#ffffff;">
                             <a href="#" style="color:#ffffff;"><span class="mr-75 feather icon-camera"></span></a>
                              <nuxt-link to="/patients/audio" style="color:#ffffff;"><span class="mr-75 feather icon-phone"></span></nuxt-link>
@@ -62,13 +62,26 @@
                                         <div class="user-chats pr-0 pl-0">
                                             <div class="m-1"><small class="text-muted">July 15, 2020</small></div>
                                             <div class="chats">
-                                                <div class="chat" v-for="(ch,index) in chats" :key="index"  :class="{'chat-left' : !checkUserMsg(ch.sender)}">
-                                                    <div class="chat-body" :style="{'width: 80%;': !checkUserMsg(ch.sender)}" :class="{'pr-0 mr-0': checkUserMsg(ch.sender)}">
-                                                        <div :class="chatClass(ch.sender)">
+                                                <div class="chat" v-for="ch in chats" :key="ch.id" :class="{'chat-left' : checkUserMsg(ch.receiver_id)}">
+                                                    <!-- <div class="chat-avatar mt-50" v-if="checkUserMsg(ch.receiver_id)">
+                                                        <a class="avatar m-0" data-toggle="tooltip" href="#" data-placement="left" title="" data-original-title="">
+                                                            <img src="~assets/img/portrait/small/avatar-s-5.jpg" alt="avatar" height="40" width="40" />
+                                                        </a>
+                                                    </div> -->
+                                                    <div class="chat-body" :style="{'width: 80%;':checkUserMsg(ch.receiver_id)}" :class="{'pr-0 mr-0': !checkUserMsg(ch.receiver_id)}">
+                                                        <div :class=" chatClass(ch.receiver_id)">
                                                             <p v-html="ch.body"></p>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!-- <div class="chat">
+                                                    
+                                                    <div class="chat-body pr-0 mr-0">
+                                                        <div class="chat-content2">
+                                                            <p>i'm fine and you</p>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
                                             </div>
                                         </div>
 
@@ -77,7 +90,7 @@
                                     <div class="chat-footer mt-0">
                                             <div class="card-body d-flex justify-content-between pt-0">
                                                 <a href="#" class="align-self-center"><i class="fa fa-paperclip btn-icon" style="font-size: 18px;"></i></a>
-                                                <input type="text" class="form-control mr-50 ml-50" @keyup.enter="sendChat" placeholder="Type your Message" v-model="chat" style="border-radius: 50px;">
+                                                <input type="text" class="form-control mr-50 ml-50" placeholder="Type your Message" v-model="chat" style="border-radius: 50px;">
                                                 <!-- <button type="button" class="btn btn-icon btn-primary"><i class="feather icon-navigation"></i></button> -->
                                                 <button @click.prevent="sendChat" class="btn btn-primary btn-sm align-self-center" style="border-radius:20px;"><i class="fa fa-paper-plane-o btn-icon" style="font-size: 18px;"></i></button>
                                             </div>
@@ -102,100 +115,93 @@ export default {
           chat: '',
           log: '',
           sender_id: this.$store.state.auth.user.id,
-          receiver:'',
-        //   receiver_id: '',
+          patient:'',
+          receiver_id: '',
           disable:true
       }
   },
-  filters: {
-    capitalize: function (value) {
-        if (!value) return ''
-        value = value.toString()
-        return value.charAt(0).toUpperCase() + value.slice(1)
-    }
-  },
+  
   computed:{
       ...mapGetters(["user"])
   },
   methods: {
-        scrollToBottom(){
-            let box = document.querySelector('.chat-app-window')
-            box.scrollTop = box.scrollHeight
+      allChats() {
+        this.$axios.get('cases/'+this.$route.params.caseid+'/messages').then(response => {
+                this.chats = response.data.data
+                console.log(this.chats)
+            })
         },
         sendChat() {
-            if(this.chat){
-                let db = this.$fireStore
-                db.collection("chats").add({
-                    sender: this.sender_id,
-                    caseid: this.$route.params.caseid,
-                    body: this.chat,
-                    createdAt: new Date()
-                })
-                .then(function(docRef) {
-                    console.log("Document written with ID: ", docRef.id);
-                    this.scrollToBottom()
-                })
-                .catch(function(error) {
-                    console.error("Error adding document: ", error);
-                });
-                this.chat = "";
-            }
+            // this.$axios.post(`cases/${this.$route.params.caseid}/messages`,{
+            //     'body':this.chat
+            // }).then(() => {
+            //     this.chat = ""
+            //     this.allChats()
+            // })
+            let db = this.$fireStore
+            db.collection("chats").add({
+                sender:this.sender_id,
+                receiver:this.receiver_id,
+                chat: this.chat,
+                createdAt: new Date()
+            })
+            .then(function(docRef) {
+                console.log("Document written with ID: ", docRef.id);
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+            });
         },
         checkUserMsg(id){
             return this.user.id === id 
         },
         chatClass(id){
-            return this.user.id === id ? 'chat-content2' : 'chat-content'
+            return this.user.id === id ? 'chat-content' : 'chat-content2'
         },
         getReceiver(){
-            const role = this.$store.state.auth.user.roles[0].name
-            if(role == "doctor"){
-                let caseId = this.$route.params.caseid;
-                console.log(caseId);
-                this.$axios.get('case/'+caseId+'/patient')
-                .then(response => {
-                    this.receiver = response.data.data;
-                })
-                .catch(error => {
-                    console.log(error.response);
-                })
-            }
-            if(role == "patient"){
-               let caseId = this.$route.params.caseid;
-                console.log(caseId);
-                this.$axios.get('case/'+caseId+'/doctor')
-                .then(response => {
-                    this.receiver = response.data.data;
-                })
-                .catch(error => {
-                    console.log(error.response);
-                }) 
-            }
+            let caseId = this.$route.params.caseid;
+            console.log(caseId);
+            this.$axios.get('case/'+caseId+'/patient')
+            .then(response => {
+                this.patient = response.data.data;
+                this.receiver_id = this.patient.id
+            })
+            .catch(error => {
+                console.log(error.response);
+            })
         },
         loadChat(){
-            const db = this.$fireStore.collection('chats')
-                db.where("caseid", '==', this.$route.params.caseid).orderBy("createdAt")
-                .onSnapshot(querySnapshot => {
-                    let messages = []
-                    console.log(querySnapshot)
-                    querySnapshot.forEach(doc => {
-                        console.log(doc.data())
-                        messages.push(doc.data())
-                    })
-
-                    this.chats = messages
-                })
-                    
+            // console.log(this.sender_id);
+            // console.log(this.receiver_id);
+            // this.log = setInterval(()=>{
+            //     this.allChats()
+            // },3000)
+            // let query = this.$fireStore.collection('chats')
+            //     query.where("sender_id", '==', this.sender_id)
+            //     query.where("reciever_id", '==', this.reciever_id)
+            //     .get().then(querySnapshot => {
+            //         console.log(querySnapshot)
+                // querySnapshot.forEach(doc => {
+                // console.log(doc.data())
+                // console.log('already exists')
+                // this.applyStatus = true
+                // })
+            // })
         }
   },
   beforeDestroy(){
       clearInterval(this.log)
   },
   created(){
-      this.loadChat()
+    //   this.loadChat()
   },
   mounted() {
       this.getReceiver();
+    // this.receiver_id = this.$route.params.caseid;
+    //   this.allChats();
+    //   setInterval(function () {
+    //     this.allChats();
+    //     }, 1000); 
   },
  
 }

@@ -84,7 +84,9 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -105,6 +107,7 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxtjs/moment',
+    '@nuxtjs/firebase',
   ],
   /*
    ** Axios module configuration
@@ -116,7 +119,27 @@ export default {
   /*
    ** Build configuration
    */
+  firebase:{
+    config: {
+      apiKey: 'AIzaSyDD14XLcdFiPD6RgGfVyd1CyK-P0cu_KdY',
+      authDomain: 'drcallaway-chat.firebaseapp.com',
+      databaseURL: 'https://drcallaway-chat.firebaseio.com',
+      projectId: 'drcallaway-chat',
+      storageBucket: 'drcallaway-chat.appspot.com',
+      messagingSenderId: '602649836320',
+      appId: '1:602649836320:web:be75d23b62aa5e0466f545',
+      measurementId: 'G-D9FEN4FPLC'
+    },
+    services: {
+      auth: true,
+      firestore: true,
+      storage: true,
+      realtimeDb: true,
+      messaging: true,
+    }
+  },
 
+  
   auth: {
     endpoints:{
       login:{
@@ -142,6 +165,8 @@ export default {
       login:'/auth/login'
     }
   },
+
+  
 
   router: {
     middleware: [
