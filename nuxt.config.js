@@ -114,7 +114,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL:'http://3.131.91.59/api/v1'
+    baseURL:'https://api.drcallaway.ng/api/v1'
   },
   /*
    ** Build configuration
