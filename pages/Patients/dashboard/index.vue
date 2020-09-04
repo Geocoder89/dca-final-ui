@@ -14,7 +14,7 @@
               <div class="row breadcrumbs-top justify-content-center">
                 <div class="col-12 col-lg-6 col-md-6">
                   <h4 class="content-header-title float-left mb-0">
-                    Hi, {{user.first_name}}
+                    Hi, {{user.first_name | capitalize}}
                   </h4>
                   <nuxt-link
                     class="btn-icon btn-lg float-right btn btn-danger btn-round btn-sm "
@@ -259,6 +259,13 @@ export default {
     Header,
     Footer,
     Sidebar
+  },
+  filters: {
+    capitalize: function (value) {
+        if (!value) return ''
+        value = value.toString()
+        return value.charAt(0).toUpperCase() + value.slice(1)
+    }
   },
   middleware:['auth','patient']
 }

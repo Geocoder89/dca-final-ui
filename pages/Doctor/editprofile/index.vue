@@ -24,11 +24,11 @@
               <div class="col-md-6">
                 <section class="card px-2 pb-2 pt-1">
                   <div class="card-header pb-2">
-                    <h4 class="font-weight-light">Personal Info</h4 class="font-weight-light">
+                    <h4 class="font-weight-light">Personal Info</h4>
                   </div>
                   <div class="card-content">
                     <div class="card-body pt-0">
-                      <form action="index.html">
+                      <form action="#">
                         <div class="row">
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
                             <fieldset class="form-group">

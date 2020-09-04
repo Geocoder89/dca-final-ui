@@ -60,6 +60,7 @@ export default {
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/dataTables.select.min.js'},
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js'},
     {type: 'text/javascript', src: '/app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js'},
+    {type: 'text/javascript', src: '/app-assets/js/scripts/modal/components-modal.js'},
     {type: 'text/javascript', src: '/app-assets/js/core/app-menu.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/js/core/app.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/js/core/app-user.js', defer: true},
@@ -85,7 +86,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-
+    
   ],
   /*
    ** Nuxt.js dev-modules
@@ -114,7 +115,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL:'http://3.131.91.59/api/v1'
+    baseURL:'http://127.0.0.1:8000/api/v1'
   },
   /*
    ** Build configuration

@@ -55,8 +55,12 @@
 </template>
     <!-- END: Content-->
     <script>
+// import 'vuejs-noty/dist/vuejs-noty.css'
 export default {
   name: 'Home',
-  middleware:['guest']
+  middleware:['guest'],
+  mounted() {
+    // this.$noty.success("Your profile has been saved!")
+  }
 }
 </script>

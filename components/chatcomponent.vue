@@ -1,51 +1,69 @@
 <template>
     <div class="row justify-content-center">
+                    
+                     <!-- <div class="col-md-3 col-lg-3 col-12" :class="{'d-none': $nuxt.$route.name !== 'doctor-chats-caseid'}">
+                        <div class="main-menu menu-fixed menu-light menu-accordion" data-scroll-to-active="true" style="height:300px !important;">
+                            <div class="main-menu-content">
+                            <ul
+                            id="main-menu-navigation"
+                            class="navigation navigation-main"
+                            data-menu="menu-navigation"
+                            >
+                            
+                            <li class=" nav-item">
+                                <nuxt-link to="#"
+                                ><ion-icon name="checkmark-done-outline" style="margin-right:1em;"></ion-icon>
+                                <span class="menu-title" data-toggle="modal" data-target="#defaultSize">Update Case</span>
+                                </nuxt-link>
+                            </li>
+                            <li class=" nav-item ">
+                                <nuxt-link to="#"
+                                ><ion-icon name="checkmark-outline" style="margin-right:1em;"></ion-icon>
+                                <span class="menu-title">Prescription</span>
+                                </nuxt-link>
+                            </li>
+
+                            <li class=" nav-item ">
+                                <nuxt-link to="#"
+                                ><ion-icon name="arrow-redo-outline" style="margin-right:1em;"></ion-icon>
+                                <span class="menu-title">Refer Nurse</span>
+                                </nuxt-link>
+                            </li>
+                            <li class=" nav-item ">
+                                <nuxt-link to="#"
+                                ><ion-icon name="arrow-redo-outline" style="margin-right:1em;"></ion-icon>
+                                <span class="menu-title">Refer Pharmacy</span>
+                                </nuxt-link>
+                            </li>
+                            <li class=" nav-item ">
+                                <nuxt-link to="#"
+                                ><ion-icon name="arrow-redo-outline" style="margin-right:1em;"></ion-icon>
+                                <span class="menu-title">Refer Nutritionist</span>
+                                </nuxt-link>
+                            </li>
+                            <li class=" nav-item ">
+                                <nuxt-link to="#"
+                                ><ion-icon name="book-outline" style="margin-right:1em;"></ion-icon>
+                                <span class="menu-title">Read Case</span>
+                                </nuxt-link>
+                            </li>
+                            <li class=" nav-item ">
+                                <nuxt-link to="#"
+                                ><ion-icon name="close-outline" style="margin-right:1em;"></ion-icon>
+                                <span class="menu-title text-danger">Close Case</span>
+                                </nuxt-link>
+                            </li>
+                            </ul>
+                            </div>
+                            
+                    
+                        </div>
+                    </div>  -->
                     <div class="col-md-6 col-lg-6 col-12">
                 <section class="card">
+                  
                    <div class="card-header p-2" style="background: #814BAA;color:#ffffff">
-                       <ul class="card-header" :class="{'d-none' : this.$store.state.auth.user.roles[0].name !== 'doctor' }" style="background: #814BAA;color:#ffffff">
                        
-                       <nuxt-link
-                              to="#"
-                              class="btn btn-sm btn"
-                              data-toggle="dropdown"
-                              ><ion-icon 
-                              size="large"
-                              color="light"
-                              style="width: 30px;height:30px;color:#fff;"
-                              name="add-circle"></ion-icon>
-                              <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right p-1">
-                            <li class="dropdown-menu-header">
-                                <nuxt-link to="/doctor/patients/patient"><span class="grey darken-2"> Update Case</span></nuxt-link>
-                            </li>
-                            <br>
-                            <li class="dropdown-menu-header pb-1">
-                                <nuxt-link to="/doctor/prescribe"><span class="grey darken-2"> Prescription</span></nuxt-link>
-                            </li>
-                            <li class="dropdown-menu-header pb-1">
-                               <nuxt-link to="#"> <span class="grey darken-2"> Refer specialist</span></nuxt-link>
-                            </li>
-                            <li class="dropdown-menu-header pb-1">
-                                <nuxt-link to="#"><span class="grey darken-2"> Refer nurse</span></nuxt-link>
-                            </li>
-                            <li class="dropdown-menu-header pb-1">
-                                <nuxt-link to="#"><span class="grey darken-2"> Refer Nutritionist</span></nuxt-link>
-                            </li>
-                            <li class="dropdown-menu-header pb-1">
-                                <nuxt-link to="#"><span class="grey darken-2"> Refer Pharmarcy</span></nuxt-link>
-                            </li>
-                            <li class="dropdown-menu-header pb-1">
-                                <nuxt-link to="#"><span class="grey darken-2"> Close Case</span></nuxt-link>
-                            </li>
-                            <li class="dropdown-menu-header pb-1">
-                                <nuxt-link to="#"><span class="grey darken-2"> Medical History</span></nuxt-link>
-                            </li>
-                            <li class="dropdown-menu-header pb-1">
-                                <nuxt-link to="#"><span class="grey darken-2"> Read Cases</span></nuxt-link>
-                            </li>
-                        </ul>
-                       </nuxt-link>
-                    </ul>
                         <h4 class="card-title" style="color:#ffffff;">{{receiver.first_name | capitalize}}</h4>
                         <div style="color:#ffffff;">
                             <a href="#" style="color:#ffffff;"><span class="mr-75 feather icon-camera"></span></a>
@@ -58,7 +76,7 @@
                             <div class="col-lg-12 col-md-12 col-12">
                                 <div class="card chat-application">
 
-                                    <div class="chat-app-window" style="height:450px;overflow-y:scroll">
+                                    <div class="chat-app-window" id="chat-frame" ref="chatBox" style="height:auto;overflow-y:scroll">
                                         <div class="user-chats pr-0 pl-0">
                                             <div class="m-1"><small class="text-muted">July 15, 2020</small></div>
                                             <div class="chats">
@@ -88,9 +106,49 @@
                     </div>
                 </section>
             </div>
+            <!-- <button type="button" class="btn btn-icon btn-primary" data-toggle="modal" data-target="#defaultSize">
+                <i class="feather icon-navigation"></i>
+            </button> -->
+
+           <div class="modal fade text-left" id="defaultSize" tabindex="-1" role="dialog" aria-labelledby="myModalLabel18" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel18">Observation</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#">
+                              <div class="row">
+                                <div class="col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput">Obesrvation:</label>
+                                    <input
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder=""
+                                      v-model="receiver.doctor_observation"
+                                      style="border-radius:40px;"
+                                    />
+                                  </fieldset>
+                                </div>
+                              </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" @click="updateCase" data-dismiss="modal">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
         </div>
 </template>
 <script>
+
 import { mapGetters } from 'vuex'
 
 
@@ -98,13 +156,13 @@ export default {
   name: 'chats',
   data() {
       return {
-          chats: null,
-          chat: '',
-          log: '',
-          sender_id: this.$store.state.auth.user.id,
-          receiver:'',
-        //   receiver_id: '',
-          disable:true
+        chats: null,
+        chat: '',
+        log: '',
+        sender_id: this.$store.state.auth.user.id,
+        receiver:'',
+        modalShown:true,
+        disable:true
       }
   },
   filters: {
@@ -118,9 +176,11 @@ export default {
       ...mapGetters(["user"])
   },
   methods: {
-        scrollToBottom(){
-            let box = document.querySelector('.chat-app-window')
-            box.scrollTop = box.scrollHeight
+        
+        lastMsgFocus(){
+            
+            this.$refs.chatBox.scrollTop += 100;
+           
         },
         sendChat() {
             if(this.chat){
@@ -132,12 +192,12 @@ export default {
                     createdAt: new Date()
                 })
                 .then(function(docRef) {
-                    console.log("Document written with ID: ", docRef.id);
-                    this.scrollToBottom()
+                   
                 })
                 .catch(function(error) {
-                    console.error("Error adding document: ", error);
+                    
                 });
+               
                 this.chat = "";
             }
         },
@@ -151,24 +211,23 @@ export default {
             const role = this.$store.state.auth.user.roles[0].name
             if(role == "doctor"){
                 let caseId = this.$route.params.caseid;
-                console.log(caseId);
                 this.$axios.get('case/'+caseId+'/patient')
                 .then(response => {
                     this.receiver = response.data.data;
                 })
                 .catch(error => {
-                    console.log(error.response);
+                    
                 })
             }
             if(role == "patient"){
                let caseId = this.$route.params.caseid;
-                console.log(caseId);
+                
                 this.$axios.get('case/'+caseId+'/doctor')
                 .then(response => {
                     this.receiver = response.data.data;
                 })
                 .catch(error => {
-                    console.log(error.response);
+                    
                 }) 
             }
         },
@@ -177,15 +236,38 @@ export default {
                 db.where("caseid", '==', this.$route.params.caseid).orderBy("createdAt")
                 .onSnapshot(querySnapshot => {
                     let messages = []
-                    console.log(querySnapshot)
                     querySnapshot.forEach(doc => {
-                        console.log(doc.data())
                         messages.push(doc.data())
                     })
 
                     this.chats = messages
                 })
+            
                     
+        },
+        getCase(){
+
+        },
+        updateCase(){
+            
+            if(!this.receiver.doctor_observation){
+                alert("this feild is required");
+                return false;
+            }
+           
+            this.$axios.post('/case/'+this.$route.params.caseid+'/update',{
+                doctor_observation : this.receiver.doctor_observation
+            })
+            .then(response => {
+                console.log(response.data);
+                 alert("Observation saved successfully!")
+            })
+            .catch(error => {
+                console.log(error.response.data);
+            }) 
+        },
+        closeCase(){
+
         }
   },
   beforeDestroy(){
@@ -195,8 +277,15 @@ export default {
       this.loadChat()
   },
   mounted() {
-      this.getReceiver();
+    this.getReceiver();
+    
+    
   },
+  updated(){  
+        var elem = this.$refs.chatBox
+        
+        elem.scrollTop = elem.scrollHeight;
+  }
  
 }
 </script>
@@ -220,6 +309,7 @@ export default {
     body::-webkit-scrollbar-thumb:hover {
         background: #b30000; 
     }
+    
 @media only screen and (max-width: 768px) {
     .content{
         margin-left:0;
