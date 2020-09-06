@@ -85,9 +85,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    
-  ],
+ 
   /*
    ** Nuxt.js dev-modules
    */
@@ -108,7 +106,7 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxtjs/moment',
-    '@nuxtjs/firebase',
+    '@nuxtjs/firebase'
   ],
   /*
    ** Axios module configuration
@@ -179,6 +177,9 @@ export default {
     './plugins/mixins/user.js',
     './plugins/axios.js',
     './plugins/mixins/validation.js',
+    { src: '~/plugins/noty.js', mode: 'client' },
+    { src: '~/plugins/confirmplugin.js', mode: 'client' },
+    { src: '~/plugins/rating.js', mode: 'client' }
   ],
   build: {
     /*

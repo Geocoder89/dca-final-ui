@@ -136,7 +136,7 @@ export default {
     },
     getStatus(){
       let vm = this;
-        this.$axios.get('case')
+        this.$axios.get('cases')
         .then(response => {
            this.chatStatus = response.data.data.status
            this.caseid = response.data.data.id
@@ -145,11 +145,6 @@ export default {
         })
     },
     checkStatus(){
-        if(this.chatStatus === "ACTIVE"){
-            this.$router.push({
-              path:'/patients/chats/'+this.caseid
-            })
-        }
         if(this.chatStatus === "PENDING"){
             this.title = 'Your doctor will be with you shortly...'
             this.showLoader = true
@@ -161,14 +156,14 @@ export default {
   mounted(){
     let vm = this;
     vm.getStatus()
-    setInterval(function () {
-      vm.getStatus();
-    }, 30000); 
+    // setInterval(function () {
+    //   vm.getStatus();
+    // }, 30000); 
   },
   created(){
 
   },
-  middleware:['auth','patient']
+  middleware:['auth','patientActiveCaseCheck','patient']
 }
 </script>
 <style scoped>

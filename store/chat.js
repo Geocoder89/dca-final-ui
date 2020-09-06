@@ -1,6 +1,6 @@
 export const state = () => ({
-    status: "ACTIVE",
-    receiver: ""
+    status: "",
+    chatSession: null
 })
 
 
@@ -8,8 +8,8 @@ export const getters = {
     showStatus(state){
         return state.status;
     },
-    showReceiver(state){
-        return state.receiver;
+    getChatSession(state){
+        return state.chatSession;
     }
 } 
 
@@ -17,8 +17,8 @@ export const mutations = {
     SET_STATUS(state,status){
         state.status = status
     },
-    UPD_RECEIVER(state,receiver){
-        state.receiver = receiver
+    UPD_CHATSESSION(state,chatSession){
+        state.chatSession = chatSession
     }
 } 
 
@@ -28,7 +28,7 @@ export const actions = {
         commit('SET_STATUS',status)
     },
 
-    setReceiver({commit}, receiver){
-        commit('UPD_RECEIVER',receiver)
+    setChatSession({commit}, chatSession){
+        commit('UPD_CHATSESSION',chatSession)
     }
 }

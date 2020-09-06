@@ -9,18 +9,34 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
           <div class="content-header row justify-content-center">
-            <div class="content-header-left col-md-6 col-12 mb-2">
+            <div class="content-header-left col-md-5 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
                   <h4 class="content-header-title float-left mb-0">
-                    Chat
+                    Expired
                   </h4>
                 </div>
               </div>
             </div>
+          
           </div>
           <div class="content-body">
-              <Chatbox />
+            <section class="page-users-view">
+              <div class="row justify-content-center">
+                <!-- account start -->
+                <div class="col-12 col-md-5 col-lg-5">
+                  <div class="card justify-content-center">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                          <small>Sorry this session has expired.</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>
@@ -34,47 +50,18 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
 import Header from '~/components/customer/header'
 import Footer from '~/components/customer/footer'
 import Sidebar from '~/components/customer/sidebar'
-import Chatbox from '~/components/chatcomponent'
 
 export default {
-  name: 'chats',
+  name: 'Timeout',
   components: {
     Header,
     Footer,
-    Sidebar,
-    Chatbox
+    Sidebar
   },
-  
-  middleware:['auth','checkCompletedCase','patient']
+  middleware:['auth','patient']
 }
 </script>
-<style scoped>
-    *{
-        scrollbar-width: thin;
-    }
-    body::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px grey; 
-        border-radius: 10px;
-    }
-    body::-webkit-scrollbar {
-        width: 3px;
-    }
-    
-    body::-webkit-scrollbar-thumb {
-        background-color: blue;
-        border-radius: 10px;
-        border: 3px solid orange;
-    }
-    body::-webkit-scrollbar-thumb:hover {
-        background: #b30000; 
-    }
-@media only screen and (max-width: 768px) {
-    .content{
-        margin-left:0;
-    }
-}
-</style>
+

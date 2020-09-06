@@ -2,14 +2,15 @@
   <div>
     <body class="vertical-layout 2-columns navbar-floating footer-static pace-done menu-hide" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" style="overflow: auto;">
       <Header></Header>
-      <Sidebar></Sidebar>
+      <Sidebar @passEventToParent="pushToChat"></Sidebar>
 
       <div class="app-content content">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
           <div class="content-header row justify-content-center">
-            <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="col-12">
+            <div class="content-header-left col-md-6 col-12 mb-2">
               <div class="row breadcrumbs-top">
                 <div class="col-12">
                   <h4 class="content-header-title float-left mb-0">
@@ -19,8 +20,9 @@
               </div>
             </div>
           </div>
+          </div>
           <div class="content-body">
-              <Chatbox />
+              <Chatbox :chatClose="feedVal"/>
           </div>
         </div>
       </div>
@@ -41,13 +43,34 @@ import Chatbox from '~/components/chatcomponent'
 
 export default {
   name: 'chats',
+  data(){
+    return{
+      feed:false
+    }
+  },
   components: {
     Header,
     Footer,
     Sidebar,
      Chatbox
   },
-  middleware:['auth','doctor']
+  methods:{
+    pushToChat(obj){
+      this.feed = !obj.opendialog
+      this.feed = obj.opendialog
+      // alert(this.feed);
+    },
+    checkCase(){
+       
+    }
+  },
+  computed:{
+    feedVal:function(){
+      return this.feed
+    }
+  },
+  
+  middleware:['auth','chatSession','doctor']
 }
 </script>
 <style scoped>

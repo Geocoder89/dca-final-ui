@@ -96,20 +96,24 @@ export default {
   },
   methods:{
     getPatients(){
-        this.$axios.get('cases/waiting-room')
-        .then(response => {
-          this.patients = response.data.data
-          console.log(response.data.data)
-        })
+      this.$axios.get('cases/waiting-room')
+      .then(response => {
+        this.patients = response.data.data
+        console.log(response.data.data)
+      })
     },
     checkin(id){
-        this.$axios.patch('case/'+id)
-        .then(response =>{
-           console.log(response.data)
-           this.$router.push({
-             path:'/doctor/chats/'+id
-           })
-          })
+      this.$axios.patch('case/'+id)
+      .then(response =>{
+        this.setDoctorCaseID()
+        this.$router.push({
+          path:'/doctor/chats/'+id
+        })
+      })
+    },
+    setDoctorCaseID(){
+        vm.$store.dispatch('chat/setChatSession', true)
+        vm.$store.dispatch('chat/setStatus', "ACTIVE")
     }
   },
   mounted(){

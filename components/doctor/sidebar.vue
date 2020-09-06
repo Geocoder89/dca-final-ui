@@ -80,7 +80,7 @@
             </a>
           <br>
           <br>
-            <a class="disabled" :class="{'d-none': $nuxt.$route.name !== 'doctor-chats-caseid'}"
+            <a class="disabled" :class="{'d-none': $nuxt.$route.name !== 'doctor-chats-caseid'}" data-toggle="modal" data-target="#prescription"
               style="padding: 30px 15px 30px 30px;"><ion-icon name="checkmark-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Prescription</span>
             </a>
@@ -116,7 +116,7 @@
          
           <br>
           <br>
-            <a class="disabled" :class="{'d-none': $nuxt.$route.name !== 'doctor-chats-caseid'}"
+            <a class="disabled" :class="{'d-none': $nuxt.$route.name !== 'doctor-chats-caseid'}" @click="initiateDialog"
               style="padding: 30px 15px 30px 30px;"><ion-icon name="close-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title text-danger">Close Case</span>
             </a>
@@ -171,10 +171,10 @@ export default {
             path:'/auth/login'
         }) 
         
+    },
+    initiateDialog() {
+        this.$emit('passEventToParent', {opendialog:true})
     }
-    
-
-    
   }
 }
 </script>
