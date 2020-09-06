@@ -103,7 +103,7 @@ export default {
       })
     },
     checkin(id){
-      this.$axios.patch('case/'+id)
+      this.$axios.patch('cases/'+id)
       .then(response =>{
         this.setDoctorCaseID()
         this.$router.push({
