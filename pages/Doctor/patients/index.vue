@@ -112,8 +112,8 @@ export default {
       })
     },
     setDoctorCaseID(){
-        vm.$store.dispatch('chat/setChatSession', true)
-        vm.$store.dispatch('chat/setStatus', "ACTIVE")
+        this.$store.dispatch('chat/setChatSession', true)
+        this.$store.dispatch('chat/setStatus', "ACTIVE")
     }
   },
   mounted(){
