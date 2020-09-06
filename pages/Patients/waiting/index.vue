@@ -122,7 +122,7 @@ export default {
         this.showLoader = true
         this.disable = !this.disable
 
-        this.$axios.post('/case', {
+        this.$axios.post('/cases', {
           initial_complain:this.message
         }).then(response => {
             console.log(response.data)
