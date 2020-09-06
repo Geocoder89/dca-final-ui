@@ -68,7 +68,7 @@
             </nuxt-link>
            <!-- doctor-chats-caseid -->
           </li>
-          
+          {{$nuxt.$route.name}}
             <!-- <button type="button" class="btn btn-icon btn-primary" data-toggle="modal" data-target="#defaultSize">
                 <i class="feather icon-navigation"></i>
             </button> -->
