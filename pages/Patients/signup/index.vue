@@ -6,6 +6,11 @@
       <div class="content-wrapper">
         <div class="content-header row"></div>
         <div class="content-body">
+          <section>
+              <center>
+                      <img src="~assets/img/logo/drapp.png" class="mb-2 mt-1" width="250px" height="80px">
+              </center>
+          </section>
           <section class="row flexbox-container justify-content-center">
             <div class="col-xl-10 col-12 d-flex justify-content-center">
               <div class="card bg-authentication rounded-0 mb-0">

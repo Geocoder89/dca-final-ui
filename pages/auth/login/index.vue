@@ -8,10 +8,28 @@
             <div class="content-header row">
             </div>
             <div class="content-body">
+                <!-- <section class="row">
+                    <div class="col-xl-12 col-12 d-flex justify-content-center">
+                        <div class="card" style="padding-left:46px;padding-right:46px; border-radius:0;margin-bottom:10px;">
+                            <div class="row m-0">
+                                <div class="col-lg-12" style="display:flex;justify-content: center;background:transparent;">
+                                    <img src="~assets/img/logo/drapp.png" class="mb-2 mt-1" width="250px" height="80px">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+                <section>
+                    <center>
+                            <img src="~assets/img/logo/drapp.png" class="mb-2 mt-1" width="250px" height="80px">
+                    </center>
+                </section>
                 <section class="row">
                     <div class="col-xl-12 col-12 d-flex justify-content-center">
                         <div class="card bg-authentication rounded-0 mb-0">
                             <div class="row m-0">
+                                
                                 <div class="col-lg-12 col-12 p-0">
                                     <div class="card rounded-0 mb-0 px-2">
                                         <div class="card-header pb-1">
