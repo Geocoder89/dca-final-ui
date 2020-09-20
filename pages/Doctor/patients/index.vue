@@ -48,7 +48,7 @@
                     <table class="table data-list-view">
                       <tbody  >
                         <tr v-for="patient in patients" :key="patient.id">
-                          <td class="product-name p-2" style="font-size:0.9em;">1.   {{patient.patient[0].first_name}} {{patient.patient[0].last_name}}</td>
+                          <td class="product-name p-2" style="font-size:0.9em;">1.   {{patient.patient.first_name}} {{patient.patient.last_name}}</td>
                           <td class="text-muted">{{patient.initial_complain}}</td>
                           <td>
                             <button

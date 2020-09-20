@@ -124,6 +124,9 @@ export default {
 
         this.$axios.post('/cases', {
           initial_complain:this.message
+        },{ headers:{
+          "Access-Control-Allow-Origin":"*"
+          }
         }).then(response => {
             console.log(response.data)
             vm.getStatus()

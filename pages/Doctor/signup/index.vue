@@ -369,23 +369,23 @@ export default {
   data(){
     return {
        form:{
-          first_name : "Mike",
-          last_name : "Ray",
+          first_name : "",
+          last_name : "",
           middle_name : "",
           email : "",
           medical_certificate:"",
           password : "",
           password_confirmation : "",
-          gender : "",
+          gender : "M",
           mobile_phone_number : "",
           user_role_code : "ROLE004",
-          mcrn: "12345",
-          year_of_graduation: "2017-05-19",
+          mcrn: "",
+          year_of_graduation: "",
           specialty_code: "",
           account_name: "",
           account_number: "",
           bank_code: "",
-          school_attended: "Yaba"
+          school_attended: ""
        },
       banks:'',
       specialties:'',

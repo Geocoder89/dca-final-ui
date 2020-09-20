@@ -4,8 +4,12 @@
                 <section class="card">
                   
                    <div class="card-header p-2" style="background: #814BAA;color:#ffffff">
-                       
-                        <h4 class="card-title" style="color:#ffffff;">{{receiver.first_name | capitalize}}</h4>
+                       <div class="d-flex justify-content-between" style="width:28%;">
+                            <div class="d-flex justify-content-center align-items-center" style="width:40px;height:40px;background:#F8F8F8;border-radius:50%;">
+                                <span style="color: #814BAA;"><i class="fa fa-user-circle"></i></span>
+                            </div>
+                            <h4 class="card-title align-self-center" style="color:#ffffff;">{{receiver.first_name | capitalize}}</h4>
+                       </div>
                         <div style="color:#ffffff;">
                             <a href="#" style="color:#ffffff;"><span class="mr-75 feather icon-camera"></span></a>
                              <nuxt-link to="/patients/audio" style="color:#ffffff;"><span class="mr-75 feather icon-phone"></span></nuxt-link>
@@ -89,11 +93,11 @@
             </div>
     
         <!-- prescription -->
-            <div class="modal fade text-left" id="prescription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel18" aria-hidden="true">
+            <div class="modal fade text-left" id="prescription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel18" aria-hidden="true" data-backdrop="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel18">Observation</h4>
+                            <h4 class="modal-title" id="myModalLabel18">Prescription</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -101,28 +105,71 @@
                         <div class="modal-body">
                             <form action="#">
                               <div class="row">
-                                <div class="col-12 mb-0">
-                                  <fieldset class="form-group">
+                                <div class="col-6 mb-0">
+                                  <fieldset class="form-group" v-if="!havePrescription">
                                     <label for="basicInput">Ailment:</label>
                                     <input
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
                                       placeholder=""
-                                      v-model="prescription.ailment"
+                                      v-model="prescription.ailment.name"
+                                      style="border-radius:40px;"
+                                    />
+                                  </fieldset>
+                                  <label for="basicInput" class="mb-2" v-if="havePrescription">Ailment: <strong>{{prescription.ailment.drug_name | capitalize}} </strong></label>
+                                </div>
+                                <div class="col-12"></div>
+                                <div class="col-6 mb-0">
+                                  <fieldset class="form-group" v-if="havePrescription">
+                                    <label for="basicInput">Drug Name:</label>
+                                    <input
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder=""
+                                      v-model="prescription.drug_name"
                                       style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
-                                <div class="col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <label for="basicInput">Details:</label>
-                                    <textarea id="" cols="20" class="form-control" style="resize:none;"
-                                      v-model="prescription.details"></textarea>
+                                <div class="col-6 mb-0">
+                                  <fieldset class="form-group" v-if="havePrescription">
+                                    <label for="basicInput">Dosage:</label>
+                                    <input
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder=""
+                                      v-model="prescription.dosage"
+                                      style="border-radius:40px;"
+                                    />
                                   </fieldset>
                                 </div>
                               </div>
                             </form>
+                            <div class="row">
+                                <div class="col-12 mb-0">
+                                    <h6>Prescribed Drugs</h6>
+                                    <small v-if="!prescription.ailment.items.length"><em>No drug prescribed yet...</em></small>
+                                    <table class="table table-striped" v-if="prescription.ailment.items.length">
+                                        <thead>
+                                            <tr>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Dosage</th>
+                                            <th scope="col">action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-for="item in prescription.ailment.items" :key="item.id">
+                                            <td>{{item.name}}</td>
+                                            <td>{{item.dosage}}</td>
+                                            <td><a href="#" @click="deleteDrug($event,item.id)" class="btn btn-default" style="color:red;"><i class="fa fa-trash"></i></a></td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" style="border-radius:40px;" @click="savePrescription" data-dismiss="modal">Save</button>
@@ -147,9 +194,14 @@ export default {
         receiver:'',
         modalShown:true,
         prescription:{
-            ailment:'',
-            details:'',
-            id:''
+            ailment:{
+                name:'',
+                items:[],                
+            },
+            id:'',
+            drug_name:'',
+            dosage:'',
+            setPrescription:false,
         },
         caseFile:'',
         disable:true
@@ -169,6 +221,9 @@ export default {
       },
       initialComplainClass:function(){
            return this.user.id == this.caseFile.patient_id  ? 'chat-content2' : 'chat-content'
+      },
+      havePrescription:function(){
+          return this.prescription.setPrescription
       }
   },
   methods: {
@@ -280,9 +335,8 @@ export default {
                 this.$axios.patch(`cases/${caseId}/close`)
                 .then(response => {
                     vm.receiver = ''
-                    vm.prescription.ailment = ''
-                    vm.prescription.details = ''
-                    vm.prescription.id = ''
+                    vm.prescription.ailment.name = ''
+                    vm.prescription.items = []
                     vm.caseFile = ''
                     vm.$store.dispatch('chat/setChatSession', false)
                     vm.$store.dispatch('chat/setStatus', "COMPLETED")
@@ -311,29 +365,48 @@ export default {
                 console.log(error.response.data);
             }) 
         },
+        getPrecriptionDrugs(id){
+            this.$axios.get(`prescriptions/${id}`)
+                .then(response => {
+                    let items = response.data.data.drugs
+                    this.prescription.ailment.items = items
+                    console.log(items);
+                })
+                .catch(error => {
+                    console.log(error.response);
+                })
+        },
         getPrescription(){
             let caseId = this.$route.params.caseid;
             this.$axios.get(`cases/${caseId}/prescriptions`)
                 .then(response => {
                     let prescription = response.data.data
-                    this.prescription.ailment = prescription.ailment
-                    this.prescription.details = prescription.details
+                    if(!Object.keys(prescription).length){
+
+                        this.prescription.setPrescription = false;
+                        return false;
+                    }
+
+                    this.prescription.setPrescription = true;
+                    this.prescription.ailment.drug_name = prescription.ailment
                     this.prescription.id = prescription.id
+                    this.getPrecriptionDrugs(prescription.id);
                 })
                 .catch(error => {
                     console.log(error.response);
                 })
         },
         savePrescription(){
-            if(!this.prescription.ailment || !this.prescription.details){
-                this.$noty.error("All feild are required!");
-                return false;
-            }
+            
             if(!this.prescription.id){
+                if(!this.prescription.ailment.name){
+                    this.$noty.error("All feild are required!");
+                    return false;
+                }
                 this.$axios.post('prescriptions',{
                     case_file_id : this.$route.params.caseid,
-                    ailment : this.prescription.ailment,
-                    details : this.prescription.details
+                    details:"a simple description",
+                    ailment : this.prescription.ailment.name
                 })
                 .then(response => {
                     this.getPrescription();
@@ -345,19 +418,33 @@ export default {
                 }) 
                 return true;
             }
-            this.$axios.patch(`prescriptions/${this.prescription.id}`,{
-                case_file_id : this.$route.params.caseid,
-                ailment : this.prescription.ailment,
-                details : this.prescription.details
+            this.$axios.patch(`prescriptions/${this.prescription.id}/drugs`,{
+                name : this.prescription.drug_name,
+                dosage : this.prescription.dosage
             })
             .then(response => {
+                this.prescription.drug_name = ""
+                this.prescription.dosage = ""
                 this.getPrescription();
-                this.$noty.success("Prescription updated successfully.")
+                this.$noty.success("item added to precsription successfully.")
             })
             .catch(error => {
                 console.log(error.response.data);
             }) 
             
+        },
+        deleteDrug(e,id){
+            e.preventDefault();
+            // alert(id);
+            this.$axios.delete(`prescriptions/${this.prescription.id}/drugs/${id}`)
+                .then(response => {
+                    this.getPrescription();
+
+                    this.$noty.success("Drug deleted successfully.")
+                })
+                .catch(error => {
+                    console.log(error.response.data);
+                }) 
         }
   },
   created(){
