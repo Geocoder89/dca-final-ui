@@ -1,13 +1,16 @@
 export default function({store, redirect}){
     
     if(store.state.auth.loggedIn){
-        const role = store.state.auth.user.roles[0].name
+        const role = store.state.auth.user.roles[0].code
         switch (role) {
-        case 'patient':
+        case 'ROLE003':
             return redirect('/patients/dashboard')
             break;
-        case 'doctor':
+        case 'ROLE004':
             return redirect('/doctor/docboard')
+            break;
+        case 'ROLE005':
+            return redirect('/pharmacy/dashboard')
             break;
         default:
             return redirect('/')

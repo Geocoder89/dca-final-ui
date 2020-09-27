@@ -129,29 +129,27 @@ export default {
       
   },
   methods:{
-    async submit(){
+      
+      
+     submit(){
         this.disable = !this.disable
-        await this.$auth.login({
+        this.$auth.login({
             data:this.form
         }).catch(error => {
             console.log(error.response)
             this.disable = !this.disable
         })
-        const logged = this.$store.state.auth.loggedIn
-        const user = this.$store.state.auth.user
-            if(logged){
-                if(user.roles[0].name === "doctor"){
-                this.$router.push({
-                    path:'/doctor/docboard'
-                })
-            }
-            if(user.roles[0].name === "patient"){
-                this.$router.push({
-                    path:'/patients/dashboard'
-                })
-            }
-        }
         
+        this.authenticated()
+       
+        
+        
+    },
+    authenticated(){
+        const logged = this.$store.state.auth.loggedIn
+        if(logged){
+                //do stuff for logged in user
+        }
     },
     getError(errors){
         return errors.email || errors.message

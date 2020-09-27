@@ -123,58 +123,32 @@
                                     Representatives #1
                             </p>
                             <div class="row">
-                                <div class="col-xl-6 col-md-6 col-12 mb-0">
+                              <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <label for="basicInput">Email:</label>
+                                    <label for="basicInput">First Name:</label>
                                     <input
                                       id="basicInput"
                                       type="text"
                                       class="form-control"
                                       placeholder=""
-                                      v-model="second_user.email"
-                                      style="border-radius:40px;"
-                                    />
-                                  </fieldset>
-                                </div>
-                                
-                                <div class="col-xl-6 col-md-6 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <label for="basicInput"
-                                      >Password:</label
-                                    >
-                                    <input
-                                      id="basicInput"
-                                      type="password"
-                                      class="form-control"
-                                      placeholder=""
-                                      v-model="second_user.password"
+                                      v-model="first_user.first_name"
                                       style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <label for="basicInput"
-                                      >Password Confirmation:</label
-                                    >
+                                    <label for="basicInput">Last Name:</label>
                                     <input
                                       id="basicInput"
-                                      type="password"
+                                      type="text"
                                       class="form-control"
                                       placeholder=""
-                                      v-model="second_user.password_confirmation"
+                                      v-model="first_user.last_name"
                                       style="border-radius:40px;"
                                     />
                                   </fieldset>
                                 </div>
-                                
-                                
-                            </div>    
-                            <p class="px-0">
-                                    Representatives #2
-                            </p>
-                            <div class="row">
-                                
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput">Email:</label>
@@ -215,6 +189,83 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="first_user.password_confirmation"
+                                      style="border-radius:40px;"
+                                    />
+                                  </fieldset>
+                                </div>
+                                
+                                
+                            </div>    
+                            <p class="px-0">
+                                    Representatives #2
+                            </p>
+                            <div class="row">
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput">First Name:</label>
+                                    <input
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder=""
+                                      v-model="second_user.first_name"
+                                      style="border-radius:40px;"
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput">Last Name:</label>
+                                    <input
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder=""
+                                      v-model="second_user.last_name"
+                                      style="border-radius:40px;"
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput">Email:</label>
+                                    <input
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder=""
+                                      v-model="second_user.email"
+                                      style="border-radius:40px;"
+                                    />
+                                  </fieldset>
+                                </div>
+                                
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput"
+                                      >Password:</label
+                                    >
+                                    <input
+                                      id="basicInput"
+                                      type="password"
+                                      class="form-control"
+                                      placeholder=""
+                                      v-model="second_user.password"
+                                      style="border-radius:40px;"
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput"
+                                      >Password Confirmation:</label
+                                    >
+                                    <input
+                                      id="basicInput"
+                                      type="password"
+                                      class="form-control"
+                                      placeholder=""
+                                      v-model="second_user.password_confirmation"
                                       style="border-radius:40px;"
                                     />
                                   </fieldset>

@@ -231,6 +231,7 @@ export default {
             this.$refs.chatBox.scrollTop += 100;
         },
         sendChat() {
+            // console.log(this.chat);
             if(this.chat){
                 let db = this.$fireStore
                 db.collection("chats").add({
@@ -241,9 +242,10 @@ export default {
                     createdAt: new Date()
                 })
                 .then(function(docRef) {
-                   
+                   console.log(docRef);
                 })
                 .catch(function(error) {
+                   console.log(error);
                     
                 });
                
@@ -280,6 +282,7 @@ export default {
                 })
         },
         loadChat(){
+            // window.location.reload();
             let vm = this;
             const role = this.$store.state.auth.user.roles[0].name
             const db = this.$fireStore.collection('chats')
@@ -418,7 +421,7 @@ export default {
                 }) 
                 return true;
             }
-            this.$axios.patch(`prescriptions/${this.prescription.id}/drugs`,{
+            this.$axios.post(`prescriptions/${this.prescription.id}/drugs`,{
                 name : this.prescription.drug_name,
                 dosage : this.prescription.dosage
             })
