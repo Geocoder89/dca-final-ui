@@ -121,7 +121,7 @@
                                 <h3
                                   class="text-bold-300 text-center align-self-center mb-1"
                                 >
-                                  Completed Prescribe <br>
+                                  Newly Prescribed <br>
                                   Drugs
                                 </h3>
                               </div>

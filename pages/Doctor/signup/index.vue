@@ -285,65 +285,14 @@
                                 </div>
                                 
                               </div>
-                              <p class="px-0">
-                                    Bank Details.
-                            </p>
-                            <div class="row">
-                                <div class="col-xl-6 col-md-6 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <label for="basicInput">Account Name:</label>
-                                    <input
-                                      id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder=""
-                                      v-model="form.account_name"
-                                      :class="{'is-invalid': errors.account_name}"
-                                      style="border-radius:40px;"
-                                    />
-                                  </fieldset>
-                                </div>
-                                <div class="col-xl-6 col-md-6 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <label for="basicInput">Account No:</label>
-                                    <input
-                                      id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder=""
-                                      v-model="form.account_number"
-                                      :class="{'is-invalid': errors.account_number}"
-                                      style="border-radius:40px;"
-                                    />
-                                    <div class="invalid-feedback" v-if="errors.account_number">
-                                        {{errors.account_number[0]}}
-                                    </div>
-                                  </fieldset>
-                                </div>
-                                <div class="col-xl-6 col-md-6 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <label for="basicInput">Choose Your Bank:</label>
-                                    <select
-                                      id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      v-model="form.bank_code"
-                                      style="border-radius:40px;"
-                                    >
-                                    <option v-for="bank in banks" :key="bank.id" :value="bank.code">{{bank.name}}</option>
-                                    </select>
-                                    <div class="invalid-feedback" v-if="errors.bank_code">
-                                        {{errors.bank_code[0]}}
-                                    </div>
-                                  </fieldset>
-                                </div>
-                            </div>        
+                              
+                                   
                               <div class="col-12 pl-0">
                                 <p>
                                   Already have an account?
                                   <nuxt-link to="/auth/login">login</nuxt-link>
                                 </p>
-                                <button style="border-radius:40px;" :disabled="this.disable" class="btn btn-primary" @click.prevent="submit">
+                                <button style="border-radius:40px;" :disabled="disable" class="btn btn-primary" @click.prevent="submit">
                                   Register</button
                                 >
                               </div>
@@ -387,22 +336,11 @@ export default {
           bank_code: "",
           school_attended: ""
        },
-      banks:'',
       specialties:'',
       disable: false
     }
   },
   methods:{
-     getBankList(){
-        this.$axios.get('banks')
-        .then(response => {
-            this.banks = response.data.data
-        })
-        .catch(error => {
-            console.log(error.response)
-            this.disable = !this.disable
-        })
-    },
     getSpecialtyCodes(){
         this.$axios.get('specialties')
         .then(response => {
@@ -425,9 +363,6 @@ export default {
          this.form.password_confirmation && 
          this.form.gender && 
          this.form.mcrn && 
-         this.form.bank_code && 
-         this.form.account_name && 
-         this.form.account_number &&
          this.form.specialty_code || false
         
     },
@@ -487,9 +422,6 @@ export default {
       formData.append('mcrn', this.form.mcrn);
       formData.append('year_of_graduation', this.form.year_of_graduation);
       formData.append('specialty_code', this.form.specialty_code);
-      formData.append('account_name', this.form.gender);
-      formData.append('account_number', this.form.account_number);
-      formData.append('bank_code', this.form.bank_code);
       formData.append('school_attended', this.form.school_attended);
       
       const config = {
@@ -511,7 +443,6 @@ export default {
     }
   },
   mounted(){
-      this.getBankList()
       this.getSpecialtyCodes()
   },
   middleware:['guest']

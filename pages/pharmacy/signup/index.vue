@@ -14,10 +14,11 @@
                     <div class="card rounded-0 mb-0 p-2">
                       <div class="card-header pt-50 pb-1">
                         <div class="card-title">
-                          <h4 class="mb-0">PHARMACY REGISTRATION</h4>
+                          <h4 class="mb-0">PARTNERS REGISTRATION</h4>
                         </div>
                       </div>
                       <p class="px-2">
+                        {{errors}}
                         Fill the below form to create a new account.
                       </p>
                       <div class="card-content">
@@ -25,9 +26,33 @@
                           <div class="col-12 pl-0">
                             <form action="">
                               <div class="row">
+                                
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <label for="basicInput">Pharmacy Name:</label>
+                                    <label for="basicInput">Partner Type:</label>
+                                    <select
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
+                                      v-model="form.partner_type"
+                                      style="border-radius:40px;"
+                                      :class="{'is-invalid': getError(errors)}"
+                                    >
+                                    <option value="" >Select Partner</option>
+                                    <option v-for="(p,i) in partner_types" :key="i" :value="p">{{p}}</option>
+                                    </select>
+                                    <div class="invalid-feedback" v-if="errors.partner_type">
+                                        {{errors.partner_type[0]}}
+                                    </div>
+                                      <div class="invalid-feedback" v-if="errors.message">
+                                        {{errors.message}}
+                                    </div>
+                                  </fieldset>
+                                </div>
+
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput">Partner Name:</label>
                                     <input
                                       id="basicInput"
                                       type="text"
@@ -35,13 +60,20 @@
                                       placeholder=""
                                       v-model="form.name"
                                       style="border-radius:40px;"
+                                      :class="{'is-invalid': getError(errors)}"
                                     />
+                                    <div class="invalid-feedback" v-if="errors.name">
+                                        {{errors.name[0]}}
+                                    </div>
+                                      <div class="invalid-feedback" v-if="errors.message">
+                                        {{errors.message}}
+                                    </div>
                                   </fieldset>
                                 </div>
                                 
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <label for="basicInput">Pharmacy License No:</label>
+                                    <label for="basicInput">Partner License No:</label>
                                     <input
                                       id="basicInput"
                                       type="text"
@@ -49,12 +81,19 @@
                                       placeholder=""
                                       v-model="form.license_number"
                                       style="border-radius:40px;"
+                                      :class="{'is-invalid': getError(errors)}"
                                     />
+                                    <div class="invalid-feedback" v-if="errors.license_number">
+                                        {{errors.license_number[0]}}
+                                    </div>
+                                      <div class="invalid-feedback" v-if="errors.message">
+                                        {{errors.message}}
+                                    </div>
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-12 col-md-12 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <label for="basicInput">Pharmacy Address:</label>
+                                    <label for="basicInput">Partner Address:</label>
                                     <input
                                       id="basicInput"
                                       type="text"
@@ -62,7 +101,14 @@
                                       placeholder=""
                                       v-model="form.address"
                                       style="border-radius:40px;"
+                                      :class="{'is-invalid': getError(errors)}"
                                     />
+                                    <div class="invalid-feedback" v-if="errors.address">
+                                        {{errors.address[0]}}
+                                    </div>
+                                      <div class="invalid-feedback" v-if="errors.message">
+                                        {{errors.message}}
+                                    </div>
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
@@ -75,7 +121,14 @@
                                       placeholder=""
                                       v-model="form.email"
                                       style="border-radius:40px;"
+                                      :class="{'is-invalid': getError(errors)}"
                                     />
+                                    <div class="invalid-feedback" v-if="errors.email">
+                                        {{errors.email[0]}}
+                                    </div>
+                                      <div class="invalid-feedback" v-if="errors.email">
+                                        {{errors.message}}
+                                    </div>
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
@@ -88,25 +141,17 @@
                                       placeholder=""
                                       v-model="form.phone"
                                       style="border-radius:40px;"
+                                      :class="{'is-invalid': getError(errors)}"
                                     />
+                                    <div class="invalid-feedback" v-if="errors.phone_number">
+                                        {{errors.phone_number[0]}}
+                                    </div>
+                                      <div class="invalid-feedback" v-if="errors.message">
+                                        {{errors.message}}
+                                    </div>
                                   </fieldset>
                                 </div>
                                 
-                                <div class="col-xl-6 col-md-6 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <label for="basicInput">Partner Type:</label>
-                                    <select
-                                      id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      v-model="form.partner_type"
-                                      style="border-radius:40px;"
-                                    >
-                                    <option value="" >Select Partner</option>
-                                    <option v-for="(p,i) in partner_types" :key="i" :value="p">{{p}}</option>
-                                    </select>
-                                  </fieldset>
-                                </div>
                                 <div class="col-xl-12 col-md-12 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput">Description of Pharmacy:</label>
@@ -114,13 +159,20 @@
                                       id="basicInput"
                                       v-model="form.description"
                                       style="resize:none;border-radius:40px;"
+                                      :class="{'is-invalid': getError(errors)}"
                                       class="form-control">
                                     </textarea>
+                                    <div class="invalid-feedback" v-if="errors.description">
+                                        {{errors.description[0]}}
+                                    </div>
+                                      <div class="invalid-feedback" v-if="errors.message">
+                                        {{errors.message}}
+                                    </div>
                                   </fieldset>
                                 </div>
                               </div>
                               <p class="px-0">
-                                    Representatives #1
+                                  <strong>Representatives #1</strong>
                             </p>
                             <div class="row">
                               <div class="col-xl-6 col-md-6 col-12 mb-0">
@@ -197,7 +249,7 @@
                                 
                             </div>    
                             <p class="px-0">
-                                    Representatives #2
+                                <strong>Representatives #2</strong>
                             </p>
                             <div class="row">
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
@@ -331,6 +383,9 @@ export default {
     }
   },
   methods:{
+    getError(errors){
+        return errors.email || errors.message
+    },
     validateInput(){
         
       return  this.form.name &&
@@ -425,6 +480,15 @@ export default {
         .catch(error => {
             
             this.disable = !this.disable
+            console.log(error.response)
+            if(error.response.status === 422){
+              this.$noty.error("Unprocessable entity.");
+              return false;
+            }
+            if(error.response.status === 422){
+              this.$noty.error("Something went wrong.");
+              return false;
+            }
         })
       
     }

@@ -67,22 +67,13 @@
                                                        
                                                     </fieldset>
                                                     <div class="form-group d-flex justify-content-between align-items-center">
-                                                        <!-- <div class="text-left">
-                                                            <label>
-                                                                <input
-                                                                type="radio"
-                                                                name="radio"
-                                                                checked
-                                                                />
-                                                                Remember
-                                                            </label>
-                                                        </div> -->
+                                                       
                                                         <div class="text-left">
                                                              <div class="text-right d-sm-block"><nuxt-link to="/patients/forgotpassword" class="card-link">Forget Password?</nuxt-link></div>
                                                         </div>
                                                     </div>
                                                    <!--  <a href="index.html" class="btn btn-outline-primary float-left btn-inline">Register</a> -->
-                                                    <button type="submit" @click="submit" :disabled="this.disable" class="btn btn-primary d-block btn-inline" style="border-radius:40px;">Sign In</button>
+                                                    <button type="submit" @click="submit" :disabled="disable" class="btn btn-primary d-block btn-inline" style="border-radius:40px;">Sign In</button>
                                                
                                                 <div class="form-group d-flex justify-content-between align-items-center mt-2">
                                                         <div class="text-center">
