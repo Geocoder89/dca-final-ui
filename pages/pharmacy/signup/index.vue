@@ -26,7 +26,7 @@
                           <div class="col-12 pl-0">
                             <form action="">
                               <div class="row">
-                                
+                                 
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput">Partner Type:</label>
@@ -52,7 +52,29 @@
 
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <label for="basicInput">Partner Name:</label>
+                                    <label for="basicInput">Company's License No:</label>
+                                    <input
+                                      id="basicInput"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder=""
+                                      v-model="form.license_number"
+                                      style="border-radius:40px;"
+                                      :class="{'is-invalid': getError(errors)}"
+                                    />
+                                    <div class="invalid-feedback" v-if="errors.license_number">
+                                        {{errors.license_number[0]}}
+                                    </div>
+                                      <div class="invalid-feedback" v-if="errors.message">
+                                        {{errors.message}}
+                                    </div>
+                                  </fieldset>
+                                </div>
+                               
+
+                                <div class="col-xl-12 col-md-12 col-12 mb-0">
+                                  <fieldset class="form-group">
+                                    <label for="basicInput">Company's Name:</label>
                                     <input
                                       id="basicInput"
                                       type="text"
@@ -71,29 +93,10 @@
                                   </fieldset>
                                 </div>
                                 
-                                <div class="col-xl-6 col-md-6 col-12 mb-0">
-                                  <fieldset class="form-group">
-                                    <label for="basicInput">Partner License No:</label>
-                                    <input
-                                      id="basicInput"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder=""
-                                      v-model="form.license_number"
-                                      style="border-radius:40px;"
-                                      :class="{'is-invalid': getError(errors)}"
-                                    />
-                                    <div class="invalid-feedback" v-if="errors.license_number">
-                                        {{errors.license_number[0]}}
-                                    </div>
-                                      <div class="invalid-feedback" v-if="errors.message">
-                                        {{errors.message}}
-                                    </div>
-                                  </fieldset>
-                                </div>
+                                
                                 <div class="col-xl-12 col-md-12 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <label for="basicInput">Partner Address:</label>
+                                    <label for="basicInput">Company's Address:</label>
                                     <input
                                       id="basicInput"
                                       type="text"
@@ -154,7 +157,7 @@
                                 
                                 <div class="col-xl-12 col-md-12 col-12 mb-0">
                                   <fieldset class="form-group">
-                                    <label for="basicInput">Description of Pharmacy:</label>
+                                    <label for="basicInput">Company's Description :</label>
                                     <textarea
                                       id="basicInput"
                                       v-model="form.description"
