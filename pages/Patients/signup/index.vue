@@ -176,7 +176,7 @@
                                     </select>
                                   </fieldset>
                                 </div> -->
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <!-- <div class="col-xl-4 col-md-6 col-12 mb-0">
                                   <div class="text-bold-100 font-small-2">
                                     Gender:
                                   </div>
@@ -215,7 +215,7 @@
                                         {{errors.gender[0]}}
                                     </div>
                                   </fieldset>
-                                </div>
+                                </div> -->
                               </div>
                               <div class="col-12 pl-0">
                                 <p>

@@ -18,7 +18,7 @@
                         </div>
                       </div>
                       <p class="px-2">
-                        {{errors}}
+                       
                         Fill the below form to create a new account.
                       </p>
                       <div class="card-content">
@@ -36,16 +36,14 @@
                                       class="form-control"
                                       v-model="form.partner_type"
                                       style="border-radius:40px;"
-                                      :class="{'is-invalid': getError(errors)}"
+                                      :class="{'is-invalid': errors.partner_type}"
                                     >
                                     <option value="" >Select Partner</option>
                                     <option v-for="(p,i) in partner_types" :key="i" :value="p">{{p}}</option>
                                     </select>
-                                    <div class="invalid-feedback" v-if="errors.partner_type">
+                                    
+                                      <div class="invalid-feedback" v-if="errors.partner_type">
                                         {{errors.partner_type[0]}}
-                                    </div>
-                                      <div class="invalid-feedback" v-if="errors.message">
-                                        {{errors.message}}
                                     </div>
                                   </fieldset>
                                 </div>
@@ -60,14 +58,12 @@
                                       placeholder=""
                                       v-model="form.license_number"
                                       style="border-radius:40px;"
-                                      :class="{'is-invalid': getError(errors)}"
+                                      :class="{'is-invalid': errors.license_number}"
                                     />
                                     <div class="invalid-feedback" v-if="errors.license_number">
                                         {{errors.license_number[0]}}
                                     </div>
-                                      <div class="invalid-feedback" v-if="errors.message">
-                                        {{errors.message}}
-                                    </div>
+                                    
                                   </fieldset>
                                 </div>
                                
@@ -82,18 +78,14 @@
                                       placeholder=""
                                       v-model="form.name"
                                       style="border-radius:40px;"
-                                      :class="{'is-invalid': getError(errors)}"
+                                      :class="{'is-invalid': errors.name}"
                                     />
                                     <div class="invalid-feedback" v-if="errors.name">
                                         {{errors.name[0]}}
                                     </div>
-                                      <div class="invalid-feedback" v-if="errors.message">
-                                        {{errors.message}}
-                                    </div>
+                                     
                                   </fieldset>
                                 </div>
-                                
-                                
                                 <div class="col-xl-12 col-md-12 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput">Company's Address:</label>
@@ -104,14 +96,12 @@
                                       placeholder=""
                                       v-model="form.address"
                                       style="border-radius:40px;"
-                                      :class="{'is-invalid': getError(errors)}"
+                                      :class="{'is-invalid': errors.address}"
                                     />
                                     <div class="invalid-feedback" v-if="errors.address">
                                         {{errors.address[0]}}
                                     </div>
-                                      <div class="invalid-feedback" v-if="errors.message">
-                                        {{errors.message}}
-                                    </div>
+                                      
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
@@ -124,15 +114,12 @@
                                       placeholder=""
                                       v-model="form.email"
                                       style="border-radius:40px;"
-                                      :class="{'is-invalid': getError(errors)}"
+                                      :class="{'is-invalid': errors.email}"
                                     />
                                     <div class="invalid-feedback" v-if="errors.email">
                                         {{errors.email[0]}}
                                     </div>
-                                      <div class="invalid-feedback" v-if="errors.email">
-                                        {{errors.message}}
-                                    </div>
-                                  </fieldset>
+                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
@@ -144,15 +131,12 @@
                                       placeholder=""
                                       v-model="form.phone"
                                       style="border-radius:40px;"
-                                      :class="{'is-invalid': getError(errors)}"
+                                      :class="{'is-invalid': errors.phone_number}"
                                     />
                                     <div class="invalid-feedback" v-if="errors.phone_number">
                                         {{errors.phone_number[0]}}
                                     </div>
-                                      <div class="invalid-feedback" v-if="errors.message">
-                                        {{errors.message}}
-                                    </div>
-                                  </fieldset>
+                                 </fieldset>
                                 </div>
                                 
                                 <div class="col-xl-12 col-md-12 col-12 mb-0">
@@ -162,14 +146,11 @@
                                       id="basicInput"
                                       v-model="form.description"
                                       style="resize:none;border-radius:40px;"
-                                      :class="{'is-invalid': getError(errors)}"
+                                      :class="{'is-invalid': errors.description}"
                                       class="form-control">
                                     </textarea>
                                     <div class="invalid-feedback" v-if="errors.description">
                                         {{errors.description[0]}}
-                                    </div>
-                                      <div class="invalid-feedback" v-if="errors.message">
-                                        {{errors.message}}
                                     </div>
                                   </fieldset>
                                 </div>
@@ -187,8 +168,14 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="first_user.first_name"
+                                      :class="{'is-invalid': errors['members.0.first_name']}"
                                       style="border-radius:40px;"
                                     />
+                                    <div class="invalid-feedback" v-if="errors['members.0.first_name']">
+                                        <p>First Name field is required</p>
+                                    </div>
+                                    
+                                     
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
@@ -200,8 +187,12 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="first_user.last_name"
+                                       :class="{'is-invalid': errors['members.0.last_name']}"
                                       style="border-radius:40px;"
                                     />
+                                     <div class="invalid-feedback" v-if="errors['members.0.last_name']">
+                                        <p>Last Name field is required</p>
+                                    </div>
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
@@ -213,8 +204,12 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="first_user.email"
+                                        :class="{'is-invalid': errors['members.0.email']}"
                                       style="border-radius:40px;"
                                     />
+                                     <div class="invalid-feedback" v-if="errors['members.0.email']">
+                                        <p>Email field is required</p>
+                                    </div>
                                   </fieldset>
                                 </div>
                                 
@@ -229,8 +224,12 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="first_user.password"
+                                       :class="{'is-invalid': errors['members.0.password']}"
                                       style="border-radius:40px;"
                                     />
+                                    <div class="invalid-feedback" v-if="errors['members.0.password']">
+                                        <p>Password field is required</p>
+                                    </div>
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
@@ -244,8 +243,12 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="first_user.password_confirmation"
+                                       :class="{'is-invalid': errors['members.0.password']}"
                                       style="border-radius:40px;"
                                     />
+                                    <div class="invalid-feedback" v-if="errors['members.0.password']">
+                                        <p>Password field is required and must match</p>
+                                    </div>
                                   </fieldset>
                                 </div>
                                 
@@ -264,8 +267,12 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="second_user.first_name"
+                                       :class="{'is-invalid': errors['members.1.first_name']}"
                                       style="border-radius:40px;"
                                     />
+                                    <div class="invalid-feedback" v-if="errors['members.1.first_name']">
+                                        <p>First Name is required</p>
+                                    </div>
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
@@ -277,8 +284,12 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="second_user.last_name"
+                                      :class="{'is-invalid': errors['members.1.last_name']}"
                                       style="border-radius:40px;"
                                     />
+                                    <div class="invalid-feedback" v-if="errors['members.1.last_name']">
+                                        <p>Last Name is required</p>
+                                    </div>
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
@@ -290,8 +301,12 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="second_user.email"
+                                      :class="{'is-invalid': errors['members.1.email']}"
                                       style="border-radius:40px;"
                                     />
+                                    <div class="invalid-feedback" v-if="errors['members.1.email']">
+                                        <p>Email is required</p>
+                                    </div>
                                   </fieldset>
                                 </div>
                                 
@@ -306,8 +321,12 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="second_user.password"
+                                      :class="{'is-invalid': errors['members.1.password']}"
                                       style="border-radius:40px;"
                                     />
+                                    <div class="invalid-feedback" v-if="errors['members.1.password']">
+                                        <p>Password is required</p>
+                                    </div>
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
@@ -321,8 +340,12 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="second_user.password_confirmation"
+                                      :class="{'is-invalid': errors['members.1.password']}"
                                       style="border-radius:40px;"
                                     />
+                                    <div class="invalid-feedback" v-if="errors['members.1.password']">
+                                        <p>Password is required nad must match</p>
+                                    </div>
                                   </fieldset>
                                 </div>
                                 
@@ -365,7 +388,8 @@ export default {
           phone:"",
           description : "",
           partner_type : "",
-          members:[]
+          //members:[]
+         members:[],
        },
        first_user:{
           first_name : "",
@@ -387,29 +411,29 @@ export default {
   },
   methods:{
     getError(errors){
-        return errors.email || errors.message
+        // return errors.email || errors.message
     },
     validateInput(){
         
-      return  this.form.name &&
-      this.form.address && this.form.license_number && 
-      this.form.email && 
-      this.form.phone && 
-      this.form.description && 
-      this.form.partner_type &&
-      this.first_user.email &&
-      this.first_user.password &&
-      this.first_user.password_confirmation &&
-      this.second_user.email &&
-      this.second_user.password &&
-      this.second_user.password_confirmation || false
+      // return  this.form.name &&
+      // this.form.address && this.form.license_number && 
+      // this.form.email && 
+      // this.form.phone && 
+      // this.form.description && 
+      // this.form.partner_type &&
+      // this.first_user.email &&
+      // this.first_user.password &&
+      // this.first_user.password_confirmation &&
+      // this.second_user.email &&
+      // this.second_user.password &&
+      // this.second_user.password_confirmation || false
         
     },
     validateImage(){
-      return this.form.medical_certificate.type == "image/png" || this.form.medical_certificate.type == "image/jpg" || this.form.medical_certificate.type == "image/jpeg" ? true : false
+      // return this.form.medical_certificate.type == "image/png" || this.form.medical_certificate.type == "image/jpg" || this.form.medical_certificate.type == "image/jpeg" ? true : false
     },
     validateImageSize(){
-      return this.form.medical_certificate.size <= 20000 || false
+      // return this.form.medical_certificate.size <= 20000 || false
     },
     checkPassword(password){
       // return password > 5 || false
@@ -423,31 +447,31 @@ export default {
     },
     async submit(){
       
-      if(!this.validateInput()){
-        this.$noty.error("please fill in the required fields");
-        return false;
-      }
+      // if(!this.validateInput()){
+      //   this.$noty.error("please fill in the required fields");
+      //   return false;
+      // }
       
 
-      if(!this.checkPassword(this.first_user.password)){
-        this.$noty.error("representative password must be atleast than six(6) characters long");
-        return false;
-      }
+      // if(!this.checkPassword(this.first_user.password)){
+      //   this.$noty.error("representative password must be atleast than six(6) characters long");
+      //   return false;
+      // }
 
-      if(!this.checkPassword(this.second_user.password)){
-        this.$noty.error("representative password must be atleast than six(6) characters long");
-        return false;
-      }
+      // if(!this.checkPassword(this.second_user.password)){
+      //   this.$noty.error("representative password must be atleast than six(6) characters long");
+      //   return false;
+      // }
 
-      if(!this.matchPassword(this.first_user.password, this.first_user.password_confirmation)){
-        this.$noty.error("representative passwords do not match");
-        return false;
-      }
+      // if(!this.matchPassword(this.first_user.password, this.first_user.password_confirmation)){
+      //   this.$noty.error("representative passwords do not match");
+      //   return false;
+      // }
 
-      if(!this.matchPassword(this.second_user.password, this.second_user.password_confirmation)){
-        this.$noty.error("representative passwords do not match");
-        return false;
-      }
+      // if(!this.matchPassword(this.second_user.password, this.second_user.password_confirmation)){
+      //   this.$noty.error("representative passwords do not match");
+      //   return false;
+      // }
       
       this.form.members.push(this.first_user)
       this.form.members.push(this.second_user)
