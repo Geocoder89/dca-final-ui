@@ -284,6 +284,8 @@ export default {
         loadChat(){
             // window.location.reload();
             let vm = this;
+            let caseId = this.$route.params.caseid;
+            console.log(caseId);
             const role = this.$store.state.auth.user.roles[0].name
             const db = this.$fireStore.collection('chats')
             db.where("caseid", '==', this.$route.params.caseid).orderBy("createdAt")
@@ -291,9 +293,9 @@ export default {
                 let messages = []
                 querySnapshot.forEach(doc => {
                     // console.log(doc.data().active)
-                    if(doc.data().active == false){
+                    if(doc.data().active == false && doc.data().caseid === caseId){
                         if(role == "patient"){
-                            vm.$store.dispatch('chat/setChatSession', false)
+                            // vm.$store.dispatch('chat/setChatSession', false)
                             vm.$router.push({path:'/patients/review'})
                             return false;
                         }
@@ -341,8 +343,8 @@ export default {
                     vm.prescription.ailment.name = ''
                     vm.prescription.items = []
                     vm.caseFile = ''
-                    vm.$store.dispatch('chat/setChatSession', false)
-                    vm.$store.dispatch('chat/setStatus', "COMPLETED")
+                    // vm.$store.dispatch('chat/setChatSession', false)
+                    // vm.$store.dispatch('chat/setStatus', "COMPLETED")
                     vm.$noty.success("Case closed succesfully.")
                     vm.$router.push({path:'/doctor/docboard'})
                 })
@@ -452,7 +454,6 @@ export default {
   },
   created(){
       this.loadChat()
-     
   },
   mounted() {
     this.getReceiver();
