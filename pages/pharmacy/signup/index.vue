@@ -412,7 +412,11 @@ export default {
       return this.form.medical_certificate.size <= 20000 || false
     },
     checkPassword(password){
-      return password > 5 || false
+      // return password > 5 || false
+      if(password < 6){
+        return false;
+      }
+      return true;
     },
     matchPassword(password, confirm_password){
       return password === confirm_password || false
