@@ -381,29 +381,28 @@ export default {
   data(){
     return {
        form:{
-          name : "BigData",
-          address : "12, olumeji",
-          license_number : "1234567",
-          email : "bi@test.com",
-          phone:"09089786756",
-          description : "lorem ispum",
-          partner_type : "PHARMACY",
-          //members:[]
-         members:[],
+          name : "",
+          address : "",
+          license_number : "",
+          email : "",
+          phone:"",
+          description : "",
+          partner_type : "",
+          members:[],
        },
        first_user:{
-          first_name : "uimide",
-          last_name : "remy",
-          email : "remy@gmail.com",
-          password : "123456",
-          password_confirmation : "123456"
+          first_name : "",
+          last_name : "",
+          email : "",
+          password : "",
+          password_confirmation : ""
        },
         second_user:{
-          first_name : "laycon",
-          last_name : "james",
-          email : "james@gmail.com",
-          password : "123456",
-          password_confirmation : "123456"
+          first_name : "",
+          last_name : "",
+          email : "",
+          password : "",
+          password_confirmation : ""
         },
        partner_types:["DIAGNOSTIC","AMBULANCE","HOSPITAL","PHARMACY"],
        disable: false
@@ -486,7 +485,7 @@ export default {
       // formData.append('description', this.form.description);
       // formData.append('members', []);
       
-      let datar = {
+      let datar = JSON.stringify({
           name : this.form.name,
           email : this.form.email,
           address : this.form.address,
@@ -495,7 +494,8 @@ export default {
           phone_number : this.form.phone,
           description : this.form.description,
           members : this.form.members
-        }
+        });
+       
       
       const config = {
           headers: { 'content-type': 'multipart/form-data' }
