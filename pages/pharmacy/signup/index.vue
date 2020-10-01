@@ -36,14 +36,14 @@
                                       class="form-control"
                                       v-model="form.partner_type"
                                       style="border-radius:40px;"
-                                      :class="{'is-invalid': errors.partner_type}"
+                                      :class="{'is-invalid': bugs.partner_type.error}"
                                     >
                                     <option value="" >Select Partner</option>
                                     <option v-for="(p,i) in partner_types" :key="i" :value="p">{{p}}</option>
                                     </select>
                                     
-                                      <div class="invalid-feedback" v-if="errors.partner_type">
-                                        {{errors.partner_type[0]}}
+                                      <div class="invalid-feedback" v-if="bugs.partner_type.error">
+                                        {{bugs.partner_type.msg}}
                                     </div>
                                   </fieldset>
                                 </div>
@@ -58,10 +58,10 @@
                                       placeholder=""
                                       v-model="form.license_number"
                                       style="border-radius:40px;"
-                                      :class="{'is-invalid': errors.license_number}"
+                                      :class="{'is-invalid': bugs.license_number.error}"
                                     />
-                                    <div class="invalid-feedback" v-if="errors.license_number">
-                                        {{errors.license_number[0]}}
+                                    <div class="invalid-feedback" v-if="bugs.license_number.error">
+                                        {{bugs.license_number.msg}}
                                     </div>
                                     
                                   </fieldset>
@@ -78,10 +78,10 @@
                                       placeholder=""
                                       v-model="form.name"
                                       style="border-radius:40px;"
-                                      :class="{'is-invalid': errors.name}"
+                                      :class="{'is-invalid': bugs.name.error}"
                                     />
-                                    <div class="invalid-feedback" v-if="errors.name">
-                                        {{errors.name[0]}}
+                                    <div class="invalid-feedback" v-if="bugs.name.error">
+                                        {{bugs.name.msg}}
                                     </div>
                                      
                                   </fieldset>
@@ -96,10 +96,10 @@
                                       placeholder=""
                                       v-model="form.address"
                                       style="border-radius:40px;"
-                                      :class="{'is-invalid': errors.address}"
+                                      :class="{'is-invalid': bugs.address.error}"
                                     />
-                                    <div class="invalid-feedback" v-if="errors.address">
-                                        {{errors.address[0]}}
+                                    <div class="invalid-feedback" v-if="bugs.address.error">
+                                        {{bugs.address.msg}}
                                     </div>
                                       
                                   </fieldset>
@@ -114,10 +114,10 @@
                                       placeholder=""
                                       v-model="form.email"
                                       style="border-radius:40px;"
-                                      :class="{'is-invalid': errors.email}"
+                                      :class="{'is-invalid': bugs.email.error}"
                                     />
-                                    <div class="invalid-feedback" v-if="errors.email">
-                                        {{errors.email[0]}}
+                                    <div class="invalid-feedback" v-if="bugs.email.error">
+                                        {{bugs.email.msg}}
                                     </div>
                                    </fieldset>
                                 </div>
@@ -131,10 +131,10 @@
                                       placeholder=""
                                       v-model="form.phone"
                                       style="border-radius:40px;"
-                                      :class="{'is-invalid': errors.phone_number}"
+                                      :class="{'is-invalid': bugs.phone.error}"
                                     />
-                                    <div class="invalid-feedback" v-if="errors.phone_number">
-                                        {{errors.phone_number[0]}}
+                                    <div class="invalid-feedback" v-if="bugs.phone.error">
+                                        {{bugs.phone.msg}}
                                     </div>
                                  </fieldset>
                                 </div>
@@ -146,11 +146,11 @@
                                       id="basicInput"
                                       v-model="form.description"
                                       style="resize:none;border-radius:40px;"
-                                      :class="{'is-invalid': errors.description}"
+                                      :class="{'is-invalid': bugs.description.error}"
                                       class="form-control">
                                     </textarea>
-                                    <div class="invalid-feedback" v-if="errors.description">
-                                        {{errors.description[0]}}
+                                    <div class="invalid-feedback" v-if="bugs.description.error">
+                                        {{bugs.description.msg}}
                                     </div>
                                   </fieldset>
                                 </div>
@@ -168,11 +168,11 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="first_user.first_name"
-                                      :class="{'is-invalid': errors['members.0.first_name']}"
+                                      :class="{'is-invalid': bugs.fufn.error}"
                                       style="border-radius:40px;"
                                     />
-                                    <div class="invalid-feedback" v-if="errors['members.0.first_name']">
-                                        <p>First Name field is required</p>
+                                    <div class="invalid-feedback" v-if="bugs.fufn.error">
+                                        <p>{{bugs.fufn.msg}}</p>
                                     </div>
                                     
                                      
@@ -187,11 +187,11 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="first_user.last_name"
-                                       :class="{'is-invalid': errors['members.0.last_name']}"
+                                       :class="{'is-invalid': bugs.fuln.error}"
                                       style="border-radius:40px;"
                                     />
-                                     <div class="invalid-feedback" v-if="errors['members.0.last_name']">
-                                        <p>Last Name field is required</p>
+                                     <div class="invalid-feedback" v-if="bugs.fuln.error">
+                                        <p>{{bugs.fuln.msg}}</p>
                                     </div>
                                   </fieldset>
                                 </div>
@@ -204,11 +204,11 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="first_user.email"
-                                        :class="{'is-invalid': errors['members.0.email']}"
+                                        :class="{'is-invalid': bugs.fuemail.error}"
                                       style="border-radius:40px;"
                                     />
-                                     <div class="invalid-feedback" v-if="errors['members.0.email']">
-                                        <p>Email field is required</p>
+                                     <div class="invalid-feedback" v-if="bugs.fuemail.error">
+                                        <p>{{bugs.fuemail.msg}}</p>
                                     </div>
                                   </fieldset>
                                 </div>
@@ -224,11 +224,11 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="first_user.password"
-                                       :class="{'is-invalid': errors['members.0.password']}"
+                                       :class="{'is-invalid': bugs.fupw.error}"
                                       style="border-radius:40px;"
                                     />
-                                    <div class="invalid-feedback" v-if="errors['members.0.password']">
-                                        <p>Password field is required</p>
+                                    <div class="invalid-feedback" v-if="bugs.fupw.error">
+                                        <p>{{bugs.fupw.msg}}</p>
                                     </div>
                                   </fieldset>
                                 </div>
@@ -243,11 +243,11 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="first_user.password_confirmation"
-                                       :class="{'is-invalid': errors['members.0.password']}"
+                                       :class="{'is-invalid': bugs.fucpw.error}"
                                       style="border-radius:40px;"
                                     />
-                                    <div class="invalid-feedback" v-if="errors['members.0.password']">
-                                        <p>Password field is required and must match</p>
+                                    <div class="invalid-feedback" v-if="bugs.fucpw.error">
+                                        <p>{{bugs.fucpw.msg}}</p>
                                     </div>
                                   </fieldset>
                                 </div>
@@ -267,11 +267,11 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="second_user.first_name"
-                                       :class="{'is-invalid': errors['members.1.first_name']}"
+                                       :class="{'is-invalid': bugs.sufn.error}"
                                       style="border-radius:40px;"
                                     />
-                                    <div class="invalid-feedback" v-if="errors['members.1.first_name']">
-                                        <p>First Name is required</p>
+                                    <div class="invalid-feedback" v-if="bugs.sufn.error">
+                                        <p>{{bugs.sufn.msg}}</p>
                                     </div>
                                   </fieldset>
                                 </div>
@@ -284,11 +284,11 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="second_user.last_name"
-                                      :class="{'is-invalid': errors['members.1.last_name']}"
+                                      :class="{'is-invalid': bugs.suln.error}"
                                       style="border-radius:40px;"
                                     />
-                                    <div class="invalid-feedback" v-if="errors['members.1.last_name']">
-                                        <p>Last Name is required</p>
+                                    <div class="invalid-feedback" v-if="bugs.suln.error">
+                                        <p>{{bugs.suln.msg}}</p>
                                     </div>
                                   </fieldset>
                                 </div>
@@ -301,11 +301,11 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="second_user.email"
-                                      :class="{'is-invalid': errors['members.1.email']}"
+                                      :class="{'is-invalid': bugs.suemail.error}"
                                       style="border-radius:40px;"
                                     />
-                                    <div class="invalid-feedback" v-if="errors['members.1.email']">
-                                        <p>Email is required</p>
+                                    <div class="invalid-feedback" v-if="bugs.suemail.error">
+                                        <p>{{bugs.suemail.msg}}</p>
                                     </div>
                                   </fieldset>
                                 </div>
@@ -321,11 +321,11 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="second_user.password"
-                                      :class="{'is-invalid': errors['members.1.password']}"
+                                      :class="{'is-invalid': bugs.supw.error}"
                                       style="border-radius:40px;"
                                     />
-                                    <div class="invalid-feedback" v-if="errors['members.1.password']">
-                                        <p>Password is required</p>
+                                    <div class="invalid-feedback" v-if="bugs.supw.error">
+                                        <p>{{bugs.supw.msg}}</p>
                                     </div>
                                   </fieldset>
                                 </div>
@@ -340,11 +340,11 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="second_user.password_confirmation"
-                                      :class="{'is-invalid': errors['members.1.password']}"
+                                      :class="{'is-invalid': bugs.sucpw.error}"
                                       style="border-radius:40px;"
                                     />
-                                    <div class="invalid-feedback" v-if="errors['members.1.password']">
-                                        <p>Password is required nad must match</p>
+                                    <div class="invalid-feedback" v-if="bugs.sucpw.error">
+                                        <p>{{bugs.sucpw.msg}}</p>
                                     </div>
                                   </fieldset>
                                 </div>
@@ -387,7 +387,7 @@ export default {
           email : "",
           phone:"",
           description : "",
-          partner_type : "",
+          partner_type : "PHARMACY",
           members:[],
        },
        first_user:{
@@ -404,8 +404,85 @@ export default {
           password : "",
           password_confirmation : ""
         },
+        bugs:{
+            name:{
+              error:false,
+              msg:""
+            },
+            address:{
+              error:false,
+              msg:""
+            },
+            license_number:{
+              error:false,
+              msg:""
+            },
+            phone:{
+              error:false,
+              msg:""
+            },
+            description:{
+              error:false,
+              msg:""
+            },
+            partner_type:{
+              error:false,
+              msg:""
+            },
+            email:{
+              error:false,
+              msg:""
+            },
+            fufn:{
+              error:false,
+              msg:""
+            },
+            fuln:{
+              error:false,
+              msg:""
+            },
+            fuemail:{
+              error:false,
+              msg:""
+            },
+            fupw:{
+              error:false,
+              msg:""
+            },
+            fucpw:{
+              error:false,
+              msg:""
+            },
+            sufn:{
+              error:false,
+              msg:""
+            },
+            suln:{
+              error:false,
+              msg:""
+            },
+            suemail:{
+              error:false,
+              msg:""
+            },
+            supw:{
+              error:false,
+              msg:""
+            },
+            sucpw:{
+              error:false,
+              msg:""
+            }
+
+           
+        },
        partner_types:["DIAGNOSTIC","AMBULANCE","HOSPITAL","PHARMACY"],
        disable: false
+    }
+  },
+  computed:{
+    bugg:function(){
+      return this.bugs
     }
   },
   methods:{
@@ -441,68 +518,183 @@ export default {
       }
       return true;
     },
+
+    validEmail(){
+
+    },
+    clearErrors(){
+        this.bugs.name.error = false
+        this.bugs.license_number.error = false
+        this.bugs.phone.error = false
+        this.bugs.description.error = false
+        this.bugs.email.error = false
+        this.bugs.address.error = false
+        this.bugs.partner_type.error = false
+        this.bugs.fufn.error = false
+        this.bugs.fuln.error = false
+        this.bugs.fuemail.error = false
+        this.bugs.fupw.error = false
+        this.bugs.fucpw.error = false
+        this.bugs.sufn.error = false
+        this.bugs.suln.error = false
+        this.bugs.suemail.error = false
+        this.bugs.supw.error = false
+        this.bugs.sucpw.error = false
+    },
+    hasErrors(value){
+        return !value ? true : false;
+    },
     matchPassword(password, confirm_password){
       return password === confirm_password || false
     },
     async submit(){
-      
-      if(!this.validateInput()){
-        this.$noty.error("please fill in the required fields");
-        return false;
+      this.clearErrors()
+      // if(!this.validateInput()){
+      //   this.$noty.error("please fill in the required fields");
+      //   return false;
+      // }
+
+      if(this.hasErrors(this.form.partner_type)){
+          let msg = "please select a type of partner";
+          this.bugs.partner_type.msg = msg;
+          this.bugs.partner_type.error = true
+          return false
+      }
+
+      if(this.hasErrors(this.form.license_number)){
+          let msg = "please enter this partner license number";
+          this.bugs.license_number.msg = msg;
+          this.bugs.license_number.error = true
+          return false
       }
       
+      if(this.hasErrors(this.form.name)){
+          let msg = "please enter a partner name";
+          this.bugs.name.msg = msg;
+          this.bugs.name.error = true
+          return false
+      }
+
+      if(this.hasErrors(this.form.address)){
+          let msg = "please enter a partner address";
+          this.bugs.address.msg = msg;
+          this.bugs.address.error = true
+          return false
+      }
+      
+      if(this.hasErrors(this.form.email)){
+          let msg = "please enter a valid email";
+          this.bugs.email.msg = msg;
+          this.bugs.email.error = true
+          return false
+      }
+      if(this.hasErrors(this.form.phone)){
+          let msg = "please enter phone number";
+          this.bugs.phone.msg = msg;
+          this.bugs.phone.error = true
+          return false
+      }
+      
+      if(this.hasErrors(this.form.description)){
+          let msg = "please description is required";
+          this.bugs.description.msg = msg;
+          this.bugs.description.error = true
+          return false
+      }
+
+      if(this.hasErrors(this.first_user.first_name)){
+          let msg = "this field is required";
+          this.bugs.fufn.msg = msg;
+          this.bugs.fufn.error = true
+          return false
+      }
+
+      if(this.hasErrors(this.first_user.last_name)){
+          let msg = "this field is required";
+          this.bugs.fuln.msg = msg;
+          this.bugs.fuln.error = true
+          return false
+      }
+      if(this.hasErrors(this.first_user.email)){
+          let msg = "this field is required";
+          this.bugs.fuemail.msg = msg;
+          this.bugs.fuemail.error = true
+          return false
+      }
 
       if(!this.checkPassword(this.first_user.password)){
-        this.$noty.error("representative password must be atleast than six(6) characters long");
-        return false;
-      }
-
-      if(!this.checkPassword(this.second_user.password)){
-        this.$noty.error("representative password must be atleast than six(6) characters long");
-        return false;
+        // this.$noty.error("representative password must be atleast than six(6) characters long");
+          this.bugs.fupw.msg = "please password length must be greater than 5";
+          this.bugs.fupw.error = true
+          return false;
       }
 
       if(!this.matchPassword(this.first_user.password, this.first_user.password_confirmation)){
-        this.$noty.error("representative passwords do not match");
-        return false;
+        // this.bugs.supw = "please password length must be greater than 5";
+          this.bugs.fucpw.msg = "passwords do not match";
+          this.bugs.fucpw.error = true
+          return false;
       }
 
+      if(this.hasErrors(this.second_user.first_name)){
+          let msg = "this field is required";
+          this.bugs.sufn.msg = msg;
+          this.bugs.sufn.error = true
+          return false
+      }
+
+      if(this.hasErrors(this.second_user.last_name)){
+          let msg = "this field is required";
+          this.bugs.suln.msg = msg;
+          this.bugs.suln.error = true
+          return false
+      }
+      if(this.hasErrors(this.second_user.email)){
+          let msg = "this field is required";
+          this.bugs.suemail.msg = msg;
+          this.bugs.suemail.error = true
+          return false
+      }
+
+      
+
+      if(!this.checkPassword(this.second_user.password)){
+        // this.$noty.error("representative password must be atleast than six(6) characters long");
+          this.bugs.supw.msg = "please password length must be greater than 5";
+          this.bugs.supw.error = true
+          return false;
+      }
+
+      
+
       if(!this.matchPassword(this.second_user.password, this.second_user.password_confirmation)){
-        this.$noty.error("representative passwords do not match");
-        return false;
+        // this.$noty.error("representative passwords do not match");
+          this.bugs.sucpw.msg = "passwords do not match";
+          this.bugs.sucpw.error = true
+          return false;
       }
       
       this.form.members.push(this.first_user)
       this.form.members.push(this.second_user)
       
-      // let formData = new FormData();
-      // formData.append('name', this.form.name);
-      // formData.append('email', this.form.email);
-      // formData.append('address', this.form.address);
-      // formData.append('license_number', this.form.license_number);
-      // formData.append('partner_type', this.form.partner_type);
-      // formData.append('phone_number', this.form.phone);
-      // formData.append('description', this.form.description);
-      // formData.append('members', []);
-      
-      let datar = JSON.stringify({
+      let datar = {
           name : this.form.name,
           email : this.form.email,
           address : this.form.address,
           license_number : this.form.license_number,
-          partner_type : this.form.partner_type,
+          type : this.form.partner_type,
           phone_number : this.form.phone,
           description : this.form.description,
           members : this.form.members
-        });
+        };
        
       
-      const config = {
-          headers: { 'content-type': 'multipart/form-data' }
-      }
+      // const config = {
+      //     headers: { 'content-type': 'multipart/form-data' }
+      // }
     
       this.disable = !this.disable
-        await this.$axios.post('partners/signup', datar , {config}
+        await this.$axios.post('partners/signup', datar
         ).then(response => {
             this.$router.push({
               path:'/auth/verify'
@@ -510,16 +702,7 @@ export default {
         })
         .catch(error => {
             console.log(error)
-            // this.disable = !this.disable
-            // console.log(error.response)
-            // if(error.response.status === 422){
-            //   this.$noty.error("Unprocessable entity.");
-            //   return false;
-            // }
-            // if(error.response.status === 500){
-            //   this.$noty.error("Something went wrong.");
-            //   return false;
-            // }
+            
         })
       
     }

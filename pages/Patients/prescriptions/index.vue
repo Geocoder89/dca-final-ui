@@ -72,20 +72,20 @@
                                   <div class="card-header">
                                   </div>
                                   <div class="card">
-                                    <table class="table data-list-view" v-if="prescriptions.length">
+                                    <table class="table data-list-view" v-if="prescriptions">
                                     <tbody>
                                       <tr v-for="(prescription,index) in prescriptions" :key="prescription.id">
-                                        <td class="product-name">{{index + 1}}. Prescriptions for {{prescription.ailment}}.</td>
+                                        <td class="product-name">{{index + 1}}. Prescriptions for your {{prescription.ailment}}.</td>
                                         <td>
                                           <a href="#" data-toggle="modal" data-target="#drugs"
                                             @click="previewDrugs(prescription.id),event => event.preventDefault()"
                                             class="btn btn-sm btn-primary float-right"
-                                            >preview</a
+                                            >drugs</a
                                           >
                                         </td>
                                         <td>
                                           <button
-                                            @click="checkin(prescription.id),event => event.preventDefault()"
+                                            @click="accept(prescription.id),event => event.preventDefault()"
                                             class="btn btn-sm btn-primary float-right"
                                             >Accept</button
                                           >
@@ -101,7 +101,7 @@
                                     </tbody>
                                   </table>
                                   </div>
-                                  <i style="color:red;" v-if="prescriptions.length">please note: accepting either of these prescriptions means you have the drugs associated with it.</i>
+                                  <!-- <i style="color:green;" v-if="prescriptions.length">please note: accepting either of these prescriptions means you have the drugs associated with it.</i> -->
                                 </section>
 
                                  <!-- <section class="mb-50">
@@ -141,24 +141,30 @@
                             <p v-if="!drugs.length">
                               <i>Loading Drugs...</i>
                             </p>
-                          <table class="table table-striped" v-else>
+                            <table class="table table-striped" v-else>
                               <thead>
                                 <tr>
                                   <th scope="col">#</th>
                                   <th scope="col">Name</th>
                                   <th scope="col">Dosage</th>
-                                
+                                  <th scope="col">Price</th>
                                 </tr>
                               </thead>
                               <tbody>
+                                <!-- {{count = 0}} -->
                                 <tr v-for="(drug,index) in drugs" :key="drug.id">
                                   <th scope="row">{{index + 1}}</th>
                                   <td>{{drug.name}}</td>
                                   <td>{{drug.dosage}}</td>
-                                  
+                                  <td>₦{{drug.price_in_minor_unit}}</td>
+                                  <!-- {{total += drug.price_in_minor_unit}} -->
+                                </tr>
+                                <tr>
+                                  <td colspan="2">₦{{total}}</td>
                                 </tr>
                               </tbody>
                             </table>
+                          
                               
                             
                             
@@ -177,9 +183,9 @@
   </div>
 </template>
 <script>
-import Header from '~/components/pharmacy/header'
-import Footer from '~/components/pharmacy/footer'
-import Sidebar from '~/components/pharmacy/sidebar'
+import Header from '~/components/customer/header'
+import Footer from '~/components/customer/footer'
+import Sidebar from '~/components/customer/sidebar'
 
 export default {
   name: 'Pending',
@@ -190,38 +196,53 @@ export default {
       showDrugs:false
     }
   },
-  middleware:['auth','pharmacy'],
+  middleware:['auth','patient'],
   components: {
     Header,
     Footer,
     Sidebar
   },
+  computed: {
+    total: function(){
+      // console.log(this.rows);
+      return this.drugs.reduce(function(total, item){
+
+        return total + item.price_in_minor_unit; 
+      },0);
+    }
+  },
   methods:{
     getPrescriptions(){
-      this.$axios.get(`prescriptions?q=not-picked`)
+      this.$axios.get(`prescriptions?q=patient`)
       .then(response => {
+        
         let prescriptions = response.data.data
         console.log(prescriptions)
         this.prescriptions = prescriptions;
+          
+         
+          
+
+          
           
       })
       .catch(error => {
           console.log(error);
       })
     },
-    checkin(id){
-      this.$axios.patch(`prescriptions/${id}/pharmacies`,{
-          partners_id : this.$store.state.auth.user.partners[0].id
-      })
-      .then(response => {
-          this.$noty.success("Prescription accepted successfuly.")
-          this.$router.push({
-            path:`/pharmacy/prescription/${id}`
-          })
-      })
-      .catch(error => {
-          console.log(error.response.data);
-      }) 
+    accept(id){
+    //   this.$axios.patch(`prescriptions/${id}/pharmacies`,{
+    //       partners_id : this.$store.state.auth.user.partners[0].id
+    //   })
+    //   .then(response => {
+    //       this.$noty.success("Prescription accepted successfuly.")
+    //       this.$router.push({
+    //         path:`/pharmacy/prescription/${id}`
+    //       })
+    //   })
+    //   .catch(error => {
+    //       console.log(error.response.data);
+    //   }) 
         
     },
     previewDrugs(id){

@@ -77,7 +77,7 @@
                                 <h3
                                   class="text-bold-300 text-center align-self-center mb-1"
                                 >
-                                  Pending Prescribe <br>
+                                  Completed Prescribed <br>
                                   Drugs
                                 </h3>
                               </div>
@@ -92,7 +92,7 @@
                               >4</span
                             ></sup
                           >
-                          <nuxt-link to="#" class="">
+                          <nuxt-link to="/pharmacy/prescription" class="">
                             <div
                               class="card d-flex flex-column justify-content-center mb-0"
                               style="border-radius: 33px;background: #F8F8F8;box-shadow: none;background:#fff;"

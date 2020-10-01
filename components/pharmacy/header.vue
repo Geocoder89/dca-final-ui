@@ -428,15 +428,12 @@ export default {
   },
   methods:{
     getPrescriptions(){
-      this.$axios.get(`prescriptions`)
+      this.$axios.get(`prescriptions?q=not-picked`)
       .then(response => {
           let prescriptions = response.data.data
         
-          prescriptions.forEach((item) => {
-              if(item.partners_id == null){
-                this.prescriptions++
-              }
-          })
+          this.prescriptions = prescriptions.length
+             
 
 
       })

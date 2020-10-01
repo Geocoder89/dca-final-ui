@@ -67,6 +67,12 @@
               <span class="menu-title">Consultation Room</span>
             </nuxt-link>
           </li>
+          <li class="nav-item">
+            <nuxt-link to="/patients/prescriptions"
+              ><ion-icon name="bandage" style="margin-right:1em;"></ion-icon>
+              <span class="menu-title">Prescriptions</span>
+            </nuxt-link>
+          </li>
           <li class=" nav-item">
             <nuxt-link to="/patients/referal"
               ><ion-icon name="people-outline" style="margin-right:1em;"></ion-icon>
