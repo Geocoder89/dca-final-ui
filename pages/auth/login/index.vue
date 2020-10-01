@@ -139,7 +139,7 @@ export default {
     authenticated(){
         const logged = this.$store.state.auth.loggedIn
         if(logged){
-                //do stuff for logged in user
+            console.log(this.$store.state.auth.user.roles[0].code);
         }
     },
     getError(errors){

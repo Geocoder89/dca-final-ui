@@ -9,7 +9,7 @@ export default function({store, redirect}){
         case 'ROLE004':
             return redirect('/doctor/docboard')
             break;
-        case 'ROLE005':
+        case 'ROLE008':
             return redirect('/pharmacy/dashboard')
             break;
         default:

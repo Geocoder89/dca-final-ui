@@ -381,29 +381,29 @@ export default {
   data(){
     return {
        form:{
-          name : "",
-          address : "",
-          license_number : "",
-          email : "",
-          phone:"",
-          description : "",
-          partner_type : "",
+          name : "BigData",
+          address : "12, olumeji",
+          license_number : "1234567",
+          email : "bi@test.com",
+          phone:"09089786756",
+          description : "lorem ispum",
+          partner_type : "PHARMACY",
           //members:[]
          members:[],
        },
        first_user:{
-          first_name : "",
-          last_name : "",
-          email : "",
-          password : "",
-          password_confirmation : ""
+          first_name : "uimide",
+          last_name : "remy",
+          email : "remy@gmail.com",
+          password : "123456",
+          password_confirmation : "123456"
        },
         second_user:{
-          first_name : "",
-          last_name : "",
-          email : "",
-          password : "",
-          password_confirmation : ""
+          first_name : "laycon",
+          last_name : "james",
+          email : "james@gmail.com",
+          password : "123456",
+          password_confirmation : "123456"
         },
        partner_types:["DIAGNOSTIC","AMBULANCE","HOSPITAL","PHARMACY"],
        disable: false
@@ -411,29 +411,29 @@ export default {
   },
   methods:{
     getError(errors){
-        // return errors.email || errors.message
+        return errors.email || errors.message
     },
     validateInput(){
         
-      // return  this.form.name &&
-      // this.form.address && this.form.license_number && 
-      // this.form.email && 
-      // this.form.phone && 
-      // this.form.description && 
-      // this.form.partner_type &&
-      // this.first_user.email &&
-      // this.first_user.password &&
-      // this.first_user.password_confirmation &&
-      // this.second_user.email &&
-      // this.second_user.password &&
-      // this.second_user.password_confirmation || false
+      return  this.form.name &&
+      this.form.address && this.form.license_number && 
+      this.form.email && 
+      this.form.phone && 
+      this.form.description && 
+      this.form.partner_type &&
+      this.first_user.email &&
+      this.first_user.password &&
+      this.first_user.password_confirmation &&
+      this.second_user.email &&
+      this.second_user.password &&
+      this.second_user.password_confirmation || false
         
     },
     validateImage(){
-      // return this.form.medical_certificate.type == "image/png" || this.form.medical_certificate.type == "image/jpg" || this.form.medical_certificate.type == "image/jpeg" ? true : false
+      return this.form.medical_certificate.type == "image/png" || this.form.medical_certificate.type == "image/jpg" || this.form.medical_certificate.type == "image/jpeg" ? true : false
     },
     validateImageSize(){
-      // return this.form.medical_certificate.size <= 20000 || false
+      return this.form.medical_certificate.size <= 20000 || false
     },
     checkPassword(password){
       // return password > 5 || false
@@ -447,31 +447,31 @@ export default {
     },
     async submit(){
       
-      // if(!this.validateInput()){
-      //   this.$noty.error("please fill in the required fields");
-      //   return false;
-      // }
+      if(!this.validateInput()){
+        this.$noty.error("please fill in the required fields");
+        return false;
+      }
       
 
-      // if(!this.checkPassword(this.first_user.password)){
-      //   this.$noty.error("representative password must be atleast than six(6) characters long");
-      //   return false;
-      // }
+      if(!this.checkPassword(this.first_user.password)){
+        this.$noty.error("representative password must be atleast than six(6) characters long");
+        return false;
+      }
 
-      // if(!this.checkPassword(this.second_user.password)){
-      //   this.$noty.error("representative password must be atleast than six(6) characters long");
-      //   return false;
-      // }
+      if(!this.checkPassword(this.second_user.password)){
+        this.$noty.error("representative password must be atleast than six(6) characters long");
+        return false;
+      }
 
-      // if(!this.matchPassword(this.first_user.password, this.first_user.password_confirmation)){
-      //   this.$noty.error("representative passwords do not match");
-      //   return false;
-      // }
+      if(!this.matchPassword(this.first_user.password, this.first_user.password_confirmation)){
+        this.$noty.error("representative passwords do not match");
+        return false;
+      }
 
-      // if(!this.matchPassword(this.second_user.password, this.second_user.password_confirmation)){
-      //   this.$noty.error("representative passwords do not match");
-      //   return false;
-      // }
+      if(!this.matchPassword(this.second_user.password, this.second_user.password_confirmation)){
+        this.$noty.error("representative passwords do not match");
+        return false;
+      }
       
       this.form.members.push(this.first_user)
       this.form.members.push(this.second_user)
@@ -509,17 +509,17 @@ export default {
             }) 
         })
         .catch(error => {
-            
-            this.disable = !this.disable
-            console.log(error.response)
-            if(error.response.status === 422){
-              this.$noty.error("Unprocessable entity.");
-              return false;
-            }
-            if(error.response.status === 422){
-              this.$noty.error("Something went wrong.");
-              return false;
-            }
+            console.log(error)
+            // this.disable = !this.disable
+            // console.log(error.response)
+            // if(error.response.status === 422){
+            //   this.$noty.error("Unprocessable entity.");
+            //   return false;
+            // }
+            // if(error.response.status === 500){
+            //   this.$noty.error("Something went wrong.");
+            //   return false;
+            // }
         })
       
     }
