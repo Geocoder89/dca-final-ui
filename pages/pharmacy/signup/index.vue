@@ -388,8 +388,7 @@ export default {
           phone:"",
           description : "",
           partner_type : "",
-          //members:[]
-         members:[],
+          members:[],
        },
        first_user:{
           first_name : "",
@@ -486,7 +485,7 @@ export default {
       // formData.append('description', this.form.description);
       // formData.append('members', []);
       
-      let datar = {
+      let datar = JSON.stringify({
           name : this.form.name,
           email : this.form.email,
           address : this.form.address,
@@ -495,7 +494,8 @@ export default {
           phone_number : this.form.phone,
           description : this.form.description,
           members : this.form.members
-        }
+        });
+       
       
       const config = {
           headers: { 'content-type': 'multipart/form-data' }
