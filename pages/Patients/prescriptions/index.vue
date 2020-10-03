@@ -86,7 +86,7 @@
                                         <td>
                                           <a href="#" data-toggle="modal" data-target="#orderDrug"
                                             class="btn btn-sm btn-success float-right"
-                                            >drugs</a
+                                            >Accept</a
                                           >
                                         </td>
                                       </tr>
