@@ -84,10 +84,9 @@
                                           >
                                         </td>
                                         <td>
-                                          <button
-                                            @click="accept(prescription.id),event => event.preventDefault()"
-                                            class="btn btn-sm btn-primary float-right"
-                                            >Accept</button
+                                          <a href="#" data-toggle="modal" data-target="#orderDrug"
+                                            class="btn btn-sm btn-success float-right"
+                                            >drugs</a
                                           >
                                         </td>
                                       </tr>
@@ -164,13 +163,32 @@
                                 </tr>
                               </tbody>
                             </table>
-                          
-                              
-                            
-                            
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-outline-primary" style="border-radius:40px;" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- update case modal -->
+           <div class="modal fade text-left" id="orderDrug" tabindex="-1" role="dialog" aria-labelledby="myModalLabel18" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel18">Drug Order</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Please Note!</h2>
+                            <p>Home delivery service cost ₦1000</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" style="border-radius:40px;" data-dismiss="modal">Home Delivery</button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" style="border-radius:40px;" data-dismiss="modal">Pickup</button>
                         </div>
                     </div>
                 </div>

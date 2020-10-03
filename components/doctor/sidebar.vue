@@ -73,7 +73,7 @@
             </button> -->
           <hr /> 
        
-            <a :class="{'d-none': $nuxt.$route.name != 'doctor-chats-caseid'}" data-toggle="modal" data-target="#defaultSize"
+            <a :class="{'d-none': $nuxt.$route.name != 'Doctor-chats-caseid'}" data-toggle="modal" data-target="#defaultSize"
               style="padding: 30px 15px 30px 30px;"><ion-icon name="checkmark-done-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title" data-toggle="modal" data-target="#defaultSize">Update Case</span>
             </a>
