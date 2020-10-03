@@ -356,7 +356,6 @@ export default {
       this.form.medical_certificate = e.target.files[0];
     },
     validateInput(){
-        
         return  this.form.first_name &&
          this.form.last_name && this.form.email && 
          this.form.password && 
@@ -364,7 +363,6 @@ export default {
          this.form.gender && 
          this.form.mcrn && 
          this.form.specialty_code || false
-        
     },
     validateImage(){
       return this.form.medical_certificate.type == "image/png" || this.form.medical_certificate.type == "image/jpg" || this.form.medical_certificate.type == "image/jpeg" ? true : false

@@ -160,7 +160,7 @@
                                   <!-- {{total += drug.price_in_minor_unit}} -->
                                 </tr>
                                 <tr>
-                                  <td colspan="2">₦{{total}}</td>
+                                  <td colspan="4" style="text-align:right;">₦{{total}}</td>
                                 </tr>
                               </tbody>
                             </table>

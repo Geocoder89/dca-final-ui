@@ -73,13 +73,13 @@
             </button> -->
           <hr /> 
        
-            <a :class="{'d-none': $nuxt.$route.name != 'Doctor-chats-caseid'}" data-toggle="modal" data-target="#defaultSize"
+            <a :class="{'d-none': $nuxt.$route.name != 'doctor-chats-caseid'}" data-toggle="modal" data-target="#defaultSize"
               style="padding: 30px 15px 30px 30px;"><ion-icon name="checkmark-done-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title" data-toggle="modal" data-target="#defaultSize">Update Case</span>
             </a>
           <br>
           <br>
-            <a class="disabled" :class="{'d-none': $nuxt.$route.name != 'Doctor-chats-caseid'}" data-toggle="modal" data-target="#prescription"
+            <a class="disabled" :class="{'d-none': $nuxt.$route.name != 'doctor-chats-caseid'}" data-toggle="modal" data-target="#prescription"
               style="padding: 30px 15px 30px 30px;"><ion-icon name="checkmark-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Prescription</span>
             </a>
@@ -87,35 +87,35 @@
           <br>
           <br>
           
-            <a class="disabled" :class="{'d-none': $nuxt.$route.name != 'Doctor-chats-caseid'}"
+            <a class="disabled" :class="{'d-none': $nuxt.$route.name != 'doctor-chats-caseid'}"
               style="padding: 30px 15px 30px 30px;"><ion-icon name="arrow-redo-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Refer Nurse</span>
             </a>
          
           <br>
          <br>
-            <a class="disabled" :class="{'d-none': $nuxt.$route.name != 'Doctor-chats-caseid'}"
+            <a class="disabled" :class="{'d-none': $nuxt.$route.name != 'doctor-chats-caseid'}"
               style="padding: 30px 15px 30px 30px;"><ion-icon name="arrow-redo-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Refer Pharmacy</span>
             </a>
           <br>
           
          <br>
-            <a class="disabled" :class="{'d-none': $nuxt.$route.name != 'Doctor-chats-caseid'}"
+            <a class="disabled" :class="{'d-none': $nuxt.$route.name != 'doctor-chats-caseid'}"
               style="padding: 30px 15px 30px 30px;margin-top:70px;"><ion-icon name="arrow-redo-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Refer Nutritionist</span>
             </a>
           <br>
           
          <br>
-            <a class="disabled" :class="{'d-none': $nuxt.$route.name != 'Doctor-chats-caseid'}"
+            <a class="disabled" :class="{'d-none': $nuxt.$route.name != 'doctor-chats-caseid'}"
               style="padding: 30px 15px 30px 30px;"><ion-icon name="book-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title">Read Case</span>
             </a>
          
           <br>
           <br>
-            <a class="disabled" :class="{'d-none': $nuxt.$route.name !== 'Doctor-chats-caseid'}" @click="initiateDialog"
+            <a class="disabled" :class="{'d-none': $nuxt.$route.name !== 'doctor-chats-caseid'}" @click="initiateDialog"
               style="padding: 30px 15px 30px 30px;"><ion-icon name="close-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title text-danger">Close Case</span>
             </a>

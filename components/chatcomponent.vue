@@ -375,7 +375,7 @@ export default {
                 .then(response => {
                     let items = response.data.data.drugs
                     this.prescription.ailment.items = items
-                    console.log(items);
+                    console.log(response.data.data);
                 })
                 .catch(error => {
                     console.log(error.response);
