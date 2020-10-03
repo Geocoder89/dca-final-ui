@@ -23,7 +23,7 @@
                                     <!-- {{chatClose}} -->
                                     <div class="chat-app-window" id="chat-frame" ref="chatBox" style="height:auto;overflow-y:scroll">
                                         <div class="user-chats pr-0 pl-0">
-                                            <div class="m-1"><small class="text-muted">July 15, 2020</small></div>
+                                            <!-- <div class="m-1"><small class="text-muted">July 15, 2020</small></div> -->
                                             <div class="chats">
                                                 <div class="chat"  :class="{'chat-left' : !isPatient}">
                                                     <div class="chat-body" :style="{'width: 80%;': isPatient}" :class="{'pr-0 mr-0': isPatient}">
