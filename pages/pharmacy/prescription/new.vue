@@ -1,11 +1,7 @@
 <template>
   <div>
-    <body
-      class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  "
-      data-open="click"
-      data-menu="vertical-menu-modern"
-      data-col="2-columns"
-    >
+    <body class="vertical-layout 2-columns navbar-floating footer-static pace-done menu-hide" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" style="overflow: hidden;">
+
       <Header></Header>
       <Sidebar></Sidebar>
 
@@ -74,54 +70,49 @@
                               <div class="col-lg-12 col-md-12 col-12">
                                 <section class="mb-50">
                                   <div class="card-header">
-                                    <!-- <h4 class="card-title">Description</h4> -->
                                   </div>
                                   <div class="card">
-                                    <table class="table data-list-view">
+                                    <table class="table data-list-view" v-if="prescriptions.length">
                                     <tbody>
-                                      <tr>
-                                        <td class="product-name">1. Prescriptions for Adewale Ayuba.</td>
+                                      <tr v-for="(prescription,index) in prescriptions" :key="prescription.id">
+                                        <td class="product-name">{{index + 1}}. Prescriptions for {{prescription.ailment}}.</td>
                                         <td>
-                                          <nuxt-link
-                                            to="/pharmacy/prescription/new_detail"
+                                          <a href="#" data-toggle="modal" data-target="#drugs"
+                                            @click="previewDrugs(prescription.id),event => event.preventDefault()"
                                             class="btn btn-sm btn-primary float-right"
-                                            >View</nuxt-link
+                                            >preview</a
                                           >
                                         </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="product-name">2. Prescriptions for Adewale Ayuba</td>
                                         <td>
-                                          <nuxt-link
-                                            to="/pharmacy/prescription/new_detail"
+                                          <button
+                                            @click="checkin(prescription.id),event => event.preventDefault()"
                                             class="btn btn-sm btn-primary float-right"
-                                            >View</nuxt-link>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="product-name">3. Prescriptions for Adewale Ayuba</td>
-                                        <td>
-                                          <nuxt-link
-                                            to="/pharmacy/prescription/new_detail"
-                                            class="btn btn-sm btn-primary float-right"
-                                            >View</nuxt-link
-                                          >
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="product-name">4. Prescriptions for Adewale Ayuba</td>
-                                        <td>
-                                          <nuxt-link
-                                            to="/pharmacy/prescription/new_detail"
-                                            class="btn btn-sm btn-primary float-right"
-                                            >view</nuxt-link
+                                            >Accept</button
                                           >
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
+                                  <table class="table data-list-view" v-else>
+                                    <tbody>
+                                      <tr>
+                                        <td class="product-name">No prescription found.</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                                   </div>
+                                  <i style="color:red;" v-if="prescriptions.length">please note: accepting either of these prescriptions means you have the drugs associated with it.</i>
                                 </section>
+
+                                 <!-- <section class="mb-50">
+                                  <div class="card-header">
+                                  </div>
+                                    <div class="card">
+                                        <ul class="list-group list-group-flush">
+                                          <li class="list-group-item" v-for="drug in drugs" :key="drug.id">{{drug.name}} | {{drug.dosage}}</li>
+                                        </ul>
+                                    </div>
+                                </section> -->
                               </div>
                             </div>
                           </div>
@@ -136,7 +127,48 @@
         </div>
       </div>
       <!-- END: Content-->
-
+<!-- prescription -->
+            <div class="modal fade text-left" id="drugs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel18" aria-hidden="true" data-backdrop="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable  modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel18">Drugs</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p v-if="!drugs.length">
+                              <i>Loading Drugs...</i>
+                            </p>
+                          <table class="table table-striped" v-else>
+                              <thead>
+                                <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">Dosage</th>
+                                
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr v-for="(drug,index) in drugs" :key="drug.id">
+                                  <th scope="row">{{index + 1}}</th>
+                                  <td>{{drug.name}}</td>
+                                  <td>{{drug.dosage}}</td>
+                                  
+                                </tr>
+                              </tbody>
+                            </table>
+                              
+                            
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" style="border-radius:40px;" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
       <div class="sidenav-overlay"></div>
       <div class="drag-target"></div>
 
@@ -151,10 +183,65 @@ import Sidebar from '~/components/pharmacy/sidebar'
 
 export default {
   name: 'Pending',
+  data(){
+    return{
+      prescriptions:'',
+      drugs:"",
+      showDrugs:false
+    }
+  },
+  middleware:['auth','pharmacy'],
   components: {
     Header,
     Footer,
     Sidebar
+  },
+  methods:{
+    getPrescriptions(){
+      this.$axios.get(`prescriptions?q=not-picked`)
+      .then(response => {
+        let prescriptions = response.data.data
+        console.log(prescriptions)
+        this.prescriptions = prescriptions;
+          
+      })
+      .catch(error => {
+          console.log(error);
+      })
+    },
+    checkin(id){
+      this.$axios.patch(`prescriptions/${id}/pharmacies`,{
+          partners_id : this.$store.state.auth.user.partners[0].id
+      })
+      .then(response => {
+          this.$noty.success("Prescription accepted successfuly.")
+          this.$router.push({
+            path:`/pharmacy/prescription/${id}`
+          })
+      })
+      .catch(error => {
+          console.log(error.response.data);
+      }) 
+        
+    },
+    previewDrugs(id){
+        
+        
+        this.$axios.get(`prescriptions/${id}`)
+        .then(response => {
+                
+                let drugs = response.data.data.drugs
+       
+                this.drugs = drugs
+                
+        })
+        .catch(error => {
+            console.log(error);
+        })
+      }
+  },
+  mounted(){
+    this.getPrescriptions();
   }
 }
 </script>

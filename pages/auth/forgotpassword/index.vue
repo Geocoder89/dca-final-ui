@@ -58,6 +58,7 @@
 </template>
 <script>
 export default {
-  name: 'Forgotpassword'
+  name: 'Forgotpassword',
+  middleware:['guest']
 }
 </script>

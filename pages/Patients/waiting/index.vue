@@ -1,11 +1,6 @@
 <template>
   <div>
-    <body
-      class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  "
-      data-open="click"
-      data-menu="vertical-menu-modern"
-      data-col="2-columns"
-    >
+    <body class="vertical-layout 2-columns navbar-floating footer-static pace-done menu-hide" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" style="overflow: auto;">
       <Header></Header>
       <side-bar></side-bar>
 
@@ -42,18 +37,29 @@
                         <!-- <h3>Welcome back,</h3> -->
 
                         <p id="title" v-html="title"></p>
+                        <fieldset>
                         <input
                             id="basicInput"
                             type="text"
                             class="form-control mb-1"
                             style="border-radius:40px;"
+                            :class="{'is-invalid': errors.initial_complain}"
+                            v-model="message"
                             placeholder="briefly tell us what went wrong..."
                           />
+                          <!-- <div class="invalid-feedback mb-1" v-if="err">
+                              {{err}}
+                          </div> -->
+                          <div class="invalid-feedback mb-1" v-if="errors.initial_complain">
+                              {{errors.initial_complain[0]}}
+                          </div>
+                        </fieldset>
                         <button
                           id="talkingbtn"
                           class="btn btn-outline-primary btn-inline"
                           style="border-radius:40px;"
-                          @click="loader"
+                          :disabled="disable"
+                          @click.prevent="submitCase"
                         >
                           Talk to a Doctor</button
                         ><br />
@@ -95,17 +101,76 @@ export default {
   data() {
     return {
       title: 'Your doctor is just a click away.',
-      showLoader: false
+      showLoader: false,
+      message:'',
+      chatStatus:null,
+      caseid:'',
+      disable:false
     }
   },
   methods: {
     loader() {
-      this.title = 'Your doctor will be with you shortly...'
-      this.showLoader = true
-      setTimeout(() => {
-        this.$router.push('chats')
-      }, 5000)
+      
+    },
+    submitCase(){
+        let vm = this;
+        if(!this.message){
+           alert('this field is required') 
+           return false;
+        }
+        this.title = 'Your doctor will be with you shortly...'
+        this.showLoader = true
+        this.disable = !this.disable
+
+        this.$axios.post('/cases', {
+          initial_complain:this.message
+        },{ headers:{
+          "Access-Control-Allow-Origin":"*"
+          }
+        }).then(response => {
+            console.log(response.data)
+            vm.getStatus()
+        }).catch(error => {
+            console.log(error.response)
+            this.title = 'Your doctor is just a click away.'
+            this.disable = !this.disable
+            this.showLoader = false
+        })
+    },
+    getStatus(){
+      let vm = this;
+        this.$axios.get('cases')
+        .then(response => {
+           this.chatStatus = response.data.data.status
+           this.caseid = response.data.data.id
+          vm.$store.dispatch('chat/setStatus', this.chatStatus)
+           vm.checkStatus()
+        })
+    },
+    checkStatus(){
+        if(this.chatStatus === "PENDING"){
+            this.title = 'Your doctor will be with you shortly...'
+            this.showLoader = true
+            this.disable = !this.disable
+        }
     }
-  }
+    
+  },
+  mounted(){
+    let vm = this;
+    vm.getStatus()
+    // setInterval(function () {
+    //   vm.getStatus();
+    // }, 30000); 
+  },
+  created(){
+
+  },
+  middleware:['auth','patientActiveCaseCheck','patient']
 }
 </script>
+<style scoped>
+  .content{
+        margin-left:0;
+    }
+</style>

@@ -67,6 +67,12 @@
               <span class="menu-title">Consultation Room</span>
             </nuxt-link>
           </li>
+          <li class="nav-item">
+            <nuxt-link to="/patients/prescriptions"
+              ><ion-icon name="bandage" style="margin-right:1em;"></ion-icon>
+              <span class="menu-title">Prescriptions</span>
+            </nuxt-link>
+          </li>
           <li class=" nav-item">
             <nuxt-link to="/patients/referal"
               ><ion-icon name="people-outline" style="margin-right:1em;"></ion-icon>
@@ -105,11 +111,11 @@
             >
           </li>
           <li class=" nav-item">
-            <nuxt-link to="#"
+            <a href="#" @click.prevent="logout"
               ><ion-icon name="exit-outline" style="margin-right:1em;"></ion-icon>
               <span class="menu-title" data-i18n="Raise Support"
                 >Logout</span
-              ></nuxt-link
+              ></a
             >
           </li>
         </ul>
@@ -120,7 +126,21 @@
 
 <script>
 export default {
-  name:"Sidebar"
+  name:"Sidebar",
+  methods:{
+    async logout(){
+        
+        await this.$auth.logout()
+        .catch(error => {
+            console.log(error.response)
+        })
+        this.$router.push({
+            path:'/auth/login'
+        }) 
+        
+    }
+    
+  }
 }
 </script>
 <style scoped>

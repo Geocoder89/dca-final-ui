@@ -1,11 +1,6 @@
 <template>
   <div>
-    <body
-      class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  "
-      data-open="click"
-      data-menu="vertical-menu-modern"
-      data-col="2-columns"
-    >
+    <body class="vertical-layout 2-columns navbar-floating footer-static pace-done menu-hide" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" style="overflow: auto;">
       <Header></Header>
       <Sidebar></Sidebar>
 
@@ -43,24 +38,27 @@
                             <hr>
                             <div class="row">
                               <div class="col-lg-6 col-md-6 col-12">
+                                
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Registered Name: Bay Hills</li>
-                                    <li class="list-group-item">License: xxxxxx955f</li>
-                                    <li class="list-group-item">Adresss: 08, rectant street</li>
-                                    <li class="list-group-item">City: Ikeja</li>
-                                    <li class="list-group-item">State: Lagos</li>
-                                    <li class="list-group-item">Email: donmils@gmail.com</li>
-                                    <li class="list-group-item">Phone: 09089787867</li>
-                                    <li class="list-group-item">Date Registered: 23/04/2019</li>
+                                    <li class="list-group-item">First Name: {{user.first_name}}</li>
+                                    <li class="list-group-item">Last Name: {{user.last_name}}</li>
+                                    <li class="list-group-item">Adresss: {{user.address ? user.address : "nil"}}</li></li>
+                                    <li class="list-group-item">City: {{user.city ? user.city : "nil"}}</li>
+                                    <li class="list-group-item">State: {{user.state ? user.state : "nil"}}</li>
+                                    <li class="list-group-item">Email: {{user.email}}</li>
+                                    <li class="list-group-item">Phone: {{user.mobile_phone_number ? user.mobile_phone_number : "nil"}}</li>
+                                    <li class="list-group-item">Date Registered: {{user.created_at | formatDate}}</li>
                                 </ul>
                               
-                                <ul class="list-group list-group-flush">
+                           
+                              
+                                <!-- <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Medical Council No: 09783682899</li>
                                     <li class="list-group-item">Medical School: Institute of Health</li>
                                     <li class="list-group-item">Year: 2014</li>
                                     <li class="list-group-item">Gp: Nil</li>
                                     <li class="list-group-item">Specialty: Nil</li>
-                                </ul>
+                                </ul> -->
                               </div>
                             </div>
                         </div>
@@ -94,14 +92,20 @@
 import Header from '~/components/doctor/header'
 import Footer from '~/components/doctor/footer'
 import Sidebar from '~/components/doctor/sidebar'
-
+import moment from 'moment'
 export default {
   name: 'Profile',
   components: {
     Header,
     Footer,
     Sidebar
-  }
+  },
+  filters:  {
+    formatDate:  function(value)  {
+      return moment(String(value)).format('MM/DD/YYYY')
+    }
+  },
+  middleware:['auth','doctor']
 }
 </script>
 

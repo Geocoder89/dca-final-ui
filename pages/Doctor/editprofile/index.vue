@@ -1,11 +1,6 @@
 <template>
   <div>
-    <body
-      class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  "
-      data-open="click"
-      data-menu="vertical-menu-modern"
-      data-col="2-columns"
-    >
+    <body class="vertical-layout 2-columns navbar-floating footer-static pace-done menu-hide" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" style="overflow: auto;">
       <Header></Header>
       <Sidebar></Sidebar>
 
@@ -29,11 +24,11 @@
               <div class="col-md-6">
                 <section class="card px-2 pb-2 pt-1">
                   <div class="card-header pb-2">
-                    <h4 class="font-weight-light">Personal Info</h4 class="font-weight-light">
+                    <h4 class="font-weight-light">Personal Info</h4>
                   </div>
                   <div class="card-content">
                     <div class="card-body pt-0">
-                      <form action="index.html">
+                      <form action="#">
                         <div class="row">
                           <div class="col-xl-4 col-md-6 col-12 mb-0">
                             <fieldset class="form-group">
@@ -234,7 +229,8 @@ export default {
     Header,
     Footer,
     Sidebar
-  }
+  },
+  middleware:['auth','doctor']
 }
 </script>
 <style scoped>

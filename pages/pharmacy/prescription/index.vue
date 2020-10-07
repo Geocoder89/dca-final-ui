@@ -1,11 +1,7 @@
 <template>
   <div>
-    <body
-      class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  "
-      data-open="click"
-      data-menu="vertical-menu-modern"
-      data-col="2-columns"
-    >
+    <body class="vertical-layout 2-columns navbar-floating footer-static pace-done menu-hide" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" style="overflow: hidden;">
+
       <Header></Header>
       <Sidebar></Sidebar>
 
@@ -34,7 +30,7 @@
                     <table class="table data-list-view">
                       <tbody>
                         <tr>
-                          <td class="product-name">New Prescription <sup>(3)</sup></td>
+                          <td class="product-name">New Prescription <sup v-if="prescriptions > 0">({{prescriptions}})</sup></td>
                           <td>
                             <nuxt-link
                               to="/pharmacy/prescription/new"
@@ -88,10 +84,33 @@ import Sidebar from '~/components/pharmacy/sidebar'
 
 export default {
   name: 'Cases',
+  data(){
+    return{
+      prescriptions:0
+    }
+  },
   components: {
     Header,
     Footer,
     Sidebar
+  },
+  methods:{
+    getPrescriptions(){
+      this.$axios.get(`prescriptions?q=not-picked`)
+      .then(response => {
+          let prescriptions = response.data.data
+        
+          this.prescriptions = prescriptions.length
+
+
+      })
+      .catch(error => {
+          console.log(error.response);
+      })
+    }
+  },
+  mounted(){
+      this.getPrescriptions()
   }
 }
 </script>

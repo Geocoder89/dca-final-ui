@@ -50,8 +50,6 @@ export default {
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/vendors/js/ui/prism.min.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/vendors/js/charts/apexcharts.min.js', defer: true},
-    {type: 'text/javascript', src: '/app-assets/js/core/app-menu.js', defer: true},
-    {type: 'text/javascript', src: '/app-assets/js/core/app.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/js/scripts/cards/card-analytics.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/js/scripts/ui/data-list-view.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/vendors/js/extensions/dropzone.min.js'},
@@ -62,6 +60,10 @@ export default {
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/dataTables.select.min.js'},
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js'},
     {type: 'text/javascript', src: '/app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js'},
+    {type: 'text/javascript', src: '/app-assets/js/scripts/modal/components-modal.js'},
+    {type: 'text/javascript', src: '/app-assets/js/core/app-menu.js', defer: true},
+    {type: 'text/javascript', src: '/app-assets/js/core/app.js', defer: true},
+    {type: 'text/javascript', src: '/app-assets/js/core/app-user.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/js/scripts/components.js'},
   ],
 },
@@ -83,7 +85,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+ 
   /*
    ** Nuxt.js dev-modules
    */
@@ -99,18 +101,86 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/auth',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/moment',
+    '@nuxtjs/firebase'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL:'https://api.drcallaway.ng/api/v1/'
+  },
   /*
    ** Build configuration
    */
+  firebase:{
+    config: {
+      apiKey: 'AIzaSyDD14XLcdFiPD6RgGfVyd1CyK-P0cu_KdY',
+      authDomain: 'drcallaway-chat.firebaseapp.com',
+      databaseURL: 'https://drcallaway-chat.firebaseio.com',
+      projectId: 'drcallaway-chat',
+      storageBucket: 'drcallaway-chat.appspot.com',
+      messagingSenderId: '602649836320',
+      appId: '1:602649836320:web:be75d23b62aa5e0466f545',
+      measurementId: 'G-D9FEN4FPLC'
+    },
+    services: {
+      auth: true,
+      firestore: true,
+      storage: true,
+      realtimeDb: true,
+      messaging: true,
+    }
+  },
+
+  
+  auth: {
+    endpoints:{
+      login:{
+          url:'login',
+          method:'post',
+          propertyName:'data.token.token'
+      },
+      signup:{
+          url:'signup',
+          method:'post'
+      },
+      user:{
+          url:'me',
+          method:'get',
+          propertyName: 'data'
+      },
+      logout:{
+          url:'logout',
+          method:'post',
+      }
+    },
+    redirect:{
+      login:'/auth/login'
+    }
+  },
+
+  
+
+  router: {
+    middleware: [
+      'clearValidationErrors'
+    ]
+  },
+
+  plugins:[
+    './plugins/mixins/user.js',
+    './plugins/axios.js',
+    './plugins/mixins/validation.js',
+    { src: '~/plugins/noty.js', mode: 'client' },
+    { src: '~/plugins/confirmplugin.js', mode: 'client' },
+    { src: '~/plugins/rating.js', mode: 'client' }
+  ],
   build: {
     /*
      ** You can extend webpack config here

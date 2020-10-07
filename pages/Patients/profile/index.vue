@@ -1,11 +1,6 @@
 <template>
   <div>
-    <body
-      class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  "
-      data-open="click"
-      data-menu="vertical-menu-modern"
-      data-col="2-columns"
-    >
+    <body class="vertical-layout 2-columns navbar-floating footer-static pace-done menu-hide" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" style="overflow: auto;">
       <Header></Header>
       <side-bar></side-bar>
 
@@ -43,14 +38,14 @@
                             <div class="row">
                               <div class="col-lg-12 col-md-12 col-12">
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">First Name: Ogunsusi</li>
-                                    <li class="list-group-item">Last Name: Ayomide</li>
-                                    <li class="list-group-item">Adresss: 09, opeoluwa street</li>
-                                    <li class="list-group-item">City: Ikeja</li>
-                                    <li class="list-group-item">State: Lagos</li>
-                                    <li class="list-group-item">Email: greenhills@gmail.com</li>
-                                    <li class="list-group-item">Phone: 09089787867</li>
-                                    <li class="list-group-item">Date Registered: 23/04/2019</li>
+                                    <li class="list-group-item">First Name: {{user.first_name}}</li>
+                                    <li class="list-group-item">Last Name: {{user.last_name}}</li>
+                                    <li class="list-group-item">Adresss: {{user.address ? user.address : "Enter your address here"}}</li></li>
+                                    <li class="list-group-item">City: {{user.city ? user.city : "Enter your city"}}</li>
+                                    <li class="list-group-item">State: {{user.state ? user.state : "Enter your state"}}</li>
+                                    <li class="list-group-item">Email: {{user.email}}</li>
+                                    <li class="list-group-item">Phone: {{user.mobile_phone_number ? user.mobile_phone_number : "Enter your phone"}}</li>
+                                    <li class="list-group-item">Date Registered: {{user.created_at | formatDate}}</li>
                                 </ul>
                               
                               </div>
@@ -86,6 +81,7 @@
 import Header from '~/components/customer/header'
 import Footer from '~/components/customer/footer'
 import SideBar from '~/components/customer/sidebar'
+import moment from 'moment'
 
 export default {
   name: 'Dashboard',
@@ -93,8 +89,22 @@ export default {
     Header,
     Footer,
     SideBar
-  }
+  },
+  filters:  {
+    formatDate:  function(value)  {
+      return moment(String(value)).format('MM/DD/YYYY')
+    }
+  },
+  middleware:['auth','patient']
 }
 </script>
+<style scoped>
+@media only screen and (max-width: 768px) {
+            .content{
+              margin-left:-15px;
+            }
+            
+        }
+</style>
 
 

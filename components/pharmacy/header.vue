@@ -21,30 +21,31 @@
                   ></nuxt-link>
                 </li>
               </ul>
-              <ul class="nav navbar-nav bookmark-icons"></ul>
+              <ul class="nav navbar-nav bookmark-icons">
+              </ul>
             </div>
             <ul class="nav navbar-nav float-right">
               <li class="nav-item">
-                <nuxt-link class="nav-link nav-link-label" to="/pharmacy/message"
+                <nuxt-link class="nav-link nav-link-label" to="message"
                   ><i class="ficon feather icon-mail"></i
                 ></nuxt-link>
               </li>
               <li class="dropdown dropdown-notification nav-item">
-                <nuxt-link
+                <a
                   class="nav-link nav-link-label"
-                  to="#"
+                  href="#"
                   data-toggle="dropdown"
                   ><i class="ficon feather icon-bell"></i
-                  ><span class="badge badge-pill badge-primary badge-up"
-                    >5</span
-                  ></nuxt-link
+                  ><span class="badge badge-pill badge-primary badge-up" v-if="prescriptions > 0"
+                    >{{prescriptions}}</span
+                  ></a
                 >
                 <ul
                   class="dropdown-menu dropdown-menu-media dropdown-menu-right"
                 >
                   <li class="dropdown-menu-header">
                     <div class="dropdown-header m-0 p-2">
-                      <h3 class="white">5 New</h3>
+                      <h3 class="white">{{prescriptions}} New</h3>
                       <span class="grey darken-2"> Notifications</span>
                     </div>
                   </li>
@@ -178,22 +179,22 @@
                     </a>
                   </li>
                   <li class="dropdown-menu-footer">
-                    <nuxt-link
+                    <a
                       class="dropdown-item p-1 text-center"
-                      to="notifications"
-                      >Read all notifications
-                    </nuxt-link>
+                      href="#"
+                      >Read all notifications</a
+                    >
                   </li>
                 </ul>
               </li>
               <li class="dropdown dropdown-user nav-item">
-                <nuxt-link
+                <a
                   class="dropdown-toggle nav-link dropdown-user-link"
-                  to="#"
+                  href="#"
                   data-toggle="dropdown"
-                >
+                > 
                   <div class="user-nav d-sm-flex d-none">
-                    <span class="user-name text-bold-600">John Doe</span
+                    <span class="user-name text-bold-600">{{user.first_name}} {{user.last_name}}</span
                     ><span class="user-status">Available</span>
                   </div>
                   <span
@@ -204,14 +205,13 @@
                       height="40"
                       width="40"
                   /></span>
-                </nuxt-link>
+                </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                  <nuxt-link class="dropdown-item" to="/pharmacy/editprofile"
-                    ><i class="feather icon-user"></i> Edit Profile</nuxt-link
-                  >
-                  <nuxt-link class="dropdown-item" to="/pharmacy/message"
+                  <a class="dropdown-item" href="../pharmacy/editprofile"
+                    ><i class="feather icon-user"></i> Edit Profile</a
+                  ><a class="dropdown-item" href="../pharmacy/message"
                     ><i class="feather icon-mail"></i> My Inbox
-                  </nuxt-link>
+                  </a>
                 </div>
               </li>
             </ul>
@@ -221,9 +221,9 @@
     </nav>
     <ul class="main-search-list-defaultlist d-none">
       <li class="d-flex align-items-center">
-        <nuxt-link class="pb-25" to="#">
+        <a class="pb-25" href="#">
           <h6 class="text-primary mb-0">Files</h6>
-        </nuxt-link>
+        </a>
       </li>
       <li class="auto-suggestion d-flex align-items-center cursor-pointer">
         <nuxt-link
@@ -232,7 +232,11 @@
         >
           <div class="d-flex">
             <div class="mr-50">
-              <img src="~assets/img/icons/xls.png" alt="png" height="32" />
+              <img
+                src="~assets/img/icons/xls.png"
+                alt="png"
+                height="32"
+              />
             </div>
             <div class="search-data">
               <p class="search-data-title mb-0">Two new item submitted</p>
@@ -243,13 +247,17 @@
         </nuxt-link>
       </li>
       <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <nuxt-link
+        <a
           class="d-flex align-items-center justify-content-between w-100"
-          to="#"
+          href="#"
         >
           <div class="d-flex">
             <div class="mr-50">
-              <img src="~assets/img/icons/jpg.png" alt="png" height="32" />
+              <img
+                src="~assets/img/icons/jpg.png"
+                alt="png"
+                height="32"
+              />
             </div>
             <div class="search-data">
               <p class="search-data-title mb-0">52 JPG file Generated</p>
@@ -257,16 +265,20 @@
             </div>
           </div>
           <small class="search-data-size mr-50 text-muted">&apos;11kb</small>
-        </nuxt-link>
+        </a>
       </li>
       <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <nuxt-link
+        <a
           class="d-flex align-items-center justify-content-between w-100"
-          to="#"
+          href="#"
         >
           <div class="d-flex">
             <div class="mr-50">
-              <img src="~assets/img/icons/pdf.png" alt="png" height="32" />
+              <img
+                src="~assets/img/icons/pdf.png"
+                alt="png"
+                height="32"
+              />
             </div>
             <div class="search-data">
               <p class="search-data-title mb-0">25 PDF File Uploaded</p>
@@ -274,16 +286,20 @@
             </div>
           </div>
           <small class="search-data-size mr-50 text-muted">&apos;150kb</small>
-        </nuxt-link>
+        </a>
       </li>
       <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <nuxt-link
+        <a
           class="d-flex align-items-center justify-content-between w-100"
-          to="#"
+          href="#"
         >
           <div class="d-flex">
             <div class="mr-50">
-              <img src="~assets/img/icons/doc.png" alt="png" height="32" />
+              <img
+                src="~assets/img/icons/doc.png"
+                alt="png"
+                height="32"
+              />
             </div>
             <div class="search-data">
               <p class="search-data-title mb-0">Anna_Strong.doc</p>
@@ -291,17 +307,17 @@
             </div>
           </div>
           <small class="search-data-size mr-50 text-muted">&apos;256kb</small>
-        </nuxt-link>
+        </a>
       </li>
       <li class="d-flex align-items-center">
-        <nuxt-link class="pb-25" to="#">
+        <a class="pb-25" href="#">
           <h6 class="text-primary mb-0">Members</h6>
-        </nuxt-link>
+        </a>
       </li>
       <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <nuxt-link
+        <a
           class="d-flex align-items-center justify-content-between py-50 w-100"
-          to="#"
+          href="#"
         >
           <div class="d-flex align-items-center">
             <div class="avatar mr-50">
@@ -316,12 +332,12 @@
               <small class="text-muted">UI designer</small>
             </div>
           </div>
-        </nuxt-link>
+        </a>
       </li>
       <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <nuxt-link
+        <a
           class="d-flex align-items-center justify-content-between py-50 w-100"
-          to="#"
+          href="#"
         >
           <div class="d-flex align-items-center">
             <div class="avatar mr-50">
@@ -336,12 +352,12 @@
               <small class="text-muted">FontEnd Developer</small>
             </div>
           </div>
-        </nuxt-link>
+        </a>
       </li>
       <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <nuxt-link
+        <a
           class="d-flex align-items-center justify-content-between py-50 w-100"
-          to="#"
+          href="#"
         >
           <div class="d-flex align-items-center">
             <div class="avatar mr-50">
@@ -356,12 +372,12 @@
               <small class="text-muted">Digital Marketing Manager</small>
             </div>
           </div>
-        </nuxt-link>
+        </a>
       </li>
       <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <nuxt-link
+        <a
           class="d-flex align-items-center justify-content-between py-50 w-100"
-          to="#"
+          href="#"
         >
           <div class="d-flex align-items-center">
             <div class="avatar mr-50">
@@ -376,7 +392,7 @@
               <small class="text-muted">Web Designer</small>
             </div>
           </div>
-        </nuxt-link>
+        </a>
       </li>
     </ul>
     <ul class="main-search-list-defaultlist-other-list d-none">
@@ -398,7 +414,38 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name:"haeder",
+  data(){
+    return{
+      prescriptions:0
+    }
+  },
+  computed:{
+    newPrescriptions:function(){
+       return this.prescriptions > 0
+    }
+  },
+  methods:{
+    getPrescriptions(){
+      this.$axios.get(`prescriptions?q=not-picked`)
+      .then(response => {
+          let prescriptions = response.data.data
+        
+          this.prescriptions = prescriptions.length
+             
+
+
+      })
+      .catch(error => {
+          console.log(error.response);
+      })
+    }
+  },
+  mounted(){
+    this.getPrescriptions();
+  }
+}
 </script>
 <style scoped>
 .csup {

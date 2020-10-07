@@ -192,9 +192,9 @@
                   class="dropdown-toggle nav-link dropdown-user-link"
                   href="#"
                   data-toggle="dropdown"
-                >
+                > 
                   <div class="user-nav d-sm-flex d-none">
-                    <span class="user-name text-bold-600">John Doe</span
+                    <span class="user-name text-bold-600">{{user.first_name}} {{user.last_name}}</span
                     ><span class="user-status">Available</span>
                   </div>
                   <span
@@ -414,8 +414,10 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  name:"Header"
+  name:"Header",
+  
 }
 </script>
 <style scoped>

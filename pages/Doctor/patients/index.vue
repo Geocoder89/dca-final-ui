@@ -1,11 +1,6 @@
 <template>
   <div>
-    <body
-      class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  "
-      data-open="click"
-      data-menu="vertical-menu-modern"
-      data-col="2-columns"
-    >
+    <body class="vertical-layout 2-columns navbar-floating footer-static pace-done menu-hide" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" style="overflow: auto;">
       <Header></Header>
       <Sidebar></Sidebar>
 
@@ -24,7 +19,7 @@
               </div>
             </div>
           </div>
-          <div class="content-body">
+          <div class="content-body" v-if="!patients.length">
             <!-- Data list view starts -->
             <section id="data-list-view" class="data-list-view-header">
               <div class="row justify-content-md-center">
@@ -32,57 +27,37 @@
                   <!-- DataTable starts -->
                   <div class="card">
                     <table class="table data-list-view">
-                      <tbody>
+                      <tbody  >
                         <tr>
-                          <td class="product-name p-2" style="font-size:0.9em;">1. Idowu Philips</td>
-                          <td class="text-muted">malaria, headache and yellow fever...</td>
-                          <td>
-                            <nuxt-link
-                              to="/doctor/chats"
-                              class="btn btn-sm btn-primary"
-                              style="border-radius:40px;"
-                              >Check In</nuxt-link
-                            >
-                          </td>
+                          <td>No available patients</td>
                         </tr>
-                        <tr>
-                          <td class="product-name p-2">2. Abdul Aminu</td>
-                          <td class="text-muted">malaria, headache and yellow fever...</td>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="content-body" v-if="patients.length">
+            <!-- Data list view starts -->
+            <section id="data-list-view" class="data-list-view-header">
+              <div class="row justify-content-md-center">
+                <div class="col-md-6 col-lg-6">
+                  <!-- DataTable starts -->
+                  <div class="card">
+                    <table class="table data-list-view">
+                      <tbody  >
+                        <tr v-for="patient in patients" :key="patient.id">
+                          <td class="product-name p-2" style="font-size:0.9em;">1.   {{patient.patient.first_name}} {{patient.patient.last_name}}</td>
+                          <td class="text-muted">{{patient.initial_complain}}</td>
                           <td>
-                            <nuxt-link
-                              to="/doctor/chats"
+                            <button
+                              @click.prevent="checkin(patient.id)"
                               class="btn btn-sm btn-primary"
                               style="border-radius:40px;"
-                              >Check In</nuxt-link
+                              >Check In</button
                             >
                           </td>
-                          
-                        </tr>
-                        <tr>
-                          <td class="product-name p-2">3. Chioma Obi</td>
-                          <td class="text-muted">malaria, headache and yellow fever...</td>
-                          <td>
-                            <nuxt-link
-                              to="/doctor/chats"
-                              class="btn btn-sm btn-primary"
-                              style="border-radius:40px;"
-                              >Check In</nuxt-link
-                            >
-                          </td>
-                          
-                        </tr>
-                        <tr>
-                          <td class="product-name p-2">4. Graves James</td>
-                          <td class="text-muted">malaria, headache and yellow fever...</td>
-                          <td>
-                            <nuxt-link
-                              to="/doctor/chats"
-                              class="btn btn-sm btn-primary"
-                              style="border-radius:40px;"
-                              >Check In</nuxt-link
-                            >
-                          </td>
-                          
                         </tr>
                       </tbody>
                     </table>
@@ -109,11 +84,42 @@ import Sidebar from '~/components/doctor/sidebar'
 
 export default {
   name: 'Patients',
+  data() {
+    return {
+      patients:'',
+    }
+  },
   components: {
     Header,
     Footer,
     Sidebar
-  }
+  },
+  methods:{
+    getPatients(){
+      this.$axios.get('cases/waiting-room')
+      .then(response => {
+        this.patients = response.data.data
+        console.log(response.data.data)
+      })
+    },
+    checkin(id){
+      this.$axios.patch('cases/'+id)
+      .then(response =>{
+        this.setDoctorCaseID()
+        this.$router.push({
+          path:'/doctor/chats/'+id
+        })
+      })
+    },
+    setDoctorCaseID(){
+        this.$store.dispatch('chat/setChatSession', true)
+        this.$store.dispatch('chat/setStatus', "ACTIVE")
+    }
+  },
+  mounted(){
+    this.getPatients()
+  },
+  middleware:['auth','doctor']
 }
 </script>
 <style scoped>

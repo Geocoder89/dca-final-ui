@@ -1,11 +1,7 @@
 <template>
   <div>
-    <body
-      class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  "
-      data-open="click"
-      data-menu="vertical-menu-modern"
-      data-col="2-columns"
-    >
+    <body class="vertical-layout 2-columns navbar-floating footer-static pace-done menu-hide" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" style="overflow: hidden;">
+
       <Header></Header>
       <Sidebar></Sidebar>
 
@@ -74,54 +70,42 @@
                               <div class="col-lg-12 col-md-12 col-12">
                                 <section class="mb-50">
                                   <div class="card-header">
-                                    <!-- <h4 class="card-title">Description</h4> -->
                                   </div>
                                   <div class="card">
-                                    <table class="table data-list-view">
+                                    <table class="table data-list-view" v-if="prescriptions.length">
                                     <tbody>
-                                      <tr>
-                                        <td class="product-name">1. Prescriptions for Adewale Ayuba.</td>
+                                      <tr v-for="(prescription,index) in prescriptions" :key="prescription.id">
+                                        <td class="product-name">{{index + 1}}. Prescriptions for {{prescription.ailment}}.</td>
+                                        
                                         <td>
-                                          <nuxt-link
-                                            to="/pharmacy/prescription/pending_detail"
+                                          <button
+                                            @click="checkin(prescription.id)"
                                             class="btn btn-sm btn-primary float-right"
-                                            >View</nuxt-link
-                                          >
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="product-name">2. Prescriptions for Adewale Ayuba</td>
-                                        <td>
-                                          <nuxt-link
-                                            to="/pharmacy/prescription/pending_detail"
-                                            class="btn btn-sm btn-primary float-right"
-                                            >View</nuxt-link>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="product-name">3. Prescriptions for Adewale Ayuba</td>
-                                        <td>
-                                          <nuxt-link
-                                            to="/pharmacy/prescription/pending_detail"
-                                            class="btn btn-sm btn-primary float-right"
-                                            >View</nuxt-link
-                                          >
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="product-name">4. Prescriptions for Adewale Ayuba</td>
-                                        <td>
-                                          <nuxt-link
-                                            to="/pharmacy/prescription/pending_detail"
-                                            class="btn btn-sm btn-primary float-right"
-                                            >view</nuxt-link
+                                            >View</button
                                           >
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
+                                  <table class="table data-list-view" v-else>
+                                    <tbody>
+                                      <tr>
+                                        <td class="product-name">No prescription found.</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                                   </div>
-                                </section>
+                                  </section>
+
+                                 <!-- <section class="mb-50">
+                                  <div class="card-header">
+                                  </div>
+                                    <div class="card">
+                                        <ul class="list-group list-group-flush">
+                                          <li class="list-group-item" v-for="drug in drugs" :key="drug.id">{{drug.name}} | {{drug.dosage}}</li>
+                                        </ul>
+                                    </div>
+                                </section> -->
                               </div>
                             </div>
                           </div>
@@ -151,10 +135,42 @@ import Sidebar from '~/components/pharmacy/sidebar'
 
 export default {
   name: 'Pending',
+  data(){
+    return{
+      prescriptions:[]
+    }
+  },
+  middleware:['auth','pharmacy'],
   components: {
     Header,
     Footer,
     Sidebar
+  },
+  methods:{
+    getPrescriptions(){
+      this.$axios.get(`prescriptions`)
+      .then(response => {
+        let prescriptions = response.data.data
+        
+        prescriptions.forEach((item) => {
+            if(item.partners_id == this.$store.state.auth.user.partners[0].id){
+              this.prescriptions.push(item)
+            }
+        })
+      })
+      .catch(error => {
+          console.log(error);
+      })
+    },
+    checkin(id){
+      this.$router.push({
+        path:`/pharmacy/prescription/pend/${id}`
+      })
+    }
+  },
+  mounted(){
+    this.getPrescriptions();
+    
   }
 }
 </script>
