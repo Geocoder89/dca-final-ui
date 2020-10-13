@@ -8,7 +8,33 @@
     >
       <div class="navbar-wrapper">
         <div class="navbar-container content">
+
           <div class="navbar-collapse" id="navbar-mobile">
+            <div>
+              <ul class="nav navbar-nav">
+                <li>
+                  <nuxt-link
+                    class="btn-icon btn-lg float-right btn-primary btn-round btn-sm mr-2 cta "
+
+                    to="/patients/waiting"
+                    ><i class="fa fa-phone"></i></nuxt-link
+                  >
+
+                </li>
+                <span class="text-muted help-text mr-2">Talk to a doctor</span>
+                <li>
+                  <nuxt-link
+                    class="btn-icon btn-lg float-right btn btn-danger btn-round btn-sm "
+                    to="emergency"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    ><i class="fa fa-ambulance"></i
+                  ></nuxt-link>
+                </li>
+                <span class="text-muted help-text ml-2">Call an Ambulance</span>
+
+              </ul>
+            </div>
             <div
               class="mr-auto float-left bookmark-wrapper d-flex align-items-center"
             >
@@ -192,7 +218,7 @@
                   class="dropdown-toggle nav-link dropdown-user-link"
                   href="#"
                   data-toggle="dropdown"
-                > 
+                >
                   <div class="user-nav d-sm-flex d-none">
                     <span class="user-name text-bold-600">{{user.first_name}} {{user.last_name}}</span
                     ><span class="user-status">Available</span>
@@ -417,7 +443,7 @@
 import { mapGetters } from 'vuex'
 export default {
   name:"Header",
-  
+
 }
 </script>
 <style scoped>
@@ -452,5 +478,20 @@ export default {
     border-radius: 50%;
     line-height: 25px;
   }
+}
+
+.cta {
+   border-radius: 25px ;
+  height: 45px ;
+  width: 45px ;
+  font-size: 20px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.help-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

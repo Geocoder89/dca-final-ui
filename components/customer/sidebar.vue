@@ -192,4 +192,7 @@ background: linear-gradient(90deg, rgba(138,40,143,1) 0%, rgba(78,7,82,1) 100%);
 .brand-text {
   color: #fff;
 }
+.main-menu .navbar-header .navbar-brand .brand-logo{
+  margin-left: -30px;
+}
 </style>

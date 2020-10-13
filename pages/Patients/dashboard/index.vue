@@ -18,7 +18,7 @@
             <div class="content-header-left col-md-12 col-12 mb-2">
               <div class="row breadcrumbs-top justify-content-center">
                 <div class="col-12 col-lg-6 col-md-6">
-                  <div
+                  <!-- <div
                     class="alert alert-warning"
                     role="alert"
                     v-if="!user.verified"
@@ -30,17 +30,11 @@
                       >request for a new verification link</a
                     >
                     to get rid of this notice.
-                  </div>
-                  <h4 class="content-header-title float-left mb-1 text-center">
+                  </div> -->
+                  <!-- <h4 class="content-header-title float-left mb-1 text-center">
                     Hi, {{ user.first_name | capitalize }}
-                  </h4>
-                  <nuxt-link
-                    class="btn-icon btn-lg float-right btn btn-danger btn-round btn-sm "
-                    to="emergency"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    ><i class="fa fa-ambulance"></i
-                  ></nuxt-link>
+                  </h4> -->
+
                 </div>
               </div>
             </div>
@@ -48,11 +42,10 @@
           <div class="content-body">
             <div class="container-sm">
               <div class="row">
+                <div
+                  class="col-12 col-md-12 col-lg-12 justify-content-center text-center"
+                >
 
-                 <div class="col-12 col-md-12 col-lg-12 justify-content-center text-center">
-                  <nuxt-link
-                    class="btn-icon btn-lg btn btn-primary btn-round btn-sm align-self-center" style="font-size:16px;"
-                    to="/patients/waiting"><i class="fa fa-phone"></i>  Talk to a Doctor</nuxt-link>
                 </div>
                 <div class="col-md-6 pad my-2">
                   <div class="card h-100" style="max-width: 400px;">
@@ -83,7 +76,7 @@
                       <!-- Avatar -->
                       <div class="single-features">
                         <div class="signle-icon">
-                        <i class="icofont-stethoscope-alt"></i>
+                          <i class="icofont-stethoscope-alt"></i>
                         </div>
                         <nuxt-link to="consult">
                           <p class="text-white">Consulting Room</p>
@@ -102,7 +95,7 @@
                       <!-- Avatar -->
                       <div class="single-features">
                         <div class="signle-icon">
-                        <i class="icofont-ui-message"></i>
+                          <i class="icofont-ui-message"></i>
                         </div>
                         <nuxt-link to="consult">
                           <p class="text-white">Message</p>
@@ -119,15 +112,50 @@
                       <!-- Avatar -->
                       <div class="single-features">
                         <div class="signle-icon">
-                        <i class="icofont-ui-file"></i>
+                          <i class="icofont-ui-file"></i>
                         </div>
                         <nuxt-link to="consult">
                           <p class="text-white">My Case File</p>
                         </nuxt-link>
                       </div>
-
                     </div>
                   </div>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-12">
+                  <table class="table table-bordered new table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="1">Larry</td>
+                        <td>Johnson</td>
+                        <td>@twitter</td>
+
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -426,6 +454,7 @@ export default {
 }
 .single-features .signle-icon {
   position: relative;
+  color: #fff;
 }
 /* .single-features .single-icon:hover {
   position: relative;
@@ -433,10 +462,10 @@ export default {
 
 .single-features .signle-icon i {
   font-size: 30px;
-  color: white;
+  color: black;
   position: absolute;
   left: 50%;
-  margin-left: -50px;
+  margin-left: -120px;
   margin-top: 20px;
   top: 0;
   height: 100px;
@@ -444,6 +473,7 @@ export default {
   line-height: 100px;
   text-align: center;
   border: 3px solid #dddddd;
+  background-color: #fff;
   border-radius: 100%;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -480,8 +510,12 @@ export default {
 }
 
 .bg2 {
- background: rgb(247,82,98);
-background: linear-gradient(90deg, rgba(247,82,98,1) 0%, rgba(244,94,140,1) 100%);
+  background: rgb(247, 82, 98);
+  background: linear-gradient(
+    90deg,
+    rgba(247, 82, 98, 1) 0%,
+    rgba(244, 94, 140, 1) 100%
+  );
 }
 
 .bg3 {
@@ -515,8 +549,12 @@ background: linear-gradient(90deg, rgba(247,82,98,1) 0%, rgba(244,94,140,1) 100%
 }
 .bg2 .single-features .signle-icon i:hover {
   color: #fff;
- background: rgb(247,82,98);
- background: linear-gradient(90deg, rgba(244,94,140,1)  0%,  rgba(247,82,98,1) 100%);
+  background: rgb(247, 82, 98);
+  background: linear-gradient(
+    90deg,
+    rgba(244, 94, 140, 1) 0%,
+    rgba(247, 82, 98, 1) 100%
+  );
 }
 
 .bg3 .single-features .signle-icon i:hover {
@@ -537,5 +575,21 @@ background: linear-gradient(90deg, rgba(247,82,98,1) 0%, rgba(244,94,140,1) 100%
     rgba(255, 217, 71, 1) 0%,
     rgba(252, 137, 84, 1) 100%
   );
+}
+
+.text-white {
+  margin-left: -110px;
+}
+
+.table {
+  border: 0.5px solid black;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+   border: 0.5px solid black;
 }
 </style>
