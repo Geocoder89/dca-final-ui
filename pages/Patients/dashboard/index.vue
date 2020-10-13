@@ -125,6 +125,7 @@
                           <p class="text-white">My Case File</p>
                         </nuxt-link>
                       </div>
+
                     </div>
                   </div>
                 </div>
