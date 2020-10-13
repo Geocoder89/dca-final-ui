@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="sidebar-body">
     <div
       class="main-menu menu-fixed menu-light menu-accordion"
       data-scroll-to-active="true"
@@ -9,7 +9,7 @@
           <li class="nav-item mr-auto">
             <a class="navbar-brand" href="#">
               <div class="brand-logo"></div>
-              <h2 class="brand-text mb-0">Drcallaway</h2>
+             <img src="~assets/img/samples/drcall way1.png" alt="" width="160px" >
             </a>
           </li>
           <li class="nav-item nav-toggle">
@@ -32,7 +32,7 @@
           id="main-menu-navigation"
           data-menu="menu-navigation"
         >
-          <li class="nav-item active">
+          <li class="nav-item active mt-2">
             <nuxt-link to="/patients/dashboard"
               ><i class="feather icon-home"></i
               ><span class="menu-title" data-i18n="Dashboard">Dashboard</span
@@ -50,69 +50,71 @@
 
           <li class=" nav-item">
             <nuxt-link to="/patients/profile"
-              ><ion-icon name="person-outline" style="margin-right:1em;"></ion-icon>
+              >
+              <i class="icofont-user-alt-1"></i>
+              <!-- <ion-icon name="person-outline" style="margin-right:1em;"></ion-icon> -->
               <span class="menu-title">Profile</span>
             </nuxt-link>
           </li>
           <li class=" nav-item ">
             <nuxt-link to="/patients/medicalhistory"
-              ><ion-icon name="receipt-outline" style="margin-right:1em;"></ion-icon>
+              ><i class="icofont-paper"></i>
               <span class="menu-title">Medical History</span>
             </nuxt-link>
           </li>
 
           <li class="nav-item">
             <nuxt-link to="/patients/consult"
-              ><ion-icon name="hourglass-outline" style="margin-right:1em;"></ion-icon>
+              ><i class="icofont-hour-glass"></i>
               <span class="menu-title">Consultation Room</span>
             </nuxt-link>
           </li>
           <li class="nav-item">
             <nuxt-link to="/patients/prescriptions"
-              ><ion-icon name="bandage" style="margin-right:1em;"></ion-icon>
+              ><i class="icofont-drug"></i>
               <span class="menu-title">Prescriptions</span>
             </nuxt-link>
           </li>
           <li class=" nav-item">
             <nuxt-link to="/patients/referal"
-              ><ion-icon name="people-outline" style="margin-right:1em;"></ion-icon>
+              ><i class="icofont-ui-user-group"></i>
               <span class="menu-title">Referral</span>
             </nuxt-link>
           </li>
           <li class=" nav-item">
             <nuxt-link to="/patients/subscriptionplan"
-              ><ion-icon name="card-outline" style="margin-right:1em;"></ion-icon>
+              ><i class="icofont-credit-card"></i>
               <span class="menu-title">Subscription Plan</span>
             </nuxt-link>
           </li>
           <li class=" nav-item">
             <nuxt-link to="/patients/emergency"
-              ><i class="fa fa-ambulance" style="margin-right:1em;"></i>
+              ><i class="icofont-ambulance-cross"></i>
               <span class="menu-title">Ambulance</span>
             </nuxt-link>
           </li>
         </ul>
         <hr />
         <ul
-          class="navigation other-link navigation-main"
+          class="navigation  navigation-main"
           id="main-menu-navigation"
           data-menu="menu-navigation"
         >
           <li class=" nav-item">
             <nuxt-link to="/patients/help"
-              ><ion-icon name="alert-circle-outline" style="margin-right:1em;"></ion-icon>
+              ><i class="icofont-chat"></i>
               <span class="menu-title">Help Desk</span></nuxt-link
             >
           </li>
           <li class=" nav-item">
             <nuxt-link to="/patients/changepassword"
-              ><ion-icon name="settings-outline" style="margin-right:1em;"></ion-icon>
+              ><i class="icofont-ui-settings"></i>
               <span class="menu-title">Change Password</span></nuxt-link
             >
           </li>
           <li class=" nav-item">
             <a href="#" @click.prevent="logout"
-              ><ion-icon name="exit-outline" style="margin-right:1em;"></ion-icon>
+              ><i class="icofont-logout"></i>
               <span class="menu-title" data-i18n="Raise Support"
                 >Logout</span
               ></a
@@ -129,17 +131,17 @@ export default {
   name:"Sidebar",
   methods:{
     async logout(){
-        
+
         await this.$auth.logout()
         .catch(error => {
             console.log(error.response)
         })
         this.$router.push({
             path:'/auth/login'
-        }) 
-        
+        })
+
     }
-    
+
   }
 }
 </script>
@@ -148,5 +150,46 @@ export default {
   position: fixed;
   bottom: 0;
   left: 0;
+}
+
+.menu-navigation a{
+  display: block;
+  color: #565656;
+padding: 10px 15px 10px 15px;
+line-height: 1.45;
+-webkit-transition: padding 0.35s ease 0s !important;
+transition: padding 0.35s ease 0s !important;
+}
+
+.main-menu {
+background: rgb(138,40,143);
+background: linear-gradient(90deg, rgba(138,40,143,1) 0%, rgba(78,7,82,1) 100%);;
+}
+
+.main-menu-content{
+background: rgb(138,40,143);
+background: linear-gradient(90deg, rgba(138,40,143,1) 0%, rgba(78,7,82,1) 100%);
+}
+
+.main-menu.menu-light .navigation {
+background: rgb(138,40,143);
+background: linear-gradient(90deg, rgba(138,40,143,1) 0%, rgba(78,7,82,1) 100%);
+}
+ .main-menu.menu-light .navigation li a {
+    color: #fff;
+
+}
+
+
+#ion-icon {
+  fill: #fff;
+}
+
+.main-menu.menu-light .navigation > li > a i {
+    font-size: 20px;
+}
+
+.brand-text {
+  color: #fff;
 }
 </style>

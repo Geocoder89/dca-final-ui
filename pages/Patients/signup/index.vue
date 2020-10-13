@@ -7,27 +7,28 @@
         <div class="content-header row"></div>
         <div class="content-body">
           <section>
-              <center>
-                      <img src="~assets/img/logo/drapp.png" class="mb-2 mt-1" width="250px" height="80px">
+              <center class="centre">
+              <img src="~assets/img/logo/drapp.png" class="mb-2 mt-1 dca-logo" width="250px" height="80px">
               </center>
           </section>
           <section class="row flexbox-container justify-content-center">
             <div class="col-xl-10 col-12 d-flex justify-content-center">
-              <div class="card bg-authentication rounded-0 mb-0">
+              <div class="card bg-authentication rounded-0">
                 <div class="row m-0">
                   <div
                     class="col-lg-5 d-lg-block d-none text-center align-self-center pl-0 pr-0 py-0"
                   >
                     <img
-                      src="~assets/img/pages/register.jpg"
+                      src="~assets/img/samples/doctor1.jpg"
                       alt="branding logo"
+                      class="logo img-fluid"
                     />
                   </div>
                   <div class="col-lg-7 col-12 p-0">
                     <div class="card rounded-0 mb-0 p-2">
                       <div class="card-header pt-50 pb-1">
                         <div class="card-title">
-                          <h4 class="mb-0">PATIENT REGISTRATION</h4>
+                          <h4 class="mb-0 title">PATIENT REGISTRATION</h4>
                         </div>
                       </div>
                       <p class="px-2">
@@ -36,9 +37,9 @@
                       <div class="card-content">
                         <div class="card-body pt-0">
                           <div class="col-12 pl-0">
-                            
+
                               <div class="row">
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput">First Name:</label>
                                     <input
@@ -48,14 +49,14 @@
                                       placeholder=""
                                       v-model="form.first_name"
                                       :class="{'is-invalid': errors.first_name}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:5px;"
                                     />
                                     <div class="invalid-feedback" v-if="errors.first_name">
                                         {{errors.first_name[0]}}
                                     </div>
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput">Last Name:</label>
                                     <input
@@ -65,14 +66,14 @@
                                       placeholder=""
                                       v-model="form.last_name"
                                       :class="{'is-invalid': errors.last_name}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:5px;"
                                     />
                                     <div class="invalid-feedback" v-if="errors.last_name">
                                         {{errors.last_name[0]}}
                                     </div>
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput">Email:</label>
                                     <input
@@ -82,14 +83,14 @@
                                       placeholder=""
                                       v-model="form.email"
                                       :class="{'is-invalid': errors.email}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:5px;"
                                     />
                                     <div class="invalid-feedback" v-if="errors.email">
                                         {{errors.email[0]}}
                                     </div>
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput">Phone:</label>
                                     <input
@@ -99,14 +100,14 @@
                                       placeholder=""
                                       v-model="form.mobile_phone_number"
                                       :class="{'is-invalid': errors.mobile_phone_number}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:5px;"
                                     />
                                     <div class="invalid-feedback" v-if="errors.mobile_phone_number">
                                         {{errors.mobile_phone_number[0]}}
                                     </div>
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput">Password:</label>
                                     <input
@@ -116,14 +117,14 @@
                                       placeholder=""
                                       v-model="form.password"
                                       :class="{'is-invalid': errors.password}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:5px;"
                                     />
                                     <div class="invalid-feedback" v-if="errors.password">
                                         {{errors.password[0]}}
                                     </div>
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput"
                                       >Password Confirmation:</label
@@ -134,7 +135,7 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="form.password_confirmation"
-                                      style="border-radius:40px;"
+                                      style="border-radius:5px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -199,12 +200,12 @@
                                       <li class="d-inline-block mr-2">
                                         <fieldset>
                                           <label>
-                                            <input 
-                                            type="radio" 
+                                            <input
+                                            type="radio"
                                             name="radio"
                                             v-model="form.gender"
                                             value="FEMALE"
-                                            
+
                                             />
                                             Female
                                           </label>
@@ -217,7 +218,8 @@
                                   </fieldset>
                                 </div> -->
                               </div>
-                              <div class="col-12 pl-0">
+                              <div class="row">
+                                 <div class="col-6">
                                 <p>
                                   Already have an account?
                                   <nuxt-link to="/auth/login">login</nuxt-link>
@@ -226,7 +228,14 @@
                                   Register</button
                                 >
                               </div>
-                            
+
+
+
+                              </div>
+
+
+
+
                           </div>
                         </div>
                       </div>
@@ -244,48 +253,70 @@
 <script>
 export default {
   name: 'Register',
-  data(){
+  data() {
     return {
-       form:{
-            first_name : "",
-            last_name : "",
-            middle_name : "",
-            email : "",
-            password : "",
-            password_confirmation : "",
-            gender : "",
-            mobile_phone_number : "",
-            work_phone_number : "",
-            user_role_code : "ROLE003"
-       },
-        disable: false
+      form: {
+        first_name: '',
+        last_name: '',
+        middle_name: '',
+        email: '',
+        password: '',
+        password_confirmation: '',
+        gender: '',
+        mobile_phone_number: '',
+        work_phone_number: '',
+        user_role_code: 'ROLE003'
+      },
+      disable: false
     }
   },
-  methods:{
-    async submit(){
-      if(this.form.password.length < 6){
-        alert("password must be atleast than six(6) characters long");
-        return false;
+  methods: {
+    async submit() {
+      if (this.form.password.length < 6) {
+        alert('password must be atleast than six(6) characters long')
+        return false
       }
-      if(this.form.password !== this.form.password_confirmation){
-        alert("password do not match!");
-        return false;
+      if (this.form.password !== this.form.password_confirmation) {
+        alert('password do not match!')
+        return false
       }
       this.disable = !this.disable
-        await this.$axios.post('signup', this.form
-        ).then(response => {
-            this.$router.push({
-              path:'/auth/verify'
-            }) 
+      await this.$axios
+        .post('signup', this.form)
+        .then((response) => {
+          this.$router.push({
+            path: '/auth/verify'
+          })
         })
-        .catch(error => {
-            console.log(error.response)
-            this.disable = !this.disable
+        .catch((error) => {
+          console.log(error.response)
+          this.disable = !this.disable
         })
-        
+
       console.log(this.form)
     }
   },
-  middleware:['guest']
+  middleware: ['guest']
 }
 </script>
+
+
+<style lang="css" scoped>
+
+
+
+.logo{
+
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+
+}
+
+html body .content .content-wrapper {
+  /* padding : 0; */
+  margin-top :0;
+
+}
+
+</style>

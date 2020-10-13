@@ -22,6 +22,7 @@ export default {
       {rel: 'stylesheet', href: '/app-assets/vendors/css/ui/prism.min.css'},
       {rel: 'stylesheet', href: '/app-assets/vendors/css/file-uploaders/dropzone.min.css'},
       {rel: 'stylesheet', href: '/app-assets/vendors/css/tables/datatable/extensions/dataTables.checkboxes.css'},
+      {rel:'stylesheet', href:'https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css'},
       {rel: 'stylesheet', href: '/app-assets/css/bootstrap.css'},
       {rel: 'stylesheet', href: '/app-assets/css/bootstrap-extended.css'},
       {rel: 'stylesheet', href: '/app-assets/css/colors.css'},
@@ -37,7 +38,7 @@ export default {
       {rel: 'stylesheet', href: '/app-assets/css/pages/authentication.css'},
       {rel: 'stylesheet', href: '/app-assets/vendors/css/vendors.min.css'},
       {rel: 'stylesheet', href: '/app-assets/vendors/css/pickers/pickadate/pickadate.css'},
-      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600'}
+      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,600'}
     ],
      // Load all javascript codes here
   script: [
@@ -54,6 +55,7 @@ export default {
     {type: 'text/javascript', src: '/app-assets/js/scripts/ui/data-list-view.js', defer: true},
     {type: 'text/javascript', src: '/app-assets/vendors/js/extensions/dropzone.min.js'},
     {type: 'text/javascript', src: 'https://unpkg.com/ionicons@5.1.2/dist/ionicons.js'},
+
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/datatables.min.js'},
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/datatables.buttons.min.js'},
     {type: 'text/javascript', src: '/app-assets/vendors/js/tables/datatable/buttons.bootstrap.min.js'},
@@ -85,7 +87,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
- 
+
   /*
    ** Nuxt.js dev-modules
    */
@@ -138,7 +140,7 @@ export default {
     }
   },
 
-  
+
   auth: {
     endpoints:{
       login:{
@@ -165,7 +167,7 @@ export default {
     }
   },
 
-  
+
 
   router: {
     middleware: [

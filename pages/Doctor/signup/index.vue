@@ -11,24 +11,28 @@
                       <img src="~assets/img/logo/drapp.png" class="mb-2 mt-1" width="250px" height="80px">
               </center>
           </section>
+
+
           <section class="row flexbox-container justify-content-center">
             <div class="col-xl-6 col-12 d-flex justify-content-center">
-              <div class="card bg-authentication rounded-0 mb-0">
+              <div class="card bg-authentication rounded-0">
                 <div class="row m-0">
                   <div class="col-lg-12 col-12 p-0">
-                    <div class="card rounded-0 mb-0 p-2">
+                    <div class="card rounded-0 mb-0">
+                      <img class="card-img-top" src="~assets/img/samples/3.png" alt="Card image cap">
                       <div class="card-header pt-50 pb-1">
                         <div class="card-title">
-                          <h4 class="mb-0">DOCTOR REGISTRATION</h4>
+                          <h4 class="mt-3">DOCTOR REGISTRATION</h4>
                         </div>
                       </div>
                       <p class="px-2">
+
                         Fill the below form to create a new account.
                       </p>
                       <div class="card-content">
                         <div class="card-body pt-0">
                           <div class="col-12 pl-0">
-                            
+
                               <div class="row">
                                 <div class="col-xl-4 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
@@ -40,7 +44,7 @@
                                       placeholder=""
                                       v-model="form.first_name"
                                       :class="{'is-invalid': errors.first_name}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="errors.first_name">
                                         {{errors.first_name[0]}}
@@ -57,7 +61,7 @@
                                       placeholder=""
                                       v-model="form.middle_name"
                                       :class="{'is-invalid': errors.middle_name}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="errors.middle_name">
                                         {{errors.middle_name[0]}}
@@ -74,7 +78,7 @@
                                       placeholder=""
                                       v-model="form.last_name"
                                       :class="{'is-invalid': errors.last_name}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="errors.last_name">
                                         {{errors.last_name[0]}}
@@ -91,7 +95,7 @@
                                       placeholder=""
                                       v-model="form.email"
                                       :class="{'is-invalid': errors.email}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                      <div class="invalid-feedback" v-if="errors.email">
                                         {{errors.email[0]}}
@@ -110,7 +114,7 @@
                                       placeholder=""
                                       v-model="form.password"
                                       :class="{'is-invalid': errors.password}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="errors.password">
                                         {{errors.password[0]}}
@@ -128,7 +132,7 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="form.password_confirmation"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                   </fieldset>
                                 </div>
@@ -160,7 +164,7 @@
                                       class="form-control"
                                       v-model="form.specialty_code"
                                       :class="{'is-invalid': errors.specialty_code}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     >
                                     <option v-for="specialty in specialties" :key="specialty.id" :value="specialty.code">{{specialty.name}}</option>
                                     </select>
@@ -192,12 +196,12 @@
                                       <li class="d-inline-block mr-2">
                                         <fieldset>
                                           <label>
-                                            <input 
-                                            type="radio" 
+                                            <input
+                                            type="radio"
                                             name="radio"
                                             v-model="form.gender"
                                             value="FEMALE"
-                                            
+
                                             />
                                             Female
                                           </label>
@@ -219,7 +223,7 @@
                                       placeholder=""
                                       v-model="form.mcrn"
                                       :class="{'is-invalid': errors.mcrn}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="errors.mcrn">
                                         {{errors.mcrn[0]}}
@@ -238,14 +242,14 @@
                                       placeholder=""
                                       v-model="form.school_attended"
                                       :class="{'is-invalid': errors.school_attended}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="errors.school_attended">
                                         {{errors.school_attended[0]}}
                                     </div>
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <div class="col-xl-4 col-md-6 col-12 mb-2">
                                   <fieldset class="form-group">
                                     <label for="basicInput"
                                       >Year of Graduation:</label
@@ -257,14 +261,14 @@
                                       placeholder=""
                                       v-model="form.year_of_graduation"
                                       :class="{'is-invalid': errors.year_of_graduation}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="errors.year_of_graduation">
                                         {{errors.year_of_graduation[0]}}
                                     </div>
                                   </fieldset>
                                 </div>
-                                <div class="col-xl-4 col-md-6 col-12 mb-0">
+                                <div class="col-xl-6 col-md-6 col-12">
                                   <fieldset class="form-group">
                                     <label for="basicInput"
                                       >Year of Graduation:</label
@@ -276,35 +280,39 @@
                                       placeholder=""
                                       @change="onImageChange"
                                       :class="{'is-invalid': errors.medical_certificate}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="errors.medical_certificate">
                                         {{errors.medical_certificate[0]}}
                                     </div>
                                   </fieldset>
                                 </div>
-                                
+
+
+
                               </div>
-                              
-                                   
+
+
                               <div class="col-12 pl-0">
                                 <p>
                                   Already have an account?
                                   <nuxt-link to="/auth/login">login</nuxt-link>
                                 </p>
-                                <button style="border-radius:40px;" :disabled="disable" class="btn btn-primary" @click.prevent="submit">
+                                <button style="border-radius:10px;" :disabled="disable" class="btn btn-primary" @click.prevent="submit">
                                   Register</button
                                 >
                               </div>
-                           
+
                           </div>
                         </div>
                       </div>
-                      
+
                     </div>
                   </div>
                 </div>
               </div>
+
+
             </div>
           </section>
         </div>
@@ -357,11 +365,11 @@ export default {
     },
     validateInput(){
         return  this.form.first_name &&
-         this.form.last_name && this.form.email && 
-         this.form.password && 
-         this.form.password_confirmation && 
-         this.form.gender && 
-         this.form.mcrn && 
+         this.form.last_name && this.form.email &&
+         this.form.password &&
+         this.form.password_confirmation &&
+         this.form.gender &&
+         this.form.mcrn &&
          this.form.specialty_code || false
     },
     validateImage(){
@@ -377,12 +385,12 @@ export default {
       return this.form.password === this.form.password_confirmation || false
     },
     async submit(){
-      
+
       if(!this.validateInput()){
         this.$noty.error("please fill in the required fields");
         return false;
       }
-      
+
       if(!this.checkPassword()){
         this.$noty.error("password must be atleast than six(6) characters long");
         return false;
@@ -405,7 +413,7 @@ export default {
       //   this.$noty.error("Please file size should not exceed 2MB.");
       //   return false;
       // }
-      
+
       let formData = new FormData();
       formData.append('first_name', this.form.first_name);
       formData.append('last_name', this.form.last_name);
@@ -421,7 +429,7 @@ export default {
       formData.append('year_of_graduation', this.form.year_of_graduation);
       formData.append('specialty_code', this.form.specialty_code);
       formData.append('school_attended', this.form.school_attended);
-      
+
       const config = {
           headers: { 'content-type': 'multipart/form-data' }
       }
@@ -430,13 +438,13 @@ export default {
         ).then(response => {
             this.$router.push({
               path:'/auth/verify'
-            }) 
+            })
         })
         .catch(error => {
             // console.log(error.response)
             this.disable = !this.disable
         })
-        
+
       console.log(this.form)
     }
   },
@@ -446,3 +454,35 @@ export default {
   middleware:['guest']
 }
 </script>
+
+
+<style lang="css" scoped>
+.card-img-top {
+  object-fit: cover;
+}
+
+
+.copyright {
+  /* background: #a048a6; */
+  padding: 25px 50px;
+
+}
+.copyright .copyright-content p {
+  color: #ccc;
+  left: 50%;
+  right: 50%;
+  text-align: center;
+}
+.card-title h4 {
+  color: #8a288f;
+}
+
+html body .content .content-wrapper {
+  /* padding : 0; */
+  margin-top :0;
+
+}
+
+
+
+</style>
