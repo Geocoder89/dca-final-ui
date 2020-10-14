@@ -20,21 +20,21 @@
                 <div class="carousel-item active">
                   <img
                     class="d-block w-100"
-                    src="~assets/img/samples/1.png"
+                    src="~assets/img/samples/doc1.png"
                     alt="First slide"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
                     class="d-block w-100"
-                    src="~assets/img/samples/2.png"
+                    src="~assets/img/samples/doc2.png"
                     alt="Second slide"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
                     class="d-block w-100"
-                    src="~assets/img/samples/3.png"
+                    src="~assets/img/samples/doc3.png"
                     alt="Third slide"
                   />
                 </div>
@@ -222,7 +222,7 @@ export default {
     position: relative;
   } */
 .flexbox-container {
-  margin-top: -800px;
+  margin-top: -400px;
 }
 
 .card-overlay img  {
@@ -297,7 +297,7 @@ export default {
 }
 
 .logo-top {
-  margin-top: -86px;
+  margin-top: -60px;
 }
 
 

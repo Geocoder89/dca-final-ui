@@ -19,7 +19,7 @@
                 <div class="row m-0">
                   <div class="col-lg-12 col-12 p-0">
                     <div class="card rounded-0 mb-0">
-                      <img class="card-img-top" src="~assets/img/samples/3.png" alt="Card image cap">
+                      <img class="card-img-top" src="~assets/img/samples/doc3.png" alt="Card image cap">
                       <div class="card-header pt-50 pb-1">
                         <div class="card-title">
                           <h4 class="mt-3">DOCTOR REGISTRATION</h4>
@@ -473,9 +473,9 @@ export default {
   right: 50%;
   text-align: center;
 }
-.card-title h4 {
+/* .card-title h4 {
   color: #8a288f;
-}
+} */
 
 html body .content .content-wrapper {
   /* padding : 0; */

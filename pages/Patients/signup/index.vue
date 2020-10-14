@@ -305,12 +305,12 @@ export default {
 
 
 
-.logo{
+ .img-fluid{
 
-  width: 100%;
-  height: 470px;
-  object-fit: cover;
-
+    width: 100%;
+    height:460px;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 html body .content .content-wrapper {

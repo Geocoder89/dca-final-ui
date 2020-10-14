@@ -11,14 +11,15 @@
               <div class="card bg-authentication rounded-0 mb-0">
                 <div class="row m-0">
                   <div class="col-lg-12 col-12 p-0">
-                    <div class="card rounded-0 mb-0 p-2">
+                    <div class="card rounded-0 mb-0 ">
+                      <img class="card-img-top card-image" src="~assets/img/samples/doc3.png" alt="Card image cap">
                       <div class="card-header pt-50 pb-1">
                         <div class="card-title">
                           <h4 class="mb-0">PARTNERS REGISTRATION</h4>
                         </div>
                       </div>
                       <p class="px-2">
-                       
+
                         Fill the below form to create a new account.
                       </p>
                       <div class="card-content">
@@ -26,7 +27,7 @@
                           <div class="col-12 pl-0">
                             <form action="">
                               <div class="row">
-                                 
+
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput">Partner Type:</label>
@@ -35,13 +36,13 @@
                                       type="text"
                                       class="form-control"
                                       v-model="form.partner_type"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                       :class="{'is-invalid': bugs.partner_type.error}"
                                     >
                                     <option value="" >Select Partner</option>
                                     <option v-for="(p,i) in partner_types" :key="i" :value="p">{{p}}</option>
                                     </select>
-                                    
+
                                       <div class="invalid-feedback" v-if="bugs.partner_type.error">
                                         {{bugs.partner_type.msg}}
                                     </div>
@@ -57,16 +58,16 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="form.license_number"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                       :class="{'is-invalid': bugs.license_number.error}"
                                     />
                                     <div class="invalid-feedback" v-if="bugs.license_number.error">
                                         {{bugs.license_number.msg}}
                                     </div>
-                                    
+
                                   </fieldset>
                                 </div>
-                               
+
 
                                 <div class="col-xl-12 col-md-12 col-12 mb-0">
                                   <fieldset class="form-group">
@@ -77,13 +78,13 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="form.name"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                       :class="{'is-invalid': bugs.name.error}"
                                     />
                                     <div class="invalid-feedback" v-if="bugs.name.error">
                                         {{bugs.name.msg}}
                                     </div>
-                                     
+
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-12 col-md-12 col-12 mb-0">
@@ -95,13 +96,13 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="form.address"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                       :class="{'is-invalid': bugs.address.error}"
                                     />
                                     <div class="invalid-feedback" v-if="bugs.address.error">
                                         {{bugs.address.msg}}
                                     </div>
-                                      
+
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
@@ -113,7 +114,7 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="form.email"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                       :class="{'is-invalid': bugs.email.error}"
                                     />
                                     <div class="invalid-feedback" v-if="bugs.email.error">
@@ -130,7 +131,7 @@
                                       class="form-control"
                                       placeholder=""
                                       v-model="form.phone"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                       :class="{'is-invalid': bugs.phone.error}"
                                     />
                                     <div class="invalid-feedback" v-if="bugs.phone.error">
@@ -138,14 +139,14 @@
                                     </div>
                                  </fieldset>
                                 </div>
-                                
+
                                 <div class="col-xl-12 col-md-12 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput">Company's Description :</label>
                                     <textarea
                                       id="basicInput"
                                       v-model="form.description"
-                                      style="resize:none;border-radius:40px;"
+                                      style="resize:none;border-radius:10px;"
                                       :class="{'is-invalid': bugs.description.error}"
                                       class="form-control">
                                     </textarea>
@@ -169,13 +170,13 @@
                                       placeholder=""
                                       v-model="first_user.first_name"
                                       :class="{'is-invalid': bugs.fufn.error}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="bugs.fufn.error">
                                         <p>{{bugs.fufn.msg}}</p>
                                     </div>
-                                    
-                                     
+
+
                                   </fieldset>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
@@ -188,7 +189,7 @@
                                       placeholder=""
                                       v-model="first_user.last_name"
                                        :class="{'is-invalid': bugs.fuln.error}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                      <div class="invalid-feedback" v-if="bugs.fuln.error">
                                         <p>{{bugs.fuln.msg}}</p>
@@ -205,14 +206,14 @@
                                       placeholder=""
                                       v-model="first_user.email"
                                         :class="{'is-invalid': bugs.fuemail.error}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                      <div class="invalid-feedback" v-if="bugs.fuemail.error">
                                         <p>{{bugs.fuemail.msg}}</p>
                                     </div>
                                   </fieldset>
                                 </div>
-                                
+
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput"
@@ -225,7 +226,7 @@
                                       placeholder=""
                                       v-model="first_user.password"
                                        :class="{'is-invalid': bugs.fupw.error}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="bugs.fupw.error">
                                         <p>{{bugs.fupw.msg}}</p>
@@ -244,16 +245,16 @@
                                       placeholder=""
                                       v-model="first_user.password_confirmation"
                                        :class="{'is-invalid': bugs.fucpw.error}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="bugs.fucpw.error">
                                         <p>{{bugs.fucpw.msg}}</p>
                                     </div>
                                   </fieldset>
                                 </div>
-                                
-                                
-                            </div>    
+
+
+                            </div>
                             <p class="px-0">
                                 <strong>Representatives #2</strong>
                             </p>
@@ -268,7 +269,7 @@
                                       placeholder=""
                                       v-model="second_user.first_name"
                                        :class="{'is-invalid': bugs.sufn.error}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="bugs.sufn.error">
                                         <p>{{bugs.sufn.msg}}</p>
@@ -285,7 +286,7 @@
                                       placeholder=""
                                       v-model="second_user.last_name"
                                       :class="{'is-invalid': bugs.suln.error}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="bugs.suln.error">
                                         <p>{{bugs.suln.msg}}</p>
@@ -302,14 +303,14 @@
                                       placeholder=""
                                       v-model="second_user.email"
                                       :class="{'is-invalid': bugs.suemail.error}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="bugs.suemail.error">
                                         <p>{{bugs.suemail.msg}}</p>
                                     </div>
                                   </fieldset>
                                 </div>
-                                
+
                                 <div class="col-xl-6 col-md-6 col-12 mb-0">
                                   <fieldset class="form-group">
                                     <label for="basicInput"
@@ -322,7 +323,7 @@
                                       placeholder=""
                                       v-model="second_user.password"
                                       :class="{'is-invalid': bugs.supw.error}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="bugs.supw.error">
                                         <p>{{bugs.supw.msg}}</p>
@@ -341,21 +342,21 @@
                                       placeholder=""
                                       v-model="second_user.password_confirmation"
                                       :class="{'is-invalid': bugs.sucpw.error}"
-                                      style="border-radius:40px;"
+                                      style="border-radius:10px;"
                                     />
                                     <div class="invalid-feedback" v-if="bugs.sucpw.error">
                                         <p>{{bugs.sucpw.msg}}</p>
                                     </div>
                                   </fieldset>
                                 </div>
-                                
-                            </div>        
+
+                            </div>
                               <div class="col-12 pl-0">
                                 <p>
                                   Already have an account?
                                   <nuxt-link to="/pharmacy/login">login</nuxt-link>
                                 </p>
-                                <button style="border-radius:40px;" :disabled="this.disable" class="btn btn-primary" @click.prevent="submit">
+                                <button style="border-radius:10px;" :disabled="this.disable" class="btn btn-primary" @click.prevent="submit">
                                   Register</button
                                 >
                               </div>
@@ -363,7 +364,7 @@
                           </div>
                         </div>
                       </div>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -474,7 +475,7 @@ export default {
               msg:""
             }
 
-           
+
         },
        partner_types:["DIAGNOSTIC","AMBULANCE","HOSPITAL","PHARMACY"],
        disable: false
@@ -490,12 +491,12 @@ export default {
         return errors.email || errors.message
     },
     validateInput(){
-        
+
       return  this.form.name &&
-      this.form.address && this.form.license_number && 
-      this.form.email && 
-      this.form.phone && 
-      this.form.description && 
+      this.form.address && this.form.license_number &&
+      this.form.email &&
+      this.form.phone &&
+      this.form.description &&
       this.form.partner_type &&
       this.first_user.email &&
       this.first_user.password &&
@@ -503,7 +504,7 @@ export default {
       this.second_user.email &&
       this.second_user.password &&
       this.second_user.password_confirmation || false
-        
+
     },
     validateImage(){
       return this.form.medical_certificate.type == "image/png" || this.form.medical_certificate.type == "image/jpg" || this.form.medical_certificate.type == "image/jpeg" ? true : false
@@ -567,7 +568,7 @@ export default {
           this.bugs.license_number.error = true
           return false
       }
-      
+
       if(this.hasErrors(this.form.name)){
           let msg = "please enter a partner name";
           this.bugs.name.msg = msg;
@@ -581,7 +582,7 @@ export default {
           this.bugs.address.error = true
           return false
       }
-      
+
       if(this.hasErrors(this.form.email)){
           let msg = "please enter a valid email";
           this.bugs.email.msg = msg;
@@ -594,7 +595,7 @@ export default {
           this.bugs.phone.error = true
           return false
       }
-      
+
       if(this.hasErrors(this.form.description)){
           let msg = "please description is required";
           this.bugs.description.msg = msg;
@@ -656,7 +657,7 @@ export default {
           return false
       }
 
-      
+
 
       if(!this.checkPassword(this.second_user.password)){
         // this.$noty.error("representative password must be atleast than six(6) characters long");
@@ -665,7 +666,7 @@ export default {
           return false;
       }
 
-      
+
 
       if(!this.matchPassword(this.second_user.password, this.second_user.password_confirmation)){
         // this.$noty.error("representative passwords do not match");
@@ -673,10 +674,10 @@ export default {
           this.bugs.sucpw.error = true
           return false;
       }
-      
+
       this.form.members.push(this.first_user)
       this.form.members.push(this.second_user)
-      
+
       let datar = {
           name : this.form.name,
           email : this.form.email,
@@ -687,29 +688,33 @@ export default {
           description : this.form.description,
           members : this.form.members
         };
-       
-      
+
+
       // const config = {
       //     headers: { 'content-type': 'multipart/form-data' }
       // }
-    
+
       this.disable = !this.disable
         await this.$axios.post('partners/signup', datar
         ).then(response => {
             this.$router.push({
               path:'/auth/verify'
-            }) 
+            })
         })
         .catch(error => {
             console.log(error)
-            
+
         })
-      
+
     }
   },
   mounted(){
-      
+
   },
   middleware:['guest']
 }
 </script>
+
+<style scoped>
+
+</style>
