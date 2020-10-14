@@ -125,37 +125,49 @@
 
               <div class="row mt-3">
                 <div class="col-12">
-                  <table class="table table-bordered new table">
+                  <div class="card table-card">
+
+                    <div class="card-body">
+                              <table class="table ">
                     <thead>
                       <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">S/N</th>
+                        <th scope="col">Name of Doctor</th>
+                        <th scope="col">Date of Consultation</th>
+                        <th scope="col"> Case File ID</th>
+                        <th scope="col">Status (Pending or Completed) </th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>Dr Tunde Sowemimo</td>
+                        <td>13/10/2020</td>
+                        <td>DCA001</td>
+                        <td>Completed</td>
                       </tr>
                       <tr>
                         <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                       <td>Dr Faith Ogbuagu</td>
+                        <td>12/10/2020</td>
+                        <td>DCA002</td>
+                        <td>Completed</td>
                       </tr>
                       <tr>
                         <th scope="row">3</th>
-                        <td colspan="1">Larry</td>
-                        <td>Johnson</td>
-                        <td>@twitter</td>
+                       <td>Dr Deji Salami</td>
+                        <td>11/10/2020</td>
+                        <td>DCA002</td>
+                        <td>Pending</td>
 
                       </tr>
                     </tbody>
                   </table>
+
+                    </div>
+                  </div>
+
+
                 </div>
               </div>
             </div>
@@ -501,39 +513,28 @@ export default {
 }
 
 .bg1 {
-  background: rgb(138, 40, 143);
-  background: linear-gradient(
-    90deg,
-    rgba(138, 40, 143, 1) 0%,
-    rgba(78, 7, 82, 1) 100%
-  );
+  background: url('~assets/img/samples/card2.png') no-repeat;
+  background-size: cover;
 }
 
+
+
 .bg2 {
-  background: rgb(247, 82, 98);
-  background: linear-gradient(
-    90deg,
-    rgba(247, 82, 98, 1) 0%,
-    rgba(244, 94, 140, 1) 100%
-  );
+ background: url('~assets/img/samples/card3.png') no-repeat;
+  background-size: cover;
+
 }
 
 .bg3 {
-  background: rgb(99, 225, 150);
-  background: linear-gradient(
-    90deg,
-    rgba(99, 225, 150, 1) 0%,
-    rgba(59, 182, 178, 1) 100%
-  );
+  background: url('~assets/img/samples/card1.png') no-repeat;
+  background-size: cover;
+
 }
 
 .bg4 {
-  background: rgb(255, 217, 71);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 217, 71, 1) 0%,
-    rgba(252, 137, 84, 1) 100%
-  );
+   background: url('~assets/img/samples/card4.png') no-repeat;
+  background-size: cover;
+
 }
 
 /* hover effect */
@@ -580,16 +581,9 @@ export default {
 .text-white {
   margin-left: -110px;
 }
+/* .table-card {
+  margin-left: 30px;
+  margin-right: 30px;
+} */
 
-.table {
-  border: 0.5px solid black;
-}
-.table-bordered > thead > tr > th,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td {
-   border: 0.5px solid black;
-}
 </style>

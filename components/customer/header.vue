@@ -14,7 +14,7 @@
               <ul class="nav navbar-nav">
                 <li>
                   <nuxt-link
-                    class="btn-icon btn-lg float-right btn-primary btn-round btn-sm mr-2 cta "
+                    class="btn-icon btn-lg float-right btn-success btn-round btn-sm mr-2 cta "
 
                     to="/patients/waiting"
                     ><i class="fa fa-phone"></i></nuxt-link
