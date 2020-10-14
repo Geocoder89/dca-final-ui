@@ -573,8 +573,8 @@ export default {
   background: rgb(255, 217, 71);
   background: linear-gradient(
     90deg,
-    rgba(255, 217, 71, 1) 0%,
-    rgba(252, 137, 84, 1) 100%
+   rgb(163,163,242),
+   rgb(171,193,240)
   );
 }
 
