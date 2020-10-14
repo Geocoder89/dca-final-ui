@@ -578,6 +578,10 @@ export default {
   );
 }
 
+
+
+
+
 .text-white {
   margin-left: -110px;
 }
